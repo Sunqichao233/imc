@@ -236,38 +236,39 @@
           <h2 class="section-title" id="releases-heading">リリース</h2>
         </div>
         <div class="section-content">
-        <div class="row">
-          <article class="section-title-wrapper">
-                <div class="div-5">
-              <div class="div-6">
-                <h3 class="medium-length">最新ニュース</h3>
-                <p class="p">
-                  2024年12月 - 新たな海外医療機関との提携契約を締結
-                </p>
-                  </div>
+          <div class="news-timeline-container">
+            <div class="news-timeline-wrapper">
+              <button class="news-nav-btn news-nav-prev" onclick="scrollNews('prev')" aria-label="前のニュース"></button>
+              <div class="news-timeline" id="newsTimeline">
+                <div class="news-item">
+                  <div class="news-date">2025年4月21日</div>
+                  <div class="news-title">「第23回上海国際医療観光展覧会」に出展しました</div>
+                  <div class="news-description">第23回上海国際医療観光展覧会に出展し、多くの来場者の方々と交流を深めることができました。</div>
                 </div>
-              </article>
-          <article class="section-title-wrapper">
-            <div class="div-5">
-              <div class="div-6">
-                <h3 class="medium-length">プレスリリース</h3>
-                <p class="p">
-                  2024年11月 - 国際医療交流プログラム第3期の参加者募集開始
-                </p>
+                <div class="news-item">
+                  <div class="news-date">2024年8月28日</div>
+                  <div class="news-title">四谷メディカルキューブにて「人間ドック＋国際医療セミナー」を開催しました</div>
+                  <div class="news-description">四谷メディカルキューブにて人間ドックと国際医療に関するセミナーを開催し、多数の参加者にご来場いただきました。</div>
+                </div>
+                <div class="news-item">
+                  <div class="news-date">2024年7月15日</div>
+                  <div class="news-title">「第21回深圳国際医療観光展覧会」に参加しました</div>
+                  <div class="news-description">第21回深圳国際医療観光展覧会に参加し、中国での医療観光事業の拡大に向けた取り組みを紹介しました。</div>
+                </div>
+                <div class="news-item">
+                  <div class="news-date">2024年4月29日</div>
+                  <div class="news-title">「第20回上海国際医療観光展覧会」に出展しました</div>
+                  <div class="news-description">第20回上海国際医療観光展覧会に出展し、日本の高品質な医療サービスについて紹介しました。</div>
+                </div>
+                <div class="news-item">
+                  <div class="news-date">2024年2月3日</div>
+                  <div class="news-title">脳神経外科医・林 基弘先生が韓国で初のZAP-X治療を行いました</div>
+                  <div class="news-description">脳神経外科医の林基弘先生が韓国において、初のZAP-X治療を成功させました。この画期的な治療法により、患者様の負担を大幅に軽減することができました。</div>
+                </div>
               </div>
+              <button class="news-nav-btn news-nav-next" onclick="scrollNews('next')" aria-label="次のニュース"></button>
             </div>
-          </article>
-          <article class="section-title-wrapper">
-            <div class="div-5">
-              <div class="div-6">
-                <h3 class="medium-length">イベント情報</h3>
-                <p class="p">
-                  2025年1月 - 国際医療シンポジウム開催予定
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
+          </div>
         </div>
       </section>
       <section class="section section--dark-teal" id="contact" aria-labelledby="contact-heading">
@@ -417,5 +418,57 @@
         </div>
       </footer>
     </main>
+    
+    <script>
+      function scrollNews(direction) {
+        const timeline = document.getElementById('newsTimeline');
+        const scrollAmount = 320; // Width of one news item plus gap
+        
+        if (direction === 'prev') {
+          timeline.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+          });
+        } else if (direction === 'next') {
+          timeline.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+        
+        // Update button states after scroll
+        setTimeout(() => updateButtonStates(), 300);
+      }
+      
+      function updateButtonStates() {
+        const timeline = document.getElementById('newsTimeline');
+        const prevBtn = document.querySelector('.news-nav-prev');
+        const nextBtn = document.querySelector('.news-nav-next');
+        
+        // Check if at the beginning
+        if (timeline.scrollLeft <= 0) {
+          prevBtn.classList.add('disabled');
+        } else {
+          prevBtn.classList.remove('disabled');
+        }
+        
+        // Check if at the end
+        const maxScroll = timeline.scrollWidth - timeline.clientWidth;
+        if (timeline.scrollLeft >= maxScroll - 10) {
+          nextBtn.classList.add('disabled');
+        } else {
+          nextBtn.classList.remove('disabled');
+        }
+      }
+      
+      // Initialize button states when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        updateButtonStates();
+        
+        // Add scroll event listener to update button states
+        const timeline = document.getElementById('newsTimeline');
+        timeline.addEventListener('scroll', updateButtonStates);
+      });
+    </script>
   </body>
 </html>

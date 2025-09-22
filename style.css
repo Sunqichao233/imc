@@ -1691,6 +1691,163 @@
     color: rgba(255, 255, 255, 0.9);
   }
 
+  /* News Timeline Styles */
+  .desktop .news-timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px; /* Add padding for buttons */
+  }
+
+  .desktop .news-timeline-wrapper {
+    position: relative;
+    overflow: visible; /* Change to visible to show buttons */
+    border-radius: 16px;
+  }
+
+  .desktop .news-timeline {
+    display: flex;
+    gap: clamp(16px, 2vw, 24px);
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    padding: clamp(16px, 2vw, 24px) 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 16px;
+  }
+
+  .desktop .news-timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .desktop .news-item {
+    flex: 0 0 auto;
+    width: clamp(280px, 35vw, 400px);
+    padding: clamp(20px, 2.5vw, 24px);
+    background: var(--bg-white, #ffffff);
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .desktop .news-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-blue, #3498db);
+  }
+
+  .desktop .news-date {
+    color: var(--primary-blue, #3498db);
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 600;
+    margin-bottom: clamp(8px, 1vw, 12px);
+    letter-spacing: 0.5px;
+  }
+
+  .desktop .news-title {
+    color: var(--text-primary, #2c3e50);
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+
+  .desktop .news-description {
+    color: var(--text-muted, #525252);
+    font-size: clamp(12px, 1.3vw, 14px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* Navigation Buttons */
+  .desktop .news-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: var(--bg-white, #ffffff);
+    border: 2px solid var(--primary-blue, #3498db);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  }
+
+  .desktop .news-nav-btn:hover {
+    background: var(--primary-blue, #3498db);
+    color: var(--bg-white, #ffffff);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .desktop .news-nav-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .desktop .news-nav-prev {
+    left: 6px;
+  }
+
+  .desktop .news-nav-next {
+    right: 6px;
+  }
+
+  .desktop .news-nav-btn::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+  }
+
+  .desktop .news-nav-prev::before {
+    transform: rotate(-135deg);
+    margin-left: 3px;
+  }
+
+  .desktop .news-nav-next::before {
+    transform: rotate(45deg);
+    margin-right: 3px;
+  }
+
+  /* Responsive adjustments for news timeline */
+  @media (max-width: 768px) {
+    .desktop .news-timeline-container {
+      padding: 0 30px; /* Reduce padding on mobile */
+    }
+    
+    .desktop .news-nav-btn {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .desktop .news-nav-btn::before {
+      width: 10px;
+      height: 10px;
+    }
+    
+    .desktop .news-nav-prev {
+      left: 2px;
+    }
+
+    .desktop .news-nav-next {
+      right: 2px;
+    }
+  }
+
   /* Timeline Styles */
   .desktop .timeline {
     position: relative;
