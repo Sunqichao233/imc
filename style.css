@@ -12,12 +12,16 @@
   .desktop .image {
     position: relative;
     width: 100%;
-    height: 100vh;
+    aspect-ratio: 16 / 9;
+    min-height: clamp(400px, 60vh, 800px);
     background-image: url('https://c.animaapp.com/mfudvd8uZxTZps/img/hero-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
   
   .desktop .image::before {
@@ -37,14 +41,14 @@
   
   
   .desktop .hero-section {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
-    position: absolute;
-    top: 450px;
-    left: 64px;
+    gap: clamp(20px, 4vw, 40px);
+    position: relative;
+    padding: clamp(20px, 4vw, 64px);
     z-index: 2;
+    max-width: clamp(400px, 70vw, 800px);
   }
   
   .desktop .hero-content {
@@ -70,9 +74,9 @@
     font-family: "Roboto", Helvetica;
     font-weight: 400;
     color: #ffffff;
-    font-size: 80px;
+    font-size: clamp(32px, 6vw, 80px);
     letter-spacing: 0;
-    line-height: 96.0px;
+    line-height: clamp(38px, 7vw, 96px);
     white-space: nowrap;
   }
   
@@ -93,9 +97,9 @@
     width: fit-content;
     font-family: "Roboto", Helvetica;
     color: #ffffff;
-    font-size: 80px;
+    font-size: clamp(32px, 6vw, 80px);
     letter-spacing: 0;
-    line-height: 96.0px;
+    line-height: clamp(38px, 7vw, 96px);
     white-space: nowrap;
   }
   
@@ -105,27 +109,27 @@
     width: fit-content;
     font-family: "Roboto", Helvetica;
     color: #ffffff;
-    font-size: 80px;
+    font-size: clamp(32px, 6vw, 80px);
     letter-spacing: 0;
-    line-height: 96.0px;
+    line-height: clamp(38px, 7vw, 96px);
     white-space: nowrap;
   }
   
   .desktop .lorem-ipsum-dolor {
-    width: 746px;
+    width: clamp(300px, 80vw, 746px);
     color: #ffffff;
     position: relative;
     font-family: "Roboto", Helvetica;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     letter-spacing: 0;
-    line-height: 27px;
+    line-height: clamp(22px, 2vw, 27px);
   }
   
   .desktop .div-2 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -136,7 +140,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     padding: 12px 24px;
     position: relative;
     flex: 0 0 auto;
@@ -150,9 +154,9 @@
     font-family: "Roboto", Helvetica;
     font-weight: 500;
     color: #ffffff;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     letter-spacing: 0.18px;
-    line-height: 27px;
+    line-height: clamp(22px, 2vw, 27px);
     white-space: nowrap;
   }
   
@@ -162,7 +166,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     padding: 12px 24px;
     position: relative;
     flex: 0 0 auto;
@@ -180,7 +184,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 32px 64px;
+    padding: clamp(20px, 3vw, 32px) clamp(20px, 4vw, 64px);
     position: absolute;
     top: 0;
     left: 0;
@@ -190,7 +194,7 @@
   .desktop .container {
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: clamp(20px, 2.5vw, 32px);
     align-self: stretch;
     display: flex;
     position: relative;
@@ -225,7 +229,7 @@
   .desktop .column {
     display: inline-flex;
     align-items: center;
-    gap: 32px;
+    gap: clamp(20px, 2.5vw, 32px);
     position: relative;
     flex: 0 0 auto;
     flex-wrap: wrap;
@@ -236,7 +240,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: clamp(3px, 0.4vw, 4px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -258,7 +262,7 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -267,7 +271,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: clamp(3px, 0.4vw, 4px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -284,7 +288,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     position: relative;
     flex: 1;
     flex-grow: 1;
@@ -296,8 +300,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 8px 20px;
+    gap: clamp(6px, 0.8vw, 8px);
+    padding: clamp(6px, 0.8vw, 8px) clamp(16px, 2vw, 20px);
     position: relative;
     flex: 0 0 auto;
     background-color: var(--blueblue-700);
@@ -310,7 +314,7 @@
     width: 100%;
     max-width: 100%;
     align-items: flex-start;
-    gap: 40px;
+    gap: clamp(24px, 3vw, 40px);
     padding: 112px 64px;
     position: relative;
     flex: 0 0 auto;
@@ -330,7 +334,7 @@
   
   .desktop .long-heading-is-what {
     position: relative;
-    width: 768px;
+    width: clamp(300px, 80vw, 768px);
     margin-top: -1.00px;
     font-family: var(--heading-desktop-h3-font-family);
     font-weight: var(--heading-desktop-h3-font-weight);
@@ -344,8 +348,8 @@
   .desktop .slider-arrow {
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px;
+    gap: clamp(6px, 0.8vw, 8px);
+    padding: clamp(8px, 1vw, 12px);
     background-color: #ffffff;
     border-radius: 50px;
     border: 1px solid;
@@ -359,8 +363,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px;
+    gap: clamp(6px, 0.8vw, 8px);
+    padding: clamp(8px, 1vw, 12px);
     position: relative;
     flex: 0 0 auto;
     background-color: #ffffff;
@@ -373,7 +377,7 @@
     width: 100%;
     max-width: 100%;
     align-items: flex-start;
-    gap: 40px;
+    gap: clamp(24px, 3vw, 40px);
     display: flex;
     position: relative;
     flex: 0 0 auto;
@@ -384,10 +388,10 @@
   .desktop .section-title-wrapper {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     align-items: flex-start;
-    gap: 32px;
-    padding: 16px;
+    gap: clamp(20px, 2.5vw, 32px);
+    padding: clamp(12px, 1.5vw, 16px);
     position: relative;
     background-color: var(--blueblue-50);
     border-radius: 16px;
@@ -397,7 +401,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -415,7 +419,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -449,10 +453,10 @@
   .desktop .div-wrapper {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     align-items: flex-start;
-    gap: 32px;
-    padding: 16px;
+    gap: clamp(20px, 2.5vw, 32px);
+    padding: clamp(12px, 1.5vw, 16px);
     position: relative;
     margin-right: -24.00px;
     background-color: var(--blueblue-50);
@@ -462,10 +466,10 @@
   .desktop .content-2 {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     align-items: flex-start;
-    gap: 32px;
-    padding: 16px;
+    gap: clamp(20px, 2.5vw, 32px);
+    padding: clamp(12px, 1.5vw, 16px);
     position: relative;
     margin-right: -384.00px;
     background-color: var(--blueblue-50);
@@ -483,8 +487,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 80px;
-    padding: 112px 64px;
+    gap: clamp(40px, 6vw, 80px);
+    padding: clamp(60px, 8vw, 112px) clamp(20px, 4vw, 64px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -495,8 +499,8 @@
   }
   
   .desktop .section-title {
-    width: 768px;
-    gap: 16px;
+    width: clamp(300px, 80vw, 768px);
+    gap: clamp(12px, 1.5vw, 16px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -523,9 +527,9 @@
     position: relative;
     font-family: "Roboto", Helvetica;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     letter-spacing: 0;
-    line-height: 27px;
+    line-height: clamp(22px, 2vw, 27px);
   }
   
   .desktop .row-2 {
@@ -543,11 +547,11 @@
   .desktop .team-member-wrapper {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 490px;
     align-items: center;
     justify-content: space-around;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
   }
   
@@ -556,7 +560,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 16px 0px;
+    padding: clamp(16px, 2vw, 20px) clamp(12px, 1.5vw, 16px) 0px;
     position: relative;
     flex: 1;
     align-self: stretch;
@@ -570,7 +574,7 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -597,7 +601,7 @@
   
   .desktop .team-member-image {
     position: relative;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 335px;
     margin-left: -16.00px;
     margin-right: -16.00px;
@@ -607,11 +611,11 @@
   .desktop .column-2 {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 442px;
     align-items: center;
     justify-content: space-around;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
   }
   
@@ -621,7 +625,7 @@
     height: 442px;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 16px 0px;
+    padding: clamp(12px, 1.5vw, 16px) clamp(12px, 1.5vw, 16px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -652,7 +656,7 @@
   
   .desktop .image-2 {
     position: relative;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 343px;
     margin-left: -16.00px;
     margin-right: -16.00px;
@@ -666,7 +670,7 @@
     height: 442px;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 16px 0px;
+    padding: clamp(12px, 1.5vw, 16px) clamp(12px, 1.5vw, 16px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -683,7 +687,7 @@
   
   .desktop .image-3 {
     position: relative;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 343px;
     margin-left: -16.00px;
     margin-right: -16.00px;
@@ -693,11 +697,11 @@
   .desktop .column-3 {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: clamp(280px, 25vw, 320px);
     height: 442px;
     align-items: center;
     justify-content: space-around;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     margin-right: -48.00px;
   }
@@ -720,7 +724,7 @@
   .desktop .content-3 {
     display: flex;
     align-items: flex-start;
-    gap: 80px;
+    gap: clamp(40px, 6vw, 80px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -731,7 +735,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     flex: 1;
     flex-grow: 1;
@@ -740,8 +744,8 @@
   .desktop .visit-us-heading {
     font-weight: 700;
     color: #000000;
-    font-size: 40px;
-    line-height: 48.0px;
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: clamp(28px, 3.5vw, 48px);
     position: relative;
     align-self: stretch;
     margin-top: -1.00px;
@@ -752,8 +756,8 @@
   .desktop .visit-us-text {
     font-weight: 400;
     color: #525252;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: clamp(22px, 2vw, 27px);
     position: relative;
     align-self: stretch;
     margin-top: -1.00px;
@@ -776,7 +780,7 @@
     width: 100%;
     max-width: 100%;
     align-items: center;
-    gap: 80px;
+    gap: clamp(40px, 6vw, 80px);
     padding: 112px 64px;
     position: relative;
     flex: 0 0 auto;
@@ -786,9 +790,9 @@
   
   .desktop .container-2 {
     flex-direction: column;
-    max-width: 1280px;
+    max-width: clamp(300px, 95vw, 1280px);
     align-items: flex-start;
-    gap: 80px;
+    gap: clamp(40px, 6vw, 80px);
     display: flex;
     position: relative;
     width: 100%;
@@ -796,8 +800,8 @@
   }
   
   .desktop .section-title-2 {
-    max-width: 768px;
-    gap: 24px;
+    max-width: clamp(300px, 80vw, 768px);
+    gap: clamp(16px, 2vw, 24px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -835,7 +839,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: clamp(20px, 2.5vw, 32px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -845,7 +849,7 @@
   .desktop .content-4 {
     display: inline-flex;
     align-items: flex-start;
-    gap: 32px;
+    gap: clamp(20px, 2.5vw, 32px);
     position: relative;
     flex: 0 0 auto;
     width: 100%;
@@ -856,9 +860,9 @@
   .desktop .column-5 {
     display: flex;
     flex-direction: column;
-    width: 608px;
+    width: clamp(300px, 60vw, 608px);
     align-items: flex-start;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     padding: 32px;
     position: relative;
     background-color: #ffffff;
@@ -876,7 +880,7 @@
   .desktop .avatar {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -954,7 +958,7 @@
   
   .desktop .slider-dots {
     align-items: flex-start;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     display: inline-flex;
     position: relative;
     flex: 0 0 auto;
@@ -982,42 +986,38 @@
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    align-items: flex-start;
-    gap: 80px;
-    padding: 64px;
+    align-items: center;
+    gap: 0;
+    padding: clamp(40px, 5vw, 80px) clamp(15px, 2vw, 40px);
     position: relative;
     flex: 0 0 auto;
-    background-color: #ffffff;
+    background-color: #0d3b45;
+    color: #ffffff;
     box-sizing: border-box;
   }
   
-  .desktop .container-3 {
-    align-items: flex-start;
-    gap: 80px;
-    padding: 64px;
-    align-self: stretch;
-    background-color: #29424c;
-    border-radius: 20px;
-    display: flex;
-    position: relative;
-    width: 100%;
-    flex: 0 0 auto;
-  }
+  /* Container-3 styles removed as layout changed to single column */
   
   .desktop .content-5 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: clamp(20px, 2.5vw, 32px);
     position: relative;
     flex: 1;
-    flex-grow: 1;
+    width: clamp(300px, 90vw, 800px);
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: clamp(20px, 3vw, 40px);
+    box-sizing: border-box;
   }
   
   .desktop .heading-2 {
     align-self: stretch;
     font-weight: var(--heading-desktop-h2-font-weight);
-    color: #ffffff;
+    color: #333333;
     font-size: var(--heading-desktop-h2-font-size);
     line-height: var(--heading-desktop-h2-line-height);
     position: relative;
@@ -1030,10 +1030,10 @@
   .desktop .text-2 {
     font-family: "Roboto", Helvetica;
     font-weight: 400;
-    color: #ffffff;
-    font-size: 18px;
+    color: #666666;
+    font-size: clamp(16px, 1.5vw, 18px);
     letter-spacing: 0;
-    line-height: 27px;
+    line-height: clamp(22px, 2vw, 27px);
     position: relative;
     align-self: stretch;
   }
@@ -1042,7 +1042,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1067,8 +1067,8 @@
   .desktop .text-input {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px;
+    gap: clamp(6px, 0.8vw, 8px);
+    padding: clamp(8px, 1vw, 12px);
     width: 100%;
     flex: 0 0 auto;
     margin-bottom: -1.00px;
@@ -1097,7 +1097,7 @@
     display: flex;
     height: 182px;
     align-items: flex-start;
-    padding: 12px;
+    padding: clamp(8px, 1vw, 12px);
     width: 100%;
     margin-bottom: -1.00px;
     margin-left: -1.00px;
@@ -1141,8 +1141,8 @@
   .desktop .checkbox {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 0px 0px 16px;
+    gap: clamp(6px, 0.8vw, 8px);
+    padding: 0px 0px clamp(12px, 1.5vw, 16px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -1180,7 +1180,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     padding: 12px 24px;
     position: relative;
     flex: 0 0 auto;
@@ -1207,11 +1207,12 @@
   
   .desktop .image-6 {
     position: relative;
-    flex: 1;
-    align-self: stretch;
-    flex-grow: 1;
-    border-radius: 16px;
-    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    margin-top: clamp(15px, 2vw, 20px);
+    border-radius: 10px;
+    border: 0;
+    box-sizing: border-box;
   }
   
   .desktop .footer {
@@ -1220,8 +1221,8 @@
     width: 100%;
     max-width: 100%;
     align-items: center;
-    gap: 80px;
-    padding: 80px 64px;
+    gap: clamp(40px, 6vw, 80px);
+    padding: clamp(50px, 6vw, 80px) clamp(20px, 4vw, 64px);
     position: relative;
     flex: 0 0 auto;
     background-color: var(--blueblue-50);
@@ -1241,20 +1242,20 @@
   .desktop .newsletter {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: clamp(300px, 50vw, 500px);
     align-items: flex-start;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     margin-bottom: -6.00px;
   }
   
   .desktop .heading-3 {
     width: 100%;
-    max-width: 702px;
+    max-width: clamp(300px, 80vw, 702px);
     font-weight: 400;
     color: var(--blueblue-500);
-    font-size: 56px;
-    line-height: 56px;
+    font-size: clamp(28px, 4vw, 56px);
+    line-height: clamp(32px, 4.5vw, 56px);
     position: relative;
     margin-top: -1.00px;
     font-family: "Roboto", Helvetica;
@@ -1277,7 +1278,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: clamp(8px, 1vw, 12px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1285,7 +1286,7 @@
   }
   
   .desktop .form {
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -1295,7 +1296,7 @@
   }
   
   .desktop .placeholder {
-    padding: 12px;
+    padding: clamp(8px, 1vw, 12px);
     position: relative;
     flex-grow: 1;
     margin-top: -1.00px;
@@ -1321,7 +1322,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: clamp(6px, 0.8vw, 8px);
     padding: 12px 24px;
     position: relative;
     flex: 0 0 auto;
@@ -1370,9 +1371,9 @@
   
   .desktop .links {
     display: flex;
-    width: 499px;
+    width: clamp(300px, 50vw, 499px);
     align-items: flex-start;
-    gap: 40px;
+    gap: clamp(24px, 3vw, 40px);
     position: relative;
   }
   
@@ -1380,7 +1381,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: clamp(12px, 1.5vw, 16px);
     position: relative;
     flex: 1;
     flex-grow: 1;
@@ -1399,7 +1400,7 @@
   .desktop .footer-link-wrapper {
     display: flex;
     align-items: flex-start;
-    padding: 8px 0px;
+    padding: clamp(6px, 0.8vw, 8px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1422,8 +1423,8 @@
   .desktop .link-2 {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 8px 0px;
+    gap: clamp(8px, 1vw, 12px);
+    padding: clamp(6px, 0.8vw, 8px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1479,7 +1480,7 @@
   .desktop .footer-links {
     display: inline-flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: clamp(16px, 2vw, 24px);
     position: relative;
     flex: 0 0 auto;
   }
@@ -1526,7 +1527,7 @@
     line-height: 24px;
     background: transparent;
     border: none;
-    padding: 12px;
+    padding: clamp(8px, 1vw, 12px);
     border-radius: 100px;
     border: 1px solid #ffffff;
   }
@@ -1595,7 +1596,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: clamp(3px, 0.4vw, 4px);
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1645,7 +1646,7 @@
   .desktop .footer-link-wrapper {
     display: flex;
     align-items: flex-start;
-    padding: 8px 0px;
+    padding: clamp(6px, 0.8vw, 8px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1655,8 +1656,8 @@
   .desktop .link-2 {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 8px 0px;
+    gap: clamp(8px, 1vw, 12px);
+    padding: clamp(6px, 0.8vw, 8px) 0px;
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -1699,5 +1700,121 @@
   .desktop .social-text:focus {
     outline: 2px solid #4a90e2;
     outline-offset: 2px;
+  }
+
+  /* Contact Form Styles */
+  .desktop .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .desktop .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 0.8vw, 10px);
+    margin-bottom: clamp(16px, 2vw, 24px);
+  }
+
+  .desktop .form-label {
+    color: #333333;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.5;
+  }
+
+  .desktop .required {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+
+  .desktop .form-input,
+  .desktop .form-textarea {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #3498db;
+    border-radius: 6px;
+    padding: clamp(8px, 1vw, 12px);
+    margin-bottom: clamp(12px, 1.5vw, 18px);
+    font-family: "Roboto", Helvetica;
+    font-size: clamp(14px, 1.2vw, 16px);
+    background-color: #ffffff;
+    color: #333333;
+    box-sizing: border-box;
+  }
+
+  .desktop .form-input:focus,
+  .desktop .form-textarea:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+
+  .desktop .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .desktop .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1vw, 12px);
+    margin-top: clamp(6px, 0.8vw, 10px);
+  }
+
+  .desktop .radio-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 0.8vw, 8px);
+  }
+
+  .desktop .radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #3498db;
+  }
+
+  .desktop .radio-item label {
+    color: #333333;
+    font-family: "Roboto", Helvetica;
+    font-size: clamp(14px, 1.2vw, 16px);
+    cursor: pointer;
+  }
+
+  .desktop .submit-button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: clamp(8px, 1vw, 10px) clamp(25px, 2.5vw, 30px);
+    font-family: "Roboto", Helvetica;
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+  }
+
+  .desktop .submit-button:hover {
+    background-color: #2980b9;
+  }
+
+  .desktop .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+  }
+
+  /* Responsive Design for Contact Section */
+  @media (max-width: 768px) {
+    .desktop .image-6 {
+      height: clamp(250px, 40vw, 350px);
+    }
+
+    .desktop .form-input,
+    .desktop .form-textarea {
+      font-size: 16px; /* 防止iOS缩放 */
+    }
   }
   

@@ -24,6 +24,10 @@ img {
   display: block;
   height: auto;
 }
+iframe {
+  max-width: 100%;
+  display: block;
+}
 /* a blue color as a generic focus style */
 button:focus-visible {
   outline: 2px solid #4a90e2 !important;

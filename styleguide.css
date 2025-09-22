@@ -1,63 +1,84 @@
 :root {
-    --blueblue-500: rgba(97, 157, 181, 1);
-    --blueblue-700: rgba(69, 111, 129, 1);
-    --graysgray-2: rgba(174, 174, 178, 1);
-    --blueblue-50: rgba(239, 245, 248, 1);
-    --blueblue-100: rgba(206, 225, 232, 1);
-    --graysgray: rgba(142, 142, 147, 1);
-    --text-medium-normal-font-family: "Roboto", Helvetica;
-    --text-medium-normal-font-weight: 400;
-    --text-medium-normal-font-size: 18px;
-    --text-medium-normal-letter-spacing: 0px;
-    --text-medium-normal-line-height: 150%;
-    --text-medium-normal-font-style: normal;
+    /* 统一管理样式：所有颜色和文字样式都集中写在这里。
+方便维护：比如要改全站的标题字体，只需要改这里的变量，不用满页面找。 */
+    /*  颜色变量 */
+
+    --blueblue-500: rgba(97, 157, 181, 1);     /* 主色：蓝色（中等） */
+    --blueblue-700: rgba(69, 111, 129, 1);     /* 主色：深蓝 */
+    --graysgray-2: rgba(174, 174, 178, 1);     /* 灰色（浅） */
+    --blueblue-50: rgba(239, 245, 248, 1);     /* 蓝色（极浅，常用于背景） */
+    --blueblue-100: rgba(206, 225, 232, 1);    /* 蓝色（较浅） */
+    --graysgray: rgba(142, 142, 147, 1);       /* 灰色（中） */
+
+    /*  中号文字样式（正文） */
+    --text-medium-normal-font-family: "Roboto", Helvetica; /* 字体 */
+    --text-medium-normal-font-weight: 400;   /* 字重：正常 */
+    --text-medium-normal-font-size: 18px;    /* 字号：18px */
+    --text-medium-normal-letter-spacing: 0px;/* 字间距 */
+    --text-medium-normal-line-height: 150%;  /* 行高：150% */
+    --text-medium-normal-font-style: normal; /* 字体样式：正常 */
+
+    /*  H3 标题（桌面端） */
     --heading-desktop-h3-font-family: "Roboto", Helvetica;
-    --heading-desktop-h3-font-weight: 700;
-    --heading-desktop-h3-font-size: 40px;
+    --heading-desktop-h3-font-weight: 700;   /* 粗体 */
+    --heading-desktop-h3-font-size: 40px;    /* 标题字号 */
     --heading-desktop-h3-letter-spacing: 0px;
-    --heading-desktop-h3-line-height: 120.00000762939453%;
+    --heading-desktop-h3-line-height: 120%;  /* 行高略紧凑 */
     --heading-desktop-h3-font-style: normal;
+
+    /*  H5 标题（桌面端） */
     --heading-desktop-h5-font-family: "Roboto", Helvetica;
     --heading-desktop-h5-font-weight: 700;
     --heading-desktop-h5-font-size: 24px;
     --heading-desktop-h5-letter-spacing: 0px;
     --heading-desktop-h5-line-height: 140%;
     --heading-desktop-h5-font-style: normal;
+
+    /*  正文（普通大小） */
     --text-regular-normal-font-family: "Roboto", Helvetica;
     --text-regular-normal-font-weight: 400;
     --text-regular-normal-font-size: 16px;
     --text-regular-normal-letter-spacing: 0px;
     --text-regular-normal-line-height: 150%;
     --text-regular-normal-font-style: normal;
+
+    /*  H2 标题（桌面端） */
     --heading-desktop-h2-font-family: "Roboto", Helvetica;
     --heading-desktop-h2-font-weight: 700;
     --heading-desktop-h2-font-size: 48px;
     --heading-desktop-h2-letter-spacing: 0px;
-    --heading-desktop-h2-line-height: 120.00000762939453%;
+    --heading-desktop-h2-line-height: 120%;
     --heading-desktop-h2-font-style: normal;
+
+    /*  H2 标题（通用） */
     --heading-h2-font-family: "Roboto", Helvetica;
     --heading-h2-font-weight: 700;
     --heading-h2-font-size: 48px;
     --heading-h2-letter-spacing: 0px;
-    --heading-h2-line-height: 120.00000762939453%;
+    --heading-h2-line-height: 120%;
     --heading-h2-font-style: normal;
+
+    /*  正文（加粗） */
     --text-regular-semi-bold-font-family: "Roboto", Helvetica;
-    --text-regular-semi-bold-font-weight: 600;
+    --text-regular-semi-bold-font-weight: 600;  /* 半粗 */
     --text-regular-semi-bold-font-size: 16px;
     --text-regular-semi-bold-letter-spacing: 0px;
     --text-regular-semi-bold-line-height: 150%;
     --text-regular-semi-bold-font-style: normal;
+
+    /*  小号文字（普通） */
     --text-small-normal-font-family: "Roboto", Helvetica;
     --text-small-normal-font-weight: 400;
     --text-small-normal-font-size: 14px;
     --text-small-normal-letter-spacing: 0px;
     --text-small-normal-line-height: 150%;
     --text-small-normal-font-style: normal;
+
+    /*  小号文字（链接样式） */
     --text-small-link-font-family: "Roboto", Helvetica;
     --text-small-link-font-weight: 400;
     --text-small-link-font-size: 14px;
     --text-small-link-letter-spacing: 0px;
     --text-small-link-line-height: 150%;
     --text-small-link-font-style: normal;
-  }
-  
+}

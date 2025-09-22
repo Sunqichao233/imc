@@ -243,57 +243,93 @@
         </div>
       </section>
       <section class="contact" id="contact" aria-labelledby="contact-heading">
-        <div class="container-3">
           <div class="content-5">
             <div class="div-6">
               <div class="div-5">
                 <h2 class="heading-2" id="contact-heading">お問い合わせ</h2>
                 <p class="text-2">
-                  ご質問やお問い合わせがございましたら、お気軽にご連絡ください。<br />
-                  <strong>所在地：</strong>東京都港区赤坂1-1-1<br />
-                  <strong>電話番号：</strong>03-1234-5678<br />
-                  <strong>メール：</strong>info@imc-medical.jp
+                  当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。<br />
+                  尚、<span style="color: #e74c3c;">※</span>は必須項目となります。
                 </p>
               </div>
             </div>
-            <form class="div-5" novalidate>
-              <div class="input">
-                <label for="name" class="sr-only">Name</label>
-                <input class="div-8" id="name" name="name" placeholder="Name" type="text" required />
-                <div class="text-input"></div>
-              </div>
-              <div class="input">
-                <label for="email" class="sr-only">Email</label>
-                <input class="div-8" id="email" name="email" placeholder="Email" type="email" required />
-                <div class="text-input"></div>
-              </div>
-              <div class="input">
-                <label for="message" class="text-wrapper-5">Message</label>
-                <div class="text-area">
-                  <textarea
-                    id="message"
-                    name="message"
-                    class="text-wrapper-6"
-                    placeholder="Type your message..."
-                    rows="6"
-                    required
-                  ></textarea>
-                  <img class="line" src="https://c.animaapp.com/mfudvd8uZxTZps/img/line-1.svg" alt="" />
-                  <img class="line-2" src="https://c.animaapp.com/mfudvd8uZxTZps/img/line-2.svg" alt="" />
+            <form class="contact-form" novalidate>
+              <!-- 問い合わせ項目 -->
+              <div class="form-group">
+                <label class="form-label">問い合わせ項目 <span class="required">*</span></label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input type="radio" id="inquiry-general" name="inquiry-type" value="general" required />
+                    <label for="inquiry-general">一般の方からのお問い合わせ</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="inquiry-medical" name="inquiry-type" value="medical" required />
+                    <label for="inquiry-medical">医療関係者からのお問い合わせ</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="inquiry-other" name="inquiry-type" value="other" required />
+                    <label for="inquiry-other">その他のお問い合わせ</label>
+                  </div>
                 </div>
               </div>
-              <div class="checkbox">
-                <input type="checkbox" id="terms" name="terms" class="checkbox-2" required />
-                <label for="terms" class="label">利用規約に同意します</label>
+
+              <!-- 姓 -->
+              <div class="form-group">
+                <label for="last-name" class="form-label">姓 <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last-name" class="form-input" required />
               </div>
-              <button class="button-3" type="submit"><span class="button-4">送信</span></button>
+
+              <!-- 名 -->
+              <div class="form-group">
+                <label for="first-name" class="form-label">名 <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first-name" class="form-input" required />
+              </div>
+
+              <!-- メールアドレス -->
+              <div class="form-group">
+                <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" required />
+              </div>
+
+              <!-- 電話番号 -->
+              <div class="form-group">
+                <label for="phone" class="form-label">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="form-input" />
+              </div>
+
+              <!-- 会社名 -->
+              <div class="form-group">
+                <label for="company" class="form-label">会社名</label>
+                <input type="text" id="company" name="company" class="form-input" />
+              </div>
+
+              <!-- 役職名 -->
+              <div class="form-group">
+                <label for="position" class="form-label">役職名</label>
+                <input type="text" id="position" name="position" class="form-input" />
+              </div>
+
+              <!-- お問い合わせ内容 -->
+              <div class="form-group">
+                <label for="message" class="form-label">お問い合わせ内容</label>
+                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+              </div>
+
+              <button type="submit" class="submit-button">送信</button>
             </form>
+            
+            <iframe 
+              class="image-6"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7323058559923!2d139.7358904902482!3d35.68359289353129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c64aab00001%3A0x875f36adbb4e7e1a!2zSU1D5Zu96Zqb5Yy755mC5Lqk5rWB5o6o6YCy5qmf5qeL!5e0!3m2!1szh-CN!2sjp!4v1758505286510!5m2!1szh-CN!2sjp" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="IMC国際医療 所在地マップ">
+            </iframe>
           </div>
-          <img
-            class="image-6"
-            src="https://c.animaapp.com/mfudvd8uZxTZps/img/image-4.png"
-            alt="IMC国際医療 所在地マップ"
-          />
         </div>
       </section>
       <footer class="footer">
@@ -342,31 +378,6 @@
                   <li class="footer-link-wrapper"><a href="#" class="footer-link">国際交流事業</a></li>
                   <li class="footer-link-wrapper"><a href="#" class="footer-link">教育研修</a></li>
                   <li class="footer-link-wrapper"><a href="#releases" class="footer-link">最新情報</a></li>
-                </ul>
-              </div>
-              <div class="column-6">
-                <h3 class="text-wrapper-4">フォローする</h3>
-                <ul class="div-9">
-                  <li class="link-2">
-                    <img class="img" src="https://c.animaapp.com/mfudvd8uZxTZps/img/social-icon-3.svg" alt="" />
-                    <a href="#" class="social-text">Facebook</a>
-                  </li>
-                  <li class="link-2">
-                    <img class="img" src="https://c.animaapp.com/mfudvd8uZxTZps/img/social-icon-2.svg" alt="" />
-                    <a href="#" class="social-text">Instagram</a>
-                  </li>
-                  <li class="link-2">
-                    <img class="img" src="https://c.animaapp.com/mfudvd8uZxTZps/img/social-icon-1.svg" alt="" />
-                    <a href="#" class="social-text">X</a>
-                  </li>
-                  <li class="link-2">
-                    <img class="img" src="https://c.animaapp.com/mfudvd8uZxTZps/img/social-icon-4.svg" alt="" />
-                    <a href="#" class="social-text">LinkedIn</a>
-                  </li>
-                  <li class="link-2">
-                    <img class="img" src="https://c.animaapp.com/mfudvd8uZxTZps/img/social-icon.svg" alt="" />
-                    <a href="#" class="social-text">Youtube</a>
-                  </li>
                 </ul>
               </div>
             </nav>
