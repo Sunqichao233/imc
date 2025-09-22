@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="desktop">
+    <main class="desktop" id="top">
       <section class="image">
         <div class="hero-section">
           <header class="hero-content">
@@ -41,9 +41,17 @@
           <div class="container">
             <div class="content">
               <div class="company-logo">
-                <div class="logo-wide" style="display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: 20px;">
-                  IMC国際医療
-                </div>
+                <a href="#top" class="logo-link">
+                  <img 
+                    fetchpriority="high" 
+                    sizes="312px" 
+                    src="image.png" 
+                    alt="IMC国際医療ロゴ" 
+                    style="object-fit:cover" 
+                    class="logo-image" 
+                    width="312" 
+                    height="49">
+                </a>
               </div>
             </div>
             <div class="column">
@@ -52,7 +60,7 @@
               <a href="#brand-story" class="link"><span class="link-text">ブランドストーリー</span></a>
               <a href="#founder" class="link"><span class="link-text">創業者紹介（夏）</span></a>
               <a href="#releases" class="link"><span class="link-text">リリース</span></a>
-
+              <a href="#contact" class="link"><span class="link-text">お問い合わせ</span></a>
             </div>
             <div class="actions">
               <a href="#contact" class="button-2" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
@@ -62,9 +70,9 @@
           </div>
         </nav>
       </section>
-      <section class="div-3" id="releases" aria-labelledby="releases-heading">
+      <section class="div-3" id="organization" aria-labelledby="organization-heading">
         <div class="section-header">
-          <h2 class="long-heading-is-what" id="releases-heading">一般社団法人 国際医療交流推進機構</h2>
+          <h2 class="long-heading-is-what" id="organization-heading">一般社団法人 国際医療交流推進機構</h2>
         </div>
         <div class="section-cards">
           <div class="card">
@@ -122,46 +130,35 @@
             </div>
         </div>
       </section>
-      <section class="div-3" id="releases" aria-labelledby="releases-heading">
+      <section class="div-3" id="imcs" aria-labelledby="imcs-heading">
         <div class="section-header">
           <div class="section-content">
-            <h2 class="long-heading-is-what" id="releases-heading">IMCS株式会社</h2>
+            <h2 class="long-heading-is-what" id="imcs-heading">IMCS株式会社</h2>
             <p class="text-body">
               IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。
             </p>
           </div>
         </div>
-        <div class="row-2">
-          <article class="team-member-wrapper">
-            <div class="team-member">
-              <div class="team-member-info">
-                <h3 class="medium-length-3">医療コンサルティング</h3>
-              </div>
-              <div style="padding: 20px; color: #000; text-align: center;">
-                <p>海外医療機関との提携支援</p>
-              </div>
-            </div>
-          </article>
-          <article class="column-2">
-            <div class="team-member-2">
-              <div class="team-member-info">
-                <h3 class="medium-length-4">国際交流事業</h3>
-              </div>
-              <div style="padding: 20px; color: #000; text-align: center;">
-                <p>医療技術交流プログラム</p>
-              </div>
-            </div>
-          </article>
-          <article class="column-2">
-            <div class="team-member-3">
-              <div class="team-member-info">
-                <h3 class="medium-length-4">教育研修</h3>
-              </div>
-              <div style="padding: 20px; color: #000; text-align: center;">
-                <p>医療従事者向け研修プログラム</p>
-              </div>
-            </div>
-          </article>
+        <!-- IMCS详细业务内容 -->
+        <div class="section-cards">
+          <div class="card">
+            <h3>会社概要</h3>
+            <p>資格などを含む</p>
+          </div>
+          
+          <div class="card">
+            <h3>業務内容</h3>
+            <p><strong>先端的な健康診断：</strong>健康管理を含む</p>
+            <p><strong>日本渡航治療：</strong>遠隔診療を含む</p>
+            <p><strong>再生医療</strong></p>
+            <p><strong>不妊治療：</strong>外国人の日本渡航治療、外国人&日本人の台湾渡航治療</p>
+            <p><strong>渡航治療治療流れ</strong></p>
+          </div>
+          
+          <div class="card">
+            <h3>資源展示</h3>
+            <p><strong>日本病院/医師</strong> → 同社団</p>
+          </div>
         </div>
       </section>
       <section class="div-3" id="brand-story" aria-labelledby="brand-story-heading">
@@ -266,16 +263,20 @@
         </div>
       </section>
       <section class="contact" id="contact" aria-labelledby="contact-heading">
-          <div class="content-5">
-            <div class="div-6">
-              <div class="div-5">
-                <h2 class="heading-2" id="contact-heading">お問い合わせ</h2>
+          <div class="contact-container">
+            <!-- 标题部分 -->
+            <div class="contact-header">
+              <h2 class="heading-2" id="contact-heading">お問い合わせ</h2>
                 <p class="text-2">
-                  当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。<br />
-                  尚、<span style="color: #e74c3c;">※</span>は必須項目となります。
-                </p>
-              </div>
+                当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。<br />
+                尚、<span style="color: #e74c3c;">※</span>は必須項目となります。
+              </p>
             </div>
+            
+            <!-- 表单和地图并排布局 -->
+            <div class="contact-content">
+              <!-- 表单部分 -->
+              <div class="form-section">
             <form class="contact-form" novalidate>
               <!-- 問い合わせ項目 -->
               <div class="form-group">
@@ -296,17 +297,17 @@
                 </div>
               </div>
 
-              <!-- 姓 -->
-              <div class="form-group">
-                <label for="last-name" class="form-label">姓 <span class="required">*</span></label>
-                <input type="text" id="last-name" name="last-name" class="form-input" required />
+              <!-- 姓名并排 -->
+              <div class="form-row">
+                <div class="form-group half-width">
+                  <label for="last-name" class="form-label">姓 <span class="required">*</span></label>
+                  <input type="text" id="last-name" name="last-name" class="form-input" required />
+                </div>
+                <div class="form-group half-width">
+                  <label for="first-name" class="form-label">名 <span class="required">*</span></label>
+                  <input type="text" id="first-name" name="first-name" class="form-input" required />
               </div>
-
-              <!-- 名 -->
-              <div class="form-group">
-                <label for="first-name" class="form-label">名 <span class="required">*</span></label>
-                <input type="text" id="first-name" name="first-name" class="form-input" required />
-              </div>
+            </div>
 
               <!-- メールアドレス -->
               <div class="form-group">
@@ -320,16 +321,16 @@
                 <input type="tel" id="phone" name="phone" class="form-input" />
               </div>
 
-              <!-- 会社名 -->
-              <div class="form-group">
-                <label for="company" class="form-label">会社名</label>
-                <input type="text" id="company" name="company" class="form-input" />
+              <!-- 会社名と役職名并排 -->
+              <div class="form-row">
+                <div class="form-group half-width">
+                  <label for="company" class="form-label">会社名</label>
+                  <input type="text" id="company" name="company" class="form-input" />
                 </div>
-
-              <!-- 役職名 -->
-              <div class="form-group">
-                <label for="position" class="form-label">役職名</label>
-                <input type="text" id="position" name="position" class="form-input" />
+                <div class="form-group half-width">
+                  <label for="position" class="form-label">役職名</label>
+                  <input type="text" id="position" name="position" class="form-input" />
+                </div>
               </div>
 
               <!-- お問い合わせ内容 -->
@@ -338,20 +339,25 @@
                 <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
               </div>
 
-              <button type="submit" class="submit-button">送信</button>
+                <button type="submit" class="submit-button">送信</button>
             </form>
-            
-            <iframe 
-              class="image-6"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7323058559923!2d139.7358904902482!3d35.68359289353129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c64aab00001%3A0x875f36adbb4e7e1a!2zSU1D5Zu96Zqb5Yy755mC5Lqk5rWB5o6o6YCy5qmf5qeL!5e0!3m2!1szh-CN!2sjp!4v1758505286510!5m2!1szh-CN!2sjp" 
-              width="600" 
-              height="450" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="IMC国際医療 所在地マップ">
-            </iframe>
+              </div>
+              
+              <!-- 地图部分 -->
+              <div class="map-section">
+                <iframe 
+                  class="contact-map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7323058559923!2d139.7358904902482!3d35.68359289353129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c64aab00001%3A0x875f36adbb4e7e1a!2zSU1D5Zu96Zqb5Yy755mC5Lqk5rWB5o6o6YCy5qmf5qeL!5e0!3m2!1szh-CN!2sjp!4v1758505286510!5m2!1szh-CN!2sjp" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="IMC国際医療 所在地マップ">
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -397,9 +403,9 @@
               <div class="column-6">
                 <h3 class="text-wrapper-4">サービス</h3>
                 <ul class="div-9">
-                  <li class="footer-link-wrapper"><a href="#" class="footer-link">医療コンサルティング</a></li>
-                  <li class="footer-link-wrapper"><a href="#" class="footer-link">国際交流事業</a></li>
-                  <li class="footer-link-wrapper"><a href="#" class="footer-link">教育研修</a></li>
+                  <li class="footer-link-wrapper"><a href="#imcs" class="footer-link">医療コンサルティング</a></li>
+                  <li class="footer-link-wrapper"><a href="#organization" class="footer-link">国際交流事業</a></li>
+                  <li class="footer-link-wrapper"><a href="#organization" class="footer-link">教育研修</a></li>
                   <li class="footer-link-wrapper"><a href="#releases" class="footer-link">最新情報</a></li>
                 </ul>
               </div>
