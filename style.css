@@ -1912,11 +1912,9 @@
   }
 
   .desktop .org-tab-button.active {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.05));
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(52, 152, 219, 0.08));
     color: var(--text-primary, #2c3e50);
     font-weight: 600;
-    border-left: 4px solid var(--primary-blue, #3498db);
-    padding-left: clamp(8px, 1vw, 12px);
   }
 
   .desktop .org-content-card {
