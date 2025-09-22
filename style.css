@@ -1998,6 +1998,45 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* Language Switcher Styles */
+  .desktop .language-switcher {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 4px;
+    gap: 2px;
+    margin-right: clamp(12px, 1.5vw, 16px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .desktop .lang-btn {
+    padding: clamp(6px, 0.8vw, 8px) clamp(12px, 1.5vw, 16px);
+    border: none;
+    background: transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: var(--text-secondary, #525252);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .desktop .lang-btn:hover {
+    color: var(--text-primary, #2c3e50);
+    transform: translateY(-1px);
+  }
+
+  .desktop .lang-btn.active {
+    background: var(--primary-blue, #3498db);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+  }
+
   /* Responsive Design for Organization Section */
   @media (max-width: 768px) {
     .desktop .org-tab-container {
@@ -2029,6 +2068,19 @@
     .desktop .org-tab-button {
       text-align: center;
       font-size: clamp(12px, 1.2vw, 14px);
+    }
+    
+    .desktop .language-switcher {
+      order: -1;
+      margin-right: 0;
+      margin-bottom: clamp(12px, 1.5vw, 16px);
+      justify-content: center;
+    }
+    
+    .desktop .actions {
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(12px, 1.5vw, 16px);
     }
   }
 

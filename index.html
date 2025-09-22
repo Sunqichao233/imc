@@ -3,10 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <title>IMC国際医療 - 国際医療交流推進機構</title>
+    <title data-i18n="page-title">IMC国際医療 - 国際医療交流推進機構</title>
     <meta
       name="description"
       content="IMC国際医療 - 一般社団法人国際医療交流推進機構とIMCS株式会社のオフィシャルサイト"
+      data-i18n-content="page-description"
     />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
@@ -19,21 +20,21 @@
           <header class="hero-content">
             <div class="hero-headline">
               <h1 class="medium-length-hero">
-                <span class="text-wrapper">国際医療交流の</span> <span class="span">架け橋</span>
+                <span class="text-wrapper" data-i18n="hero-title-1">国際医療交流の</span> <span class="span" data-i18n="hero-title-2">架け橋</span>
               </h1>
-              <div class="div">IMC国際医療</div>
+              <div class="div" data-i18n="hero-company">IMC国際医療</div>
             </div>
-            <div class="medium-length-hero-2">世界をつなぐ医療ネットワーク</div>
+            <div class="medium-length-hero-2" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</div>
           </header>
-          <p class="lorem-ipsum-dolor">
+          <p class="lorem-ipsum-dolor" data-i18n="hero-description">
             IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。
           </p>
           <div class="div-2">
             <a href="#organization" class="button" style="text-decoration: none;">
-              <span class="text-wrapper-2">組織について</span>
+              <span class="text-wrapper-2" data-i18n="hero-btn-about">組織について</span>
             </a>
             <a href="#contact" class="button-wrapper" style="text-decoration: none;">
-              <span class="text-wrapper-2">お問い合わせ</span>
+              <span class="text-wrapper-2" data-i18n="hero-btn-contact">お問い合わせ</span>
             </a>
           </div>
         </div>
@@ -55,16 +56,21 @@
               </div>
             </div>
             <div class="column">
-              <a href="#organization" class="link"><span class="link-text">一般社団法人 国際医療交流推進機構</span></a>
-              <a href="#imcs" class="link"><span class="link-text">IMCS株式会社</span></a>
-              <a href="#brand-story" class="link"><span class="link-text">ブランドストーリー</span></a>
-              <a href="#founder" class="link"><span class="link-text">創業者紹介</span></a>
-              <a href="#releases" class="link"><span class="link-text">リリース</span></a>
-              <a href="#contact" class="link"><span class="link-text">お問い合わせ</span></a>
+              <a href="#organization" class="link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+              <a href="#imcs" class="link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+              <a href="#brand-story" class="link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+              <a href="#founder" class="link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+              <a href="#releases" class="link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
+              <a href="#contact" class="link"><span class="link-text" data-i18n="nav-contact">お問い合わせ</span></a>
             </div>
             <div class="actions">
+              <!-- Language Switcher -->
+              <div class="language-switcher">
+                <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+                <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+              </div>
               <a href="#contact" class="button-2" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
-                <span class="text-wrapper-2">お問い合わせ</span>
+                <span class="text-wrapper-2" data-i18n="hero-btn-contact">お問い合わせ</span>
               </a>
             </div>
           </div>
@@ -72,31 +78,31 @@
       </section>
       <section class="section section--white" id="organization" aria-labelledby="organization-heading">
         <div class="section-header">
-          <h2 class="section-title" id="organization-heading">一般社団法人 国際医療交流推進機構</h2>
+          <h2 class="section-title" id="organization-heading" data-i18n="org-section-title">一般社団法人 国際医療交流推進機構</h2>
         </div>
         <div class="section-content">
           <div class="org-tab-container">
             <!-- 左侧导航 -->
             <div class="org-tab-nav">
-              <h3 class="org-tab-nav-title">組織情報</h3>
+              <h3 class="org-tab-nav-title" data-i18n="org-nav-title">組織情報</h3>
               <ul class="org-tab-list">
                 <li class="org-tab-item">
-                  <button class="org-tab-button active" onclick="showOrgTab('business')">事業内容</button>
+                  <button class="org-tab-button active" onclick="showOrgTab('business')" data-i18n="org-tab-business">事業内容</button>
                 </li>
                 <li class="org-tab-item">
-                  <button class="org-tab-button" onclick="showOrgTab('organization')">組織情報</button>
+                  <button class="org-tab-button" onclick="showOrgTab('organization')" data-i18n="org-tab-organization">組織情報</button>
                 </li>
                 <li class="org-tab-item">
-                  <button class="org-tab-button" onclick="showOrgTab('officers')">役員紹介</button>
+                  <button class="org-tab-button" onclick="showOrgTab('officers')" data-i18n="org-tab-officers">役員紹介</button>
                 </li>
                 <li class="org-tab-item">
-                  <button class="org-tab-button" onclick="showOrgTab('advisor')">顧問紹介</button>
+                  <button class="org-tab-button" onclick="showOrgTab('advisor')" data-i18n="org-tab-advisor">顧問紹介</button>
                 </li>
                 <li class="org-tab-item">
-                  <button class="org-tab-button" onclick="showOrgTab('services')">業務内容</button>
+                  <button class="org-tab-button" onclick="showOrgTab('services')" data-i18n="org-tab-services">業務内容</button>
                 </li>
                 <li class="org-tab-item">
-                  <button class="org-tab-button" onclick="showOrgTab('resources')">資源展示</button>
+                  <button class="org-tab-button" onclick="showOrgTab('resources')" data-i18n="org-tab-resources">資源展示</button>
                 </li>
               </ul>
             </div>
@@ -193,8 +199,8 @@
       </section>
       <section class="section section--light-gray" id="imcs" aria-labelledby="imcs-heading">
         <div class="section-header">
-          <h2 class="section-title" id="imcs-heading">IMCS株式会社</h2>
-          <p class="section-description">
+          <h2 class="section-title" id="imcs-heading" data-i18n="imcs-section-title">IMCS株式会社</h2>
+          <p class="section-description" data-i18n="imcs-description">
             IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。
           </p>
         </div>
@@ -224,7 +230,7 @@
       </section>
       <section class="section section--white" id="brand-story" aria-labelledby="brand-story-heading">
         <div class="section-header">
-          <h2 class="section-title" id="brand-story-heading">会社の歴史・タイムライン</h2>
+          <h2 class="section-title" id="brand-story-heading" data-i18n="brand-story-title">会社の歴史・タイムライン</h2>
         </div>
         <div class="section-content">
         <div class="timeline-item">
@@ -251,8 +257,8 @@
       </section>
       <section class="section section--light-gray" id="founder" aria-labelledby="founder-heading">
         <div class="section-header">
-          <h2 class="section-title" id="founder-heading">創業者紹介</h2>
-          <p class="section-description">国際医療交流推進機構の創業者である夏氏についてご紹介します。</p>
+          <h2 class="section-title" id="founder-heading" data-i18n="founder-section-title">創業者紹介</h2>
+          <p class="section-description" data-i18n="founder-description">国際医療交流推進機構の創業者である夏氏についてご紹介します。</p>
         </div>
         <div class="section-content">
           <div class="founder-card-container">
@@ -290,7 +296,7 @@
       
       <section class="section section--white" id="releases" aria-labelledby="releases-heading">
         <div class="section-header">
-          <h2 class="section-title" id="releases-heading">リリース</h2>
+          <h2 class="section-title" id="releases-heading" data-i18n="releases-section-title">リリース</h2>
         </div>
         <div class="section-content">
           <div class="news-timeline-container">
@@ -330,8 +336,8 @@
       </section>
       <section class="section section--dark-teal" id="contact" aria-labelledby="contact-heading">
         <div class="section-header">
-          <h2 class="section-title" id="contact-heading">お問い合わせ</h2>
-          <p class="section-description">
+          <h2 class="section-title" id="contact-heading" data-i18n="contact-title">お問い合わせ</h2>
+          <p class="section-description" data-i18n="contact-description">
             当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。<br />
             尚、<span style="color: #e74c3c;">※</span>は必須項目となります。
           </p>
@@ -433,16 +439,16 @@
           <div class="content-6">
             <div class="newsletter">
               <h2 class="heading-3">
-                <span class="text-wrapper-7">国際医療交流の</span>
-                <span class="text-wrapper-8">架け橋</span>
-                <span class="text-wrapper-7"> <br />IMC国際医療</span>
+                <span class="text-wrapper-7" data-i18n="footer-hero-title-1">国際医療交流の</span>
+                <span class="text-wrapper-8" data-i18n="footer-hero-title-2">架け橋</span>
+                <span class="text-wrapper-7" data-i18n="footer-hero-company"> <br />IMC国際医療</span>
               </h2>
               <div class="actions-2">
               </div>
             </div>
             <nav class="links" role="navigation" aria-label="Footer navigation">
               <div class="column-6">
-                <h3 class="text-wrapper-4">組織情報</h3>
+                <h3 class="text-wrapper-4" data-i18n="footer-org-info">組織情報</h3>
                 <ul class="div-9">
                   <li class="footer-link-wrapper"><a href="#organization" class="footer-link">一般社団法人について</a></li>
                   <li class="footer-link-wrapper"><a href="#imcs" class="footer-link">IMCS株式会社</a></li>
@@ -451,7 +457,7 @@
                 </ul>
               </div>
               <div class="column-6">
-                <h3 class="text-wrapper-4">サービス</h3>
+                <h3 class="text-wrapper-4" data-i18n="footer-services">サービス</h3>
                 <ul class="div-9">
                   <li class="footer-link-wrapper"><a href="#imcs" class="footer-link">医療コンサルティング</a></li>
                   <li class="footer-link-wrapper"><a href="#organization" class="footer-link">国際交流事業</a></li>
@@ -464,11 +470,11 @@
           <div class="div-7">
             <img class="divider" src="https://c.animaapp.com/mfudvd8uZxTZps/img/divider.svg" alt="" />
             <div class="row-3">
-              <p class="copyright-text">© 2025 IMC国際医療. All rights reserved.</p>
+              <p class="copyright-text" data-i18n="footer-copyright">© 2025 IMC国際医療. All rights reserved.</p>
               <nav class="footer-links" role="navigation" aria-label="Legal links">
-                <a href="privacy.html" class="footer-link-2">プライバシーポリシー</a>
-                <a href="terms.html" class="footer-link-2">利用規約</a>
-                <a href="cookies.html" class="footer-link-2">Cookie設定</a>
+                <a href="privacy.html" class="footer-link-2" data-i18n="footer-privacy">プライバシーポリシー</a>
+                <a href="terms.html" class="footer-link-2" data-i18n="footer-terms">利用規約</a>
+                <a href="cookies.html" class="footer-link-2" data-i18n="footer-cookies">Cookie設定</a>
               </nav>
             </div>
           </div>
@@ -477,6 +483,133 @@
     </main>
     
     <script>
+      // Translation object for multi-language support
+      const translations = {
+        ja: {
+          // Meta and Title
+          'page-title': 'IMC国際医療 - 国際医療交流推進機構',
+          'page-description': 'IMC国際医療 - 一般社団法人国際医療交流推進機構とIMCS株式会社のオフィシャルサイト',
+          
+          // Hero Section
+          'hero-title-1': '国際医療交流の',
+          'hero-title-2': '架け橋',
+          'hero-company': 'IMC国際医療',
+          'hero-slogan': '世界をつなぐ医療ネットワーク',
+          'hero-description': 'IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。',
+          'hero-btn-about': '組織について',
+          'hero-btn-contact': 'お問い合わせ',
+          
+          // Navigation
+          'nav-organization': '一般社団法人 国際医療交流推進機構',
+          'nav-imcs': 'IMCS株式会社',
+          'nav-brand-story': 'ブランドストーリー',
+          'nav-founder': '創業者紹介',
+          'nav-releases': 'リリース',
+          'nav-contact': 'お問い合わせ',
+          
+          // Organization Section
+          'org-section-title': '一般社団法人 国際医療交流推進機構',
+          'org-nav-title': '組織情報',
+          'org-tab-business': '事業内容',
+          'org-tab-organization': '組織情報',
+          'org-tab-officers': '役員紹介',
+          'org-tab-advisor': '顧問紹介',
+          'org-tab-services': '業務内容',
+          'org-tab-resources': '資源展示',
+          
+          // IMCS Section
+          'imcs-section-title': 'IMCS株式会社',
+          'imcs-description': 'IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。',
+          
+          // Brand Story Section
+          'brand-story-title': '会社の歴史・タイムライン',
+          
+          // Founder Section
+          'founder-section-title': '創業者紹介',
+          'founder-description': '国際医療交流推進機構の創業者である夏氏についてご紹介します。',
+          
+          // Releases Section
+          'releases-section-title': 'リリース',
+          
+          // Contact Section
+          'contact-title': 'お問い合わせ',
+          'contact-description': '当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。 尚、※は必須項目となります。',
+          
+          // Footer
+          'footer-hero-title-1': '国際医療交流の',
+          'footer-hero-title-2': '架け橋',
+          'footer-hero-company': 'IMC国際医療',
+          'footer-org-info': '組織情報',
+          'footer-services': 'サービス',
+          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.',
+          'footer-privacy': 'プライバシーポリシー',
+          'footer-terms': '利用規約',
+          'footer-cookies': 'Cookie設定'
+        },
+        
+        zh: {
+          // Meta and Title
+          'page-title': 'IMC国际医疗 - 国际医疗交流推进机构',
+          'page-description': 'IMC国际医疗 - 一般社团法人国际医疗交流推进机构与IMCS株式会社官方网站',
+          
+          // Hero Section
+          'hero-title-1': '国际医疗交流的',
+          'hero-title-2': '桥梁',
+          'hero-company': 'IMC国际医疗',
+          'hero-slogan': '连接世界的医疗网络',
+          'hero-description': 'IMC国际医疗通过一般社团法人国际医疗交流推进机构和IMCS株式会社，作为连接日本与世界医疗机构的桥梁开展活动。通过最先进医疗技术和知识的国际共享，为提高世界医疗水平做出贡献。',
+          'hero-btn-about': '关于组织',
+          'hero-btn-contact': '联系我们',
+          
+          // Navigation
+          'nav-organization': '一般社团法人 国际医疗交流推进机构',
+          'nav-imcs': 'IMCS株式会社',
+          'nav-brand-story': '品牌故事',
+          'nav-founder': '创始人介绍',
+          'nav-releases': '新闻发布',
+          'nav-contact': '联系我们',
+          
+          // Organization Section
+          'org-section-title': '一般社团法人 国际医疗交流推进机构',
+          'org-nav-title': '组织信息',
+          'org-tab-business': '事业内容',
+          'org-tab-organization': '组织信息',
+          'org-tab-officers': '管理层介绍',
+          'org-tab-advisor': '顾问介绍',
+          'org-tab-services': '业务内容',
+          'org-tab-resources': '资源展示',
+          
+          // IMCS Section
+          'imcs-section-title': 'IMCS株式会社',
+          'imcs-description': 'IMCS株式会社作为国际医疗交流推进机构的事业部门，提供具体的医疗服务和咨询业务。',
+          
+          // Brand Story Section
+          'brand-story-title': '公司历史·时间轴',
+          
+          // Founder Section
+          'founder-section-title': '创始人介绍',
+          'founder-description': '为您介绍国际医疗交流推进机构的创始人夏先生。',
+          
+          // Releases Section
+          'releases-section-title': '新闻发布',
+          
+          // Contact Section
+          'contact-title': '联系我们',
+          'contact-description': '关于本法人的问题和咨询，请通过以下表单联系我们。带※的为必填项目。',
+          
+          // Footer
+          'footer-hero-title-1': '国际医疗交流的',
+          'footer-hero-title-2': '桥梁',
+          'footer-hero-company': 'IMC国际医疗',
+          'footer-org-info': '组织信息',
+          'footer-services': '服务',
+          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。',
+          'footer-privacy': '隐私政策',
+          'footer-terms': '使用条款',
+          'footer-cookies': 'Cookie设置'
+        }
+      };
+
       function scrollNews(direction) {
         const timeline = document.getElementById('newsTimeline');
         const scrollAmount = 320; // Width of one news item plus gap
@@ -518,6 +651,50 @@
         }
       }
       
+      // Language switching functionality
+      function switchLanguage(lang) {
+        // Save language preference to localStorage
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // Update all elements with data-i18n attribute
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+        elementsToTranslate.forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+        
+        // Update meta description
+        const metaDescription = document.querySelector('meta[data-i18n-content="page-description"]');
+        if (metaDescription && translations[lang]['page-description']) {
+          metaDescription.setAttribute('content', translations[lang]['page-description']);
+        }
+        
+        // Update document title
+        const titleElement = document.querySelector('title[data-i18n="page-title"]');
+        if (titleElement && translations[lang]['page-title']) {
+          document.title = translations[lang]['page-title'];
+        }
+        
+        // Update language button states
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        document.getElementById('lang-' + lang).classList.add('active');
+        
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', lang);
+        
+        console.log('Language switched to:', lang);
+      }
+      
+      // Initialize language on page load
+      function initializeLanguage() {
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        switchLanguage(savedLanguage);
+      }
+
       // Organization tab switching functionality
       function showOrgTab(tabId) {
         // Hide all tab contents
@@ -545,6 +722,10 @@
       
       // Initialize button states when page loads
       document.addEventListener('DOMContentLoaded', function() {
+        // Initialize language settings
+        initializeLanguage();
+        
+        // Initialize news timeline button states
         updateButtonStates();
         
         // Add scroll event listener to update button states
