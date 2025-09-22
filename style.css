@@ -321,6 +321,75 @@
     background-color: #ffffff;
     box-sizing: border-box;
   }
+
+  /* New unified card layout */
+  .desktop .section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(20px, 3vw, 30px);
+    width: 100%;
+  }
+
+  .desktop .section-cards .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: clamp(20px, 3vw, 30px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+  }
+
+  .desktop .section-cards .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .desktop .section-cards .card h3 {
+    color: #0d3b45;
+    font-family: "Roboto", Helvetica;
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 22px);
+    margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
+    line-height: 1.4;
+  }
+
+  .desktop .section-cards .card p {
+    color: #333333;
+    font-family: "Roboto", Helvetica;
+    font-weight: 400;
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.6;
+    margin: 0 0 clamp(8px, 1vw, 12px) 0;
+  }
+
+  .desktop .section-cards .card ul {
+    margin: 0;
+    padding-left: clamp(16px, 2vw, 20px);
+    color: #333333;
+  }
+
+  .desktop .section-cards .card li {
+    font-family: "Roboto", Helvetica;
+    font-size: clamp(14px, 1.2vw, 16px);
+    line-height: 1.6;
+    margin-bottom: clamp(6px, 0.8vw, 8px);
+  }
+
+  .desktop .section-cards .card a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .desktop .section-cards .card a:hover {
+    border-bottom-color: #3498db;
+  }
+
+  .desktop .section-cards .card strong {
+    color: #0d3b45;
+    font-weight: 600;
+  }
   
   .desktop .div-4 {
     display: flex;
@@ -333,16 +402,15 @@
   }
   
   .desktop .long-heading-is-what {
-    position: relative;
-    width: clamp(300px, 80vw, 768px);
-    margin-top: -1.00px;
-    font-family: var(--heading-desktop-h3-font-family);
-    font-weight: var(--heading-desktop-h3-font-weight);
+    font-weight: 700;
     color: #000000;
-    font-size: var(--heading-desktop-h3-font-size);
-    letter-spacing: var(--heading-desktop-h3-letter-spacing);
-    line-height: var(--heading-desktop-h3-line-height);
-    font-style: var(--heading-desktop-h3-font-style);
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: clamp(28px, 3.5vw, 48px);
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: "Roboto", Helvetica;
+    letter-spacing: 0;
   }
   
   .desktop .slider-arrow {
@@ -593,11 +661,6 @@
     font-style: var(--heading-desktop-h5-font-style);
   }
   
-  .desktop .linkedin {
-    position: relative;
-    width: 32px;
-    height: 32px;
-  }
   
   .desktop .team-member-image {
     position: relative;
@@ -647,12 +710,6 @@
     font-style: var(--heading-desktop-h5-font-style);
   }
   
-  .desktop .linkedin-2 {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    margin: 0;
-  }
   
   .desktop .image-2 {
     position: relative;
@@ -678,12 +735,6 @@
     border-radius: 16px;
   }
   
-  .desktop .linkedin-3 {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    margin: 0;
-  }
   
   .desktop .image-3 {
     position: relative;
@@ -872,9 +923,11 @@
     border-color: #456f81;
   }
   
-  .desktop .stars {
+  /* Unified stars styles */
+  .desktop [class*="stars"] {
     position: relative;
     flex: 0 0 auto;
+    margin: 0;
   }
   
   .desktop .avatar {
@@ -887,10 +940,12 @@
     flex: 0 0 auto;
   }
   
-  .desktop .avatar-image {
+  /* Unified avatar image styles */
+  .desktop [class*="avatar-image"] {
     position: relative;
     width: 48px;
     height: 48px;
+    margin: 0;
     object-fit: cover;
   }
   
@@ -927,35 +982,7 @@
     align-self: stretch;
     font-style: var(--text-regular-normal-font-style);
   }
-  
-  .desktop .stars-2 {
-    position: relative;
-    flex: 0 0 auto;
-    margin: 0;
-  }
-  
-  .desktop .avatar-image-2 {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    object-fit: cover;
-  }
-  
-  .desktop .stars-3 {
-    position: relative;
-    flex: 0 0 auto;
-    margin: 0;
-  }
-  
-  .desktop .avatar-image-3 {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    object-fit: cover;
-  }
-  
+
   .desktop .slider-dots {
     align-items: flex-start;
     gap: clamp(6px, 0.8vw, 8px);
@@ -1049,10 +1076,8 @@
     flex: 0 0 auto;
   }
   
-  .desktop .div-8 {
-    position: relative;
-    align-self: stretch;
-    margin-top: -1.00px;
+  /* Consolidated input styles */
+  .desktop .form-input-base {
     font-family: "Roboto", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -1060,37 +1085,27 @@
     letter-spacing: 0;
     line-height: 24px;
     background: transparent;
-    border: none;
-    padding: 0;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: clamp(8px, 1vw, 12px);
   }
-  
+
+  .desktop .div-8 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    width: 100%;
+  }
+
   .desktop .text-input {
     display: flex;
     align-items: center;
     gap: clamp(6px, 0.8vw, 8px);
-    padding: clamp(8px, 1vw, 12px);
     width: 100%;
     flex: 0 0 auto;
-    margin-bottom: -1.00px;
-    margin-left: -1.00px;
-    margin-right: -1.00px;
-    border-radius: 100px;
-    border: 1px solid;
-    border-color: #ffffff;
+    margin: -1px;
     position: relative;
     align-self: stretch;
-  }
-  
-  .desktop .text-wrapper-5 {
-    position: relative;
-    align-self: stretch;
-    margin-top: -1.00px;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
   }
   
   .desktop .text-area {
@@ -1112,12 +1127,6 @@
   .desktop .text-wrapper-6 {
     position: relative;
     flex: 1;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
   }
   
   .desktop .line {
@@ -1262,18 +1271,7 @@
     letter-spacing: 0;
     box-sizing: border-box;
   }
-  
-  .desktop .text-wrapper-7 {
-    font-weight: 700;
-    line-height: 67.2px;
-  }
-  
-  .desktop .text-wrapper-8 {
-    font-weight: 600;
-    font-style: italic;
-    line-height: 67.2px;
-  }
-  
+
   .desktop .actions-2 {
     display: flex;
     flex-direction: column;
@@ -1357,18 +1355,7 @@
     letter-spacing: 0;
     line-height: 12px;
   }
-  
-  .desktop .text-wrapper-9 {
-    color: #000000;
-    line-height: 0.1px;
-  }
-  
-  .desktop .text-wrapper-10 {
-    color: #000000;
-    line-height: 18px;
-    text-decoration: underline;
-  }
-  
+
   .desktop .links {
     display: flex;
     width: clamp(300px, 50vw, 499px);
@@ -1514,47 +1501,16 @@
     border: 0;
   }
   
-  /* Form improvements */
-  .desktop .div-8 {
-    position: relative;
-    align-self: stretch;
-    margin-top: -1.00px;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    background: transparent;
-    border: none;
-    padding: clamp(8px, 1vw, 12px);
-    border-radius: 100px;
-    border: 1px solid #ffffff;
-  }
-  
-  .desktop .div-8:focus {
-    outline: 2px solid #4a90e2;
-    outline-offset: 2px;
-  }
-  
-  .desktop .text-wrapper-6 {
-    position: relative;
-    flex: 1;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    background: transparent;
-    border: none;
-    resize: vertical;
-    min-height: 120px;
-  }
-  
+  /* Form focus improvements */
+  .desktop .div-8:focus,
   .desktop .text-wrapper-6:focus {
     outline: 2px solid #4a90e2;
     outline-offset: 2px;
+  }
+
+  .desktop .text-wrapper-6 {
+    resize: vertical;
+    min-height: 120px;
   }
   
   .desktop .checkbox-2 {
@@ -1665,10 +1621,8 @@
     list-style: none;
   }
   
-  /* Fix missing LinkedIn icons */
-  .desktop .linkedin-2,
-  .desktop .linkedin-3,
-  .desktop .linkedin-4 {
+  /* Unified LinkedIn icon styles */
+  .desktop [class*="linkedin"] {
     position: relative;
     width: 32px;
     height: 32px;
@@ -1681,22 +1635,16 @@
     outline-offset: 2px;
   }
   
-  /* Button focus improvements */
-  .desktop .button:focus,
-  .desktop .button-wrapper:focus,
-  .desktop .button-2:focus,
-  .desktop .button-3:focus,
-  .desktop .button-5:focus,
+  /* Unified button and interactive element focus styles */
+  .desktop [class*="button"]:focus,
   .desktop .slider-arrow:focus,
   .desktop .icon-right-arrow-alt-wrapper:focus {
     outline: 2px solid #4a90e2 !important;
     outline-offset: 2px;
   }
   
-  /* Link focus improvements */
-  .desktop .link:focus,
-  .desktop .footer-link:focus,
-  .desktop .footer-link-2:focus,
+  /* Unified link focus styles */
+  .desktop [class*="link"]:focus,
   .desktop .social-text:focus {
     outline: 2px solid #4a90e2;
     outline-offset: 2px;
@@ -1815,6 +1763,16 @@
     .desktop .form-input,
     .desktop .form-textarea {
       font-size: 16px; /* 防止iOS缩放 */
+    }
+    
+    /* Card layout responsive */
+    .desktop .section-cards {
+      grid-template-columns: 1fr;
+      gap: clamp(16px, 2.5vw, 20px);
+    }
+    
+    .desktop .section-cards .card {
+      padding: clamp(16px, 2.5vw, 20px);
     }
   }
   
