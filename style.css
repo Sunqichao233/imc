@@ -1848,6 +1848,357 @@
     }
   }
 
+  /* Organization Tab Navigation Styles */
+  .desktop .org-tab-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: clamp(30px, 4vw, 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+
+  .desktop .org-tab-nav {
+    background: var(--bg-white, #ffffff);
+    border-radius: 16px;
+    padding: clamp(20px, 2.5vw, 24px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+  }
+
+  .desktop .org-tab-nav-title {
+    color: var(--text-primary, #2c3e50);
+    font-size: clamp(16px, 1.8vw, 18px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 700;
+    margin-bottom: clamp(16px, 2vw, 20px);
+    padding-bottom: clamp(12px, 1.5vw, 16px);
+    border-bottom: 2px solid rgba(52, 152, 219, 0.1);
+  }
+
+  .desktop .org-tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop .org-tab-item {
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+
+  .desktop .org-tab-button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: clamp(12px, 1.5vw, 16px);
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: var(--text-secondary, #34495e);
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .desktop .org-tab-button:hover {
+    background: rgba(52, 152, 219, 0.08);
+    color: var(--text-primary, #2c3e50);
+    transform: translateX(4px);
+  }
+
+  .desktop .org-tab-button.active {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.05));
+    color: var(--text-primary, #2c3e50);
+    font-weight: 600;
+    border-left: 4px solid var(--primary-blue, #3498db);
+    padding-left: clamp(8px, 1vw, 12px);
+  }
+
+  .desktop .org-content-card {
+    background: var(--bg-white, #ffffff);
+    border-radius: 16px;
+    padding: clamp(30px, 4vw, 40px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+    position: relative;
+  }
+
+  .desktop .org-content-title {
+    color: var(--text-primary, #2c3e50);
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 700;
+    margin-bottom: clamp(20px, 2.5vw, 24px);
+    padding-bottom: clamp(12px, 1.5vw, 16px);
+    border-bottom: 2px solid rgba(52, 152, 219, 0.1);
+  }
+
+  .desktop .org-content-body {
+    color: var(--text-muted, #525252);
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .desktop .org-content-body h4 {
+    color: var(--text-secondary, #34495e);
+    font-size: clamp(16px, 1.6vw, 18px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 600;
+    margin: clamp(16px, 2vw, 20px) 0 clamp(8px, 1vw, 12px) 0;
+  }
+
+  .desktop .org-content-body p {
+    margin-bottom: clamp(12px, 1.5vw, 16px);
+  }
+
+  .desktop .org-content-body strong {
+    color: var(--text-secondary, #34495e);
+    font-weight: 600;
+  }
+
+  .desktop .org-content-body ul {
+    margin: clamp(12px, 1.5vw, 16px) 0;
+    padding-left: clamp(20px, 2.5vw, 24px);
+  }
+
+  .desktop .org-content-body li {
+    margin-bottom: clamp(8px, 1vw, 10px);
+    line-height: 1.5;
+  }
+
+  .desktop .org-content-body a {
+    color: var(--primary-blue, #3498db);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .desktop .org-content-body a:hover {
+    color: var(--primary-blue-dark, #2980b9);
+    text-decoration: underline;
+  }
+
+  .desktop .org-tab-content {
+    display: none;
+  }
+
+  .desktop .org-tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive Design for Organization Section */
+  @media (max-width: 768px) {
+    .desktop .org-tab-container {
+      grid-template-columns: 1fr;
+      gap: clamp(20px, 3vw, 24px);
+    }
+    
+    .desktop .org-tab-nav {
+      position: static;
+      order: -1;
+    }
+    
+    .desktop .org-tab-nav-title {
+      text-align: center;
+    }
+    
+    .desktop .org-tab-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(8px, 1vw, 12px);
+    }
+    
+    .desktop .org-tab-item {
+      margin-bottom: 0;
+      flex: 1;
+      min-width: calc(50% - 6px);
+    }
+    
+    .desktop .org-tab-button {
+      text-align: center;
+      font-size: clamp(12px, 1.2vw, 14px);
+    }
+  }
+
+  /* Founder Section Styles */
+  .desktop .founder-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 4vw, 50px);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .desktop .founder-profile-card {
+    background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+    border-radius: 20px;
+    padding: clamp(30px, 4vw, 40px);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .desktop .founder-profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue, #3498db), var(--primary-blue-light, #5dade2));
+  }
+
+  .desktop .founder-profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.15);
+  }
+
+  .desktop .founder-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: clamp(20px, 3vw, 30px);
+  }
+
+  .desktop .founder-avatar {
+    width: clamp(80px, 12vw, 120px);
+    height: clamp(80px, 12vw, 120px);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue, #3498db), var(--primary-blue-light, #5dade2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(16px, 2vw, 20px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+    position: relative;
+  }
+
+  .desktop .founder-avatar::before {
+    content: '夏';
+    color: white;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    font-family: "Roboto", Helvetica;
+  }
+
+  .desktop .founder-name {
+    color: var(--text-primary, #2c3e50);
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 700;
+    margin-bottom: clamp(4px, 0.5vw, 8px);
+    line-height: 1.2;
+  }
+
+  .desktop .founder-title {
+    color: var(--text-muted, #525252);
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 600;
+    margin-bottom: clamp(16px, 2vw, 20px);
+  }
+
+  .desktop .founder-quote {
+    color: var(--text-muted, #525252);
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    font-style: italic;
+    position: relative;
+    padding: clamp(16px, 2vw, 20px);
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-blue, #3498db);
+  }
+
+  .desktop .founder-achievements-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 20px;
+    padding: clamp(30px, 4vw, 40px);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .desktop .founder-achievements-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue-light, #5dade2), var(--primary-blue, #3498db));
+  }
+
+  .desktop .founder-achievements-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.15);
+  }
+
+  .desktop .achievements-title {
+    color: var(--text-primary, #2c3e50);
+    font-size: clamp(18px, 2vw, 22px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 700;
+    margin-bottom: clamp(20px, 2.5vw, 25px);
+  }
+
+  .desktop .achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop .achievement-item {
+    margin-bottom: clamp(12px, 1.5vw, 16px);
+    padding: clamp(12px, 1.5vw, 16px);
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .desktop .achievement-item:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateX(5px);
+  }
+
+  .desktop .achievement-text {
+    color: var(--text-secondary, #34495e);
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-family: "Roboto", Helvetica;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* Responsive Design for Founder Section */
+  @media (max-width: 768px) {
+    .desktop .founder-card-container {
+      grid-template-columns: 1fr;
+      gap: clamp(20px, 3vw, 30px);
+    }
+  }
+
   /* Timeline Styles */
   .desktop .timeline {
     position: relative;
@@ -1891,7 +2242,7 @@
   .desktop .timeline-year {
     font-size: clamp(16px, 2vw, 18px);
     font-weight: 700;
-    color: var(--primary-blue, #3498db);
+    color: var(--text-primary, #2c3e50);
     font-family: "Roboto", Helvetica;
     margin-bottom: clamp(4px, 0.6vw, 6px);
     line-height: 1.2;
