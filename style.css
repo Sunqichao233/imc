@@ -1,31 +1,40 @@
 .desktop {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
     background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
   
   .desktop .image {
     position: relative;
-    align-self: stretch;
     width: 100%;
-    height: 900px;
+    height: 100vh;
+    background-image: url('https://c.animaapp.com/mfudvd8uZxTZps/img/hero-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .desktop .image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(0, 0, 0, 0) 43%,
       rgba(0, 0, 0, 0.3) 100%
     );
+    pointer-events: none;
   }
   
-  .desktop .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1440px;
-    height: 900px;
-    object-fit: cover;
-  }
   
   .desktop .hero-section {
     display: inline-flex;
@@ -35,6 +44,7 @@
     position: absolute;
     top: 450px;
     left: 64px;
+    z-index: 2;
   }
   
   .desktop .hero-content {
@@ -167,13 +177,14 @@
   .desktop .navbar {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 32px 64px;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
   }
   
   .desktop .container {
@@ -184,7 +195,9 @@
     display: flex;
     position: relative;
     width: 100%;
+    max-width: 100%;
     flex: 0 0 auto;
+    box-sizing: border-box;
   }
   
   .desktop .content {
@@ -215,6 +228,8 @@
     gap: 32px;
     position: relative;
     flex: 0 0 auto;
+    flex-wrap: wrap;
+    max-width: 100%;
   }
   
   .desktop .link {
@@ -292,13 +307,15 @@
   .desktop .div-3 {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
+    max-width: 100%;
     align-items: flex-start;
     gap: 40px;
     padding: 112px 64px;
     position: relative;
     flex: 0 0 auto;
     background-color: #ffffff;
+    box-sizing: border-box;
   }
   
   .desktop .div-4 {
@@ -353,13 +370,15 @@
   }
   
   .desktop .row {
-    width: 1376px;
+    width: 100%;
+    max-width: 100%;
     align-items: flex-start;
     gap: 40px;
-    margin-right: -64.00px;
     display: flex;
     position: relative;
     flex: 0 0 auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
   }
   
   .desktop .section-title-wrapper {
@@ -458,8 +477,6 @@
     align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
-    margin-top: -931.00px;
-    margin-left: -1386.00px;
   }
   
   .desktop .layout {
@@ -471,8 +488,10 @@
     position: relative;
     align-self: stretch;
     width: 100%;
+    max-width: 100%;
     flex: 0 0 auto;
     background-color: #ffffff;
+    box-sizing: border-box;
   }
   
   .desktop .section-title {
@@ -510,13 +529,15 @@
   }
   
   .desktop .row-2 {
-    width: 1376px;
+    width: 100%;
+    max-width: 100%;
     align-items: flex-end;
     gap: 48px;
-    margin-right: -64.00px;
     display: flex;
     position: relative;
     flex: 0 0 auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
   }
   
   .desktop .team-member-wrapper {
@@ -623,11 +644,10 @@
   }
   
   .desktop .linkedin-2 {
-    margin-top: -1681.00px;
-    margin-left: -356.50px;
     position: relative;
     width: 32px;
     height: 32px;
+    margin: 0;
   }
   
   .desktop .image-2 {
@@ -655,11 +675,10 @@
   }
   
   .desktop .linkedin-3 {
-    margin-top: -1681.00px;
-    margin-left: -724.50px;
     position: relative;
     width: 32px;
     height: 32px;
+    margin: 0;
   }
   
   .desktop .image-3 {
@@ -684,11 +703,10 @@
   }
   
   .desktop .linkedin-4 {
-    margin-top: -1681.00px;
-    margin-left: -1092.50px;
     position: relative;
     width: 32px;
     height: 32px;
+    margin: 0;
   }
   
   .desktop .image-4 {
@@ -755,13 +773,15 @@
   .desktop .testimonial {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
+    max-width: 100%;
     align-items: center;
     gap: 80px;
     padding: 112px 64px;
     position: relative;
     flex: 0 0 auto;
     background-color: var(--blueblue-50);
+    box-sizing: border-box;
   }
   
   .desktop .container-2 {
@@ -828,7 +848,9 @@
     gap: 32px;
     position: relative;
     flex: 0 0 auto;
-    margin-right: -1888.00px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
   }
   
   .desktop .column-5 {
@@ -903,34 +925,30 @@
   }
   
   .desktop .stars-2 {
-    margin-top: -3612.00px;
-    margin-left: -1898.00px;
     position: relative;
     flex: 0 0 auto;
+    margin: 0;
   }
   
   .desktop .avatar-image-2 {
-    margin-left: -1898.00px;
     position: relative;
     width: 48px;
     height: 48px;
-    margin-top: -3759.89px;
+    margin: 0;
     object-fit: cover;
   }
   
   .desktop .stars-3 {
-    margin-top: -3612.00px;
-    margin-left: -2538.00px;
     position: relative;
     flex: 0 0 auto;
+    margin: 0;
   }
   
   .desktop .avatar-image-3 {
-    margin-left: -2538.00px;
     position: relative;
     width: 48px;
     height: 48px;
-    margin-top: -3759.89px;
+    margin: 0;
     object-fit: cover;
   }
   
@@ -962,13 +980,15 @@
   .desktop .contact {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
+    max-width: 100%;
     align-items: flex-start;
     gap: 80px;
     padding: 64px;
     position: relative;
     flex: 0 0 auto;
     background-color: #ffffff;
+    box-sizing: border-box;
   }
   
   .desktop .container-3 {
@@ -1197,13 +1217,15 @@
   .desktop .footer {
     display: flex;
     flex-direction: column;
-    width: 1440px;
+    width: 100%;
+    max-width: 100%;
     align-items: center;
     gap: 80px;
     padding: 80px 64px;
     position: relative;
     flex: 0 0 auto;
     background-color: var(--blueblue-50);
+    box-sizing: border-box;
   }
   
   .desktop .content-6 {
@@ -1227,8 +1249,8 @@
   }
   
   .desktop .heading-3 {
-    width: 702px;
-    margin-right: -202.00px;
+    width: 100%;
+    max-width: 702px;
     font-weight: 400;
     color: var(--blueblue-500);
     font-size: 56px;
@@ -1237,6 +1259,7 @@
     margin-top: -1.00px;
     font-family: "Roboto", Helvetica;
     letter-spacing: 0;
+    box-sizing: border-box;
   }
   
   .desktop .text-wrapper-7 {
