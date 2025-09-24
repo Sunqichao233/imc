@@ -13,7 +13,6 @@
     position: relative;
     width: 100%;
     min-height: clamp(400px, 60vh, 800px);
-    background-image: url('https://c.animaapp.com/mfudvd8uZxTZps/img/hero-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2380,21 +2379,33 @@
 
   /* 新的问询按钮样式 */
   .Frame {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    background: #2c5530;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+
+  .Frame:hover {
+    background: #1e3a20;
+    transform: scale(1.1);
   }
 
   .Vector {
-    width: 18px;
-    height: 18px;
-    left: 3px;
-    top: 4px;
-    position: absolute;
-    outline: 2px white solid;
-    outline-offset: -1px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background: white;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
   }
 
   /* 移动端菜单 */
@@ -2525,5 +2536,192 @@
   /* Index页面背景图片 */
   .image--index {
     background-image: url('homepage.png');
+  }
+
+  /* 分支时间线样式 */
+  .branch-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .main-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* 中央主线 */
+  .main-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #333;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  /* 分支容器 */
+  .timeline-branch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* 左侧分支 */
+  .branch-left {
+    justify-content: flex-end;
+    padding-right: calc(50% + 30px);
+  }
+
+  /* 右侧分支 */
+  .branch-right {
+    justify-content: flex-start;
+    padding-left: calc(50% + 30px);
+  }
+
+  /* 分支节点 */
+  .branch-node {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* 年份标签 */
+  .branch-node::before {
+    content: attr(data-year);
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 3;
+  }
+
+  /* 左侧年份位置 */
+  .branch-left .branch-node::before {
+    right: -60px;
+  }
+
+  /* 右侧年份位置 */
+  .branch-right .branch-node::before {
+    left: -60px;
+  }
+
+  /* 连接线 */
+  .branch-node::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #333;
+    z-index: 2;
+  }
+
+  /* 左侧连接线 */
+  .branch-left .branch-node::after {
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 右侧连接线 */
+  .branch-right .branch-node::after {
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 分支卡片 */
+  .branch-card {
+    background: #2196f3;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 200px;
+    max-width: 300px;
+    position: relative;
+  }
+
+  /* 分支标题 */
+  .branch-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  /* 分支描述 */
+  .branch-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* 子分支 */
+  .branch-subbranch {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.3rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .branch-subbranch::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .branch-timeline {
+      padding: 1rem;
+    }
+
+    .main-timeline {
+      gap: 2rem;
+    }
+
+    .main-timeline::before {
+      left: 30px;
+    }
+
+    .branch-left,
+    .branch-right {
+      justify-content: flex-start;
+      padding-left: 60px;
+      padding-right: 0;
+    }
+
+    .branch-left .branch-node::before,
+    .branch-right .branch-node::before {
+      left: -50px;
+      right: auto;
+    }
+
+    .branch-left .branch-node::after,
+    .branch-right .branch-node::after {
+      left: -25px;
+      right: auto;
+    }
+
+    .branch-card {
+      min-width: 150px;
+      max-width: 250px;
+    }
   }
   

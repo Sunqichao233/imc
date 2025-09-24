@@ -48,9 +48,9 @@
                 <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
                 <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
               </div>
-          <div data-layer="Frame" class="Frame">
+          <a href="#contact" class="Frame">
             <div data-layer="Vector" class="Vector"></div>
-          </div>
+          </a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -109,29 +109,57 @@
       </section>
       <section class="section section--white" id="brand-story" aria-labelledby="brand-story-heading">
         <div class="section-header">
-          <h2 class="section-title" id="brand-story-heading" data-i18n="brand-story-title">会社の歴史・タイムライン</h2>
+          <h2 class="section-title" id="brand-story-heading" data-i18n="brand-story-title">ブランドストーリー </h2>
         </div>
         <div class="section-content">
-        <div class="timeline-item">
-          <div class="timeline-year">2020年</div>
-          <div class="timeline-content">一般社団法人国際医療交流推進機構設立</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2021年</div>
-          <div class="timeline-content">IMCS株式会社設立、本格的な事業開始</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2022年</div>
-          <div class="timeline-content">海外医療機関との提携拡大</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2023年</div>
-          <div class="timeline-content">教育研修プログラム本格始動</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2024年</div>
-          <div class="timeline-content">国際医療交流ネットワーク確立</div>
-        </div>
+          <div class="branch-timeline">
+            <div class="main-timeline">
+              <!-- 右侧分支 -->
+              <div class="timeline-branch branch-right">
+                <div class="branch-node" data-year="2024">
+                  <div class="branch-card">
+                    <div class="branch-description">国際医療交流ネットワーク確立</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 左侧分支 -->
+              <div class="timeline-branch branch-left">
+                <div class="branch-node" data-year="2023">
+                  <div class="branch-card">
+                    <div class="branch-description">教育研修プログラム本格始動</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 右侧分支 -->
+              <div class="timeline-branch branch-right">
+                <div class="branch-node" data-year="2022">
+                  <div class="branch-card">
+                    <div class="branch-description">海外医療機関との提携拡大</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 左侧分支 -->
+              <div class="timeline-branch branch-left">
+                <div class="branch-node" data-year="2021">
+                  <div class="branch-card">
+                    <div class="branch-description">IMCS株式会社設立、本格的な事業開始</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 右侧分支 -->
+              <div class="timeline-branch branch-right">
+                <div class="branch-node" data-year="2020">
+                  <div class="branch-card">
+                    <div class="branch-description">一般社団法人国際医療交流推進機構設立</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section section--light-gray" id="founder" aria-labelledby="founder-heading">
@@ -374,9 +402,7 @@
           <div class="content-6">
             <div class="newsletter">
               <h2 class="heading-3">
-                <span class="text-wrapper-7" data-i18n="footer-hero-title-1">国際医療交流の</span>
-                <span class="text-wrapper-8" data-i18n="footer-hero-title-2">架け橋</span>
-                <span class="text-wrapper-7" data-i18n="footer-hero-company"> <br />IMC国際医療</span>
+                <span class="text-wrapper-7" data-i18n="footer-hero-company">IMC国際医療</span>
               </h2>
               <div class="actions-2">
               </div>
@@ -465,8 +491,6 @@
           'contact-description': '当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。 尚、※は必須項目となります。',
           
           // Footer
-          'footer-hero-title-1': '国際医療交流の',
-          'footer-hero-title-2': '架け橋',
           'footer-hero-company': 'IMC国際医療',
           'footer-org-info': '組織情報',
           'footer-services': 'サービス',
@@ -523,8 +547,6 @@
           'contact-description': '关于本法人的问题和咨询，请通过以下表单联系我们。带※的为必填项目。',
           
           // Footer
-          'footer-hero-title-1': '国际医疗交流的',
-          'footer-hero-title-2': '桥梁',
           'footer-hero-company': 'IMC国际医疗',
           'footer-org-info': '组织信息',
           'footer-services': '服务',
@@ -572,7 +594,7 @@
           nextBtn.classList.remove('disabled');
         }
       }
-      
+
       // Language switching functionality
       function switchLanguage(lang) {
         // Save language preference to localStorage
