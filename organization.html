@@ -34,7 +34,6 @@
 
         <!-- Desktop Navigation Links -->
         <div class="nav-links">
-          <a href="index.html" class="nav-link"><span class="link-text" data-i18n="nav-home">ホーム</span></a>
           <a href="#overview" class="nav-link"><span class="link-text" data-i18n="nav-overview">組織概要</span></a>
           <a href="#advisor" class="nav-link"><span class="link-text" data-i18n="nav-advisor">顧問紹介</span></a>
           <a href="#business" class="nav-link"><span class="link-text" data-i18n="nav-business">業務内容</span></a>
@@ -110,92 +109,83 @@
       </section>
 
       <!-- 組織概要 Section -->
-      <section class="section section--white" id="overview" aria-labelledby="overview-heading">
-        <div class="section-header">
-          <h2 class="section-title" id="overview-heading" data-i18n="overview-title">組織概要</h2>
+      <section class="about-section" id="overview">
+        <div class="about-header">
+          <h2 class="about-title" data-i18n="overview-title">組織概要</h2>
+          
+          <!-- 基本情報 -->
+          <div class="org-basic-info">
+            <div class="info-row">
+              <div class="info-item">
+                <strong data-i18n="org-name-label">名称：</strong>
+                <span data-i18n="org-name">一般社団法人 国際医療交流推進機構</span>
+              </div>
+              <div class="info-item">
+                <strong data-i18n="org-address-label">所在地：</strong>
+                <span data-i18n="org-address">〒102-0083 東京千代田区麹町4-1-5</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-item">
+                <strong data-i18n="org-established-label">設立：</strong>
+                <span data-i18n="org-established">2016/9/12</span>
+              </div>
+              <div class="info-item">
+                <strong data-i18n="org-contact-label">連絡先：</strong>
+                <span data-i18n="org-contact">03-6261-6288</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="section-content">
-          <!-- 基本情報カード -->
-          <div class="section-cards">
-            <div class="card">
-              <h3 data-i18n="basic-info-title">基本情報</h3>
-              <p><strong data-i18n="org-name-label">正式名称：</strong>一般社団法人 国際医療交流推進機構</p>
-              <p><strong data-i18n="org-established-label">設立年月日：</strong>2016年9月12日</p>
-              <p><strong data-i18n="org-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
-            </div>
-            
-            <div class="card">
-              <h3 data-i18n="contact-info-title">連絡先</h3>
-              <p><strong data-i18n="org-phone-label">電話番号：</strong>03-6261-6288</p>
-              <p><strong data-i18n="org-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
-            </div>
-            
-            <div class="card">
-              <h3 data-i18n="org-purpose-title">設立目的</h3>
-              <p data-i18n="org-purpose-value">国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること</p>
-            </div>
-          </div>
-          
-          <!-- 事業内容 -->
-          <h3 data-i18n="business-title">事業</h3>
-          <p data-i18n="business-purpose">この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。</p>
-          
-          <div class="business-list" style="margin: 1.5rem 0;">
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（1）</strong>医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（2）</strong>医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（3）</strong>医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（4）</strong>医療ツーリズムに関する事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（5）</strong>食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（6）</strong>医療機器の販売及び輸出入事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（7）</strong>薬局業及び医薬品並びに医薬部外品の販売事業
-            </div>
-            <div class="business-item" style="margin-bottom: 1rem; padding: 1rem; background-color: #f8f9fa; border-left: 4px solid #007bff; line-height: 1.6;">
-              <strong>（8）</strong>人材派遣事業
-            </div>
-          </div>
 
-          <!-- 組織詳細情報 -->
-          <div class="section-cards" style="margin-top: 2rem;">
-            <div class="card">
-              <h4>法人情報</h4>
-              <div class="org-detail" style="line-height: 1.8;">
-                <p style="margin: 0.5rem 0;"><strong>名称：</strong>一般社団法人 国際医療交流推進機構</p>
-                <p style="margin: 0.5rem 0;"><strong>所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
-                <p style="margin: 0.5rem 0;"><strong>設立：</strong>2016/9/12</p>
+        <!-- 事業内容カード -->
+        <div class="about-cards">
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop&crop=center" alt="Research" />
+            <h3 data-i18n="business-research-title">調査・研究事業</h3>
+            <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" alt="Consulting" />
+            <h3 data-i18n="business-consulting-title">コンサルティング事業</h3>
+            <p data-i18n="business-consulting-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop&crop=center" alt="Medical Tourism" />
+            <h3 data-i18n="business-tourism-title">医療ツーリズム事業</h3>
+            <p data-i18n="business-tourism-desc">医療ツーリズムに関する事業及び国内外施設の紹介事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=400&h=300&fit=crop&crop=center" alt="Medical Equipment" />
+            <h3 data-i18n="business-trade-title">医療機器・医薬品事業</h3>
+            <p data-i18n="business-trade-desc">医療機器の販売及び輸出入事業、薬局業及び医薬品販売事業</p>
+          </div>
+        </div>
+
+        <!-- 理事情報 -->
+        <div class="leadership-section">
+          <div class="about-card leadership-card">
+            <h3 data-i18n="leadership-title">役員体制</h3>
+            <div class="leadership-grid">
+              <div class="leadership-item">
+                <strong data-i18n="representative-label">代表理事：</strong>
+                <span data-i18n="representative-names">中村　達 / 華岡　知</span>
               </div>
-            </div>
-            
-            <div class="card">
-              <h4>役員体制</h4>
-              <div class="org-detail" style="line-height: 1.8;">
-                <p style="margin: 0.5rem 0;"><strong>代表理事：</strong>中村　達</p>
-                <p style="margin: 0.5rem 0;"><strong>代表理事：</strong>華岡　知</p>
-                <p style="margin: 0.5rem 0;"><strong>理事：</strong>酒井　友佳</p>
-                <p style="margin: 0.5rem 0;"><strong>監事：</strong>山田　和夫</p>
-                <p style="margin: 0.5rem 0;"><strong>顧問：</strong>林　基弘</p>
-                <p style="margin: 0.5rem 0;"><strong>執行理事：</strong>金子　朗久</p>
-                <p style="margin: 0.5rem 0;"><strong>執行理事：</strong>郭常青</p>
+              <div class="leadership-item">
+                <strong data-i18n="directors-label">理事：</strong>
+                <span data-i18n="directors-name">酒井　友佳</span>
               </div>
-            </div>
-            
-            <div class="card">
-              <h4>連絡先</h4>
-              <div class="org-detail" style="line-height: 1.8;">
-                <p style="margin: 0.5rem 0;"><strong>TEL：</strong>03-6261-6288</p>
-                <p style="margin: 0.5rem 0;"><strong>EMAIL：</strong>info@imcs.co.jp</p>
+              <div class="leadership-item">
+                <strong data-i18n="auditor-label">監事：</strong>
+                <span data-i18n="auditor-name">山田　和夫</span>
+              </div>
+              <div class="leadership-item">
+                <strong data-i18n="advisor-label">顧問：</strong>
+                <span data-i18n="advisor-name">林　基弘</span>
+              </div>
+              <div class="leadership-item">
+                <strong data-i18n="executive-directors-label">執行理事：</strong>
+                <span data-i18n="executive-directors-names">金子　朗久 / 郭常青</span>
               </div>
             </div>
           </div>
@@ -228,7 +218,7 @@
             <!-- 左側：経歴・履歴 -->
             <div class="advisor-info" style="flex: 2; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
               <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #2c3e50; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem;">
-                夏冰　Xia Bing
+                夏冰
               </h3>
               
               <!-- プロフィール -->
@@ -305,93 +295,57 @@
         </div>
         
         <div class="section-content">
-          <div class="business-table" style="border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden;">
-            <div class="table-row" style="display: flex; border-bottom: 1px solid #dee2e6; background-color: #f8f9fa;">
-              <div class="table-cell header" style="flex: 1; padding: 1rem; font-weight: bold; color: #495057; border-right: 1px solid #dee2e6;">
+          <div class="business-table">
+            <div class="table-row">
+              <div class="table-cell header">
                 <span data-i18n="business-category-header">業務内容</span>
               </div>
-              <div class="table-cell header" style="flex: 2; padding: 1rem; font-weight: bold; color: #495057;">
+              <div class="table-cell header">
                 <span data-i18n="case-studies-header">具体的な取り組み</span>
               </div>
             </div>
             
-            <div class="table-row" style="display: flex; border-bottom: 1px solid #dee2e6;">
-              <div class="table-cell" style="flex: 1; padding: 1.5rem; border-right: 1px solid #dee2e6; background-color: white;">
-                <h4 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.1rem;" data-i18n="international-exchange-title">国際交流活動</h4>
-                <p style="margin: 0; color: #6c757d; line-height: 1.5; font-size: 0.95rem;" data-i18n="international-exchange-desc">医療従事者の国際的な交流プログラムの企画・運営</p>
+            <div class="table-row">
+              <div class="table-cell">
+                <h4 data-i18n="international-exchange-title">国際交流活動</h4>
+                <p data-i18n="international-exchange-desc">医療従事者の国際的な交流プログラムの企画・運営</p>
               </div>
-              <div class="table-cell" style="flex: 2; padding: 1.5rem; background-color: white;">
-                <div class="case-study" style="display: flex; align-items: center; justify-content: space-between;">
-                  <span style="color: #495057; font-size: 0.95rem;" data-i18n="international-case">医療従事者向け国際研修プログラム、学術交流会議の開催</span>
-                  <a href="#" style="color: #007bff; text-decoration: none; font-size: 0.9rem; white-space: nowrap; margin-left: 1rem;" data-i18n="view-case">→ 案例</a>
+              <div class="table-cell">
+                <div class="case-study">
+                  <span data-i18n="international-case">医療従事者向け国際研修プログラム、学術交流会議の開催</span>
+                  <a href="#" data-i18n="view-case">→ 案例</a>
                 </div>
               </div>
             </div>
             
-            <div class="table-row" style="display: flex; border-bottom: 1px solid #dee2e6;">
-              <div class="table-cell" style="flex: 1; padding: 1.5rem; border-right: 1px solid #dee2e6; background-color: white;">
-                <h4 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.1rem;" data-i18n="overseas-promotion-title">海外宣传（コンサルティング）</h4>
-                <p style="margin: 0; color: #6c757d; line-height: 1.5; font-size: 0.95rem;" data-i18n="overseas-promotion-desc">海外市場への医療サービス展開支援とコンサルティング</p>
+            <div class="table-row">
+              <div class="table-cell">
+                <h4 data-i18n="overseas-promotion-title">海外宣传（コンサルティング）</h4>
+                <p data-i18n="overseas-promotion-desc">海外市場への医療サービス展開支援とコンサルティング</p>
               </div>
-              <div class="table-cell" style="flex: 2; padding: 1.5rem; background-color: white;">
-                <div class="case-study" style="display: flex; align-items: center; justify-content: space-between;">
-                  <span style="color: #495057; font-size: 0.95rem;" data-i18n="promotion-case">日本医療機関の海外展開支援、医療ツーリズム促進活動</span>
-                  <a href="#" style="color: #007bff; text-decoration: none; font-size: 0.9rem; white-space: nowrap; margin-left: 1rem;" data-i18n="view-case">→ 案例</a>
+              <div class="table-cell">
+                <div class="case-study">
+                  <span data-i18n="promotion-case">日本医療機関の海外展開支援、医療ツーリズム促進活動</span>
+                  <a href="#" data-i18n="view-case">→ 案例</a>
                 </div>
               </div>
             </div>
             
-            <div class="table-row" style="display: flex;">
-              <div class="table-cell" style="flex: 1; padding: 1.5rem; border-right: 1px solid #dee2e6; background-color: white;">
-                <h4 style="margin: 0 0 0.5rem 0; color: #2c3e50; font-size: 1.1rem;" data-i18n="education-training-title">教育研修</h4>
-                <p style="margin: 0; color: #6c757d; line-height: 1.5; font-size: 0.95rem;" data-i18n="education-training-desc">医療技術向上のための専門研修プログラムの実施</p>
+            <div class="table-row">
+              <div class="table-cell">
+                <h4 data-i18n="education-training-title">教育研修</h4>
+                <p data-i18n="education-training-desc">医療技術向上のための専門研修プログラムの実施</p>
               </div>
-              <div class="table-cell" style="flex: 2; padding: 1.5rem; background-color: white;">
-                <div class="case-study" style="display: flex; align-items: center; justify-content: space-between;">
-                  <span style="color: #495057; font-size: 0.95rem;" data-i18n="education-case">最新医療技術研修、国際基準対応研修プログラムの提供</span>
-                  <a href="#" style="color: #007bff; text-decoration: none; font-size: 0.9rem; white-space: nowrap; margin-left: 1rem;" data-i18n="view-case">→ 案例</a>
+              <div class="table-cell">
+                <div class="case-study">
+                  <span data-i18n="education-case">最新医療技術研修、国際基準対応研修プログラムの提供</span>
+                  <a href="#" data-i18n="view-case">→ 案例</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <style>
-          .business-table {
-            max-width: 100%;
-            margin: 0 auto;
-          }
-          .table-row:hover {
-            background-color: #f8f9fa;
-          }
-          .table-row:hover .table-cell {
-            background-color: #f8f9fa !important;
-          }
-          .case-study a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-          }
-          @media (max-width: 768px) {
-            .table-row {
-              flex-direction: column;
-            }
-            .table-cell {
-              border-right: none !important;
-              border-bottom: 1px solid #dee2e6;
-            }
-            .table-cell:last-child {
-              border-bottom: none;
-            }
-            .case-study {
-              flex-direction: column;
-              align-items: flex-start;
-              gap: 0.5rem;
-            }
-            .case-study a {
-              margin-left: 0 !important;
-            }
-          }
-        </style>
       </section>
 
       <!-- 資源展示 Section -->
@@ -481,18 +435,29 @@
           'org-hero-btn-about': '組織について詳しく',
           'hero-btn-contact': 'お問い合わせ',
           
-          // Overview Panel
+          // Overview Section
           'overview-title': '組織概要',
-          'basic-info-title': '基本情報',
-          'contact-info-title': '連絡先',
-          'org-purpose-title': '設立目的',
-          'org-name-label': '正式名称',
-          'org-established-label': '設立年月日',
-          'org-address-label': '所在地',
-          'org-phone-label': '電話番号',
-          'org-email-label': 'メールアドレス',
-          'org-purpose-value': '国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること',
-          'leadership-title': '組織体制',
+          'org-name-label': '名称：',
+          'org-name': '一般社団法人 国際医療交流推進機構',
+          'org-address-label': '所在地：',
+          'org-address': '〒102-0083 東京千代田区麹町4-1-5',
+          'org-established-label': '設立：',
+          'org-established': '2016/9/12',
+          'org-contact-label': '連絡先：',
+          'org-contact': '03-6261-6288',
+          
+          // Business Cards
+          'business-research-title': '調査・研究事業',
+          'business-research-desc': '医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業',
+          'business-consulting-title': 'コンサルティング事業',
+          'business-consulting-desc': '医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業',
+          'business-tourism-title': '医療ツーリズム事業',
+          'business-tourism-desc': '医療ツーリズムに関する事業及び国内外施設の紹介事業',
+          'business-trade-title': '医療機器・医薬品事業',
+          'business-trade-desc': '医療機器の販売及び輸出入事業、薬局業及び医薬品販売事業',
+          
+          // Leadership
+          'leadership-title': '役員体制',
           'representative-label': '代表理事',
           'directors-label': '理事',
           'auditor-label': '監事',
@@ -575,18 +540,29 @@
           'org-hero-btn-about': '详细了解组织',
           'hero-btn-contact': '联系我们',
           
-          // Overview Panel
+          // Overview Section
           'overview-title': '组织概要',
-          'basic-info-title': '基本信息',
-          'contact-info-title': '联系方式',
-          'org-purpose-title': '成立目的',
-          'org-name-label': '正式名称',
-          'org-established-label': '成立日期',
-          'org-address-label': '所在地',
-          'org-phone-label': '电话号码',
-          'org-email-label': '邮箱地址',
-          'org-purpose-value': '推进国际医疗交流，促进医疗护理领域发展和跨境医疗普及',
-          'leadership-title': '组织体制',
+          'org-name-label': '名称：',
+          'org-name': '一般社团法人 国际医疗交流推进机构',
+          'org-address-label': '所在地：',
+          'org-address': '〒102-0083 东京千代田区麹町4-1-5',
+          'org-established-label': '设立：',
+          'org-established': '2016/9/12',
+          'org-contact-label': '联系方式：',
+          'org-contact': '03-6261-6288',
+          
+          // Business Cards
+          'business-research-title': '调查・研究事业',
+          'business-research-desc': '医疗、护理及海外医疗相关调查研究，国内外各种信息提供事业',
+          'business-consulting-title': '咨询事业',
+          'business-consulting-desc': '医疗设施及护理设施的设置运营事业及设置运营相关咨询事业',
+          'business-tourism-title': '医疗旅游事业',
+          'business-tourism-desc': '医疗旅游相关事业及国内外设施介绍事业',
+          'business-trade-title': '医疗器械・医药品事业',
+          'business-trade-desc': '医疗器械销售及进出口事业，药局业及医药品销售事业',
+          
+          // Leadership
+          'leadership-title': '管理层体制',
           'representative-label': '代表理事',
           'directors-label': '理事',
           'auditor-label': '监事',

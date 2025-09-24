@@ -2379,33 +2379,48 @@
 
   /* 新的问询按钮样式 */
   .Frame {
-    width: 40px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     background: #2c5530;
-    border-radius: 50%;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
   }
 
   .Frame:hover {
     background: #1e3a20;
-    transform: scale(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 85, 48, 0.4);
   }
 
   .Vector {
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     position: relative;
-    background: white;
-    border-radius: 50%;
     left: 0;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .Vector::before {
+    content: '✉ お問い合わせ';
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
   }
 
   /* 移动端菜单 */
@@ -2502,6 +2517,342 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
+  /* 業務内容表格样式 */
+  .business-table {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .table-row {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .table-row:last-child {
+    border-bottom: none;
+  }
+
+  .table-row:hover {
+    background-color: #f8f9fa;
+  }
+
+  .table-row:hover .table-cell {
+    background-color: #f8f9fa !important;
+  }
+
+  .table-cell {
+    padding: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .table-cell.header {
+    padding: 1rem;
+    font-weight: bold;
+    color: #495057;
+    background-color: #f8f9fa !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table-cell:first-child {
+    flex: 1;
+    border-right: 1px solid #dee2e6;
+  }
+
+  .table-cell:last-child {
+    flex: 2;
+  }
+
+  .table-cell h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .table-cell p {
+    margin: 0;
+    color: #6c757d;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .case-study {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .case-study span {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .case-study a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+
+  .case-study a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  /* 業務内容表格响应式 */
+  @media (max-width: 768px) {
+    .table-row {
+      flex-direction: column;
+    }
+
+    .table-cell {
+      border-right: none !important;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .table-cell:last-child {
+      border-bottom: none;
+    }
+
+    .case-study {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .case-study a {
+      margin-left: 0 !important;
+    }
+  }
+
+  /* About Section 新模板样式 */
+  .about-section {
+    background: #f5f8fc;
+    padding: 60px 10%;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #222;
+  }
+
+  .about-header {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .about-tag {
+    background: #eaf3ff;
+    color: #2370ff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .about-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 20px 0;
+    line-height: 1.4;
+  }
+
+  .about-points p {
+    font-size: 16px;
+    color: #444;
+    margin: 8px 0;
+    line-height: 1.6;
+  }
+
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .about-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .about-card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .about-card h3 {
+    font-size: 18px;
+    margin: 10px 0 8px;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .about-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .about-card.purple {
+    background: linear-gradient(135deg, #e6ddff 0%, #d4c5ff 100%);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+  }
+
+  .about-card.purple h3 {
+    color: #5a2d91;
+    margin-bottom: 15px;
+  }
+
+  .about-card.purple p {
+    color: #4a4a4a;
+  }
+
+  /* 组织基本信息样式 */
+  .org-basic-info {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  .info-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+  }
+
+  .info-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-item strong {
+    color: #2370ff;
+    font-weight: 600;
+    min-width: 80px;
+  }
+
+  .info-item span {
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* 理事情报样式 */
+  .leadership-section {
+    margin-top: 30px;
+  }
+
+  .leadership-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+    border: 1px solid #e1e8ff;
+  }
+
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .leadership-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .leadership-item strong {
+    color: #2370ff;
+    font-weight: 600;
+    min-width: 100px;
+  }
+
+  .leadership-item span {
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 40px 5%;
+    }
+
+    .about-title {
+      font-size: 24px;
+    }
+
+    .about-cards {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .info-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .info-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+
+    .info-item strong {
+      min-width: auto;
+    }
+
+    .leadership-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .leadership-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+
+    .leadership-item strong {
+      min-width: auto;
+    }
+  }
+
   /* Index页面Hero Section样式 */
   .hero-section--index {
     color: #2c3e50;
@@ -2513,18 +2864,24 @@
     font-weight: bold;
     margin-bottom: 1.2rem;
     white-space: nowrap;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
   }
 
   .hero-subtitle--index {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 0.6rem;
+    color: #2370FF;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
 
   .hero-subtitle--secondary {
     font-size: 2.4rem;
     font-weight: 500;
     margin-bottom: 1.8rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
   }
 
   @media (max-width: 768px) {
@@ -2535,7 +2892,7 @@
 
   /* Index页面背景图片 */
   .image--index {
-    background-image: url('homepage.png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('homepage.png');
   }
 
   /* 分支时间线样式 */
