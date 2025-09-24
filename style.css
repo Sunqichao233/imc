@@ -2639,6 +2639,33 @@
     }
   }
 
+  /* IMCS服务卡片文字样式 */
+  .service-title h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .service-description p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .service-title h3 {
+      font-size: 1.2rem;
+    }
+    
+    .service-description p {
+      font-size: 1rem;
+    }
+  }
+
   /* About Section 新模板样式 */
   .about-section {
     background: #f5f8fc;
