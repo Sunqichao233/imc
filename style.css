@@ -59,82 +59,13 @@
     flex: 0 0 auto;
   }
   
-  .desktop .hero-headline {
-    display: inline-flex;
-    align-items: center;
-    gap: 202px;
-    position: relative;
-    flex: 0 0 auto;
-  }
   
-  .desktop .medium-length-hero {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: clamp(32px, 6vw, 80px);
-    letter-spacing: 0;
-    line-height: clamp(38px, 7vw, 96px);
-    white-space: nowrap;
-  }
   
-  .desktop .text-wrapper {
-    font-weight: 700;
-  }
   
-  .desktop .span {
-    font-weight: 600;
-    font-style: italic;
-  }
   
-  .desktop .div {
-    margin-top: -1.00px;
-    font-weight: 600;
-    font-style: italic;
-    position: relative;
-    width: fit-content;
-    font-family: "Roboto", Helvetica;
-    color: #ffffff;
-    font-size: clamp(32px, 6vw, 80px);
-    letter-spacing: 0;
-    line-height: clamp(38px, 7vw, 96px);
-    white-space: nowrap;
-  }
   
-  .desktop .medium-length-hero-2 {
-    font-weight: 700;
-    position: relative;
-    width: 100%;
-    max-width: clamp(400px, 70vw, 800px);
-    font-family: "Roboto", Helvetica;
-    color: #ffffff;
-    font-size: clamp(24px, 4.5vw, 60px);
-    letter-spacing: 0;
-    line-height: clamp(30px, 5.5vw, 72px);
-    white-space: normal;
-    word-wrap: break-word;
-  }
   
-  .desktop .lorem-ipsum-dolor {
-    width: clamp(300px, 80vw, 746px);
-    color: #ffffff;
-    position: relative;
-    font-family: "Roboto", Helvetica;
-    font-weight: 400;
-    font-size: clamp(16px, 1.5vw, 18px);
-    letter-spacing: 0;
-    line-height: clamp(22px, 2vw, 27px);
-  }
   
-  .desktop .div-2 {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: clamp(12px, 1.5vw, 16px);
-    position: relative;
-    flex: 0 0 auto;
-  }
   
   .desktop .button {
     all: unset;
@@ -150,35 +81,7 @@
     border-radius: 100px;
   }
   
-  .desktop .text-wrapper-2 {
-    position: relative;
-    width: fit-content;
-    font-family: "Roboto", Helvetica;
-    font-weight: 500;
-    color: #ffffff;
-    font-size: clamp(16px, 1.5vw, 18px);
-    letter-spacing: 0.18px;
-    line-height: clamp(22px, 2vw, 27px);
-    white-space: nowrap;
-  }
   
-  .desktop .button-wrapper {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(6px, 0.8vw, 8px);
-    padding: 12px 24px;
-    position: relative;
-    flex: 0 0 auto;
-    margin-top: -1.00px;
-    margin-bottom: -1.00px;
-    margin-right: -1.00px;
-    border-radius: 100px;
-    border: 1px solid;
-    border-color: #ffffff;
-  }
   
   .desktop .navbar {
     display: flex;
