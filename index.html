@@ -16,61 +16,282 @@
   <body>
     <main class="desktop" id="top">
       <section class="image" style="background-image: url('homepage.png');">
-        <div class="hero-section" style="color: #2c3e50;">
+        <div class="hero-section" style="color: #2c3e50; padding-top: 120px;">
+          <style>
+            @media (max-width: 768px) {
+              .hero-section {
+                padding-top: 140px !important;
+              }
+            }
+          </style>
           <header class="hero-content">
-            <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 0.5rem;" data-i18n="hero-title-1">国際医療交流の</h1>
-            <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem;" data-i18n="hero-title-2">架け橋</h1>
+            <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; white-space: nowrap;">
+              <span data-i18n="hero-title-1">国際医療交流の</span><span data-i18n="hero-title-2">架け橋</span>
+            </h1>
             <h2 class="hero-subtitle" style="font-size: 2.5rem; font-weight: 600; margin-bottom: 0.5rem;" data-i18n="hero-company">IMC国際医療</h2>
             <h3 class="hero-subtitle" style="font-size: 2rem; font-weight: 500; margin-bottom: 1.5rem;" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</h3>
           </header>
-          <p class="hero-text" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;" data-i18n="hero-description">
-            IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。
-          </p>
           <div class="hero-buttons">
             <a href="organization.html" class="button" style="text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem;">
               <span data-i18n="hero-btn-about">組織について</span>
             </a>
-            <a href="#contact" class="button" style="text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem;">
+            <a href="#contact" class="button" style="text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; background-color: #2c5530; border: 1px solid #2c5530; color: white;">
               <span data-i18n="hero-btn-contact">お問い合わせ</span>
             </a>
           </div>
         </div>
         <nav class="navbar" role="navigation" aria-label="Main navigation">
-          <div class="container">
-            <div class="content">
-              <div class="company-logo">
-                <a href="#top" class="logo-link">
-                  <img 
-                    fetchpriority="high" 
-                    sizes="312px" 
-                    src="image.png" 
-                    alt="IMC国際医療ロゴ" 
-                    style="object-fit:cover" 
-                    class="logo-image" 
-                    width="312" 
-                    height="49">
-                </a>
-              </div>
+          <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-brand">
+              <a href="#top" class="logo-link">
+                <img 
+                  fetchpriority="high" 
+                  sizes="312px" 
+                  src="image.png" 
+                  alt="IMC国際医療ロゴ" 
+                  style="object-fit:cover" 
+                  class="logo-image" 
+                  width="312" 
+                  height="49">
+              </a>
             </div>
-            <div class="column">
-              <a href="organization.html" class="link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
-              <a href="imcs.html" class="link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
-              <a href="#brand-story" class="link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
-              <a href="#founder" class="link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
-              <a href="#releases" class="link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links">
+              <a href="organization.html" class="nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+              <a href="imcs.html" class="nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+              <a href="#brand-story" class="nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+              <a href="#founder" class="nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+              <a href="#releases" class="nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
             </div>
-            <div class="actions">
+
+            <!-- Always visible actions -->
+            <div class="nav-actions">
               <!-- Language Switcher -->
               <div class="language-switcher">
                 <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
                 <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
               </div>
-              <a href="#contact" class="button" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              <a href="#contact" class="nav-button">
                 <span data-i18n="hero-btn-contact">お問い合わせ</span>
               </a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Navigation Menu (only navigation links) -->
+          <div class="mobile-nav-menu" id="mobileNavMenu">
+            <a href="organization.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+            <a href="imcs.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+            <a href="#brand-story" class="mobile-nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+            <a href="#founder" class="mobile-nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+            <a href="#releases" class="mobile-nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
           </div>
         </nav>
+
+        <style>
+          /* 导航栏基础样式 */
+          .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+          }
+
+          /* Logo 保持比例 */
+          .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+          }
+
+          /* 导航链接样式 */
+          .nav-links {
+            display: flex;
+            gap: 2rem;
+          }
+
+          .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+          }
+
+          .nav-link:hover {
+            color: #007bff;
+          }
+
+          /* 动作区（语言切换 + 联系按钮） */
+          .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .language-switcher {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+          }
+
+          .lang-btn {
+            padding: 0.3rem 1rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #333;
+            transition: all 0.3s;
+          }
+
+          .lang-btn.active {
+            background: #007bff;
+            color: #fff;
+          }
+
+          .nav-button {
+            padding: 0.4rem 1rem;
+            border: 1px solid #2c5530;
+            border-radius: 20px;
+            color: #2c5530;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+          }
+
+          .nav-button:hover {
+            background: #2c5530;
+            color: #fff;
+          }
+
+          /* 移动端菜单 */
+          .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 0.3rem;
+            width: 30px;
+            height: 30px;
+          }
+
+          .hamburger-line {
+            width: 25px;
+            height: 2px;
+            background-color: #333;
+            transition: all 0.3s;
+            display: block;
+          }
+
+          .mobile-nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transform: translateY(-20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+          }
+
+          .mobile-nav-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .mobile-nav-link {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s;
+          }
+
+          .mobile-nav-link:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+          }
+
+          .mobile-nav-link:last-child {
+            border-bottom: none;
+          }
+
+          @media (max-width: 768px) {
+            .nav-links {
+              display: none;
+            }
+
+            .mobile-menu-toggle {
+              display: flex;
+            }
+
+            .mobile-nav-menu {
+              display: block;
+            }
+
+            .nav-container {
+              padding: 0.5rem 1rem;
+            }
+          }
+
+          /* 汉堡菜单动画 */
+          .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+          }
+
+          .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+          }
+
+          .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+          }
+        </style>
+
+        <script>
+          function toggleMobileMenu() {
+            const mobileNavMenu = document.getElementById('mobileNavMenu');
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            
+            mobileNavMenu.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+          }
+
+          // 点击菜单项后关闭移动菜单
+          document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+              link.addEventListener('click', () => {
+                const mobileNavMenu = document.getElementById('mobileNavMenu');
+                const toggleBtn = document.querySelector('.mobile-menu-toggle');
+                
+                mobileNavMenu.classList.remove('active');
+                toggleBtn.classList.remove('active');
+              });
+            });
+          });
+        </script>
       </section>
       <section class="section section--white" id="brand-story" aria-labelledby="brand-story-heading">
         <div class="section-header">
@@ -105,34 +326,90 @@
           <p class="section-description" data-i18n="founder-description">国際医療交流推進機構の創業者である夏氏についてご紹介します。</p>
         </div>
         <div class="section-content">
-          <div class="founder-card-container">
-            <div class="founder-profile-card">
-              <div class="founder-avatar-section">
-                <div class="founder-avatar"></div>
-                <div class="founder-name">夏冰（か ひょう）</div>
-                <div class="founder-title">創業者・代表理事</div>
+          <!-- 創業者プロフィール - 左右レイアウト -->
+          <div class="founder-profile" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap;">
+            <style>
+              @media (max-width: 768px) {
+                .founder-profile {
+                  flex-direction: column !important;
+                  gap: 2rem !important;
+                }
+                .founder-info {
+                  flex: none !important;
+                }
+                .founder-photo {
+                  flex: none !important;
+                  align-self: center !important;
+                }
+              }
+            </style>
+            <!-- 左側：経歴・履歴 -->
+            <div class="founder-info" style="flex: 2; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #1a1a1a; border-bottom: 2px solid #2c5530; padding-bottom: 0.5rem;">
+                夏冰　Xia Bing
+              </h3>
+              
+              <!-- プロフィール -->
+              <div class="profile-section" style="margin-bottom: 2rem;">
+                <h4 style="color: #2c5530; font-size: 1.2rem; margin-bottom: 1rem;">プロフィール</h4>
+                <div class="profile-content" style="line-height: 1.8; font-size: 0.95rem; color: #333;">
+                  <p style="margin-bottom: 1rem; color: #333;">国際医療交流分野における豊富な経験と専門知識を持つ創業者として、当機構の戦略的方向性と国際展開をリードしています。</p>
+                  <p style="margin-bottom: 1rem; color: #333;">医療業界での長年の実績を活かし、日本と海外の医療機関を繋ぐ重要な役割を担っています。</p>
+                </div>
               </div>
-              <div class="founder-quote">
-                医療分野での豊富な国際経験を持ち、日本と海外の医療機関を繋ぐ架け橋として活動。国際医療交流の発展に情熱を注いでいます。
+
+              <!-- 専門分野 -->
+              <div class="expertise-section" style="margin-bottom: 2rem;">
+                <h4 style="color: #2c5530; font-size: 1.2rem; margin-bottom: 1rem;">専門分野</h4>
+                <div class="expertise-list" style="line-height: 1.8; font-size: 0.95rem;">
+                  <div class="expertise-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    国際医療交流の戦略企画
+                  </div>
+                  <div class="expertise-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    医療ツーリズム事業の開発
+                  </div>
+                  <div class="expertise-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    海外医療機関との提携構築
+                  </div>
+                  <div class="expertise-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    医療技術の国際的普及
+                  </div>
+                </div>
+              </div>
+
+              <!-- 主な実績 -->
+              <div class="achievements-section">
+                <h4 style="color: #2c5530; font-size: 1.2rem; margin-bottom: 1rem;">主な実績</h4>
+                <div class="achievements-list" style="line-height: 1.8; font-size: 0.95rem;">
+                  <div class="achievement-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    多数の国際医療プロジェクトの統括
+                  </div>
+                  <div class="achievement-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    アジア太平洋地域での医療ネットワーク構築
+                  </div>
+                  <div class="achievement-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    医療従事者向け国際研修プログラムの開発
+                  </div>
+                  <div class="achievement-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
+                    国際医療交流推進機構の設立と運営
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div class="founder-achievements-card">
-              <h3 class="achievements-title">経歴・実績</h3>
-              <ul class="achievements-list">
-                <li class="achievement-item">
-                  <span class="achievement-text">医療業界での20年以上の経験</span>
-                </li>
-                <li class="achievement-item">
-                  <span class="achievement-text">国際医療プロジェクトの統括責任者</span>
-                </li>
-                <li class="achievement-item">
-                  <span class="achievement-text">多数の海外医療機関との提携実績</span>
-                </li>
-                <li class="achievement-item">
-                  <span class="achievement-text">医療技術国際交流の専門家</span>
-                </li>
-              </ul>
+            <!-- 右側：写真 -->
+            <div class="founder-photo" style="flex: 1; display: flex; justify-content: center; align-self: flex-start;">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop&crop=face" 
+                   alt="夏冰創業者" 
+                   style="width: 100%; max-width: 350px; height: 500px; min-height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
             </div>
           </div>
         </div>
@@ -315,11 +592,6 @@
             <img class="divider" src="https://c.animaapp.com/mfudvd8uZxTZps/img/divider.svg" alt="" />
             <div class="row-3">
               <p class="copyright-text" data-i18n="footer-copyright">© 2025 IMC国際医療. All rights reserved.</p>
-              <nav class="footer-links" role="navigation" aria-label="Legal links">
-                <a href="privacy.html" class="footer-link-2" data-i18n="footer-privacy">プライバシーポリシー</a>
-                <a href="terms.html" class="footer-link-2" data-i18n="footer-terms">利用規約</a>
-                <a href="cookies.html" class="footer-link-2" data-i18n="footer-cookies">Cookie設定</a>
-              </nav>
             </div>
           </div>
         </div>
@@ -339,7 +611,6 @@
           'hero-title-2': '架け橋',
           'hero-company': 'IMC国際医療',
           'hero-slogan': '世界をつなぐ医療ネットワーク',
-          'hero-description': 'IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。',
           'hero-btn-about': '組織について',
           'hero-btn-contact': 'お問い合わせ',
           
@@ -385,10 +656,7 @@
           'footer-hero-company': 'IMC国際医療',
           'footer-org-info': '組織情報',
           'footer-services': 'サービス',
-          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.',
-          'footer-privacy': 'プライバシーポリシー',
-          'footer-terms': '利用規約',
-          'footer-cookies': 'Cookie設定'
+          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.'
         },
         
         zh: {
@@ -401,7 +669,6 @@
           'hero-title-2': '桥梁',
           'hero-company': 'IMC国际医疗',
           'hero-slogan': '连接世界的医疗网络',
-          'hero-description': 'IMC国际医疗通过一般社团法人国际医疗交流推进机构和IMCS株式会社，作为连接日本与世界医疗机构的桥梁开展活动。通过最先进医疗技术和知识的国际共享，为提高世界医疗水平做出贡献。',
           'hero-btn-about': '关于组织',
           'hero-btn-contact': '联系我们',
           
@@ -447,10 +714,7 @@
           'footer-hero-company': 'IMC国际医疗',
           'footer-org-info': '组织信息',
           'footer-services': '服务',
-          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。',
-          'footer-privacy': '隐私政策',
-          'footer-terms': '使用条款',
-          'footer-cookies': 'Cookie设置'
+          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。'
         }
       };
 
