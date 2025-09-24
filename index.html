@@ -14,261 +14,75 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="desktop" id="top">
-      <section class="image" style="background-image: url('homepage.png');">
-        <div class="hero-section" style="color: #2c3e50; padding-top: 120px;">
-          <style>
-            @media (max-width: 768px) {
-              .hero-section {
-                padding-top: 140px !important;
-              }
-            }
-          </style>
-          <header class="hero-content">
-            <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; white-space: nowrap;">
-              <span data-i18n="hero-title-1">国際医療交流の</span><span data-i18n="hero-title-2">架け橋</span>
-            </h1>
-            <h2 class="hero-subtitle" style="font-size: 2.5rem; font-weight: 600; margin-bottom: 0.5rem;" data-i18n="hero-company">IMC国際医療</h2>
-            <h3 class="hero-subtitle" style="font-size: 2rem; font-weight: 500; margin-bottom: 1.5rem;" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</h3>
-          </header>
-          <div class="hero-buttons">
-            <a href="organization.html" class="button" style="text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem;">
-              <span data-i18n="hero-btn-about">組織について</span>
-            </a>
-            <a href="#contact" class="button" style="text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; background-color: #2c5530; border: 1px solid #2c5530; color: white;">
-              <span data-i18n="hero-btn-contact">お問い合わせ</span>
-            </a>
-          </div>
-        </div>
+    <!-- 独立导航栏 -->
         <nav class="navbar" role="navigation" aria-label="Main navigation">
-          <div class="nav-container">
-            <!-- Logo -->
-            <div class="nav-brand">
-              <a href="#top" class="logo-link">
-                <img 
-                  fetchpriority="high" 
-                  sizes="312px" 
-                  src="image.png" 
-                  alt="IMC国際医療ロゴ" 
-                  style="object-fit:cover" 
-                  class="logo-image" 
-                  width="312" 
-                  height="49">
-              </a>
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="nav-brand">
+                <a href="#top" class="logo-link">
+                  <img 
+                    fetchpriority="high" 
+                    sizes="312px" 
+                    src="image.png" 
+                    alt="IMC国際医療ロゴ" 
+                    style="object-fit:cover" 
+                    class="logo-image" 
+                    width="312" 
+                    height="49">
+                </a>
+              </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="organization.html" class="nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+          <a href="imcs.html" class="nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+          <a href="#brand-story" class="nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+          <a href="#founder" class="nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+          <a href="#releases" class="nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
             </div>
 
-            <!-- Desktop Navigation Links -->
-            <div class="nav-links">
-              <a href="organization.html" class="nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
-              <a href="imcs.html" class="nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
-              <a href="#brand-story" class="nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
-              <a href="#founder" class="nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
-              <a href="#releases" class="nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
-            </div>
-
-            <!-- Always visible actions -->
-            <div class="nav-actions">
+        <!-- Always visible actions -->
+        <div class="nav-actions">
               <!-- Language Switcher -->
               <div class="language-switcher">
                 <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
                 <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
               </div>
-              <a href="#contact" class="nav-button">
-                <span data-i18n="hero-btn-contact">お問い合わせ</span>
-              </a>
+          <div data-layer="Frame" class="Frame">
+            <div data-layer="Vector" class="Vector"></div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-            </button>
-          </div>
+      <!-- Mobile Navigation Menu (only navigation links) -->
+      <div class="mobile-nav-menu" id="mobileNavMenu">
+        <a href="organization.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+        <a href="imcs.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+        <a href="#brand-story" class="mobile-nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+        <a href="#founder" class="mobile-nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+        <a href="#releases" class="mobile-nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
+                </div>
+    </nav>
 
-          <!-- Mobile Navigation Menu (only navigation links) -->
-          <div class="mobile-nav-menu" id="mobileNavMenu">
-            <a href="organization.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
-            <a href="imcs.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
-            <a href="#brand-story" class="mobile-nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
-            <a href="#founder" class="mobile-nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
-            <a href="#releases" class="mobile-nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
-          </div>
-        </nav>
+    <main class="desktop" id="top">
+      <section class="image image--index">
+        <div class="hero-section hero-section--index">
+          <header class="hero-content">
+            <h1 class="hero-title hero-title--index">
+              <span data-i18n="hero-title-1">国際医療交流の</span><span data-i18n="hero-title-2">架け橋</span>
+            </h1>
+            <h2 class="hero-subtitle hero-subtitle--index" data-i18n="hero-company">IMC国際医療</h2>
+            <h3 class="hero-subtitle hero-subtitle--secondary" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</h3>
+          </header>
+        </div>
 
-        <style>
-          /* 导航栏基础样式 */
-          .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-          }
-
-          /* Logo 保持比例 */
-          .logo-image {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-          }
-
-          /* 导航链接样式 */
-          .nav-links {
-            display: flex;
-            gap: 2rem;
-          }
-
-          .nav-link {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-          }
-
-          .nav-link:hover {
-            color: #007bff;
-          }
-
-          /* 动作区（语言切换 + 联系按钮） */
-          .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-          }
-
-          .language-switcher {
-            display: flex;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            overflow: hidden;
-          }
-
-          .lang-btn {
-            padding: 0.3rem 1rem;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            font-size: 0.9rem;
-            color: #333;
-            transition: all 0.3s;
-          }
-
-          .lang-btn.active {
-            background: #007bff;
-            color: #fff;
-          }
-
-          .nav-button {
-            padding: 0.4rem 1rem;
-            border: 1px solid #2c5530;
-            border-radius: 20px;
-            color: #2c5530;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-          }
-
-          .nav-button:hover {
-            background: #2c5530;
-            color: #fff;
-          }
-
-          /* 移动端菜单 */
-          .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 0.3rem;
-            width: 30px;
-            height: 30px;
-          }
-
-          .hamburger-line {
-            width: 25px;
-            height: 2px;
-            background-color: #333;
-            transition: all 0.3s;
-            display: block;
-          }
-
-          .mobile-nav-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transform: translateY(-20px);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            z-index: 1000;
-          }
-
-          .mobile-nav-menu.active {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-          }
-
-          .mobile-nav-link {
-            display: block;
-            color: #333;
-            text-decoration: none;
-            padding: 1rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            font-size: 1rem;
-            text-align: center;
-            transition: background-color 0.3s;
-          }
-
-          .mobile-nav-link:hover {
-            background-color: rgba(0, 123, 255, 0.1);
-          }
-
-          .mobile-nav-link:last-child {
-            border-bottom: none;
-          }
-
-          @media (max-width: 768px) {
-            .nav-links {
-              display: none;
-            }
-
-            .mobile-menu-toggle {
-              display: flex;
-            }
-
-            .mobile-nav-menu {
-              display: block;
-            }
-
-            .nav-container {
-              padding: 0.5rem 1rem;
-            }
-          }
-
-          /* 汉堡菜单动画 */
-          .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-          }
-
-          .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-            opacity: 0;
-          }
-
-          .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-          }
-        </style>
 
         <script>
           function toggleMobileMenu() {

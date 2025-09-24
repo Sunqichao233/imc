@@ -14,10 +14,91 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- 独立导航栏 -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="nav-brand">
+          <a href="index.html" class="logo-link">
+            <img 
+              fetchpriority="high" 
+              sizes="312px" 
+              src="image.png" 
+              alt="IMC国際医療ロゴ" 
+              style="object-fit:cover" 
+              class="logo-image" 
+              width="312" 
+              height="49">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"><span class="link-text" data-i18n="nav-home">ホーム</span></a>
+          <a href="#overview" class="nav-link"><span class="link-text" data-i18n="nav-overview">組織概要</span></a>
+          <a href="#advisor" class="nav-link"><span class="link-text" data-i18n="nav-advisor">顧問紹介</span></a>
+          <a href="#business" class="nav-link"><span class="link-text" data-i18n="nav-business">業務内容</span></a>
+          <a href="#resources" class="nav-link"><span class="link-text" data-i18n="nav-resources">資源展示</span></a>
+        </div>
+
+        <!-- Always visible actions -->
+        <div class="nav-actions">
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+            <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+          </div>
+          <div data-layer="Frame" class="Frame">
+            <div data-layer="Vector" class="Vector"></div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu (only navigation links) -->
+      <div class="mobile-nav-menu" id="mobileNavMenu">
+        <a href="index.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-home">ホーム</span></a>
+        <a href="#overview" class="mobile-nav-link"><span class="link-text" data-i18n="nav-overview">組織概要</span></a>
+        <a href="#advisor" class="mobile-nav-link"><span class="link-text" data-i18n="nav-advisor">顧問紹介</span></a>
+        <a href="#business" class="mobile-nav-link"><span class="link-text" data-i18n="nav-business">業務内容</span></a>
+        <a href="#resources" class="mobile-nav-link"><span class="link-text" data-i18n="nav-resources">資源展示</span></a>
+      </div>
+    </nav>
+
+
+    <script>
+      function toggleMobileMenu() {
+        const mobileNavMenu = document.getElementById('mobileNavMenu');
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        
+        mobileNavMenu.classList.toggle('active');
+        toggleBtn.classList.toggle('active');
+      }
+
+      // 点击菜单项后关闭移动菜单
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            const mobileNavMenu = document.getElementById('mobileNavMenu');
+            const toggleBtn = document.querySelector('.mobile-menu-toggle');
+            
+            mobileNavMenu.classList.remove('active');
+            toggleBtn.classList.remove('active');
+          });
+        });
+      });
+    </script>
+
     <main class="desktop" id="top">
       <!-- Header with Logo and Navigation -->
       <section class="image" style="background-image: url('imc.png');">
-        <div class="hero-section" style="color: white; padding-top: 120px; margin-top: 0;">
+        <div class="hero-section" style="color: white; padding-top: 80px; margin-top: 0;">
           <header class="hero-content">
             <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 0.5rem; color: white;" data-i18n="org-hero-title-1">一般社団法人</h1>
             <h1 class="hero-title" style="font-size: 4rem; font-weight: bold; margin-bottom: 1rem; color: white;" data-i18n="org-hero-title-2">国際医療交流推進機構</h1>
@@ -26,38 +107,6 @@
           </header>
 
         </div>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-          <div class="container">
-            <div class="content">
-              <div class="company-logo">
-                <a href="index.html" class="logo-link">
-                  <img 
-                    fetchpriority="high" 
-                    sizes="312px" 
-                    src="image.png" 
-                    alt="IMC国際医療ロゴ" 
-                    style="object-fit:cover" 
-                    class="logo-image" 
-                    width="312" 
-                    height="49">
-                </a>
-              </div>
-            </div>
-            <div class="column">
-              <a href="#overview" class="link"><span class="link-text" data-i18n="nav-overview">組織概要</span></a>
-              <a href="#advisor" class="link"><span class="link-text" data-i18n="nav-advisor">顧問紹介</span></a>
-              <a href="#business" class="link"><span class="link-text" data-i18n="nav-business">業務内容</span></a>
-              <a href="#resources" class="link"><span class="link-text" data-i18n="nav-resources">資源展示</span></a>
-            </div>
-            <div class="actions">
-              <!-- Language Switcher -->
-              <div class="language-switcher">
-                <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
-                <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
-              </div>
-            </div>
-          </div>
-        </nav>
       </section>
 
       <!-- 組織概要 Section -->
