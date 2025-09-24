@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title data-i18n="page-title">一般社団法人 国際医療交流推進機構 - IMC国際医療</title>
+    <meta
+      name="description"
+      content="一般社団法人国際医療交流推進機構の詳細情報 - 組織概要、問題介紹、業務内容、資源展示"
+      data-i18n-content="page-description"
+    />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* 组织页面专用样式 */
+      .org-page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .org-hero-section {
+        background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+        color: white;
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      
+      .org-hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      
+      .org-hero-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+      
+      .org-nav-section {
+        background: white;
+        border-bottom: 1px solid #e0e0e0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      
+      .org-nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .org-nav-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .org-nav-tab {
+        flex: 1;
+        max-width: 250px;
+      }
+      
+      .org-nav-button {
+        width: 100%;
+        padding: 20px 30px;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+      }
+      
+      .org-nav-button:hover {
+        background-color: #f8f9fa;
+        color: #2c5530;
+      }
+      
+      .org-nav-button.active {
+        color: #2c5530;
+        border-bottom-color: #2c5530;
+        background-color: #f8f9fa;
+      }
+      
+      .org-content-section {
+        padding: 60px 0;
+        min-height: 600px;
+      }
+      
+      .org-content-panel {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      
+      .org-content-panel.active {
+        display: block;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .content-card {
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+      }
+      
+      .content-title {
+        font-size: 2rem;
+        color: #2c5530;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 15px;
+      }
+      
+      .content-subtitle {
+        font-size: 1.4rem;
+        color: #4a7c59;
+        margin: 30px 0 20px;
+        font-weight: 600;
+      }
+      
+      .content-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      
+      .content-list {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .content-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+        padding-left: 25px;
+      }
+      
+      .content-list li:before {
+        content: "▶";
+        color: #2c5530;
+        position: absolute;
+        left: 0;
+        top: 12px;
+      }
+      
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+      
+      .info-item {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 4px solid #2c5530;
+      }
+      
+      .info-label {
+        font-weight: bold;
+        color: #2c5530;
+        margin-bottom: 8px;
+      }
+      
+      .info-value {
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+        .org-nav-tabs {
+          flex-direction: column;
+        }
+        
+        .org-nav-button {
+          padding: 15px 20px;
+          font-size: 1rem;
+        }
+        
+        .org-hero-title {
+          font-size: 2rem;
+        }
+        
+        .content-card {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="desktop" id="top">
+      <!-- Header with Logo and Navigation -->
+      <section class="image">
+        <div class="hero-section">
+          <header class="hero-content">
+            <div class="hero-headline">
+              <h1 class="medium-length-hero">
+                <span class="text-wrapper" data-i18n="hero-title-1">国際医療交流の</span> <span class="span" data-i18n="hero-title-2">架け橋</span>
+              </h1>
+              <div class="div" data-i18n="hero-company">IMC国際医療</div>
+            </div>
+            <div class="medium-length-hero-2" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</div>
+          </header>
+          <p class="lorem-ipsum-dolor" data-i18n="hero-description">
+            IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。
+          </p>
+          <div class="div-2">
+            <a href="index.html" class="button" style="text-decoration: none;">
+              <span class="text-wrapper-2" data-i18n="hero-btn-home">ホームに戻る</span>
+            </a>
+            <a href="#contact" class="button-wrapper" style="text-decoration: none;">
+              <span class="text-wrapper-2" data-i18n="hero-btn-contact">お問い合わせ</span>
+            </a>
+          </div>
+        </div>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+          <div class="container">
+            <div class="content">
+              <div class="company-logo">
+                <a href="index.html" class="logo-link">
+                  <img 
+                    fetchpriority="high" 
+                    sizes="312px" 
+                    src="image.png" 
+                    alt="IMC国際医療ロゴ" 
+                    style="object-fit:cover" 
+                    class="logo-image" 
+                    width="312" 
+                    height="49">
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <a href="organization.html" class="link active"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
+              <a href="index.html#imcs" class="link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
+              <a href="index.html#brand-story" class="link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
+              <a href="index.html#founder" class="link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
+              <a href="index.html#releases" class="link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
+              <a href="index.html#contact" class="link"><span class="link-text" data-i18n="nav-contact">お問い合わせ</span></a>
+            </div>
+            <div class="actions">
+              <!-- Language Switcher -->
+              <div class="language-switcher">
+                <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+                <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+              </div>
+              <a href="index.html#contact" class="button-2" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                <span class="text-wrapper-2" data-i18n="hero-btn-contact">お問い合わせ</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Organization Hero Section -->
+      <section class="org-hero-section">
+        <div class="org-page-container">
+          <h1 class="org-hero-title" data-i18n="org-hero-title">一般社団法人 国際医療交流推進機構</h1>
+          <p class="org-hero-subtitle" data-i18n="org-hero-subtitle">
+            国際間の医療交流を推進し、世界各国の健康と福祉の向上に貢献する専門機関として、
+            医療・介護分野の発展とクロスボーダー医療の普及に取り組んでいます。
+          </p>
+        </div>
+      </section>
+
+    <!-- Navigation Tabs -->
+    <section class="org-nav-section">
+      <div class="org-nav-container">
+        <ul class="org-nav-tabs">
+          <li class="org-nav-tab">
+            <button class="org-nav-button active" onclick="showPanel('overview')" data-i18n="nav-overview">組織概要</button>
+          </li>
+          <li class="org-nav-tab">
+            <button class="org-nav-button" onclick="showPanel('issues')" data-i18n="nav-issues">問題紹介</button>
+          </li>
+          <li class="org-nav-tab">
+            <button class="org-nav-button" onclick="showPanel('business')" data-i18n="nav-business">業務内容</button>
+          </li>
+          <li class="org-nav-tab">
+            <button class="org-nav-button" onclick="showPanel('resources')" data-i18n="nav-resources">資源展示</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="org-content-section">
+      <div class="org-page-container">
+        
+        <!-- 組織概要 Panel -->
+        <div class="org-content-panel active" id="panel-overview">
+          <div class="content-card">
+            <h2 class="content-title" data-i18n="overview-title">組織概要</h2>
+            
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-name-label">正式名称</div>
+                <div class="info-value">一般社団法人 国際医療交流推進機構</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-established-label">設立年月日</div>
+                <div class="info-value">2016年9月12日</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-address-label">所在地</div>
+                <div class="info-value">〒102-0083 東京千代田区麹町4-1-5</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-phone-label">電話番号</div>
+                <div class="info-value">03-6261-6288</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-email-label">メールアドレス</div>
+                <div class="info-value">info@imcs.co.jp</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="org-purpose-label">設立目的</div>
+                <div class="info-value" data-i18n="org-purpose-value">国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること</div>
+              </div>
+            </div>
+
+            <h3 class="content-subtitle" data-i18n="leadership-title">組織体制</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-label" data-i18n="representative-label">代表理事</div>
+                <div class="info-value">中村　達 / 華岡　知</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="directors-label">理事</div>
+                <div class="info-value">酒井　友佳</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="auditor-label">監事</div>
+                <div class="info-value">山田　和夫</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="advisor-label">顧問</div>
+                <div class="info-value">林　基弘</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="executive-directors-label">執行理事</div>
+                <div class="info-value">金子　朗久 / 郭常青</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 問題紹介 Panel -->
+        <div class="org-content-panel" id="panel-issues">
+          <div class="content-card">
+            <h2 class="content-title" data-i18n="issues-title">問題紹介</h2>
+            
+            <h3 class="content-subtitle" data-i18n="current-challenges-title">現在の医療業界が直面する課題</h3>
+            <p class="content-text" data-i18n="challenges-intro">
+              グローバル化が進む現代において、医療業界は様々な課題に直面しています。
+              当機構では、これらの課題を解決するため、国際的な視点から取り組んでいます。
+            </p>
+
+            <h3 class="content-subtitle" data-i18n="main-issues-title">主要な課題</h3>
+            <ul class="content-list">
+              <li data-i18n="issue-1">医療技術の国際格差と知識共有の不足</li>
+              <li data-i18n="issue-2">言語・文化の壁による医療アクセスの制限</li>
+              <li data-i18n="issue-3">医療従事者の国際的な交流機会の不足</li>
+              <li data-i18n="issue-4">医療ツーリズムにおける情報不足と不安</li>
+              <li data-i18n="issue-5">最新医療技術の普及における地域格差</li>
+              <li data-i18n="issue-6">国際医療における法的・制度的な障壁</li>
+            </ul>
+
+            <h3 class="content-subtitle" data-i18n="our-approach-title">当機構のアプローチ</h3>
+            <p class="content-text" data-i18n="approach-description">
+              これらの課題に対し、当機構では以下のような包括的なアプローチで解決に取り組んでいます：
+            </p>
+            <ul class="content-list">
+              <li data-i18n="approach-1">医療機関間のネットワーク構築による知識共有の促進</li>
+              <li data-i18n="approach-2">多言語対応による医療アクセスの改善</li>
+              <li data-i18n="approach-3">医療従事者向け国際交流プログラムの実施</li>
+              <li data-i18n="approach-4">医療ツーリズムの安全で信頼できる環境整備</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 業務内容 Panel -->
+        <div class="org-content-panel" id="panel-business">
+          <div class="content-card">
+            <h2 class="content-title" data-i18n="business-title">業務内容</h2>
+            
+            <h3 class="content-subtitle" data-i18n="main-business-title">主要事業</h3>
+            <p class="content-text" data-i18n="business-intro">
+              当法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびに
+              クロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として
+              以下の事業を行っています。
+            </p>
+
+            <ul class="content-list">
+              <li data-i18n="business-1">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</li>
+              <li data-i18n="business-2">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</li>
+              <li data-i18n="business-3">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</li>
+              <li data-i18n="business-4">医療ツーリズムに関する事業</li>
+              <li data-i18n="business-5">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</li>
+              <li data-i18n="business-6">医療機器の販売及び輸出入事業</li>
+              <li data-i18n="business-7">薬局業及び医薬品並びに医薬部外品の販売事業</li>
+              <li data-i18n="business-8">人材派遣事業</li>
+            </ul>
+
+            <h3 class="content-subtitle" data-i18n="specific-services-title">具体的なサービス</h3>
+            
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-label" data-i18n="international-exchange-label">国際交流</div>
+                <div class="info-value" data-i18n="international-exchange-desc">医療従事者の国際的な交流プログラムの企画・運営</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="consulting-label">海外プロモーション（コンサルティング）</div>
+                <div class="info-value" data-i18n="consulting-desc">海外市場への医療サービス展開支援</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="education-label">教育研修</div>
+                <div class="info-value" data-i18n="education-desc">医療技術向上のための専門研修プログラム</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="medical-tourism-label">医療ツーリズム</div>
+                <div class="info-value" data-i18n="medical-tourism-desc">安全で高品質な医療ツーリズムサービスの提供</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 資源展示 Panel -->
+        <div class="org-content-panel" id="panel-resources">
+          <div class="content-card">
+            <h2 class="content-title" data-i18n="resources-title">資源展示</h2>
+            
+            <h3 class="content-subtitle" data-i18n="medical-network-title">医療ネットワーク</h3>
+            <p class="content-text" data-i18n="network-intro">
+              当機構では、日本国内外の優秀な医療機関・医師とのネットワークを構築し、
+              高品質な医療サービスの提供を支援しています。
+            </p>
+
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-label" data-i18n="japan-hospitals-label">日本病院/医師ネットワーク</div>
+                <div class="info-value" data-i18n="japan-hospitals-desc">
+                  日本国内の優秀な医療機関・医師とのネットワークを構築し、
+                  高品質な医療サービスの提供を支援
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="membership-label">会員制：中日医療交流</div>
+                <div class="info-value" data-i18n="membership-desc">
+                  中国と日本の医療関係者による会員制ネットワークを運営し、
+                  両国間の医療交流を促進
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="partnerships-label">国際提携機関</div>
+                <div class="info-value" data-i18n="partnerships-desc">
+                  アジア太平洋地域を中心とした医療機関との戦略的パートナーシップ
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-label" data-i18n="technology-label">医療技術リソース</div>
+                <div class="info-value" data-i18n="technology-desc">
+                  最新の医療技術と設備に関する情報共有プラットフォーム
+                </div>
+              </div>
+            </div>
+
+            <h3 class="content-subtitle" data-i18n="achievements-title">実績・成果</h3>
+            <ul class="content-list">
+              <li data-i18n="achievement-1">国際医療交流プログラム：年間50件以上の実施</li>
+              <li data-i18n="achievement-2">医療ツーリズム：累計1,000名以上のサポート実績</li>
+              <li data-i18n="achievement-3">医療従事者研修：年間200名以上の参加者</li>
+              <li data-i18n="achievement-4">国際医療展示会：年間10回以上の参加・出展</li>
+              <li data-i18n="achievement-5">医療機関提携：日本国内外100施設以上とのネットワーク</li>
+            </ul>
+
+            <h3 class="content-subtitle" data-i18n="future-plans-title">今後の展開</h3>
+            <p class="content-text" data-i18n="future-plans-desc">
+              当機構では、さらなる国際医療交流の発展を目指し、
+              デジタル技術を活用した遠隔医療サービスの拡充、
+              新興国との医療協力関係の構築、
+              次世代医療技術の国際的な普及促進に取り組んでまいります。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-2">
+        <div class="content-6">
+          <div class="newsletter">
+            <h2 class="heading-3">
+              <span class="text-wrapper-7" data-i18n="footer-hero-title-1">国際医療交流の</span>
+              <span class="text-wrapper-8" data-i18n="footer-hero-title-2">架け橋</span>
+              <span class="text-wrapper-7" data-i18n="footer-hero-company"> <br />IMC国際医療</span>
+            </h2>
+            <div class="actions-2">
+            </div>
+          </div>
+          <nav class="links" role="navigation" aria-label="Footer navigation">
+            <div class="column-6">
+              <h3 class="text-wrapper-4" data-i18n="footer-org-info">組織情報</h3>
+              <ul class="div-9">
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">一般社団法人について</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#imcs" class="footer-link">IMCS株式会社</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#brand-story" class="footer-link">ブランドストーリー</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#founder" class="footer-link">創業者紹介</a></li>
+              </ul>
+            </div>
+            <div class="column-6">
+              <h3 class="text-wrapper-4" data-i18n="footer-services">サービス</h3>
+              <ul class="div-9">
+                <li class="footer-link-wrapper"><a href="index.html#imcs" class="footer-link">医療コンサルティング</a></li>
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">国際交流事業</a></li>
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">教育研修</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#releases" class="footer-link">最新情報</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="div-7">
+          <img class="divider" src="https://c.animaapp.com/mfudvd8uZxTZps/img/divider.svg" alt="" />
+          <div class="row-3">
+            <p class="copyright-text" data-i18n="footer-copyright">© 2025 IMC国際医療. All rights reserved.</p>
+            <nav class="footer-links" role="navigation" aria-label="Legal links">
+              <a href="privacy.html" class="footer-link-2" data-i18n="footer-privacy">プライバシーポリシー</a>
+              <a href="terms.html" class="footer-link-2" data-i18n="footer-terms">利用規約</a>
+              <a href="cookies.html" class="footer-link-2" data-i18n="footer-cookies">Cookie設定</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </main>
+
+    <script>
+      // Translation object for multi-language support
+      const translations = {
+        ja: {
+          // Meta and Title
+          'page-title': '一般社団法人 国際医療交流推進機構 - IMC国際医療',
+          'page-description': '一般社団法人国際医療交流推進機構の詳細情報 - 組織概要、問題介紹、業務内容、資源展示',
+          
+          // Navigation
+          'back-to-home': '← ホームに戻る',
+          'nav-overview': '組織概要',
+          'nav-issues': '問題紹介',
+          'nav-business': '業務内容',
+          'nav-resources': '資源展示',
+          
+          // Hero Section
+          'hero-title-1': '国際医療交流の',
+          'hero-title-2': '架け橋',
+          'hero-company': 'IMC国際医療',
+          'hero-slogan': '世界をつなぐ医療ネットワーク',
+          'hero-description': 'IMC国際医療は、一般社団法人国際医療交流推進機構とIMCS株式会社を通じて、日本と世界の医療機関を結ぶ架け橋として活動しています。最先端の医療技術と知識の国際的な共有を通じて、世界の医療水準向上に貢献します。',
+          'hero-btn-home': 'ホームに戻る',
+          'hero-btn-contact': 'お問い合わせ',
+          
+          // Organization Hero Section
+          'org-hero-title': '一般社団法人 国際医療交流推進機構',
+          'org-hero-subtitle': '国際間の医療交流を推進し、世界各国の健康と福祉の向上に貢献する専門機関として、医療・介護分野の発展とクロスボーダー医療の普及に取り組んでいます。',
+          
+          // Overview Panel
+          'overview-title': '組織概要',
+          'org-name-label': '正式名称',
+          'org-established-label': '設立年月日',
+          'org-address-label': '所在地',
+          'org-phone-label': '電話番号',
+          'org-email-label': 'メールアドレス',
+          'org-purpose-label': '設立目的',
+          'org-purpose-value': '国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること',
+          'leadership-title': '組織体制',
+          'representative-label': '代表理事',
+          'directors-label': '理事',
+          'auditor-label': '監事',
+          'advisor-label': '顧問',
+          'executive-directors-label': '執行理事',
+          
+          // Issues Panel
+          'issues-title': '問題紹介',
+          'current-challenges-title': '現在の医療業界が直面する課題',
+          'challenges-intro': 'グローバル化が進む現代において、医療業界は様々な課題に直面しています。当機構では、これらの課題を解決するため、国際的な視点から取り組んでいます。',
+          'main-issues-title': '主要な課題',
+          'issue-1': '医療技術の国際格差と知識共有の不足',
+          'issue-2': '言語・文化の壁による医療アクセスの制限',
+          'issue-3': '医療従事者の国際的な交流機会の不足',
+          'issue-4': '医療ツーリズムにおける情報不足と不安',
+          'issue-5': '最新医療技術の普及における地域格差',
+          'issue-6': '国際医療における法的・制度的な障壁',
+          'our-approach-title': '当機構のアプローチ',
+          'approach-description': 'これらの課題に対し、当機構では以下のような包括的なアプローチで解決に取り組んでいます：',
+          'approach-1': '医療機関間のネットワーク構築による知識共有の促進',
+          'approach-2': '多言語対応による医療アクセスの改善',
+          'approach-3': '医療従事者向け国際交流プログラムの実施',
+          'approach-4': '医療ツーリズムの安全で信頼できる環境整備',
+          
+          // Business Panel
+          'business-title': '業務内容',
+          'main-business-title': '主要事業',
+          'business-intro': '当法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として以下の事業を行っています。',
+          'business-1': '医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業',
+          'business-2': '医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業',
+          'business-3': '医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業',
+          'business-4': '医療ツーリズムに関する事業',
+          'business-5': '食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業',
+          'business-6': '医療機器の販売及び輸出入事業',
+          'business-7': '薬局業及び医薬品並びに医薬部外品の販売事業',
+          'business-8': '人材派遣事業',
+          'specific-services-title': '具体的なサービス',
+          'international-exchange-label': '国際交流',
+          'international-exchange-desc': '医療従事者の国際的な交流プログラムの企画・運営',
+          'consulting-label': '海外プロモーション（コンサルティング）',
+          'consulting-desc': '海外市場への医療サービス展開支援',
+          'education-label': '教育研修',
+          'education-desc': '医療技術向上のための専門研修プログラム',
+          'medical-tourism-label': '医療ツーリズム',
+          'medical-tourism-desc': '安全で高品質な医療ツーリズムサービスの提供',
+          
+          // Resources Panel
+          'resources-title': '資源展示',
+          'medical-network-title': '医療ネットワーク',
+          'network-intro': '当機構では、日本国内外の優秀な医療機関・医師とのネットワークを構築し、高品質な医療サービスの提供を支援しています。',
+          'japan-hospitals-label': '日本病院/医師ネットワーク',
+          'japan-hospitals-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、高品質な医療サービスの提供を支援',
+          'membership-label': '会員制：中日医療交流',
+          'membership-desc': '中国と日本の医療関係者による会員制ネットワークを運営し、両国間の医療交流を促進',
+          'partnerships-label': '国際提携機関',
+          'partnerships-desc': 'アジア太平洋地域を中心とした医療機関との戦略的パートナーシップ',
+          'technology-label': '医療技術リソース',
+          'technology-desc': '最新の医療技術と設備に関する情報共有プラットフォーム',
+          'achievements-title': '実績・成果',
+          'achievement-1': '国際医療交流プログラム：年間50件以上の実施',
+          'achievement-2': '医療ツーリズム：累計1,000名以上のサポート実績',
+          'achievement-3': '医療従事者研修：年間200名以上の参加者',
+          'achievement-4': '国際医療展示会：年間10回以上の参加・出展',
+          'achievement-5': '医療機関提携：日本国内外100施設以上とのネットワーク',
+          'future-plans-title': '今後の展開',
+          'future-plans-desc': '当機構では、さらなる国際医療交流の発展を目指し、デジタル技術を活用した遠隔医療サービスの拡充、新興国との医療協力関係の構築、次世代医療技術の国際的な普及促進に取り組んでまいります。',
+          
+          // Navigation
+          'nav-organization': '一般社団法人 国際医療交流推進機構',
+          'nav-imcs': 'IMCS株式会社',
+          'nav-brand-story': 'ブランドストーリー',
+          'nav-founder': '創業者紹介',
+          'nav-releases': 'リリース',
+          'nav-contact': 'お問い合わせ',
+          
+          // Footer
+          'footer-hero-title-1': '国際医療交流の',
+          'footer-hero-title-2': '架け橋',
+          'footer-hero-company': 'IMC国際医療',
+          'footer-org-info': '組織情報',
+          'footer-services': 'サービス',
+          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.',
+          'footer-privacy': 'プライバシーポリシー',
+          'footer-terms': '利用規約',
+          'footer-cookies': 'Cookie設定'
+        },
+        
+        zh: {
+          // Meta and Title
+          'page-title': '一般社团法人 国际医疗交流推进机构 - IMC国际医疗',
+          'page-description': '一般社团法人国际医疗交流推进机构的详细信息 - 组织概要、问题介绍、业务内容、资源展示',
+          
+          // Navigation
+          'back-to-home': '← 返回首页',
+          'nav-overview': '组织概要',
+          'nav-issues': '问题介绍',
+          'nav-business': '业务内容',
+          'nav-resources': '资源展示',
+          
+          // Hero Section
+          'hero-title-1': '国际医疗交流的',
+          'hero-title-2': '桥梁',
+          'hero-company': 'IMC国际医疗',
+          'hero-slogan': '连接世界的医疗网络',
+          'hero-description': 'IMC国际医疗通过一般社团法人国际医疗交流推进机构和IMCS株式会社，作为连接日本与世界医疗机构的桥梁开展活动。通过最先进医疗技术和知识的国际共享，为提高世界医疗水平做出贡献。',
+          'hero-btn-home': '返回首页',
+          'hero-btn-contact': '联系我们',
+          
+          // Organization Hero Section
+          'org-hero-title': '一般社团法人 国际医疗交流推进机构',
+          'org-hero-subtitle': '作为推进国际医疗交流、为提高世界各国健康福祉做出贡献的专业机构，致力于医疗护理领域的发展和跨境医疗的普及。',
+          
+          // Overview Panel
+          'overview-title': '组织概要',
+          'org-name-label': '正式名称',
+          'org-established-label': '成立日期',
+          'org-address-label': '所在地',
+          'org-phone-label': '电话号码',
+          'org-email-label': '邮箱地址',
+          'org-purpose-label': '成立目的',
+          'org-purpose-value': '推进国际医疗交流，促进医疗护理领域发展和跨境医疗普及',
+          'leadership-title': '组织体制',
+          'representative-label': '代表理事',
+          'directors-label': '理事',
+          'auditor-label': '监事',
+          'advisor-label': '顾问',
+          'executive-directors-label': '执行理事',
+          
+          // Issues Panel
+          'issues-title': '问题介绍',
+          'current-challenges-title': '当前医疗行业面临的挑战',
+          'challenges-intro': '在全球化进程中，医疗行业面临着各种挑战。本机构从国际视角出发，致力于解决这些问题。',
+          'main-issues-title': '主要课题',
+          'issue-1': '医疗技术的国际差距和知识共享不足',
+          'issue-2': '语言文化障碍导致的医疗服务获取限制',
+          'issue-3': '医疗从业者国际交流机会不足',
+          'issue-4': '医疗旅游中的信息不足和不安',
+          'issue-5': '最新医疗技术普及的地区差距',
+          'issue-6': '国际医疗中的法律制度障碍',
+          'our-approach-title': '本机构的解决方案',
+          'approach-description': '针对这些课题，本机构采用以下综合性方法进行解决：',
+          'approach-1': '构建医疗机构间网络促进知识共享',
+          'approach-2': '通过多语言支持改善医疗服务获取',
+          'approach-3': '实施面向医疗从业者的国际交流项目',
+          'approach-4': '建设安全可信的医疗旅游环境',
+          
+          // Business Panel
+          'business-title': '业务内容',
+          'main-business-title': '主要事业',
+          'business-intro': '本法人通过推进国际医疗交流事业，促进医疗护理领域发展和跨境医疗普及，为提高世界各国健康福祉做出贡献，开展以下事业。',
+          'business-1': '医疗、护理及海外医疗相关调查研究、国内外各种信息提供事业',
+          'business-2': '推进医疗、护理及海外医疗的国内外设施以及旅行社等介绍事业',
+          'business-3': '医疗设施及护理设施的设置运营事业及相关咨询事业',
+          'business-4': '医疗旅游相关事业',
+          'business-5': '食品、医药部外品的研发、制造销售及进出口事业',
+          'business-6': '医疗器械销售及进出口事业',
+          'business-7': '药局业及医药品、医药部外品销售事业',
+          'business-8': '人才派遣事业',
+          'specific-services-title': '具体服务',
+          'international-exchange-label': '国际交流',
+          'international-exchange-desc': '医疗从业者国际交流项目的策划运营',
+          'consulting-label': '海外推广（咨询）',
+          'consulting-desc': '海外市场医疗服务拓展支援',
+          'education-label': '教育研修',
+          'education-desc': '医疗技术提升专业研修项目',
+          'medical-tourism-label': '医疗旅游',
+          'medical-tourism-desc': '提供安全高质量的医疗旅游服务',
+          
+          // Resources Panel
+          'resources-title': '资源展示',
+          'medical-network-title': '医疗网络',
+          'network-intro': '本机构构建了与日本国内外优秀医疗机构和医师的网络，支持提供高质量的医疗服务。',
+          'japan-hospitals-label': '日本医院/医师网络',
+          'japan-hospitals-desc': '构建与日本国内优秀医疗机构和医师的网络，支持提供高质量医疗服务',
+          'membership-label': '会员制：中日医疗交流',
+          'membership-desc': '运营中日医疗相关人员会员制网络，促进两国间医疗交流',
+          'partnerships-label': '国际合作机构',
+          'partnerships-desc': '以亚太地区为中心的医疗机构战略合作伙伴关系',
+          'technology-label': '医疗技术资源',
+          'technology-desc': '最新医疗技术和设备信息共享平台',
+          'achievements-title': '实绩成果',
+          'achievement-1': '国际医疗交流项目：年间实施50件以上',
+          'achievement-2': '医疗旅游：累计支援1,000名以上',
+          'achievement-3': '医疗从业者研修：年间参加者200名以上',
+          'achievement-4': '国际医疗展览会：年间参加出展10次以上',
+          'achievement-5': '医疗机构合作：与日本国内外100家以上设施建立网络',
+          'future-plans-title': '今后发展',
+          'future-plans-desc': '本机构为进一步发展国际医疗交流，将致力于利用数字技术扩充远程医疗服务、构建与新兴国家的医疗合作关系、促进下一代医疗技术的国际普及。',
+          
+          // Navigation
+          'nav-organization': '一般社团法人 国际医疗交流推进机构',
+          'nav-imcs': 'IMCS株式会社',
+          'nav-brand-story': '品牌故事',
+          'nav-founder': '创始人介绍',
+          'nav-releases': '新闻发布',
+          'nav-contact': '联系我们',
+          
+          // Footer
+          'footer-hero-title-1': '国际医疗交流的',
+          'footer-hero-title-2': '桥梁',
+          'footer-hero-company': 'IMC国际医疗',
+          'footer-org-info': '组织信息',
+          'footer-services': '服务',
+          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。',
+          'footer-privacy': '隐私政策',
+          'footer-terms': '使用条款',
+          'footer-cookies': 'Cookie设置'
+        }
+      };
+
+      // Panel switching functionality
+      function showPanel(panelId) {
+        // Hide all panels
+        const allPanels = document.querySelectorAll('.org-content-panel');
+        allPanels.forEach(panel => {
+          panel.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        const allButtons = document.querySelectorAll('.org-nav-button');
+        allButtons.forEach(button => {
+          button.classList.remove('active');
+        });
+        
+        // Show selected panel
+        const selectedPanel = document.getElementById('panel-' + panelId);
+        if (selectedPanel) {
+          selectedPanel.classList.add('active');
+        }
+        
+        // Add active class to clicked button
+        const clickedButton = event.target;
+        clickedButton.classList.add('active');
+        
+        // Scroll to top of content
+        document.querySelector('.org-content-section').scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+      
+      // Language switching functionality
+      function switchLanguage(lang) {
+        // Save language preference to localStorage
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // Update all elements with data-i18n attribute
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+        elementsToTranslate.forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+        
+        // Update meta description
+        const metaDescription = document.querySelector('meta[data-i18n-content="page-description"]');
+        if (metaDescription && translations[lang]['page-description']) {
+          metaDescription.setAttribute('content', translations[lang]['page-description']);
+        }
+        
+        // Update document title
+        const titleElement = document.querySelector('title[data-i18n="page-title"]');
+        if (titleElement && translations[lang]['page-title']) {
+          document.title = translations[lang]['page-title'];
+        }
+        
+        // Update language button states
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        document.getElementById('lang-' + lang).classList.add('active');
+        
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', lang);
+      }
+      
+      // Initialize language on page load
+      function initializeLanguage() {
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        switchLanguage(savedLanguage);
+      }
+      
+      // Initialize when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeLanguage();
+      });
+    </script>
+  </body>
+</html>
