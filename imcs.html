@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title data-i18n="page-title">IMCS株式会社 - IMC国際医療</title>
+    <meta
+      name="description"
+      content="IMCS株式会社の詳細情報 - 会社概要、業務内容、サービス紹介、実績展示"
+      data-i18n-content="page-description"
+    />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="desktop" id="top">
+      <!-- Header with Logo and Navigation -->
+      <section class="image">
+        <div class="hero-section">
+          <header class="hero-content">
+            <div class="hero-headline">
+              <h1 class="medium-length-hero">
+                <span class="text-wrapper" data-i18n="imcs-hero-title-1">IMCS</span> <span class="span" data-i18n="imcs-hero-title-2">株式会社</span>
+              </h1>
+              <div class="div" data-i18n="imcs-hero-subtitle">International Medical Consulting Services Co., Ltd.</div>
+            </div>
+            <div class="medium-length-hero-2" data-i18n="imcs-hero-slogan">医療サービスとコンサルティングの専門企業</div>
+          </header>
+          <p class="lorem-ipsum-dolor" data-i18n="imcs-hero-description">
+            IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。先端的な健康診断から医療ツーリズムまで、幅広いサービスを通じて国際医療の発展に貢献しています。
+          </p>
+        </div>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+          <div class="container">
+            <div class="content">
+              <div class="company-logo">
+                <a href="index.html" class="logo-link">
+                  <img 
+                    fetchpriority="high" 
+                    sizes="312px" 
+                    src="image.png" 
+                    alt="IMC国際医療ロゴ" 
+                    style="object-fit:cover" 
+                    class="logo-image" 
+                    width="312" 
+                    height="49">
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <a href="#overview" class="link"><span class="link-text" data-i18n="nav-overview">会社概要</span></a>
+              <a href="#services" class="link"><span class="link-text" data-i18n="nav-services">業務内容</span></a>
+              <a href="#resources" class="link"><span class="link-text" data-i18n="nav-resources">資源展示</span></a>
+            </div>
+            <div class="actions">
+              <!-- Language Switcher -->
+              <div class="language-switcher">
+                <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+                <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- 会社概要 Section -->
+      <section class="section section--white" id="overview" aria-labelledby="overview-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="overview-heading" data-i18n="overview-title">会社概要</h2>
+        </div>
+        <div class="section-content">
+          <p><strong data-i18n="company-name-label">会社名：</strong>IMCS株式会社</p>
+          <p><strong data-i18n="company-established-label">設立：</strong>2021年</p>
+          <p><strong data-i18n="company-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
+          <p><strong data-i18n="company-phone-label">電話番号：</strong>03-6261-6288</p>
+          <p><strong data-i18n="company-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
+          <p><strong data-i18n="company-purpose-label">事業目的：</strong><span data-i18n="company-purpose-value">国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供</span></p>
+          
+          <h3 data-i18n="qualifications-title">資格などを含む</h3>
+          <ul>
+            <li data-i18n="qualification-1">医療ツーリズム事業者認定</li>
+            <li data-i18n="qualification-2">国際医療コーディネーター資格</li>
+            <li data-i18n="qualification-3">医療通訳士認定</li>
+            <li data-i18n="qualification-4">海外医療機関提携認証</li>
+            <li data-i18n="qualification-5">国際医療保険対応資格</li>
+            <li data-i18n="qualification-6">多言語医療サポート認定</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 業務内容 Section -->
+      <section class="section section--light-gray" id="services" aria-labelledby="services-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="services-heading" data-i18n="services-title">業務内容</h2>
+        </div>
+        <div class="section-content">
+          <div class="section-cards">
+            <div class="card">
+              <h3 data-i18n="advanced-checkup-title">高端体检：含健康管理</h3>
+              <p data-i18n="advanced-checkup-desc">提供最高水準の健康診断サービス。最新の医療技術を活用した包括的な健康診断から、個人に合わせた健康管理プログラムまで、トータルヘルスケアをサポートします。</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="cancer-treatment-title">癌症重症赴日治疗：含远程</h3>
+              <p data-i18n="cancer-treatment-desc">がん・重篤疾患の日本での治療サポート。遠隔診療システムを含む最先端の医療技術により、海外からの患者様に最高品質の治療機会を提供します。</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="regenerative-title">再生医療</h3>
+              <p data-i18n="regenerative-desc">最先端の再生医療技術を活用した革新的な治療サービス。幹細胞治療や組織再生技術により、従来の治療法では困難な疾患に対する新たな治療選択肢を提供します。</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="fertility-treatment-title">不孕不育：含外国人赴日治疗，外国人和日本人赴台治疗</h3>
+              <p data-i18n="fertility-treatment-desc">不妊治療の総合サポートサービス。外国人の日本での治療、外国人・日本人の台湾での治療など、国境を越えた最適な治療環境を提供します。</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="service-flow-title">服务流程</h3>
+              <p data-i18n="service-flow-desc">初回相談から治療完了まで、患者様一人ひとりに寄り添った包括的なサポート体制。医療通訳、渡航手配、現地サポート、アフターケアまで、全工程をトータルでサポートします。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 資源展示 Section -->
+      <section class="section section--white" id="resources" aria-labelledby="resources-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="resources-heading" data-i18n="resources-title">資源展示</h2>
+        </div>
+        <div class="section-content">
+          <div class="section-cards">
+            <div class="card">
+              <h3 data-i18n="hospital-network-title">日本医院/医生 → 同社团</h3>
+              <p data-i18n="hospital-network-desc">日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。</p>
+              <ul>
+                <li data-i18n="network-1">提携医療機関：50施設以上</li>
+                <li data-i18n="network-2">専門医師：200名以上</li>
+                <li data-i18n="network-3">対応診療科：20科目以上</li>
+                <li data-i18n="network-4">社団法人との連携による包括的サポート体制</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-2">
+        <div class="content-6">
+          <div class="newsletter">
+            <h2 class="heading-3">
+              <span class="text-wrapper-7" data-i18n="footer-hero-title-1">国際医療交流の</span>
+              <span class="text-wrapper-8" data-i18n="footer-hero-title-2">架け橋</span>
+              <span class="text-wrapper-7" data-i18n="footer-hero-company"> <br />IMC国際医療</span>
+            </h2>
+            <div class="actions-2">
+            </div>
+          </div>
+          <nav class="links" role="navigation" aria-label="Footer navigation">
+            <div class="column-6">
+              <h3 class="text-wrapper-4" data-i18n="footer-org-info">組織情報</h3>
+              <ul class="div-9">
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">一般社団法人について</a></li>
+                <li class="footer-link-wrapper"><a href="imcs.html" class="footer-link">IMCS株式会社</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#brand-story" class="footer-link">ブランドストーリー</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#founder" class="footer-link">創業者紹介</a></li>
+              </ul>
+            </div>
+            <div class="column-6">
+              <h3 class="text-wrapper-4" data-i18n="footer-services">サービス</h3>
+              <ul class="div-9">
+                <li class="footer-link-wrapper"><a href="imcs.html" class="footer-link">医療コンサルティング</a></li>
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">国際交流事業</a></li>
+                <li class="footer-link-wrapper"><a href="organization.html" class="footer-link">教育研修</a></li>
+                <li class="footer-link-wrapper"><a href="index.html#releases" class="footer-link">最新情報</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="div-7">
+          <img class="divider" src="https://c.animaapp.com/mfudvd8uZxTZps/img/divider.svg" alt="" />
+          <div class="row-3">
+            <p class="copyright-text" data-i18n="footer-copyright">© 2025 IMC国際医療. All rights reserved.</p>
+            <nav class="footer-links" role="navigation" aria-label="Legal links">
+              <a href="privacy.html" class="footer-link-2" data-i18n="footer-privacy">プライバシーポリシー</a>
+              <a href="terms.html" class="footer-link-2" data-i18n="footer-terms">利用規約</a>
+              <a href="cookies.html" class="footer-link-2" data-i18n="footer-cookies">Cookie設定</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </main>
+
+    <script>
+      // Translation object for multi-language support
+      const translations = {
+        ja: {
+          // Meta and Title
+          'page-title': 'IMCS株式会社 - IMC国際医療',
+          'page-description': 'IMCS株式会社の詳細情報 - 会社概要、業務内容、サービス紹介、実績展示',
+          
+          // Navigation
+          'nav-overview': '会社概要',
+          'nav-services': '業務内容',
+          'nav-resources': '資源展示',
+          'nav-home': 'ホーム',
+          'nav-contact': 'お問い合わせ',
+          
+          // IMCS Hero Section
+          'imcs-hero-title-1': 'IMCS',
+          'imcs-hero-title-2': '株式会社',
+          'imcs-hero-subtitle': 'International Medical Consulting Services Co., Ltd.',
+          'imcs-hero-slogan': '医療サービスとコンサルティングの専門企業',
+          'imcs-hero-description': 'IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。先端的な健康診断から医療ツーリズムまで、幅広いサービスを通じて国際医療の発展に貢献しています。',
+          
+          // Overview Panel
+          'overview-title': '会社概要',
+          'company-name-label': '会社名',
+          'company-established-label': '設立',
+          'company-address-label': '所在地',
+          'company-phone-label': '電話番号',
+          'company-email-label': 'メールアドレス',
+          'company-purpose-label': '事業目的',
+          'company-purpose-value': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供',
+          'qualifications-title': '資格などを含む',
+          'qualification-1': '医療ツーリズム事業者認定',
+          'qualification-2': '国際医療コーディネーター資格',
+          'qualification-3': '医療通訳士認定',
+          'qualification-4': '海外医療機関提携認証',
+          'qualification-5': '国際医療保険対応資格',
+          'qualification-6': '多言語医療サポート認定',
+          
+          // Services Panel
+          'services-title': '業務内容',
+          'advanced-checkup-title': '高端体检：含健康管理',
+          'advanced-checkup-desc': '提供最高水準の健康診断サービス。最新の医療技術を活用した包括的な健康診断から、個人に合わせた健康管理プログラムまで、トータルヘルスケアをサポートします。',
+          'cancer-treatment-title': '癌症重症赴日治疗：含远程',
+          'cancer-treatment-desc': 'がん・重篤疾患の日本での治療サポート。遠隔診療システムを含む最先端の医療技術により、海外からの患者様に最高品質の治療機会を提供します。',
+          'regenerative-title': '再生医療',
+          'regenerative-desc': '最先端の再生医療技術を活用した革新的な治療サービス。幹細胞治療や組織再生技術により、従来の治療法では困難な疾患に対する新たな治療選択肢を提供します。',
+          'fertility-treatment-title': '不孕不育：含外国人赴日治疗，外国人和日本人赴台治疗',
+          'fertility-treatment-desc': '不妊治療の総合サポートサービス。外国人の日本での治療、外国人・日本人の台湾での治療など、国境を越えた最適な治療環境を提供します。',
+          'service-flow-title': '服务流程',
+          'service-flow-desc': '初回相談から治療完了まで、患者様一人ひとりに寄り添った包括的なサポート体制。医療通訳、渡航手配、現地サポート、アフターケアまで、全工程をトータルでサポートします。',
+          
+          // Resources Panel
+          'resources-title': '資源展示',
+          'hospital-network-title': '日本医院/医生 → 同社团',
+          'hospital-network-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。',
+          'network-1': '提携医療機関：50施設以上',
+          'network-2': '専門医師：200名以上',
+          'network-3': '対応診療科：20科目以上',
+          'network-4': '社団法人との連携による包括的サポート体制',
+          
+          // Footer
+          'footer-hero-title-1': '国際医療交流の',
+          'footer-hero-title-2': '架け橋',
+          'footer-hero-company': 'IMC国際医療',
+          'footer-org-info': '組織情報',
+          'footer-services': 'サービス',
+          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.',
+          'footer-privacy': 'プライバシーポリシー',
+          'footer-terms': '利用規約',
+          'footer-cookies': 'Cookie設定'
+        },
+        
+        zh: {
+          // Meta and Title
+          'page-title': 'IMCS株式会社 - IMC国际医疗',
+          'page-description': 'IMCS株式会社的详细信息 - 公司概要、业务内容、服务介绍、实绩展示',
+          
+          // Navigation
+          'nav-overview': '公司概要',
+          'nav-services': '业务内容',
+          'nav-resources': '资源展示',
+          'nav-home': '首页',
+          'nav-contact': '联系我们',
+          
+          // IMCS Hero Section
+          'imcs-hero-title-1': 'IMCS',
+          'imcs-hero-title-2': '株式会社',
+          'imcs-hero-subtitle': 'International Medical Consulting Services Co., Ltd.',
+          'imcs-hero-slogan': '医疗服务与咨询的专业企业',
+          'imcs-hero-description': 'IMCS株式会社作为国际医疗交流推进机构的事业部门，提供具体的医疗服务和咨询业务。从先进的健康体检到医疗旅游，通过广泛的服务为国际医疗发展做出贡献。',
+          
+          // Overview Panel
+          'overview-title': '公司概要',
+          'company-name-label': '公司名',
+          'company-established-label': '成立',
+          'company-address-label': '所在地',
+          'company-phone-label': '电话号码',
+          'company-email-label': '邮箱地址',
+          'company-purpose-label': '事业目的',
+          'company-purpose-value': '作为国际医疗交流推进机构的事业部门，提供具体的医疗服务和咨询业务',
+          'qualifications-title': '资格等包含',
+          'qualification-1': '医疗旅游事业者认定',
+          'qualification-2': '国际医疗协调员资格',
+          'qualification-3': '医疗翻译师认定',
+          'qualification-4': '海外医疗机构合作认证',
+          'qualification-5': '国际医疗保险对应资格',
+          'qualification-6': '多语言医疗支持认定',
+          
+          // Services Panel
+          'services-title': '业务内容',
+          'advanced-checkup-title': '高端体检：含健康管理',
+          'advanced-checkup-desc': '提供最高水准的健康体检服务。从运用最新医疗技术的综合健康体检到个人定制的健康管理项目，提供全方位健康护理支持。',
+          'cancer-treatment-title': '癌症重症赴日治疗：含远程',
+          'cancer-treatment-desc': '癌症・重症疾病的日本治疗支持。通过包含远程诊疗系统在内的最先进医疗技术，为海外患者提供最高质量的治疗机会。',
+          'regenerative-title': '再生医疗',
+          'regenerative-desc': '运用最先进再生医疗技术的创新治疗服务。通过干细胞治疗和组织再生技术，为传统治疗方法难以治愈的疾病提供新的治疗选择。',
+          'fertility-treatment-title': '不孕不育：含外国人赴日治疗，外国人和日本人赴台治疗',
+          'fertility-treatment-desc': '不孕治疗的综合支持服务。外国人在日本的治疗、外国人・日本人在台湾的治疗等，提供跨越国境的最适治疗环境。',
+          'service-flow-title': '服务流程',
+          'service-flow-desc': '从初次咨询到治疗完成，为每一位患者提供贴心的综合支持体制。从医疗翻译、出行安排、现地支持到后续护理，全程提供全方位支持。',
+          
+          // Resources Panel
+          'resources-title': '资源展示',
+          'hospital-network-title': '日本医院/医生 → 同社团',
+          'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量医疗服务。',
+          'network-1': '合作医疗机构：50家以上',
+          'network-2': '专门医师：200名以上',
+          'network-3': '对应诊疗科：20科以上',
+          'network-4': '与社团法人合作的综合支持体制',
+          
+          // Footer
+          'footer-hero-title-1': '国际医疗交流的',
+          'footer-hero-title-2': '桥梁',
+          'footer-hero-company': 'IMC国际医疗',
+          'footer-org-info': '组织信息',
+          'footer-services': '服务',
+          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。',
+          'footer-privacy': '隐私政策',
+          'footer-terms': '使用条款',
+          'footer-cookies': 'Cookie设置'
+        }
+      };
+      
+      // Language switching functionality
+      function switchLanguage(lang) {
+        // Save language preference to localStorage
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // Update all elements with data-i18n attribute
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+        elementsToTranslate.forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+        
+        // Update meta description
+        const metaDescription = document.querySelector('meta[data-i18n-content="page-description"]');
+        if (metaDescription && translations[lang]['page-description']) {
+          metaDescription.setAttribute('content', translations[lang]['page-description']);
+        }
+        
+        // Update document title
+        const titleElement = document.querySelector('title[data-i18n="page-title"]');
+        if (titleElement && translations[lang]['page-title']) {
+          document.title = translations[lang]['page-title'];
+        }
+        
+        // Update language button states
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        document.getElementById('lang-' + lang).classList.add('active');
+        
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', lang);
+      }
+      
+      // Initialize language on page load
+      function initializeLanguage() {
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        switchLanguage(savedLanguage);
+      }
+      
+      // Initialize when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeLanguage();
+      });
+    </script>
+  </body>
+</html>
