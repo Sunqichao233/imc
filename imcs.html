@@ -16,7 +16,7 @@
   <body>
     <main class="desktop" id="top">
       <!-- Header with Logo and Navigation -->
-      <section class="image">
+      <section class="image" style="background-image: url('homepage.png');">
         <div class="hero-section">
           <header class="hero-content">
             <div class="hero-headline">
@@ -70,22 +70,33 @@
           <h2 class="section-title" id="overview-heading" data-i18n="overview-title">会社概要</h2>
         </div>
         <div class="section-content">
-          <p><strong data-i18n="company-name-label">会社名：</strong>IMCS株式会社</p>
-          <p><strong data-i18n="company-established-label">設立：</strong>2021年</p>
-          <p><strong data-i18n="company-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
-          <p><strong data-i18n="company-phone-label">電話番号：</strong>03-6261-6288</p>
-          <p><strong data-i18n="company-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
-          <p><strong data-i18n="company-purpose-label">事業目的：</strong><span data-i18n="company-purpose-value">国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供</span></p>
-          
-          <h3 data-i18n="qualifications-title">資格などを含む</h3>
-          <ul>
-            <li data-i18n="qualification-1">医療ツーリズム事業者認定</li>
-            <li data-i18n="qualification-2">国際医療コーディネーター資格</li>
-            <li data-i18n="qualification-3">医療通訳士認定</li>
-            <li data-i18n="qualification-4">海外医療機関提携認証</li>
-            <li data-i18n="qualification-5">国際医療保険対応資格</li>
-            <li data-i18n="qualification-6">多言語医療サポート認定</li>
-          </ul>
+          <div class="section-cards">
+            <div class="card">
+              <h3 data-i18n="company-info-title">会社情報</h3>
+              <p><strong data-i18n="company-name-label">会社名：</strong>IMCS株式会社</p>
+              <p><strong data-i18n="company-established-label">設立：</strong>2021年</p>
+              <p><strong data-i18n="company-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
+              <p><strong data-i18n="company-phone-label">電話番号：</strong>03-6261-6288</p>
+              <p><strong data-i18n="company-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="company-purpose-title">事業目的</h3>
+              <p data-i18n="company-purpose-value">国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="qualifications-title">資格などを含む</h3>
+              <ul>
+                <li data-i18n="qualification-1">医療ツーリズム事業者認定</li>
+                <li data-i18n="qualification-2">国際医療コーディネーター資格</li>
+                <li data-i18n="qualification-3">医療通訳士認定</li>
+                <li data-i18n="qualification-4">海外医療機関提携認証</li>
+                <li data-i18n="qualification-5">国際医療保険対応資格</li>
+                <li data-i18n="qualification-6">多言語医療サポート認定</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -219,12 +230,13 @@
           
           // Overview Panel
           'overview-title': '会社概要',
+          'company-info-title': '会社情報',
           'company-name-label': '会社名',
           'company-established-label': '設立',
           'company-address-label': '所在地',
           'company-phone-label': '電話番号',
           'company-email-label': 'メールアドレス',
-          'company-purpose-label': '事業目的',
+          'company-purpose-title': '事業目的',
           'company-purpose-value': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供',
           'qualifications-title': '資格などを含む',
           'qualification-1': '医療ツーリズム事業者認定',
@@ -289,12 +301,13 @@
           
           // Overview Panel
           'overview-title': '公司概要',
+          'company-info-title': '公司信息',
           'company-name-label': '公司名',
           'company-established-label': '成立',
           'company-address-label': '所在地',
           'company-phone-label': '电话号码',
           'company-email-label': '邮箱地址',
-          'company-purpose-label': '事业目的',
+          'company-purpose-title': '事业目的',
           'company-purpose-value': '作为国际医疗交流推进机构的事业部门，提供具体的医疗服务和咨询业务',
           'qualifications-title': '资格等包含',
           'qualification-1': '医疗旅游事业者认定',

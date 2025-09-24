@@ -16,7 +16,7 @@
   <body>
     <main class="desktop" id="top">
       <!-- Header with Logo and Navigation -->
-      <section class="image">
+      <section class="image" style="background-image: url('imc.png');">
         <div class="hero-section">
           <header class="hero-content">
             <div class="hero-headline">
@@ -72,19 +72,49 @@
           <h2 class="section-title" id="overview-heading" data-i18n="overview-title">組織概要</h2>
         </div>
         <div class="section-content">
-          <p><strong data-i18n="org-name-label">正式名称：</strong>一般社団法人 国際医療交流推進機構</p>
-          <p><strong data-i18n="org-established-label">設立年月日：</strong>2016年9月12日</p>
-          <p><strong data-i18n="org-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
-          <p><strong data-i18n="org-phone-label">電話番号：</strong>03-6261-6288</p>
-          <p><strong data-i18n="org-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
-          <p><strong data-i18n="org-purpose-label">設立目的：</strong><span data-i18n="org-purpose-value">国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること</span></p>
+          <!-- 基本情報カード -->
+          <div class="section-cards">
+            <div class="card">
+              <h3 data-i18n="basic-info-title">基本情報</h3>
+              <p><strong data-i18n="org-name-label">正式名称：</strong>一般社団法人 国際医療交流推進機構</p>
+              <p><strong data-i18n="org-established-label">設立年月日：</strong>2016年9月12日</p>
+              <p><strong data-i18n="org-address-label">所在地：</strong>〒102-0083 東京千代田区麹町4-1-5</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="contact-info-title">連絡先</h3>
+              <p><strong data-i18n="org-phone-label">電話番号：</strong>03-6261-6288</p>
+              <p><strong data-i18n="org-email-label">メールアドレス：</strong>info@imcs.co.jp</p>
+            </div>
+            
+            <div class="card">
+              <h3 data-i18n="org-purpose-title">設立目的</h3>
+              <p data-i18n="org-purpose-value">国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること</p>
+            </div>
+          </div>
           
+          <!-- 組織体制 - タイムライン風 -->
           <h3 data-i18n="leadership-title">組織体制</h3>
-          <p><strong data-i18n="representative-label">代表理事：</strong>中村　達 / 華岡　知</p>
-          <p><strong data-i18n="directors-label">理事：</strong>酒井　友佳</p>
-          <p><strong data-i18n="auditor-label">監事：</strong>山田　和夫</p>
-          <p><strong data-i18n="advisor-label">顧問：</strong>林　基弘</p>
-          <p><strong data-i18n="executive-directors-label">執行理事：</strong>金子　朗久 / 郭常青</p>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="representative-label">代表理事</div>
+            <div class="timeline-content">中村　達 / 華岡　知</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="executive-directors-label">執行理事</div>
+            <div class="timeline-content">金子　朗久 / 郭常青</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="directors-label">理事</div>
+            <div class="timeline-content">酒井　友佳</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="auditor-label">監事</div>
+            <div class="timeline-content">山田　和夫</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-i18n="advisor-label">顧問</div>
+            <div class="timeline-content">林　基弘</div>
+          </div>
         </div>
       </section>
 
@@ -94,24 +124,33 @@
           <h2 class="section-title" id="advisor-heading" data-i18n="advisor-title">顧問紹介</h2>
         </div>
         <div class="section-content">
-          <h3>夏冰</h3>
-          <p data-i18n="advisor-intro">国際医療交流分野における豊富な経験と専門知識を持つ顧問として、当機構の戦略的方向性と国際展開をサポートしています。</p>
-          <p data-i18n="advisor-experience">医療業界での長年の実績を活かし、日本と海外の医療機関を繋ぐ重要な役割を担っています。</p>
-          
-          <h4 data-i18n="advisor-expertise-title">専門分野</h4>
-          <ul>
-            <li data-i18n="expertise-1">国際医療交流の戦略企画</li>
-            <li data-i18n="expertise-2">医療ツーリズム事業の開発</li>
-            <li data-i18n="expertise-3">海外医療機関との提携構築</li>
-            <li data-i18n="expertise-4">医療技術の国際的普及</li>
-          </ul>
-          
-          <h4 data-i18n="advisor-achievements-title">主な実績</h4>
-          <ul>
-            <li data-i18n="achievement-advisor-1">多数の国際医療プロジェクトの統括</li>
-            <li data-i18n="achievement-advisor-2">アジア太平洋地域での医療ネットワーク構築</li>
-            <li data-i18n="achievement-advisor-3">医療従事者向け国際研修プログラムの開発</li>
-          </ul>
+          <!-- 顧問プロフィールカード -->
+          <div class="section-cards">
+            <div class="card">
+              <h3>夏冰</h3>
+              <p data-i18n="advisor-intro">国際医療交流分野における豊富な経験と専門知識を持つ顧問として、当機構の戦略的方向性と国際展開をサポートしています。</p>
+              <p data-i18n="advisor-experience">医療業界での長年の実績を活かし、日本と海外の医療機関を繋ぐ重要な役割を担っています。</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="advisor-expertise-title">専門分野</h4>
+              <ul>
+                <li data-i18n="expertise-1">国際医療交流の戦略企画</li>
+                <li data-i18n="expertise-2">医療ツーリズム事業の開発</li>
+                <li data-i18n="expertise-3">海外医療機関との提携構築</li>
+                <li data-i18n="expertise-4">医療技術の国際的普及</li>
+              </ul>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="advisor-achievements-title">主な実績</h4>
+              <ul>
+                <li data-i18n="achievement-advisor-1">多数の国際医療プロジェクトの統括</li>
+                <li data-i18n="achievement-advisor-2">アジア太平洋地域での医療ネットワーク構築</li>
+                <li data-i18n="achievement-advisor-3">医療従事者向け国際研修プログラムの開発</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -121,21 +160,57 @@
           <h2 class="section-title" id="business-heading" data-i18n="business-title">業務内容</h2>
         </div>
         <div class="section-content">
-          <p data-i18n="business-intro">
-            当法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびに
-            クロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として
-            以下の事業を行っています。
-          </p>
-          <ul>
-            <li data-i18n="business-1">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</li>
-            <li data-i18n="business-2">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</li>
-            <li data-i18n="business-3">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</li>
-            <li data-i18n="business-4">医療ツーリズムに関する事業</li>
-            <li data-i18n="business-5">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</li>
-            <li data-i18n="business-6">医療機器の販売及び輸出入事業</li>
-            <li data-i18n="business-7">薬局業及び医薬品並びに医薬部外品の販売事業</li>
-            <li data-i18n="business-8">人材派遣事業</li>
-          </ul>
+          <!-- 事業目的 -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <p data-i18n="business-intro">
+              当法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびに
+              クロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として
+              以下の事業を行っています。
+            </p>
+          </div>
+          
+          <!-- 事業内容グリッド -->
+          <div class="section-cards">
+            <div class="card">
+              <h4 data-i18n="research-title">調査・研究・情報提供</h4>
+              <p data-i18n="business-1">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="facility-intro-title">施設・旅行会社紹介</h4>
+              <p data-i18n="business-2">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="facility-consulting-title">施設運営・コンサルティング</h4>
+              <p data-i18n="business-3">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="medical-tourism-title">医療ツーリズム</h4>
+              <p data-i18n="business-4">医療ツーリズムに関する事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="product-development-title">製品開発・販売</h4>
+              <p data-i18n="business-5">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="medical-equipment-title">医療機器販売</h4>
+              <p data-i18n="business-6">医療機器の販売及び輸出入事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="pharmacy-title">薬局業・医薬品販売</h4>
+              <p data-i18n="business-7">薬局業及び医薬品並びに医薬部外品の販売事業</p>
+            </div>
+            
+            <div class="card">
+              <h4 data-i18n="staffing-title">人材派遣</h4>
+              <p data-i18n="business-8">人材派遣事業</p>
+            </div>
+          </div>
           
           <h3 data-i18n="specific-services-title">具体的なサービス</h3>
           <div class="section-cards">
@@ -256,12 +331,14 @@
           
           // Overview Panel
           'overview-title': '組織概要',
+          'basic-info-title': '基本情報',
+          'contact-info-title': '連絡先',
+          'org-purpose-title': '設立目的',
           'org-name-label': '正式名称',
           'org-established-label': '設立年月日',
           'org-address-label': '所在地',
           'org-phone-label': '電話番号',
           'org-email-label': 'メールアドレス',
-          'org-purpose-label': '設立目的',
           'org-purpose-value': '国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与すること',
           'leadership-title': '組織体制',
           'representative-label': '代表理事',
@@ -289,6 +366,14 @@
           'business-title': '業務内容',
           'main-business-title': '主要事業',
           'business-intro': '当法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として以下の事業を行っています。',
+          'research-title': '調査・研究・情報提供',
+          'facility-intro-title': '施設・旅行会社紹介',
+          'facility-consulting-title': '施設運営・コンサルティング',
+          'medical-tourism-title': '医療ツーリズム',
+          'product-development-title': '製品開発・販売',
+          'medical-equipment-title': '医療機器販売',
+          'pharmacy-title': '薬局業・医薬品販売',
+          'staffing-title': '人材派遣',
           'business-1': '医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業',
           'business-2': '医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業',
           'business-3': '医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業',
@@ -372,12 +457,14 @@
           
           // Overview Panel
           'overview-title': '组织概要',
+          'basic-info-title': '基本信息',
+          'contact-info-title': '联系方式',
+          'org-purpose-title': '成立目的',
           'org-name-label': '正式名称',
           'org-established-label': '成立日期',
           'org-address-label': '所在地',
           'org-phone-label': '电话号码',
           'org-email-label': '邮箱地址',
-          'org-purpose-label': '成立目的',
           'org-purpose-value': '推进国际医疗交流，促进医疗护理领域发展和跨境医疗普及',
           'leadership-title': '组织体制',
           'representative-label': '代表理事',
@@ -404,6 +491,14 @@
           'business-title': '业务内容',
           'main-business-title': '主要事业',
           'business-intro': '本法人通过推进国际医疗交流事业，促进医疗护理领域发展和跨境医疗普及，为提高世界各国健康福祉做出贡献，开展以下事业。',
+          'research-title': '调查研究信息提供',
+          'facility-intro-title': '设施旅行社介绍',
+          'facility-consulting-title': '设施运营咨询',
+          'medical-tourism-title': '医疗旅游',
+          'product-development-title': '产品开发销售',
+          'medical-equipment-title': '医疗器械销售',
+          'pharmacy-title': '药局业医药品销售',
+          'staffing-title': '人才派遣',
           'business-1': '医疗、护理及海外医疗相关调查研究、国内外各种信息提供事业',
           'business-2': '推进医疗、护理及海外医疗的国内外设施以及旅行社等介绍事业',
           'business-3': '医疗设施及护理设施的设置运营事业及相关咨询事业',
