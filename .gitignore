@@ -1,0 +1,8 @@
+# PDF转换器目录 - 包含PDF文件和转换结果
+pdf_converter/
+
+# 其他常见的忽略文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
