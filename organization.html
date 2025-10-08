@@ -131,14 +131,25 @@
               </div>
               <div class="info-item">
                 <strong data-i18n="org-contact-label">連絡先：</strong>
-                <span data-i18n="org-contact">03-6261-6288</span>
+                <div style="line-height: 1.6;">
+                  <div>TEL　03-6261-6288</div>
+                  <div>EMAIL　info@imcs.co.jp</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- 事業目的 -->
+        <div class="business-purpose" style="margin-bottom: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
+          <h3 style="color: #007bff; margin-bottom: 1rem; font-size: 1.3rem;">事業目的</h3>
+          <p style="line-height: 1.8; color: #333; margin: 0;">
+            この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
+          </p>
+        </div>
+
         <!-- 事業内容カード -->
-        <div class="about-cards">
+        <div class="about-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
           <div class="about-card">
             <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop&crop=center" alt="Research" />
             <h3 data-i18n="business-research-title">調査・研究事業</h3>
@@ -146,18 +157,38 @@
           </div>
           <div class="about-card">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" alt="Consulting" />
-            <h3 data-i18n="business-consulting-title">コンサルティング事業</h3>
-            <p data-i18n="business-consulting-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
+            <h3 data-i18n="business-consulting-title">施設紹介事業</h3>
+            <p data-i18n="business-consulting-desc">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
           </div>
           <div class="about-card">
             <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop&crop=center" alt="Medical Tourism" />
-            <h3 data-i18n="business-tourism-title">医療ツーリズム事業</h3>
-            <p data-i18n="business-tourism-desc">医療ツーリズムに関する事業及び国内外施設の紹介事業</p>
+            <h3 data-i18n="business-tourism-title">施設運営・コンサルティング事業</h3>
+            <p data-i18n="business-tourism-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
           </div>
           <div class="about-card">
             <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=400&h=300&fit=crop&crop=center" alt="Medical Equipment" />
-            <h3 data-i18n="business-trade-title">医療機器・医薬品事業</h3>
-            <p data-i18n="business-trade-desc">医療機器の販売及び輸出入事業、薬局業及び医薬品販売事業</p>
+            <h3 data-i18n="business-trade-title">医療ツーリズム事業</h3>
+            <p data-i18n="business-trade-desc">医療ツーリズムに関する事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&crop=center" alt="Food Products" />
+            <h3 data-i18n="business-food-title">食品・医薬部外品事業</h3>
+            <p data-i18n="business-food-desc">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop&crop=center" alt="Medical Devices" />
+            <h3 data-i18n="business-device-title">医療機器事業</h3>
+            <p data-i18n="business-device-desc">医療機器の販売及び輸出入事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031d8eb?w=400&h=300&fit=crop&crop=center" alt="Pharmacy" />
+            <h3 data-i18n="business-pharmacy-title">薬局・医薬品事業</h3>
+            <p data-i18n="business-pharmacy-desc">薬局業及び医薬品並びに医薬部外品の販売事業</p>
+          </div>
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=300&fit=crop&crop=center" alt="Human Resources" />
+            <h3 data-i18n="business-hr-title">人材派遣事業</h3>
+            <p data-i18n="business-hr-desc">人材派遣事業</p>
           </div>
         </div>
 
@@ -168,7 +199,10 @@
             <div class="leadership-grid">
               <div class="leadership-item">
                 <strong data-i18n="representative-label">代表理事：</strong>
-                <span data-i18n="representative-names">中村　達 / 華岡　知</span>
+                <div style="line-height: 1.6;">
+                  <div>中村　達</div>
+                  <div>華岡　知</div>
+                </div>
               </div>
               <div class="leadership-item">
                 <strong data-i18n="directors-label">理事：</strong>
@@ -180,11 +214,14 @@
               </div>
               <div class="leadership-item">
                 <strong data-i18n="advisor-label">顧問：</strong>
-                <span data-i18n="advisor-name">林　基弘　Motohiro Hayashi</span>
+                <span data-i18n="advisor-name">林　基弘</span>
               </div>
               <div class="leadership-item">
                 <strong data-i18n="executive-directors-label">執行理事：</strong>
-                <span data-i18n="executive-directors-names">金子　朗久 / 郭常青</span>
+                <div style="line-height: 1.6;">
+                  <div>金子　朗久</div>
+                  <div>郭常青</div>
+                </div>
               </div>
             </div>
           </div>
@@ -317,7 +354,6 @@
       <section class="section section--white" id="business" aria-labelledby="business-heading">
         <div class="section-header">
           <h2 class="section-title" id="business-heading" data-i18n="business-title">業務内容</h2>
-          <p class="section-subtitle" data-i18n="business-subtitle">国際医療交流を通じて、世界の健康と福祉の向上に貢献します</p>
         </div>
         
         <div class="section-content">
@@ -380,18 +416,272 @@
           <h2 class="section-title" id="resources-heading" data-i18n="resources-title">リソース展示</h2>
         </div>
         <div class="section-content">
-          <div class="section-cards">
-            <div class="card">
-              <h3 data-i18n="hospital-network-title">日本病院・医師 → 当社団</h3>
-              <p data-i18n="hospital-network-desc">日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。</p>
-              <ul>
-                <li data-i18n="network-1">提携医療機関：50施設以上</li>
-                <li data-i18n="network-2">専門医師：200名以上</li>
-                <li data-i18n="network-3">対応診療科：20科目以上</li>
-                <li data-i18n="network-4">社団法人との連携による包括的サポート体制</li>
-              </ul>
+          <!-- 医院走马灯 -->
+          <div class="hospital-carousel-container" style="position: relative; overflow: hidden; margin: 2rem 0;">
+            <div class="hospital-carousel" id="hospitalCarousel" style="display: flex; transition: transform 0.5s ease; gap: 2rem;">
+              <!-- 医院卡片 -->
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/tokyo_university_hospital.png" alt="東京大学附属病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京大学附属病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/tokyo_womens_medical_university.png" alt="東京女子医科大学" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京女子医科大学</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/juntendo_hospital.png" alt="順天堂医院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">順天堂医院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/st_lukes_international_hospital.png" alt="聖路加国際病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">聖路加国際病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/kameda_general_hospital.png" alt="亀田総合病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">亀田総合病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/gan_ken_ariake_hospital.png" alt="がん研有明病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">がん研有明病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/fujita_medical_university_tokyo.png" alt="藤田医科大学東京 先端医療研究センター" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">藤田医科大学東京 先端医療研究センター</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/tokyo_medical_university_hospital.png" alt="東京医科大学病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京医科大学病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/nihon_university_hospital.png" alt="日本大学医院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">日本大学医院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/keio_university_hospital.png" alt="慶応義塾大学病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">慶応義塾大学病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <span>東京逓信病院</span>
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京逓信病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <span>四谷メディカルキューブ</span>
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">四谷メディカルキューブ</h3>
+                </div>
+              </div>
+
+              <!-- 继续添加其他医院... -->
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/jikei_university_hospital.png" alt="東京慈恵会医科大学付属病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京慈恵会医科大学付属病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/ncgm_hospital.png" alt="国立国際医療研究センター病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">国立国際医療研究センター病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/ncc_hospital.png" alt="国立がん研究センター" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">国立がん研究センター</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/inouye_eye_hospital.png" alt="井上眼科医院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">井上眼科医院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <span>NTT東日本　関東病院</span>
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">NTT東日本　関東病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/cardiovascular_institute_hospital.png" alt="心臓血管研究所付属病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">心臓血管研究所付属病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <span>東京都済生会中央病院</span>
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京都済生会中央病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/tokyo_medical_dental_university_hospital.png" alt="東京医科歯科大学病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京医科歯科大学病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/nippon_medical_school_hospital.png" alt="日本医科大学付属病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">日本医科大学付属病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <span>湘南鎌倉病院</span>
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">湘南鎌倉病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/iuhw_mita_hospital.png" alt="国際医療福祉大学三田病院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">国際医療福祉大学三田病院</h3>
+                </div>
+              </div>
+
+              <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
+                <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                  <img src="hospitals/toranomon_hospital.png" alt="虎ノ門医院" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="hospital-info" style="padding: 1.5rem;">
+                  <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">虎ノ門医院</h3>
+                </div>
+              </div>
             </div>
+
+            <!-- 走马灯控制按钮 -->
+            <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">‹</button>
+            <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">›</button>
           </div>
+
+          <!-- 走马灯JavaScript -->
+          <script>
+            let currentPosition = 0;
+            const cardWidth = 320; // 300px + 20px gap
+            const visibleCards = Math.floor(window.innerWidth / cardWidth);
+            const carousel = document.getElementById('hospitalCarousel');
+            const totalCards = carousel.children.length;
+            const maxPosition = Math.max(0, totalCards - visibleCards);
+
+            function moveCarousel(direction) {
+              currentPosition += direction;
+              
+              // 限制在有效范围内，不循环
+              if (currentPosition < 0) {
+                currentPosition = 0;
+              } else if (currentPosition > maxPosition) {
+                currentPosition = maxPosition;
+              }
+              
+              const translateX = -currentPosition * cardWidth;
+              carousel.style.transform = `translateX(${translateX}px)`;
+            }
+
+            // 自动播放已禁用 - 只能通过点击按钮控制
+            // setInterval(() => {
+            //   moveCarousel(1);
+            // }, 4000);
+
+            // 响应式调整
+            window.addEventListener('resize', () => {
+              const newVisibleCards = Math.floor(window.innerWidth / cardWidth);
+              const newMaxPosition = Math.max(0, totalCards - newVisibleCards);
+              if (currentPosition > newMaxPosition) {
+                currentPosition = newMaxPosition;
+                const translateX = -currentPosition * cardWidth;
+                carousel.style.transform = `translateX(${translateX}px)`;
+              }
+            });
+          </script>
         </div>
       </section>
 
