@@ -361,10 +361,14 @@
       </section>
 
       <!-- 資源展示 Section -->
-      <section id="resources" class="container py-5">
-        <h2 class="mb-4" data-i18n="resources-title">リソース展示</h2>
-        <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
-          <!-- JS 渲染 -->
+      <section class="section section--white" id="resources" aria-labelledby="resources-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="resources-heading" data-i18n="resources-title">リソース展示</h2>
+        </div>
+        <div class="section-content">
+          <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
+            <!-- JS 渲染 -->
+          </div>
         </div>
       </section>
 
@@ -674,6 +678,7 @@
 
       // 医院数据驱动渲染
       function renderHospitals() {
+        console.log('渲染医院列表...');
         const hospitals = [
           {img:'hospitals/tokyo_university_hospital.png', title:'東京大学附属病院'},
           {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学'},
@@ -702,14 +707,23 @@
         ];
 
         const row = document.getElementById('hospitalRow');
+        if (!row) {
+          console.error('找不到hospitalRow元素');
+          return;
+        }
+        
         row.innerHTML = hospitals.map(h=>`
-          <article class="card flex-shrink-0" style="min-width:300px;scroll-snap-align:start;">
-            <img src="${h.img}" class="card-img-top" alt="${h.title}" loading="lazy" width="300" height="200" style="object-fit:cover;">
-            <div class="card-body py-3">
-              <h3 class="h6 text-center mb-0">${h.title}</h3>
+          <article class="card hospital-card h-100 flex-shrink-0">
+            <div class="ratio ratio-4x3 hospital-thumb">
+              <img src="${h.img}" alt="${h.title}" class="w-100 h-100 object-fit-cover" loading="lazy">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="hospital-title text-center mb-0">${h.title}</h3>
             </div>
           </article>
         `).join('');
+        
+        console.log(`已渲染 ${hospitals.length} 个医院`);
       }
     </script>
     

@@ -12,62 +12,37 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body>
-    <!-- 独立导航栏 -->
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="nav-container">
-        <!-- Logo -->
-        <div class="nav-brand">
-                <a href="#top" class="logo-link">
-                  <img 
-                    fetchpriority="high" 
-                    sizes="312px" 
-                    src="imc_logo.png" 
-                    alt="IMC国際医療ロゴ" 
-                    style="object-fit:cover" 
-                    class="logo-image" 
-                    width="312" 
-                    height="49">
-                </a>
-              </div>
+  <body class="index-page">
+    <!-- 头部：Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#top">
+          <img src="imc_logo.png" alt="IMC国際医療ロゴ" width="156" height="24" class="me-2">
+          <span class="visually-hidden">IMC</span>
+        </a>
 
-        <!-- Desktop Navigation Links -->
-        <div class="nav-links">
-          <a href="organization.html" class="nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
-          <a href="imcs.html" class="nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
-          <a href="#brand-story" class="nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
-          <a href="#founder" class="nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
-          <a href="#releases" class="nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
-          <a href="#contact" class="nav-link"><span class="link-text" data-i18n="nav-contact">お問い合わせ</span></a>
-            </div>
-
-        <!-- Always visible actions -->
-        <div class="nav-actions">
-              <!-- Language Switcher -->
-              <div class="language-switcher">
-                <button class="lang-btn active" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
-                <button class="lang-btn" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
-              </div>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
         </button>
-            </div>
 
-      <!-- Mobile Navigation Menu (only navigation links) -->
-      <div class="mobile-nav-menu" id="mobileNavMenu">
-        <a href="organization.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</span></a>
-        <a href="imcs.html" class="mobile-nav-link"><span class="link-text" data-i18n="nav-imcs">IMCS株式会社</span></a>
-        <a href="#brand-story" class="mobile-nav-link"><span class="link-text" data-i18n="nav-brand-story">ブランドストーリー</span></a>
-        <a href="#founder" class="mobile-nav-link"><span class="link-text" data-i18n="nav-founder">創業者紹介</span></a>
-        <a href="#releases" class="mobile-nav-link"><span class="link-text" data-i18n="nav-releases">リリース</span></a>
-        <a href="#contact" class="mobile-nav-link"><span class="link-text" data-i18n="nav-contact">お問い合わせ</span></a>
-                </div>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="organization.html" data-i18n="nav-organization">一般社団法人 国際医療交流推進機構</a></li>
+            <li class="nav-item"><a class="nav-link" href="imcs.html" data-i18n="nav-imcs">IMCS株式会社</a></li>
+            <li class="nav-item"><a class="nav-link" href="#brand-story" data-i18n="nav-brand-story">ブランドストーリー</a></li>
+            <li class="nav-item"><a class="nav-link" href="#founder" data-i18n="nav-founder">創業者紹介</a></li>
+            <li class="nav-item"><a class="nav-link" href="#releases" data-i18n="nav-releases">リリース</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">お問い合わせ</a></li>
+          </ul>
+          <div class="ms-3 btn-group" role="group" aria-label="language switch">
+            <button class="btn btn-sm btn-primary" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+            <button class="btn btn-sm btn-outline-primary" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <main class="desktop" id="top">
@@ -80,28 +55,6 @@
         </div>
 
 
-        <script>
-          function toggleMobileMenu() {
-            const mobileNavMenu = document.getElementById('mobileNavMenu');
-            const toggleBtn = document.querySelector('.mobile-menu-toggle');
-            
-            mobileNavMenu.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-          }
-
-          // 点击菜单项后关闭移动菜单
-          document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-              link.addEventListener('click', () => {
-                const mobileNavMenu = document.getElementById('mobileNavMenu');
-                const toggleBtn = document.querySelector('.mobile-menu-toggle');
-                
-                mobileNavMenu.classList.remove('active');
-                toggleBtn.classList.remove('active');
-              });
-            });
-          });
-        </script>
       </section>
       <section class="section section--white" id="brand-story" aria-labelledby="brand-story-heading">
         <div class="section-header">
@@ -654,5 +607,8 @@
         timeline.addEventListener('scroll', updateButtonStates);
       });
     </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

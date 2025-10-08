@@ -3108,4 +3108,75 @@
       max-width: 250px;
     }
   }
+
+/* 响应式导航栏字体大小 */
+/* 默认（手机） */
+.navbar .nav-link{ font-size: 1.5rem; }
+/* ≥992px 桌面端放大 */
+@media (min-width: 992px){
+  .navbar .nav-link{ font-size: 1.5rem; }  /* 或 1.25rem */
+  .navbar .btn.btn-sm{ font-size: 1rem; }
+}
+
+/* 医院卡片样式优化 */
+/* 横向滚动容器（保留） */
+#hospitalRow { scroll-snap-type: x mandatory; }
+
+/* 卡片统一宽度区间、圆角与阴影 */
+.hospital-card{
+  min-width: 260px;       /* 列表可视宽 */
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  scroll-snap-align: start;
+}
+
+/* 固定图片比例区（用 .ratio） */
+.hospital-thumb { 
+  border-top-left-radius: 12px; 
+  border-top-right-radius: 12px; 
+  overflow: hidden; 
+}
+
+/* 统一裁切策略 */
+.object-fit-cover{ object-fit: cover; }
+
+/* 压缩标题占比：字号/行高/字重/两行截断 */
+.hospital-title{
+  font-size: .95rem;         /* 原 h6 改得更紧凑 */
+  line-height: 1.35;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* 最多两行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 紧凑内边距，减少文字空间 */
+.hospital-card .card-body{ padding: .5rem .75rem; }
+
+/* 大屏略微放大图片区域，视觉更均衡 */
+@media (min-width: 992px){
+  .hospital-card{ min-width: 280px; max-width: 340px; }
+  .hospital-title{ font-size: 1rem; }
+}
+
+/* index.html 导航栏单独样式优化 */
+body.index-page .navbar {
+  min-height: 70px;  /* 与其他页面保持一致的高度 */
+}
+
+body.index-page .navbar .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;   /* 与其他页面一致的垂直内边距 */
+  padding-bottom: 0.8rem;
+}
+
+@media (min-width: 1200px) {
+  body.index-page .navbar .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
   
