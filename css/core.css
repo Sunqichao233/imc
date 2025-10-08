@@ -614,7 +614,106 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* ===== 20) 响应式微调 ===== */
+/* ===== 20) 业务内容样式 ===== */
+.business-item {
+  margin-bottom: 3rem;
+}
+
+.business-main-title {
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 700;
+  color: var(--imc-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--imc-primary);
+}
+
+.business-subsection {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.business-subtitle {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+  color: var(--imc-text);
+  margin-bottom: 1rem;
+}
+
+.business-description {
+  font-size: var(--fz);
+  color: var(--imc-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.business-list {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.business-list li {
+  font-size: var(--fz-sm);
+  color: var(--imc-text);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.business-cases {
+  margin-top: 1.5rem;
+}
+
+.case-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--imc-surface-gray);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--imc-primary);
+}
+
+.case-item h5 {
+  font-size: var(--fz);
+  font-weight: 600;
+  color: var(--imc-text);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.case-images {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-placeholder {
+  width: 200px;
+  height: 120px;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--imc-muted);
+  font-size: var(--fz-sm);
+  font-weight: 500;
+}
+
+.case-image {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--imc-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-image:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== 21) 响应式微调 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
   .hospital-card{ min-width:280px; max-width:340px; }
@@ -649,4 +748,12 @@
   
   /* Form Mobile */
   .form-input, .form-textarea{ font-size: 16px; } /* Prevent zoom on iOS */
+  
+  /* Business Content Mobile */
+  .business-subsection{ margin-left: 0.5rem; }
+  .business-list{ padding-left: 1rem; }
+  .case-item{ padding: 1rem; }
+  .case-images{ flex-direction: column; gap: 0.5rem; }
+  .image-placeholder{ width: 100%; max-width: 300px; height: 100px; }
+  .case-image{ width: 100%; max-width: 300px; height: 100px; }
 }
