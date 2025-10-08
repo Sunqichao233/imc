@@ -416,10 +416,12 @@
           <h2 class="section-title" id="resources-heading" data-i18n="resources-title">リソース展示</h2>
         </div>
         <div class="section-content">
-          <!-- 医院走马灯 -->
+          <!-- 医院走马灯 - 双行自动滚动 -->
           <div class="hospital-carousel-container" style="position: relative; overflow: hidden; margin: 2rem 0;">
-            <div class="hospital-carousel" id="hospitalCarousel" style="display: flex; transition: transform 0.5s ease; gap: 2rem;">
-              <!-- 医院卡片 -->
+            <!-- 第一行：从左往右自动滚动 -->
+            <div class="carousel-wrapper" style="position: relative; margin-bottom: 1rem; overflow: hidden;">
+              <div class="carousel-row" style="display: flex; gap: 1rem; animation: scrollRightInfinite 30s linear infinite;" id="row1">
+              <!-- 前12个医院 -->
               <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
                 <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
                   <img src="hospitals/tokyo_university_hospital.png" alt="東京大学附属病院" style="width: 100%; height: 100%; object-fit: cover;">
@@ -527,8 +529,15 @@
                   <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">四谷メディカルキューブ</h3>
                 </div>
               </div>
+              <!-- 第一行控制按钮 -->
+              <button class="carousel-btn carousel-prev" onclick="moveCarousel('row1', -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">‹</button>
+              <button class="carousel-btn carousel-next" onclick="moveCarousel('row1', 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">›</button>
+            </div>
 
-              <!-- 继续添加其他医院... -->
+            <!-- 第二行：从右往左自动滚动 -->
+            <div class="carousel-wrapper" style="position: relative; overflow: hidden;">
+              <div class="carousel-row" style="display: flex; gap: 1rem; animation: scrollLeftInfinite 30s linear infinite;" id="row2">
+              <!-- 后12个医院 -->
               <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
                 <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
                   <img src="hospitals/jikei_university_hospital.png" alt="東京慈恵会医科大学付属病院" style="width: 100%; height: 100%; object-fit: cover;">
@@ -567,7 +576,7 @@
 
               <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
                 <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
-                  <span>NTT東日本　関東病院</span>
+                  <img src="hospitals/ntt_east_kanto_hospital.png" alt="NTT東日本　関東病院" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="hospital-info" style="padding: 1.5rem;">
                   <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">NTT東日本　関東病院</h3>
@@ -585,7 +594,7 @@
 
               <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
                 <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
-                  <span>東京都済生会中央病院</span>
+                  <img src="hospitals/tokyo_saiseikai_central_hospital.png" alt="東京都済生会中央病院" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="hospital-info" style="padding: 1.5rem;">
                   <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">東京都済生会中央病院</h3>
@@ -612,7 +621,7 @@
 
               <div class="hospital-card" style="min-width: 300px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e0e0e0;">
                 <div class="hospital-image" style="width: 100%; height: 200px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
-                  <span>湘南鎌倉病院</span>
+                  <img src="hospitals/shonan_kamakura_general_hospital.png" alt="湘南鎌倉病院" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="hospital-info" style="padding: 1.5rem;">
                   <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">湘南鎌倉病院</h3>
@@ -636,50 +645,108 @@
                   <h3 style="margin: 0; font-size: 1.2rem; color: #333; text-align: center;">虎ノ門医院</h3>
                 </div>
               </div>
+              <!-- 第二行控制按钮 -->
+              <button class="carousel-btn carousel-prev" onclick="moveCarousel('row2', -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,123,0,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">‹</button>
+              <button class="carousel-btn carousel-next" onclick="moveCarousel('row2', 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,123,0,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">›</button>
             </div>
-
-            <!-- 走马灯控制按钮 -->
-            <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">‹</button>
-            <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,123,255,0.8); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 18px; z-index: 10;">›</button>
           </div>
 
-          <!-- 走马灯JavaScript -->
-          <script>
-            let currentPosition = 0;
-            const cardWidth = 320; // 300px + 20px gap
-            const visibleCards = Math.floor(window.innerWidth / cardWidth);
-            const carousel = document.getElementById('hospitalCarousel');
-            const totalCards = carousel.children.length;
-            const maxPosition = Math.max(0, totalCards - visibleCards);
-
-            function moveCarousel(direction) {
-              currentPosition += direction;
-              
-              // 限制在有效范围内，不循环
-              if (currentPosition < 0) {
-                currentPosition = 0;
-              } else if (currentPosition > maxPosition) {
-                currentPosition = maxPosition;
+          <!-- CSS样式 -->
+          <style>
+            @keyframes scrollRightInfinite {
+              0% {
+                transform: translateX(0);
               }
-              
-              const translateX = -currentPosition * cardWidth;
-              carousel.style.transform = `translateX(${translateX}px)`;
+              100% {
+                transform: translateX(-100%);
+              }
             }
 
-            // 自动播放已禁用 - 只能通过点击按钮控制
-            // setInterval(() => {
-            //   moveCarousel(1);
-            // }, 4000);
-
-            // 响应式调整
-            window.addEventListener('resize', () => {
-              const newVisibleCards = Math.floor(window.innerWidth / cardWidth);
-              const newMaxPosition = Math.max(0, totalCards - newVisibleCards);
-              if (currentPosition > newMaxPosition) {
-                currentPosition = newMaxPosition;
-                const translateX = -currentPosition * cardWidth;
-                carousel.style.transform = `translateX(${translateX}px)`;
+            @keyframes scrollLeftInfinite {
+              0% {
+                transform: translateX(-100%);
               }
+              100% {
+                transform: translateX(0);
+              }
+            }
+
+            .carousel-row {
+              white-space: nowrap;
+              width: calc(200%); /* 双倍宽度以实现无限循环 */
+            }
+
+            .hospital-card {
+              flex-shrink: 0;
+            }
+
+            .carousel-wrapper {
+              position: relative;
+            }
+
+            .carousel-row:hover {
+              animation-play-state: paused !important;
+            }
+
+            .carousel-btn:hover {
+              background: rgba(0,0,0,0.8) !important;
+            }
+          </style>
+
+          <!-- 无限循环滚动JavaScript -->
+          <script>
+            const row1 = document.getElementById('row1');
+            const row2 = document.getElementById('row2');
+            let row1Position = 0;
+            let row2Position = 0;
+            const cardWidth = 320; // 300px + 20px gap
+
+            // 复制医院卡片以实现无限循环
+            function duplicateCards() {
+              const row1Cards = row1.innerHTML;
+              const row2Cards = row2.innerHTML;
+              row1.innerHTML = row1Cards + row1Cards; // 复制一遍
+              row2.innerHTML = row2Cards + row2Cards; // 复制一遍
+            }
+
+            // 手动控制走马灯
+            function moveCarousel(rowId, direction) {
+              const row = document.getElementById(rowId);
+              const totalCards = row.children.length / 2; // 因为复制了一遍
+              
+              if (rowId === 'row1') {
+                row1Position += direction;
+                if (row1Position >= totalCards) row1Position = 0;
+                if (row1Position < 0) row1Position = totalCards - 1;
+                row.style.transform = `translateX(-${row1Position * cardWidth}px)`;
+              } else {
+                row2Position += direction;
+                if (row2Position >= totalCards) row2Position = 0;
+                if (row2Position < 0) row2Position = totalCards - 1;
+                row.style.transform = `translateX(-${row2Position * cardWidth}px)`;
+              }
+              
+              // 暂停动画一秒后恢复
+              row.style.animationPlayState = 'paused';
+              setTimeout(() => {
+                row.style.animationPlayState = 'running';
+              }, 1000);
+            }
+
+            // 鼠标悬停控制
+            document.querySelectorAll('.carousel-row').forEach(row => {
+              row.addEventListener('mouseenter', () => {
+                row.style.animationPlayState = 'paused';
+              });
+              
+              row.addEventListener('mouseleave', () => {
+                row.style.animationPlayState = 'running';
+              });
+            });
+
+            // 页面加载后复制卡片
+            window.addEventListener('load', () => {
+              duplicateCards();
             });
           </script>
         </div>
