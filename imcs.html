@@ -442,16 +442,16 @@
                             <div class="marker-tooltip">
                               <strong>フランス</strong>
                             </div>
-                          </div>
+            </div>
                           <div class="map-marker" data-country="ロシア" style="top: 25%; left: 65%;">
                             <div class="marker-pin"></div>
                             <div class="marker-tooltip">
                               <strong>ロシア</strong>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
+              </div>
+              </div>
+            </div>
+          </div>
+          
                       <!-- 右侧：文字介绍 -->
                       <div class="col-lg-4">
                         <div class="global-network-info ps-lg-4">
@@ -475,13 +475,13 @@
                             </p>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <p class="text-center mt-3 small text-muted">外務省認定医療滞在ビザ身元保証機関登録管理番号：B-044</p>
-                  </div>
-                </div>
+            </div>
               </div>
-
+                    <p class="text-center mt-3 small text-muted">外務省認定医療滞在ビザ身元保証機関登録管理番号：B-044</p>
+              </div>
+            </div>
+          </div>
+          
               <!-- 再生医療 -->
               <div class="mb-5">
                 <div class="card-imc">
@@ -545,7 +545,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
 
               <!-- 不妊治療（生殖医療）分野 -->
               <div class="mb-5">
@@ -572,7 +572,7 @@
                           <li><strong>多言語支援</strong><br>
                           中国語・英語・日本語によるトリリンガル体制で、患者と医療機関間の円滑なコミュニケーションを確保。</li>
                         </ul>
-                      </div>
+              </div>
                       <div class="col-md-6">
                         <h6 class="fw-bold mb-2">特徴：</h6>
                         <ul class="small">
@@ -581,10 +581,10 @@
                           <li>保険外診療を前提とした明確な料金体系</li>
                           <li>年齢制限や卵子凍結など、国による制約の少ない柔軟な治療プラン</li>
                         </ul>
-                      </div>
-                    </div>
-                  </div>
-
+              </div>
+            </div>
+          </div>
+          
                   <!-- Ⅱ．外国人・日本人の台湾渡航不妊治療支援 -->
                   <div class="mb-4">
                     <h5 class="h6 mb-3">Ⅱ. 外国人・日本人の台湾渡航不妊治療支援</h5>
@@ -668,12 +668,12 @@
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
               </div>
-
+              </div>
+            </div>
+          </div>
+          
               <!-- 日本渡航治療の流れ -->
               <div class="mb-5">
                 <div class="card-imc">
@@ -771,8 +771,8 @@
                         <p class="small text-muted mb-0">🌐 海外滞在中でも日本の専門医が継続フォロー可能</p>
                       </div>
                     </div>
-                  </div>
-                </div>
+            </div>
+              </div>
               </div>
             </div>
           </div>
@@ -785,16 +785,33 @@
           <h2 class="section-title" id="resources-heading" data-i18n="resources-title">リソース展示</h2>
         </div>
         <div class="section-content">
-          <div class="section-cards">
-            <div class="card">
-              <h3 data-i18n="hospital-network-title">日本病院・医師 → 当社団</h3>
-              <p data-i18n="hospital-network-desc">日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。</p>
-              <ul>
-                <li data-i18n="network-1">提携医療機関：50施設以上</li>
-                <li data-i18n="network-2">専門医師：200名以上</li>
-                <li data-i18n="network-3">対応診療科：20科目以上</li>
-                <li data-i18n="network-4">社団法人との連携による包括的サポート体制</li>
-              </ul>
+          <!-- 医院展示 -->
+          <div class="mb-5">
+            <h3 class="h4 mb-4 text-center" data-i18n="hospitals-subtitle">提携医療機関</h3>
+            <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
+              <!-- JS 渲染 -->
+            </div>
+          </div>
+          
+          <!-- 医師紹介 -->
+          <div class="mt-5">
+            <div class="text-center mb-4">
+              <h3 class="h4 mb-3" data-i18n="doctors-title">医師紹介</h3>
+              <p class="text-muted" data-i18n="doctors-desc">日本トップクラスの専門医師陣をご紹介いたします</p>
+            </div>
+            <div class="row g-4" id="doctorsGrid">
+              <!-- JS 渲染医生信息 -->
+            </div>
+          </div>
+          
+          <!-- 資源全体図 -->
+          <div class="mt-5">
+            <div class="text-center mb-4">
+              <h3 class="h4 mb-3" data-i18n="resources-overview-title">資源全体図</h3>
+              <p class="text-muted" data-i18n="resources-overview-desc">IMC国際医療の包括的なサービス体系と国際的なネットワークをご覧ください</p>
+            </div>
+            <div class="image-showcase">
+              <img src="image.png" alt="IMC国際医療 資源全体図" class="showcase-image img-fluid">
             </div>
           </div>
         </div>
@@ -845,7 +862,7 @@
     <!-- 模块化JavaScript -->
     <script src="js/i18n.js"></script>
     <script src="js/render.js"></script>
-    
+
     <script>
       // 全局变量
       let i18n, dataRenderer;

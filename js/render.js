@@ -31,7 +31,7 @@ class DataRenderer {
     this.doctorsData = [
       {
         name: '林 基弘',
-        title: '「神の手」と呼ばれる名医',
+        title: '',
         subtitle: 'ガンマナイフ治療 世界第一',
         position: '東京女子医科大学 脳神経外科 教授',
         specialty: 'ガンマナイフ（GammaKnife）、ZAP-X、頭蓋底腫瘍、脳動静脈奇形（AVM）、三叉神経痛など',
@@ -39,7 +39,7 @@ class DataRenderer {
       },
       {
         name: '丸山 隆志',
-        title: '脳腫瘍外科手術件数 日本一',
+        title: '',
         subtitle: '',
         position: '東京女子医科大学 脳神経外科 講師',
         specialty: '覚醒下悪性脳腫瘍（神経膠腫）手術、聴神経腫瘍手術、転移性脳腫瘍手術、脳腫瘍関連手術',
@@ -47,7 +47,7 @@ class DataRenderer {
       },
       {
         name: '新井 平伊',
-        title: '日本「アルツハイマー病」研究の第一人者',
+        title: '',
         subtitle: '',
         position: '順天堂大学医学部 名誉教授',
         specialty: '精神科全般、老年精神科、リエゾン精神医学、早発性アルツハイマー病専門外来',
@@ -55,7 +55,7 @@ class DataRenderer {
       },
       {
         name: '藍原 康雄',
-        title: '小児脳神経外科 世界的名医',
+        title: '',
         subtitle: '',
         position: '東京女子医科大学 脳神経外科 准教授',
         specialty: '小児脳腫瘍（胚胎性腫瘍、良性腫瘍、膠腫／星状細胞腫などの悪性腫瘍、脳幹部腫瘍）、水頭症、脊髄腫瘍、小児もやもや病 など',
@@ -63,7 +63,6 @@ class DataRenderer {
       },
       {
         name: '川島 明次',
-        title: '日本脳神経外科・脳血管疾患の権威',
         subtitle: '',
         position: '聖路加国際病院 脳神経外科 部長',
         specialty: '脳血管疾患（動脈瘤、脳出血）、頭蓋底腫瘍手術、もやもや病、頸動脈狭窄症',
@@ -71,7 +70,6 @@ class DataRenderer {
       },
       {
         name: '畑山 徹',
-        title: '顔面神経痛・痙攣・三叉神経痛 日本第一人者',
         subtitle: '',
         position: '水戸心脳疾患治療センター 院長',
         specialty: '脳卒中、脳腫瘍治療、顔面神経痛、痙攣、三叉神経痛 など',
@@ -79,7 +77,6 @@ class DataRenderer {
       },
       {
         name: '明星 智洋',
-        title: '日本腫瘍標的薬物療法の専門家 医療革新の旗手',
         subtitle: '',
         position: '江戸川病院 副院長',
         specialty: '腫瘍薬物療法（抗がん剤治療）、血液疾患（良性・悪性）、感染症管理、免疫療法',
@@ -87,7 +84,6 @@ class DataRenderer {
       },
       {
         name: '小笠原 均',
-        title: '日本がん免疫療法専門家 複合治療の先駆者',
         subtitle: '',
         position: 'JTK国際クリニック 院長',
         specialty: '総合内科、膠原病、がん免疫療法、リウマチ、糖尿病、漢方内科',
@@ -95,7 +91,6 @@ class DataRenderer {
       },
       {
         name: '田中 紘一',
-        title: '日本消化器外科の父 上原賞受賞者',
         subtitle: '',
         position: '京都大学医学部附属病院 前院長',
         specialty: '消化器外科、一般外科、小児外科、臓器移植、病理診断',
@@ -103,7 +98,6 @@ class DataRenderer {
       },
       {
         name: '高橋 克仁',
-        title: '希少がん・肉腫治療の第一人者',
         subtitle: '',
         position: '亀田総合病院 肉腫総合治療センター 主任／日本肉腫学会 理事長',
         specialty: '希少がん、肉腫、がんゲノム医療',
@@ -111,11 +105,24 @@ class DataRenderer {
       },
       {
         name: '福間 英祐',
-        title: '非切開で乳がん治療 冷凍療法 世界的リーダー',
         subtitle: '',
         position: '亀田総合病院 乳腺科 上席主任',
         specialty: '乳がん治療、乳腺内視鏡下手術、乳腺画像診断、冷凍療法',
         image: 'doctors/fukuma_eisuke.png'
+      },
+      {
+        name: '安倍 弘和',
+        subtitle: '',
+        position: '亀田総合病院 泌尿器科 主任',
+        specialty: '泌尿器科・膀胱癌 日本の権威',
+        image: 'doctors/Abe_Hirokazu.png'
+      },
+      {
+        name: '野田 真永',
+        subtitle: '',
+        position: '放射線腫瘍治療名医',
+        specialty: '放射線腫瘍治療（重粒子線、陽子線、サイバーナイフ）、免疫細胞療法',
+        image: 'doctors/noda_manei.png'
       }
     ];
   }
