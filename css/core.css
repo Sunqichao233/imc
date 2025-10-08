@@ -366,6 +366,26 @@
   font-size: 1rem;
 }
 
+/* ===== 12) 图片展示样式 ===== */
+.image-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.showcase-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
 .hero-title--index {
   font-size: clamp(2.5rem, 5vw, 4.8rem);
   font-weight: bold;
