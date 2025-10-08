@@ -23,8 +23,8 @@ class DataRenderer {
       {img:'hospitals/tokyo_saiseikai_central_hospital.png', title:'東京都済生会中央病院'},
       {img:'hospitals/tokyo_medical_dental_university_hospital.png', title:'東京医科歯科大学病院'},
       {img:'hospitals/nippon_medical_school_hospital.png', title:'日本医科大学付属病院'},
-      {img:'hospitals/shonan_kamakura_hospital.png', title:'湘南鎌倉病院'},
-      {img:'hospitals/international_university_health_welfare.png', title:'国際医療福祉大学三田病院'},
+      {img:'hospitals/shonan_kamakura_general_hospital.png', title:'湘南鎌倉病院'},
+      {img:'hospitals/iuhw_mita_hospital.png', title:'国際医療福祉大学三田病院'},
       {img:'hospitals/toranomon_hospital.png', title:'虎ノ門医院'}
     ];
     
@@ -132,8 +132,8 @@ class DataRenderer {
     
     try {
       row.innerHTML = this.hospitalsData.map(hospital => `
-        <article class="card hospital-card h-100 flex-shrink-0">
-          <div class="ratio ratio-4x3 hospital-thumb">
+        <article class="card hospital-card flex-shrink-0">
+          <div class="hospital-thumb">
             <img src="${hospital.img}" 
                  alt="${hospital.title}" 
                  class="w-100 h-100 object-fit-cover" 

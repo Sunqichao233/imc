@@ -40,14 +40,44 @@
 
 /* ===== 4) 医院卡片（走马灯项） ===== */
 #hospitalRow{ scroll-snap-type:x mandatory; }
-.hospital-card{ min-width:260px; max-width:320px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); scroll-snap-align:start; }
-.hospital-thumb{ border-top-left-radius:var(--radius-md); border-top-right-radius:var(--radius-md); overflow:hidden; }
+.hospital-card{ 
+  width: 280px; /* 固定宽度确保一致性 */
+  height: 240px; /* 固定高度确保一致性 */
+  border-radius:var(--radius-md); 
+  box-shadow:var(--shadow-sm); 
+  scroll-snap-align:start; 
+  display: flex;
+  flex-direction: column;
+}
+.hospital-thumb{ 
+  border-top-left-radius:var(--radius-md); 
+  border-top-right-radius:var(--radius-md); 
+  overflow:hidden; 
+  flex: 1; /* 图片区域占据剩余空间 */
+  position: relative;
+  background: #f8f9fa; /* 背景色，防止图片加载时空白 */
+}
+.hospital-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  display: block;
+}
 .object-fit-cover{ object-fit:cover; }
 .hospital-title{
   font-size:var(--fz-sm); line-height:1.35; font-weight:600;
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:0;
+  text-align: center;
 }
-.hospital-card .card-body{ padding:.5rem .75rem; }
+.hospital-card .card-body{ 
+  padding:.5rem .75rem; 
+  flex-shrink: 0; /* 防止文字区域被压缩 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px; /* 确保文字区域有足够高度 */
+}
 
 /* ===== 5) Section & 容器 ===== */
 .section{ 
@@ -275,10 +305,55 @@
   cursor: pointer;
 }
 
-/* ===== 10) Hero Section 样式 ===== */
+/* ===== 10) Hero Section 样式 & 动画 ===== */
 .hero-section--index {
   color: #2c3e50;
   padding-top: 80px;
+}
+
+/* Hero文字动画 */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ===== 11) 组织介绍样式 ===== */
@@ -386,20 +461,32 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.hero-title--index {
+/* Hero文字样式 - 增强可读性和动画 */
+.hero-title, .hero-title--index {
   font-size: clamp(2.5rem, 5vw, 4.8rem);
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1.2rem;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 1px 1px 3px rgba(0,0,0,0.8);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0;
 }
 
-.hero-subtitle--index {
+.hero-subtitle, .hero-subtitle--index {
   font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: 600;
   margin-bottom: 0.6rem;
-  color: #2370FF;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  color: #ffffff;
+  background: linear-gradient(135deg, #2370FF, #4A90E2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+  animation: slideInRight 1.2s ease-out 0.3s forwards;
+  opacity: 0;
 }
 
 .hero-subtitle--secondary {
@@ -407,7 +494,46 @@
   font-weight: 500;
   margin-bottom: 1.8rem;
   color: white;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.7);
+  animation: slideInUp 1.2s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+/* Organization页面Hero样式 */
+.org-hero-title {
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 1px 1px 3px rgba(0,0,0,0.8);
+  font-weight: 700;
+}
+
+.org-hero-title:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.org-hero-subtitle {
+  animation: slideInRight 1.2s ease-out 0.6s forwards;
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.org-hero-slogan {
+  animation: fadeInScale 1.2s ease-out 0.9s forwards;
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* IMCS页面Hero样式 */
+.imcs-hero-title {
+  animation: slideInUp 1.2s ease-out forwards;
+  opacity: 0;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.imcs-hero-subtitle {
+  animation: slideInLeft 1.2s ease-out 0.4s forwards;
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .image--index {
@@ -1122,6 +1248,10 @@
   color: var(--imc-muted);
   text-align: center;
   height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .placeholder-content {
@@ -1208,8 +1338,12 @@
 /* ===== 24) 响应式微调 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
-  .hospital-card{ min-width:280px; max-width:340px; }
+  .hospital-card{ 
+    width: 300px; /* 大屏幕稍大一些 */
+    height: 260px; 
+  }
   .hospital-title{ font-size:var(--fz); }
+  .hospital-card .card-body{ min-height: 70px; }
 }
 @media (max-width:768px){
   .card-imc{ padding:clamp(12px,2vw,16px); }
@@ -1219,6 +1353,12 @@
   .doctor-name{ font-size:var(--fz-lg); }
   .doctor-title{ font-size:var(--fz); }
   .hero-section--index{ padding-top: 100px; }
+  .hospital-card{ 
+    width: 240px; /* 移动端稍小一些 */
+    height: 200px; 
+  }
+  .hospital-card .card-body{ min-height: 50px; }
+  .hospital-title{ font-size: 0.875rem; }
   .leadership-item{ flex-direction: column; align-items: flex-start; gap: 5px; }
   .leadership-item strong{ min-width: auto; }
   
