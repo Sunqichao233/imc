@@ -38,9 +38,9 @@
           <div class="ms-3 btn-group" role="group" aria-label="language switch">
             <button class="btn btn-imc btn-sm" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
             <button class="btn btn-imc-outline btn-sm" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
-          </div>
+              </div>
         </div>
-      </div>
+                </div>
     </nav>
 
     <main class="desktop" id="top">
@@ -370,240 +370,57 @@
       </footer>
     </main>
     
+    <!-- 模块化JavaScript -->
+    <script src="js/i18n.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/tabs.js"></script>
+    
     <script>
-      // Translation object for multi-language support
-      const translations = {
-        ja: {
-          // Meta and Title
-          'page-title': 'IMC国際医療 - 国際医療交流推進機構',
-          'page-description': 'IMC国際医療 - 一般社団法人国際医療交流推進機構とIMCS株式会社のオフィシャルサイト',
-          
-          // Hero Section
-          'hero-company': 'IMC国際医療',
-          'hero-slogan': '世界をつなぐ医療ネットワーク',
-          'hero-btn-about': '組織について',
-          'hero-btn-contact': 'お問い合わせ',
-          
-          // Navigation
-          'nav-organization': '一般社団法人 国際医療交流推進機構',
-          'nav-imcs': 'IMCS株式会社',
-          'nav-brand-story': 'ブランドストーリー',
-          'nav-founder': '創業者紹介',
-          'nav-releases': 'リリース',
-          'nav-contact': 'お問い合わせ',
-          
-          // Organization Section
-          'org-section-title': '一般社団法人 国際医療交流推進機構',
-          'org-nav-title': '組織情報',
-          'org-tab-business': '事業内容',
-          'org-tab-organization': '組織情報',
-          'org-tab-officers': '役員紹介',
-          'org-tab-advisor': '顧問紹介',
-          'org-tab-services': '業務内容',
-          'org-tab-resources': '資源展示',
-          
-          // IMCS Section
-          'imcs-section-title': 'IMCS株式会社',
-          'imcs-description': 'IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。',
-          
-          // Brand Story Section
-          'brand-story-title': '会社の歴史・タイムライン',
-          
-          // Founder Section
-          'founder-section-title': '創業者紹介',
-          'founder-description': 'IMC国際医療の創始者・CEO である夏冰氏についてご紹介します。',
-          
-          // Releases Section
-          'releases-section-title': 'リリース',
-          
-          // Contact Section
-          'contact-title': 'お問い合わせ',
-          'contact-description': '当法人へのご質問・ご相談は、以下のフォームにてお問い合わせください。 尚、※は必須項目となります。',
-          
-          // Footer
-          'footer-hero-company': 'IMC国際医療',
-          'footer-org-info': '組織情報',
-          'footer-services': 'サービス',
-          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.'
-        },
-        
-        zh: {
-          // Meta and Title
-          'page-title': 'IMC国际医疗 - 国际医疗交流推进机构',
-          'page-description': 'IMC国际医疗 - 一般社团法人国际医疗交流推进机构与IMCS株式会社官方网站',
-          
-          // Hero Section
-          'hero-company': 'IMC国际医疗',
-          'hero-slogan': '连接世界的医疗网络',
-          'hero-btn-about': '关于组织',
-          'hero-btn-contact': '联系我们',
-          
-          // Navigation
-          'nav-organization': '一般社团法人 国际医疗交流推进机构',
-          'nav-imcs': 'IMCS株式会社',
-          'nav-brand-story': '品牌故事',
-          'nav-founder': '创始人介绍',
-          'nav-releases': '新闻发布',
-          'nav-contact': '联系我们',
-          
-          // Organization Section
-          'org-section-title': '一般社团法人 国际医疗交流推进机构',
-          'org-nav-title': '组织信息',
-          'org-tab-business': '事业内容',
-          'org-tab-organization': '组织信息',
-          'org-tab-officers': '管理层介绍',
-          'org-tab-advisor': '顾问介绍',
-          'org-tab-services': '业务内容',
-          'org-tab-resources': '资源展示',
-          
-          // IMCS Section
-          'imcs-section-title': 'IMCS株式会社',
-          'imcs-description': 'IMCS株式会社作为国际医疗交流推进机构的事业部门，提供具体的医疗服务和咨询业务。',
-          
-          // Brand Story Section
-          'brand-story-title': '公司历史·时间轴',
-          
-          // Founder Section
-          'founder-section-title': '创始人介绍',
-          'founder-description': '为您介绍IMC国际医疗的创始人・CEO夏冰先生。',
-          
-          // Releases Section
-          'releases-section-title': '新闻发布',
-          
-          // Contact Section
-          'contact-title': '联系我们',
-          'contact-description': '关于本法人的问题和咨询，请通过以下表单联系我们。带※的为必填项目。',
-          
-          // Footer
-          'footer-hero-company': 'IMC国际医疗',
-          'footer-org-info': '组织信息',
-          'footer-services': '服务',
-          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。'
-        }
-      };
-
-      function scrollNews(direction) {
-        const timeline = document.getElementById('newsTimeline');
-        const scrollAmount = 320; // Width of one news item plus gap
-        
-        if (direction === 'prev') {
-          timeline.scrollBy({
-            left: -scrollAmount,
-            behavior: 'smooth'
-          });
-        } else if (direction === 'next') {
-          timeline.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-          });
-        }
-        
-        // Update button states after scroll
-        setTimeout(() => updateButtonStates(), 300);
-      }
+      // 全局变量
+      let i18n, newsTimeline, tabManager;
       
-      function updateButtonStates() {
-        const timeline = document.getElementById('newsTimeline');
-        const prevBtn = document.querySelector('.news-nav-prev');
-        const nextBtn = document.querySelector('.news-nav-next');
-        
-        // Check if at the beginning
-        if (timeline.scrollLeft <= 0) {
-          prevBtn.classList.add('disabled');
-        } else {
-          prevBtn.classList.remove('disabled');
-        }
-        
-        // Check if at the end
-        const maxScroll = timeline.scrollWidth - timeline.clientWidth;
-        if (timeline.scrollLeft >= maxScroll - 10) {
-          nextBtn.classList.add('disabled');
-        } else {
-          nextBtn.classList.remove('disabled');
-        }
-      }
-
-      // Language switching functionality
-      function switchLanguage(lang) {
-        // Save language preference to localStorage
-        localStorage.setItem('selectedLanguage', lang);
-        
-        // Update all elements with data-i18n attribute
-        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-        elementsToTranslate.forEach(element => {
-          const key = element.getAttribute('data-i18n');
-          if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
-          }
-        });
-        
-        // Update meta description
-        const metaDescription = document.querySelector('meta[data-i18n-content="page-description"]');
-        if (metaDescription && translations[lang]['page-description']) {
-          metaDescription.setAttribute('content', translations[lang]['page-description']);
-        }
-        
-        // Update document title
-        const titleElement = document.querySelector('title[data-i18n="page-title"]');
-        if (titleElement && translations[lang]['page-title']) {
-          document.title = translations[lang]['page-title'];
-        }
-        
-        // Update language button states
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-          btn.classList.remove('active');
-        });
-        document.getElementById('lang-' + lang).classList.add('active');
-        
-        // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', lang);
-        
-        console.log('Language switched to:', lang);
-      }
-      
-      // Initialize language on page load
-      function initializeLanguage() {
-        const savedLanguage = localStorage.getItem('selectedLanguage') || 'ja';
-        switchLanguage(savedLanguage);
-      }
-
-      // Organization tab switching functionality
-      function showOrgTab(tabId) {
-        // Hide all tab contents
-        const allTabs = document.querySelectorAll('.org-tab-content');
-        allTabs.forEach(tab => {
-          tab.classList.remove('active');
-        });
-        
-        // Remove active class from all buttons
-        const allButtons = document.querySelectorAll('.org-tab-button');
-        allButtons.forEach(button => {
-          button.classList.remove('active');
-        });
-        
-        // Show selected tab content
-        const selectedTab = document.getElementById('tab-' + tabId);
-        if (selectedTab) {
-          selectedTab.classList.add('active');
-        }
-        
-        // Add active class to clicked button
-        const clickedButton = event.target;
-        clickedButton.classList.add('active');
-      }
-      
-      // Initialize button states when page loads
+      // 页面初始化
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize language settings
-        initializeLanguage();
+        console.log('Index页面加载完成，开始初始化...');
         
-        // Initialize news timeline button states
-        updateButtonStates();
-        
-        // Add scroll event listener to update button states
-        const timeline = document.getElementById('newsTimeline');
-        timeline.addEventListener('scroll', updateButtonStates);
+        try {
+          // 初始化国际化模块
+          i18n = new I18n();
+          window.i18n = i18n; // 全局暴露
+          console.log('国际化模块初始化完成');
+          
+          // 初始化新闻时间轴模块
+          newsTimeline = new NewsTimeline();
+          window.newsTimeline = newsTimeline; // 全局暴露
+          console.log('新闻时间轴模块初始化完成');
+          
+          // 初始化标签页管理模块
+          tabManager = new TabManager();
+          window.tabManager = tabManager; // 全局暴露
+          console.log('标签页管理模块初始化完成');
+          
+        } catch (error) {
+          console.error('初始化过程中出现错误:', error);
+        }
       });
+      
+      // 错误处理
+      window.addEventListener('error', function(event) {
+        console.error('页面错误:', event.error);
+      });
+      
+      // 调试信息
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('开发模式：调试信息已启用');
+        window.debug = {
+          i18n: () => window.i18n,
+          newsTimeline: () => window.newsTimeline,
+          tabManager: () => window.tabManager,
+          switchLanguage: (lang) => window.i18n.switchLanguage(lang),
+          scrollNews: (direction) => window.newsTimeline.scrollNews(direction),
+          showOrgTab: (tabId) => window.tabManager.showTab(tabId)
+        };
+      }
     </script>
     
     <!-- Bootstrap JS -->

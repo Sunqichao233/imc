@@ -69,12 +69,12 @@
                 <h3 class="mb-3">基本情報</h3>
                 <div class="org-info-list">
                   <div class="org-info-item">
-                    <strong data-i18n="org-name-label">名称：</strong>
-                    <span data-i18n="org-name">一般社団法人 国際医療交流推進機構</span>
-                  </div>
+                <strong data-i18n="org-name-label">名称：</strong>
+                <span data-i18n="org-name">一般社団法人 国際医療交流推進機構</span>
+              </div>
                   <div class="org-info-item">
-                    <strong data-i18n="org-address-label">所在地：</strong>
-                    <span data-i18n="org-address">〒102-0083 東京千代田区麹町4-1-5</span>
+                <strong data-i18n="org-address-label">所在地：</strong>
+                <span data-i18n="org-address">〒102-0083 東京千代田区麹町4-1-5</span>
                   </div>
                   <div class="org-info-item">
                     <strong data-i18n="org-established-label">設立：</strong>
@@ -122,7 +122,7 @@
                       <div>郭常青</div>
                     </div>
                   </div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -134,8 +134,8 @@
               <p class="mb-0">
                 この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
               </p>
-            </div>
           </div>
+        </div>
 
           <!-- 事業内容 -->
           <div class="mt-5">
@@ -144,21 +144,21 @@
               <div class="col-lg-3 col-md-6">
                 <div class="card-imc business-item-card h-100">
                   <h4 data-i18n="business-research-title">調査・研究事業</h4>
-                  <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
-                </div>
+            <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
+          </div>
               </div>
               <div class="col-lg-3 col-md-6">
                 <div class="card-imc business-item-card h-100">
                   <h4 data-i18n="business-consulting-title">施設紹介事業</h4>
                   <p data-i18n="business-consulting-desc">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
-                </div>
-              </div>
+          </div>
+          </div>
               <div class="col-lg-3 col-md-6">
                 <div class="card-imc business-item-card h-100">
                   <h4 data-i18n="business-tourism-title">施設運営・コンサルティング事業</h4>
                   <p data-i18n="business-tourism-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
-                </div>
-              </div>
+          </div>
+        </div>
               <div class="col-lg-3 col-md-6">
                 <div class="card-imc business-item-card h-100">
                   <h4 data-i18n="business-trade-title">医療ツーリズム事業</h4>
@@ -492,469 +492,53 @@
     </footer>
     </main>
 
+    <!-- 模块化JavaScript -->
+    <script src="js/i18n.js"></script>
+    <script src="js/render.js"></script>
+
     <script>
-      // Translation object for multi-language support
-      const translations = {
-        ja: {
-          // Meta and Title
-          'page-title': '一般社団法人 国際医療交流推進機構 - IMC国際医療',
-          'page-description': '一般社団法人国際医療交流推進機構の詳細情報 - 組織概要、顧問紹介、業務内容、リソース展示',
-          
-          // Navigation
-          'nav-overview': '組織概要',
-          'nav-advisor': '顧問紹介',
-          'nav-business': '業務内容',
-          'nav-resources': 'リソース展示',
-          'nav-home': 'ホーム',
-          'nav-contact': 'お問い合わせ',
-          
-          // Organization Hero Section
-          'org-hero-title-1': '一般社団法人',
-          'org-hero-title-2': '国際医療交流推進機構',
-          'org-hero-subtitle': 'International Medical Exchange Promotion Organization',
-          'org-hero-slogan': '情報格差のない国際医療プラットフォームを目指す',
-          'org-hero-btn-about': '組織について詳しく',
-          'hero-btn-contact': 'お問い合わせ',
-          
-          // Overview Section
-          'overview-title': '組織概要',
-          'org-name-label': '名称：',
-          'org-name': '一般社団法人 国際医療交流推進機構',
-          'org-address-label': '所在地：',
-          'org-address': '〒102-0083 東京千代田区麹町4-1-5',
-          'org-established-label': '設立：',
-          'org-established': '2016/9/12',
-          'org-contact-label': '連絡先：',
-          'org-contact': '03-6261-6288',
-          
-          // Business Cards
-          'business-research-title': '調査・研究事業',
-          'business-research-desc': '医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業',
-          'business-consulting-title': 'コンサルティング事業',
-          'business-consulting-desc': '医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業',
-          'business-tourism-title': '医療ツーリズム事業',
-          'business-tourism-desc': '医療ツーリズムに関する事業及び国内外施設の紹介事業',
-          'business-trade-title': '医療機器・医薬品事業',
-          'business-trade-desc': '医療機器の販売及び輸出入事業、薬局業及び医薬品販売事業',
-          
-          // Leadership
-          'leadership-title': '役員体制',
-          'representative-label': '代表理事',
-          'directors-label': '理事',
-          'auditor-label': '監事',
-          'advisor-label': '顧問',
-          'executive-directors-label': '執行理事',
-          
-          // Advisor Panel
-          'advisor-title': '顧問紹介',
-          'advisor-intro': '国際医療交流分野における豊富な経験と専門知識を持つ顧問として、当機構の戦略的方向性と国際展開をサポートしています。',
-          'advisor-experience': '医療業界での長年の実績を活かし、日本と海外の医療機関を繋ぐ重要な役割を担っています。',
-          'advisor-expertise-title': '専門分野',
-          'expertise-1': '国際医療交流の戦略企画',
-          'expertise-2': '医療ツーリズム事業の開発',
-          'expertise-3': '海外医療機関との提携構築',
-          'expertise-4': '医療技術の国際的普及',
-          'advisor-achievements-title': '主な実績',
-          'achievement-advisor-1': '多数の国際医療プロジェクトの統括',
-          'achievement-advisor-2': 'アジア太平洋地域での医療ネットワーク構築',
-          'achievement-advisor-3': '医療従事者向け国際研修プログラムの開発',
-          
-          
-          // Business Panel
-          'business-title': '業務内容',
-          'business-subtitle': '国際医療交流を通じて、世界の健康と福祉の向上に貢献します',
-          'business-category-header': '業務内容',
-          'case-studies-header': '具体的な取り組み',
-          'international-exchange-title': '国際交流活動',
-          'international-exchange-desc': '医療従事者の国際的な交流プログラムの企画・運営',
-          'international-case': '医療従事者向け国際研修プログラム、学術交流会議の開催',
-          'overseas-promotion-title': '海外宣传（コンサルティング）',
-          'overseas-promotion-desc': '海外市場への医療サービス展開支援とコンサルティング',
-          'promotion-case': '日本医療機関の海外展開支援、医療ツーリズム促進活動',
-          'education-training-title': '教育研修',
-          'education-training-desc': '医療技術向上のための専門研修プログラムの実施',
-          'education-case': '最新医療技術研修、国際基準対応研修プログラムの提供',
-          'view-case': '→ 案例',
-          
-          // Resources Panel
-          'resources-title': 'リソース展示',
-          'hospitals-subtitle': '提携医療機関',
-          'hospital-network-title': '日本病院・医師 → 当社団',
-          'hospital-network-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。',
-          'network-1': '提携医療機関：50施設以上',
-          'network-2': '専門医師：200名以上',
-          'network-3': '対応診療科：20科目以上',
-          'network-4': '社団法人との連携による包括的サポート体制',
-          
-          // Doctors Panel
-          'doctors-title': '医師紹介',
-          'doctors-desc': '日本トップクラスの専門医師陣をご紹介いたします',
-          
-          // Navigation
-          'nav-organization': '一般社団法人 国際医療交流推進機構',
-          'nav-imcs': 'IMCS株式会社',
-          'nav-brand-story': 'ブランドストーリー',
-          'nav-founder': '創業者紹介',
-          'nav-releases': 'リリース',
-          'nav-contact': 'お問い合わせ',
-          
-        // Footer
-        'footer-hero-company': 'IMC国際医療',
-          'footer-org-info': '組織情報',
-          'footer-services': 'サービス',
-          'footer-copyright': '© 2025 IMC国際医療. All rights reserved.'
-        },
-        
-        zh: {
-          // Meta and Title
-          'page-title': '一般社团法人 国际医疗交流推进机构 - IMC国际医疗',
-          'page-description': '一般社团法人国际医疗交流推进机构的详细信息 - 组织概要、问题介绍、业务内容、资源展示',
-          
-          // Navigation
-          'nav-overview': '组织概要',
-          'nav-advisor': '顾问介绍',
-          'nav-business': '业务内容',
-          'nav-resources': '资源展示',
-          'nav-home': '首页',
-          'nav-contact': '联系我们',
-          
-          // Organization Hero Section
-          'org-hero-title-1': '一般社团法人',
-          'org-hero-title-2': '国际医疗交流推进机构',
-          'org-hero-subtitle': 'International Medical Exchange Promotion Organization',
-          'org-hero-slogan': '致力于构建无信息差距的国际医疗平台',
-          'org-hero-btn-about': '详细了解组织',
-          'hero-btn-contact': '联系我们',
-          
-          // Overview Section
-          'overview-title': '组织概要',
-          'org-name-label': '名称：',
-          'org-name': '一般社团法人 国际医疗交流推进机构',
-          'org-address-label': '所在地：',
-          'org-address': '〒102-0083 东京千代田区麹町4-1-5',
-          'org-established-label': '设立：',
-          'org-established': '2016/9/12',
-          'org-contact-label': '联系方式：',
-          'org-contact': '03-6261-6288',
-          
-          // Business Cards
-          'business-research-title': '调查・研究事业',
-          'business-research-desc': '医疗、护理及海外医疗相关调查研究，国内外各种信息提供事业',
-          'business-consulting-title': '咨询事业',
-          'business-consulting-desc': '医疗设施及护理设施的设置运营事业及设置运营相关咨询事业',
-          'business-tourism-title': '医疗旅游事业',
-          'business-tourism-desc': '医疗旅游相关事业及国内外设施介绍事业',
-          'business-trade-title': '医疗器械・医药品事业',
-          'business-trade-desc': '医疗器械销售及进出口事业，药局业及医药品销售事业',
-          
-          // Leadership
-          'leadership-title': '管理层体制',
-          'representative-label': '代表理事',
-          'directors-label': '理事',
-          'auditor-label': '监事',
-          'advisor-label': '顾问',
-          'executive-directors-label': '执行理事',
-          
-          // Advisor Panel
-          'advisor-title': '顾问介绍',
-          'advisor-intro': '作为在国际医疗交流领域拥有丰富经验和专业知识的顾问，为本机构的战略方向和国际发展提供支持。',
-          'advisor-experience': '发挥在医疗行业的长年实绩，担任连接日本与海外医疗机构的重要角色。',
-          'advisor-expertise-title': '专业领域',
-          'expertise-1': '国际医疗交流的战略企划',
-          'expertise-2': '医疗旅游事业的开发',
-          'expertise-3': '海外医疗机构的合作构建',
-          'expertise-4': '医疗技术的国际普及',
-          'advisor-achievements-title': '主要实绩',
-          'achievement-advisor-1': '多个国际医疗项目的统筹',
-          'achievement-advisor-2': '亚太地区医疗网络的构建',
-          'achievement-advisor-3': '面向医疗从业者的国际研修项目开发',
-          
-          // Business Panel
-          'business-title': '业务内容',
-          'business-subtitle': '通过国际医疗交流，为世界健康福祉的提升做出贡献',
-          'business-category-header': '业务内容',
-          'case-studies-header': '具体举措',
-          'international-exchange-title': '国际交流活动',
-          'international-exchange-desc': '医疗从业者国际交流项目的策划运营',
-          'international-case': '面向医疗从业者的国际研修项目、学术交流会议的举办',
-          'overseas-promotion-title': '海外宣传（咨询）',
-          'overseas-promotion-desc': '海外市场医疗服务拓展支援与咨询',
-          'promotion-case': '日本医疗机构海外拓展支援、医疗旅游促进活动',
-          'education-training-title': '教育研修',
-          'education-training-desc': '医疗技术提升专业研修项目的实施',
-          'education-case': '最新医疗技术研修、国际标准对应研修项目的提供',
-          'view-case': '→ 案例',
-          
-          // Resources Panel
-          'resources-title': '资源展示',
-          'hospitals-subtitle': '合作医疗机构',
-          'hospital-network-title': '日本病院・医師 → 当社团',
-          'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量医疗服务。',
-          'network-1': '合作医疗机构：50家以上',
-          'network-2': '专门医师：200名以上',
-          'network-3': '对应诊疗科：20科以上',
-          'network-4': '与社团法人合作的综合支持体制',
-          
-          // Doctors Panel
-          'doctors-title': '医师介绍',
-          'doctors-desc': '为您介绍日本顶级专业医师团队',
-          
-          // Navigation
-          'nav-organization': '一般社团法人 国际医疗交流推进机构',
-          'nav-imcs': 'IMCS株式会社',
-          'nav-brand-story': '品牌故事',
-          'nav-founder': '创始人介绍',
-          'nav-releases': '新闻发布',
-          'nav-contact': '联系我们',
-          
-        // Footer
-        'footer-hero-company': 'IMC国际医疗',
-          'footer-org-info': '组织信息',
-          'footer-services': '服务',
-          'footer-copyright': '© 2025 IMC国际医疗. 版权所有。'
-        }
-      };
-
+      // 全局变量
+      let i18n, dataRenderer;
       
-      // Language switching functionality
-      function switchLanguage(lang) {
-        // Save language preference to localStorage
-        localStorage.setItem('selectedLanguage', lang);
-        
-        // Update all elements with data-i18n attribute
-        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-        elementsToTranslate.forEach(element => {
-          const key = element.getAttribute('data-i18n');
-          if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
-          }
-        });
-        
-        // Update meta description
-        const metaDescription = document.querySelector('meta[data-i18n-content="page-description"]');
-        if (metaDescription && translations[lang]['page-description']) {
-          metaDescription.setAttribute('content', translations[lang]['page-description']);
-        }
-        
-        // Update document title
-        const titleElement = document.querySelector('title[data-i18n="page-title"]');
-        if (titleElement && translations[lang]['page-title']) {
-          document.title = translations[lang]['page-title'];
-        }
-        
-        // Update language button states
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-          btn.classList.remove('active');
-        });
-        document.getElementById('lang-' + lang).classList.add('active');
-        
-        // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', lang);
-      }
-      
-      // Initialize language on page load
-      function initializeLanguage() {
-        const savedLanguage = localStorage.getItem('selectedLanguage') || 'ja';
-        switchLanguage(savedLanguage);
-      }
-      
-      // Initialize when page loads
+      // 页面初始化
       document.addEventListener('DOMContentLoaded', function() {
-        initializeLanguage();
-        renderHospitals();
-        renderDoctors();
+        console.log('Organization页面加载完成，开始初始化...');
+        
+        try {
+          // 初始化国际化模块
+          i18n = new I18n();
+          window.i18n = i18n; // 全局暴露
+          console.log('国际化模块初始化完成');
+          
+          // 初始化数据渲染模块
+          dataRenderer = new DataRenderer();
+          window.dataRenderer = dataRenderer; // 全局暴露
+          console.log('数据渲染模块初始化完成');
+          
+          // 渲染所有数据
+          dataRenderer.renderAll();
+          console.log('数据渲染完成');
+          
+        } catch (error) {
+          console.error('初始化过程中出现错误:', error);
+        }
       });
-
-      // 医院数据驱动渲染
-      function renderHospitals() {
-        console.log('渲染医院列表...');
-        
-        // 验证数据完整性
-        console.log('医院数据验证:');
-        
-        const hospitals = [
-          {img:'hospitals/tokyo_university_hospital.png', title:'東京大学附属病院'},
-          {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学医院'},
-          {img:'hospitals/juntendo_hospital.png', title:'順天堂医院'},
-          {img:'hospitals/st_lukes_international_hospital.png', title:'聖路加国際病院'},
-          {img:'hospitals/kameda_general_hospital.png', title:'亀田総合病院'},
-          {img:'hospitals/gan_ken_ariake_hospital.png', title:'がん研有明病院'},
-          {img:'hospitals/fujita_medical_university_tokyo.png', title:'藤田医科大学東京 先端医療研究センター'},
-          {img:'hospitals/tokyo_medical_university_hospital.png', title:'東京医科大学病院'},
-          {img:'hospitals/nihon_university_hospital.png', title:'日本大学医院'},
-          {img:'hospitals/keio_university_hospital.png', title:'慶応義塾大学病院'},
-          {img:'hospitals/tokyo_teishin_hospital.png', title:'東京逓信病院'},
-          {img:'hospitals/yotsuya_medical_cube.png', title:'四谷メディカルキューブ'},
-          {img:'hospitals/jikei_university_hospital.png', title:'東京慈恵会医科大学付属病院'},
-          {img:'hospitals/ncgm_hospital.png', title:'国立国際医療研究センター病院'},
-          {img:'hospitals/ncc_hospital.png', title:'国立がん研究センター'},
-          {img:'hospitals/inouye_eye_hospital.png', title:'井上眼科医院'},
-          {img:'hospitals/ntt_east_kanto_hospital.png', title:'NTT東日本　関東病院'},
-          {img:'hospitals/cardiovascular_institute_hospital.png', title:'心臓血管研究所付属病院'},
-          {img:'hospitals/tokyo_saiseikai_central_hospital.png', title:'東京都済生会中央病院'},
-          {img:'hospitals/tokyo_medical_dental_university_hospital.png', title:'東京医科歯科大学病院'},
-          {img:'hospitals/nippon_medical_school_hospital.png', title:'日本医科大学付属病院'},
-          {img:'hospitals/shonan_kamakura_general_hospital.png', title:'湘南鎌倉病院'},
-          {img:'hospitals/iuhw_mita_hospital.png', title:'国際医療福祉大学三田病院'},
-          {img:'hospitals/toranomon_hospital.png', title:'虎ノ門医院'}
-        ];
-
-        // 输出前5个医院的标题进行验证
-        hospitals.slice(0, 5).forEach((h, i) => {
-          console.log(`医院 ${i + 1}: "${h.title}"`);
-        });
-
-        const row = document.getElementById('hospitalRow');
-        if (!row) {
-          console.error('找不到hospitalRow元素');
-          return;
-        }
-        
-        // 清空现有内容
-        row.innerHTML = '';
-        
-        // 使用 map 和 join 方法渲染医院卡片
-        const cardsHTML = hospitals.map((hospital, index) => {
-          console.log(`渲染医院 ${index + 1}: ${hospital.title}`);
-          return `<article class="card hospital-card h-100 flex-shrink-0">
-              <div class="ratio ratio-4x3 hospital-thumb">
-                <img src="${hospital.img}" alt="${hospital.title}" class="w-100 h-100 object-fit-cover" loading="lazy">
-              </div>
-              <div class="card-body py-2">
-                <h3 class="hospital-title text-center mb-0">${hospital.title}</h3>
-              </div>
-            </article>`;
-        }).join('');
-        
-        row.innerHTML = cardsHTML;
-        
-        console.log(`已渲染 ${hospitals.length} 个医院`);
-      }
-
-      // 医师数据驱动渲染
-      function renderDoctors() {
-        console.log('渲染医师列表...');
-        const doctors = [
-          {
-            name: '林 基弘',
-            title: '「神の手」と呼ばれる名医',
-            subtitle: 'ガンマナイフ治療 世界第一',
-            position: '東京女子医科大学 脳神経外科 教授',
-            specialty: 'ガンマナイフ（GammaKnife）、ZAP-X、頭蓋底腫瘍、脳動静脈奇形（AVM）、三叉神経痛など',
-            image: 'doctors/hayashi_motohiro.png'
-          },
-          {
-            name: '丸山 隆志',
-            title: '脳腫瘍外科手術件数 日本一',
-            subtitle: '',
-            position: '東京女子医科大学 脳神経外科 講師',
-            specialty: '覚醒下悪性脳腫瘍（神経膠腫）手術、聴神経腫瘍手術、転移性脳腫瘍手術、脳腫瘍関連手術',
-            image: 'doctors/maruyama_takashi.png'
-          },
-          {
-            name: '新井 平伊',
-            title: '日本「アルツハイマー病」研究の第一人者',
-            subtitle: '',
-            position: '順天堂大学医学部 名誉教授',
-            specialty: '精神科全般、老年精神科、リエゾン精神医学、早発性アルツハイマー病専門外来',
-            image: 'doctors/arai_heii.png'
-          },
-          {
-            name: '藍原 康雄',
-            title: '小児脳神経外科 世界的名医',
-            subtitle: '',
-            position: '東京女子医科大学 脳神経外科 准教授',
-            specialty: '小児脳腫瘍（胚胎性腫瘍、良性腫瘍、膠腫／星状細胞腫などの悪性腫瘍、脳幹部腫瘍）、水頭症、脊髄腫瘍、小児もやもや病 など',
-            image: 'doctors/aihara_yasuo.png'
-          },
-          {
-            name: '川島 明次',
-            title: '日本脳神経外科・脳血管疾患の権威',
-            subtitle: '',
-            position: '聖路加国際病院 脳神経外科 部長',
-            specialty: '脳血管疾患（動脈瘤、脳出血）、頭蓋底腫瘍手術、もやもや病、頸動脈狭窄症',
-            image: 'doctors/kawashima_akitsugu.png'
-          },
-          {
-            name: '畑山 徹',
-            title: '顔面神経痛・痙攣・三叉神経痛 日本第一人者',
-            subtitle: '',
-            position: '水戸心脳疾患治療センター 院長',
-            specialty: '脳卒中、脳腫瘍治療、顔面神経痛、痙攣、三叉神経痛 など',
-            image: 'doctors/hatayama_toru.png'
-          },
-          {
-            name: '明星 智洋',
-            title: '日本腫瘍標的薬物療法の専門家',
-            subtitle: '医療革新の旗手',
-            position: '江戸川病院 副院長',
-            specialty: '腫瘍薬物療法（抗がん剤治療）、血液疾患（良性・悪性）、感染症管理、免疫療法',
-            image: 'doctors/myojo_tomohiro.png'
-          },
-          {
-            name: '小笠原 均',
-            title: '日本がん免疫療法専門家',
-            subtitle: '複合治療の先駆者',
-            position: 'JTK国際クリニック 院長',
-            specialty: '総合内科、膠原病、がん免疫療法、リウマチ、糖尿病、漢方内科',
-            image: 'doctors/ogasawara_hitoshi.png'
-          },
-          {
-            name: '田中 紘一',
-            title: '日本消化器外科の父',
-            subtitle: '上原賞受賞者',
-            position: '京都大学医学部附属病院 前院長',
-            specialty: '消化器外科、一般外科、小児外科、臓器移植、病理診断',
-            image: 'doctors/tanaka_koichi.png'
-          },
-          {
-            name: '高橋 克仁',
-            title: '希少がん・肉腫治療の第一人者',
-            subtitle: '',
-            position: '亀田総合病院 肉腫総合治療センター 主任／日本肉腫学会 理事長',
-            specialty: '希少がん、肉腫、がんゲノム医療',
-            image: 'doctors/takahashi_katsuhito.png'
-          },
-          {
-            name: '福間 英祐',
-            title: '非切開で乳がん治療 冷凍療法',
-            subtitle: '世界的リーダー',
-            position: '亀田総合病院 乳腺科 上席主任',
-            specialty: '乳がん治療、乳腺内視鏡下手術、乳腺画像診断、冷凍療法',
-            image: 'doctors/fukuma_eisuke.png'
-          }
-        ];
-
-        const grid = document.getElementById('doctorsGrid');
-        if (!grid) {
-          console.error('找不到doctorsGrid元素');
-          return;
-        }
-        
-        grid.innerHTML = doctors.map(doctor => `
-          <div class="col-lg-4 col-md-6">
-            <div class="card-imc card-imc-doctor h-100">
-              <div class="doctor-image-placeholder">
-                <img src="${doctor.image}" alt="${doctor.name}" class="doctor-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="doctor-placeholder" style="display:none;">
-                  <i class="fas fa-user-md"></i>
-                  <span>医師写真</span>
-                </div>
-              </div>
-              <div class="doctor-info">
-                <h3 class="doctor-name">${doctor.name}</h3>
-                <div class="doctor-title">${doctor.title}</div>
-                ${doctor.subtitle ? `<div class="doctor-subtitle">${doctor.subtitle}</div>` : ''}
-                <div class="doctor-position">${doctor.position}</div>
-                <div class="doctor-specialty">
-                  <strong>専門：</strong>${doctor.specialty}
-                </div>
-              </div>
-            </div>
-          </div>
-        `).join('');
-        
-        console.log(`已渲染 ${doctors.length} 位医师`);
+      
+      // 错误处理
+      window.addEventListener('error', function(event) {
+        console.error('页面错误:', event.error);
+      });
+      
+      // 调试信息
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('开发模式：调试信息已启用');
+        window.debug = {
+          i18n: () => window.i18n,
+          dataRenderer: () => window.dataRenderer,
+          switchLanguage: (lang) => window.i18n.switchLanguage(lang),
+          renderHospitals: () => window.dataRenderer.renderHospitals(),
+          renderDoctors: () => window.dataRenderer.renderDoctors()
+        };
       }
     </script>
     

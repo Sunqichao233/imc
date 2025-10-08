@@ -925,7 +925,103 @@
   background: var(--imc-primary-600);
 }
 
-/* ===== 23) 响应式微调 ===== */
+/* ===== 23) 占位符样式 ===== */
+.hospital-placeholder, .doctor-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: var(--radius-md);
+  padding: 2rem 1rem;
+  color: var(--imc-muted);
+  text-align: center;
+  height: 100%;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.placeholder-content i {
+  font-size: 2rem;
+  color: var(--imc-muted);
+  opacity: 0.6;
+}
+
+.placeholder-content span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.doctor-image-placeholder {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-info {
+  padding: 1.5rem;
+}
+
+.doctor-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--imc-text);
+  margin-bottom: 0.5rem;
+}
+
+.doctor-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--imc-primary);
+  margin-bottom: 0.25rem;
+}
+
+.doctor-subtitle {
+  font-size: 0.9rem;
+  color: var(--imc-primary-600);
+  margin-bottom: 0.75rem;
+}
+
+.doctor-position {
+  font-size: 0.9rem;
+  color: var(--imc-text);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.doctor-specialty {
+  font-size: 0.85rem;
+  color: var(--imc-muted);
+  line-height: 1.5;
+}
+
+.card-imc-doctor {
+  border: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-imc-doctor:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ===== 24) 响应式微调 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
   .hospital-card{ min-width:280px; max-width:340px; }
@@ -979,4 +1075,8 @@
   .marker-pin::after{ width: 6px; height: 6px; }
   .marker-tooltip{ font-size: 11px; padding: 6px 8px; }
   .world-map:hover{ transform: scale(1.01); }
+  
+  /* Placeholder Mobile */
+  .hospital-placeholder, .doctor-placeholder{ padding: 1rem; }
+  .placeholder-content{ font-size: 12px; }
 }
