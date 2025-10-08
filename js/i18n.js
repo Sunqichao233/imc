@@ -71,6 +71,24 @@ class I18n {
         // Brand Story Section
         'brand-story-title': '会社の歴史・タイムライン',
         
+        // Organizations Section
+        'organizations-title': '私たちの組織',
+        'organizations-description': 'IMC国際医療は、一般社団法人とIMCS株式会社の2つの組織で構成され、それぞれが専門性を活かして国際医療交流を推進しています。',
+        'org-card-title': '一般社団法人<br>国際医療交流推進機構',
+        'org-card-description': '国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与する非営利組織です。',
+        'org-feature-1': '医療交流事業の企画・運営',
+        'org-feature-2': '国際医療情報の提供',
+        'org-feature-3': '医療機関・施設の紹介',
+        'org-feature-4': '医療ツーリズム事業',
+        'org-learn-more': '詳しく見る',
+        'imcs-card-title': 'IMCS株式会社',
+        'imcs-card-description': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供する営利企業です。',
+        'imcs-feature-1': '高品質な医療サービス提供',
+        'imcs-feature-2': '国際医療コンサルティング',
+        'imcs-feature-3': '先端医療技術の普及',
+        'imcs-feature-4': '7,000名超のクライアント対応',
+        'imcs-learn-more': '詳しく見る',
+        
         // Founder Section
         'founder-section-title': '創業者紹介',
         'founder-description': 'IMC国際医療の創始者・CEO である夏冰氏についてご紹介します。',
@@ -170,6 +188,24 @@ class I18n {
         
         // Brand Story Section
         'brand-story-title': '公司历史·时间轴',
+        
+        // Organizations Section
+        'organizations-title': '我们的组织',
+        'organizations-description': 'IMC国际医疗由一般社团法人和IMCS株式会社两个组织构成，各自发挥专业性推进国际医疗交流。',
+        'org-card-title': '一般社团法人<br>国际医疗交流推进机构',
+        'org-card-description': '推进国际间医疗交流，促进医疗・护理领域发展和跨境医疗普及的非营利组织。',
+        'org-feature-1': '医疗交流事业的策划・运营',
+        'org-feature-2': '国际医疗信息的提供',
+        'org-feature-3': '医疗机构・设施的介绍',
+        'org-feature-4': '医疗旅游事业',
+        'org-learn-more': '了解详情',
+        'imcs-card-title': 'IMCS株式会社',
+        'imcs-card-description': '作为国际医疗交流推进机构的事业部门，提供具体医疗服务和咨询业务的营利企业。',
+        'imcs-feature-1': '高品质医疗服务提供',
+        'imcs-feature-2': '国际医疗咨询',
+        'imcs-feature-3': '先进医疗技术的普及',
+        'imcs-feature-4': '7,000名以上客户对应',
+        'imcs-learn-more': '了解详情',
         
         // Founder Section
         'founder-section-title': '创始人介绍',
