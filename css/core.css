@@ -823,7 +823,109 @@
   margin: 0;
 }
 
-/* ===== 22) 响应式微调 ===== */
+/* ===== 22) 世界地图样式 ===== */
+.world-map-container {
+  max-width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.world-map {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.world-map:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.map-marker {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.marker-pin {
+  width: 20px;
+  height: 20px;
+  background: var(--imc-primary);
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite;
+}
+
+.marker-pin::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 0 rgba(11, 131, 197, 0.7);
+  }
+  70% {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 10px rgba(11, 131, 197, 0);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 0 0 rgba(11, 131, 197, 0);
+  }
+}
+
+.marker-tooltip {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.marker-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.map-marker:hover .marker-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: 35px;
+}
+
+.map-marker:hover .marker-pin {
+  transform: rotate(-45deg) scale(1.2);
+  background: var(--imc-primary-600);
+}
+
+/* ===== 23) 响应式微调 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
   .hospital-card{ min-width:280px; max-width:340px; }
@@ -871,4 +973,10 @@
   .org-info-item{ flex-direction: column; gap: 0.25rem; align-items: flex-start; }
   .org-info-item strong{ min-width: auto; }
   .business-item-card{ min-height: 120px; padding: 1rem 0.75rem; }
+  
+  /* World Map Mobile */
+  .marker-pin{ width: 16px; height: 16px; }
+  .marker-pin::after{ width: 6px; height: 6px; }
+  .marker-tooltip{ font-size: 11px; padding: 6px 8px; }
+  .world-map:hover{ transform: scale(1.01); }
 }
