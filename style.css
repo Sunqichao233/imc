@@ -1,9 +1,138 @@
+/* Design Tokens - 设计令牌 */
+:root {
+  /* Colors - 颜色 */
+  --imc-primary: #0b83c5;
+  --imc-primary-600: #0a6fa6;
+  --imc-primary-light: #5dade2;
+  --imc-surface: #fff;
+  --imc-surface-alt: #f8fbff;
+  --imc-surface-gray: #f9fbfc;
+  --imc-muted: #525252;
+  --imc-text: #2c3e50;
+  --imc-text-secondary: #34495e;
+  --imc-text-light: #666666;
+  --imc-border: #dee2e6;
+  --imc-border-light: #e0e0e0;
+  --imc-success: #27ae60;
+  --imc-warning: #f39c12;
+  --imc-error: #e74c3c;
+
+  /* Radius & Shadow - 圆角与阴影 */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50px;
+  --shadow-xs: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.10);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.12);
+  --shadow-lg: 0 8px 25px rgba(0,0,0,.15);
+  --shadow-xl: 0 10px 30px rgba(0,0,0,.20);
+
+  /* Spacing & Size - 间距与尺寸 */
+  --container: 1200px;
+  --gap-xs: 8px;
+  --gap-sm: 12px;
+  --gap: 20px;
+  --gap-lg: 30px;
+  --gap-xl: 40px;
+  --gap-2xl: 50px;
+
+  /* Typography - 字体 */
+  --fz-xs: .85rem;
+  --fz-sm: .95rem;
+  --fz: 1rem;
+  --fz-md: 1.125rem;
+  --fz-lg: 1.25rem;
+  --fz-xl: 1.5rem;
+  --fz-2xl: 2rem;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Layout - 布局 */
+  --navbar-height: 70px;
+  --section-padding: clamp(40px, 6vw, 80px);
+  --card-padding: clamp(20px, 3vw, 30px);
+}
+
+/* Bootstrap Button Components - 统一按钮组件 */
+.btn-imc {
+  --bs-btn-bg: var(--imc-primary);
+  --bs-btn-border-color: var(--imc-primary);
+  --bs-btn-hover-bg: var(--imc-primary-600);
+  --bs-btn-hover-border-color: var(--imc-primary-600);
+  --bs-btn-active-bg: var(--imc-primary-600);
+  --bs-btn-active-border-color: var(--imc-primary-600);
+  --bs-btn-color: var(--imc-surface);
+  --bs-btn-hover-color: var(--imc-surface);
+  --bs-btn-active-color: var(--imc-surface);
+  border-radius: var(--radius-full);
+  font-weight: var(--fw-medium);
+  transition: all 0.3s ease;
+}
+
+.btn-imc:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-imc-outline {
+  --bs-btn-color: var(--imc-primary);
+  --bs-btn-border-color: var(--imc-primary);
+  --bs-btn-hover-color: var(--imc-surface);
+  --bs-btn-hover-bg: var(--imc-primary);
+  --bs-btn-hover-border-color: var(--imc-primary);
+  --bs-btn-active-color: var(--imc-surface);
+  --bs-btn-active-bg: var(--imc-primary-600);
+  --bs-btn-active-border-color: var(--imc-primary-600);
+  border-radius: var(--radius-full);
+  font-weight: var(--fw-medium);
+  transition: all 0.3s ease;
+}
+
+.btn-imc-outline:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Bootstrap Utility Class Enhancements - Bootstrap工具类增强 */
+.gap-imc-xs { gap: var(--gap-xs) !important; }
+.gap-imc-sm { gap: var(--gap-sm) !important; }
+.gap-imc { gap: var(--gap) !important; }
+.gap-imc-lg { gap: var(--gap-lg) !important; }
+.gap-imc-xl { gap: var(--gap-xl) !important; }
+
+.p-imc { padding: var(--card-padding) !important; }
+.py-imc { padding-top: var(--section-padding) !important; padding-bottom: var(--section-padding) !important; }
+
+.rounded-imc-sm { border-radius: var(--radius-sm) !important; }
+.rounded-imc { border-radius: var(--radius-md) !important; }
+.rounded-imc-lg { border-radius: var(--radius-lg) !important; }
+.rounded-imc-xl { border-radius: var(--radius-xl) !important; }
+.rounded-imc-pill { border-radius: var(--radius-full) !important; }
+
+.shadow-imc-xs { box-shadow: var(--shadow-xs) !important; }
+.shadow-imc-sm { box-shadow: var(--shadow-sm) !important; }
+.shadow-imc { box-shadow: var(--shadow-md) !important; }
+.shadow-imc-lg { box-shadow: var(--shadow-lg) !important; }
+
+.text-imc-primary { color: var(--imc-primary) !important; }
+.text-imc-muted { color: var(--imc-muted) !important; }
+.text-imc-secondary { color: var(--imc-text-secondary) !important; }
+
+.bg-imc-surface { background-color: var(--imc-surface) !important; }
+.bg-imc-surface-alt { background-color: var(--imc-surface-alt) !important; }
+.bg-imc-surface-gray { background-color: var(--imc-surface-gray) !important; }
+
 .desktop {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     position: relative;
-    background-color: #ffffff;
+    background-color: var(--imc-surface);
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -69,19 +198,6 @@
   
   
   
-  .desktop .button {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(6px, 0.8vw, 8px);
-    padding: 12px 24px;
-    position: relative;
-    flex: 0 0 auto;
-    background-color: var(--blueblue-500);
-    border-radius: 100px;
-  }
   
   
   
@@ -141,25 +257,9 @@
     display: block;
   }
   
-  .desktop .column {
-    display: inline-flex;
-    align-items: center;
-    gap: clamp(12px, 2vw, 24px);
-    position: relative;
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    max-width: 100%;
-    overflow: hidden;
-  }
+  /* 可用 Bootstrap: .d-inline-flex .align-items-center .gap-3 .flex-wrap */
   
-  .desktop .link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(3px, 0.4vw, 4px);
-    position: relative;
-    flex: 0 0 auto;
-  }
+  /* 可用 Bootstrap: .d-inline-flex .align-items-center .justify-content-center .gap-1 */
   
   .desktop .link-text {
     position: relative;
@@ -210,19 +310,6 @@
     flex-grow: 1;
   }
   
-  .desktop .button-2 {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(6px, 0.8vw, 8px);
-    padding: clamp(6px, 0.8vw, 8px) clamp(16px, 2vw, 20px);
-    position: relative;
-    flex: 0 0 auto;
-    background-color: var(--blueblue-700);
-    border-radius: 100px;
-  }
   
 
   /* New unified card layout */
@@ -234,32 +321,32 @@
   }
 
   .desktop .section-cards .card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: clamp(20px, 3vw, 30px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: var(--imc-surface);
+    border-radius: var(--radius-md);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+    border: 1px solid var(--imc-border-light);
   }
 
   .desktop .section-cards .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lg);
   }
 
   .desktop .section-cards .card h3 {
-    color: #0d3b45;
+    color: var(--imc-text);
     font-family: "Roboto", Helvetica;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     font-size: clamp(18px, 2vw, 22px);
     margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
     line-height: 1.4;
   }
 
   .desktop .section-cards .card p {
-    color: #333333;
+    color: var(--imc-text-secondary);
     font-family: "Roboto", Helvetica;
-    font-weight: 400;
+    font-weight: var(--fw-normal);
     font-size: clamp(14px, 1.2vw, 16px);
     line-height: 1.6;
     margin: 0 0 clamp(8px, 1vw, 12px) 0;
@@ -268,7 +355,7 @@
   .desktop .section-cards .card ul {
     margin: 0;
     padding-left: clamp(16px, 2vw, 20px);
-    color: #333333;
+    color: var(--imc-text-secondary);
   }
 
   .desktop .section-cards .card li {
@@ -279,30 +366,22 @@
   }
 
   .desktop .section-cards .card a {
-    color: #3498db;
+    color: var(--imc-primary);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
   }
 
   .desktop .section-cards .card a:hover {
-    border-bottom-color: #3498db;
+    border-bottom-color: var(--imc-primary);
   }
 
   .desktop .section-cards .card strong {
-    color: #0d3b45;
-    font-weight: 600;
+    color: var(--imc-text);
+    font-weight: var(--fw-semibold);
   }
   
-  .desktop .div-4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    flex: 0 0 auto;
-  }
+  /* 可用 Bootstrap: .d-flex .align-items-center .justify-content-between .w-100 */
   
   .desktop .long-heading-is-what {
     font-weight: 700;
@@ -344,17 +423,7 @@
     border-color: #456f81;
   }
   
-  .desktop .row {
-    width: 100%;
-    max-width: 100%;
-    align-items: flex-start;
-    gap: clamp(24px, 3vw, 40px);
-    display: flex;
-    position: relative;
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-  }
+  /* 可用 Bootstrap: .row .g-4 或 .d-flex .flex-wrap .gap-4 */
   
   .desktop .section-title-wrapper {
     display: flex;
@@ -810,26 +879,21 @@
     margin-bottom: clamp(30px, 4vw, 50px);
   }
 
-  .desktop .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(30px, 4vw, 50px);
-    align-items: start;
-  }
+  /* 可用 Bootstrap: .row .g-4 或 .d-grid 配合自定义grid-template-columns */
 
   .desktop .form-section {
-    background: #ffffff;
-    border-radius: 12px;
+    background: var(--imc-surface);
+    border-radius: var(--radius-md);
     padding: clamp(20px, 3vw, 40px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-lg);
   }
 
   .desktop .map-section {
     height: 100%;
     min-height: 500px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-lg);
   }
 
   .desktop .contact-map {
@@ -837,16 +901,11 @@
     height: 100%;
     min-height: 500px;
     border: 0;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
   }
 
   /* Form row layout for side-by-side fields */
-  .desktop .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(12px, 1.5vw, 20px);
-    margin-bottom: clamp(6px, 0.8vw, 10px);
-  }
+  /* 可用 Bootstrap: .row .g-3 */
 
   .desktop .form-group.half-width {
     margin-bottom: 0;
@@ -1073,36 +1132,7 @@
     font-style: var(--text-regular-normal-font-style);
   }
   
-  .desktop .button-5 {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(6px, 0.8vw, 8px);
-    padding: 12px 24px;
-    position: relative;
-    flex: 0 0 auto;
-    margin-top: -1.00px;
-    margin-bottom: -1.00px;
-    margin-right: -1.00px;
-    border-radius: 100px;
-    border: 1px solid;
-    border-color: #000000;
-  }
   
-  .desktop .button-6 {
-    position: relative;
-    width: fit-content;
-    font-family: var(--text-regular-normal-font-family);
-    font-weight: var(--text-regular-normal-font-weight);
-    color: #000000;
-    font-size: var(--text-regular-normal-font-size);
-    letter-spacing: var(--text-regular-normal-letter-spacing);
-    line-height: var(--text-regular-normal-line-height);
-    white-space: nowrap;
-    font-style: var(--text-regular-normal-font-style);
-  }
   
   .desktop .newsletter-consent {
     position: relative;
@@ -1446,14 +1476,14 @@
   .desktop .form-textarea {
     width: 100%;
     max-width: 100%;
-    border: 1px solid #3498db;
-    border-radius: 6px;
+    border: 1px solid var(--imc-primary);
+    border-radius: var(--radius-xs);
     padding: clamp(6px, 0.8vw, 10px);
     margin-bottom: 0;
     font-family: "Roboto", Helvetica;
     font-size: clamp(14px, 1.2vw, 16px);
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--imc-surface);
+    color: var(--imc-text-secondary);
     box-sizing: border-box;
     transition: all 0.2s ease;
   }
@@ -1461,8 +1491,8 @@
   .desktop .form-input:focus,
   .desktop .form-textarea:focus {
     outline: none;
-    border-color: #2980b9;
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    border-color: var(--imc-primary-600);
+    box-shadow: 0 0 0 2px rgba(11, 131, 197, 0.2);
   }
 
   .desktop .form-textarea {
@@ -1491,36 +1521,16 @@
   }
 
   /* Submit button */
-  .desktop .submit-button {
-    background: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: clamp(8px, 1vw, 10px) clamp(25px, 2.5vw, 30px);
-    font-family: "Roboto", Helvetica;
-    font-size: clamp(14px, 1.2vw, 16px);
-    font-weight: 500;
-    cursor: pointer;
-    align-self: flex-start;
-    transition: all 0.3s ease;
-  }
+  /* 已替换为 .btn .btn-imc */
 
-  .desktop .submit-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-1px);
-  }
-
-  .desktop .submit-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
-  }
+  /* Focus样式已包含在 .btn-imc 中 */
 
   /* Unified Section Styles */
   .desktop .section {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 64px);
+    padding: var(--section-padding) clamp(20px, 4vw, 64px);
     position: relative;
   }
 
@@ -1533,8 +1543,8 @@
   }
 
   .desktop .section-title {
-    font-weight: 700;
-    color: var(--text-primary, #2c3e50);
+    font-weight: var(--fw-bold);
+    color: var(--imc-text);
     font-size: clamp(24px, 3vw, 40px);
     line-height: clamp(28px, 3.5vw, 48px);
     font-family: "Roboto", Helvetica;
@@ -1543,8 +1553,8 @@
   }
 
   .desktop .section-description {
-    font-weight: 400;
-    color: var(--text-muted, #525252);
+    font-weight: var(--fw-normal);
+    color: var(--imc-muted);
     font-size: clamp(14px, 1.5vw, 18px);
     line-height: clamp(20px, 2vw, 27px);
     font-family: "Roboto", Helvetica;
@@ -1556,27 +1566,27 @@
   }
 
   .desktop .section-content {
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
     width: 100%;
   }
 
   /* Section Background Variations */
   .desktop .section--white {
-    background-color: var(--bg-white, #ffffff);
+    background-color: var(--imc-surface);
   }
 
   .desktop .section--light-gray {
-    background-color: var(--bg-light-gray, #f9fbfc);
+    background-color: var(--imc-surface-gray);
   }
 
   .desktop .section--primary {
-    background-color: var(--primary-blue, #3498db);
-    color: var(--bg-white, #ffffff);
+    background-color: var(--imc-primary);
+    color: var(--imc-surface);
   }
 
   .desktop .section--primary .section-title {
-    color: var(--bg-white, #ffffff);
+    color: var(--imc-surface);
   }
 
   .desktop .section--primary .section-description {
@@ -1600,7 +1610,7 @@
   .desktop .news-timeline-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
     padding: 0 60px; /* Add padding for buttons */
   }
@@ -1608,7 +1618,7 @@
   .desktop .news-timeline-wrapper {
     position: relative;
     overflow: visible; /* Change to visible to show buttons */
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
   }
 
   .desktop .news-timeline {
@@ -1620,7 +1630,7 @@
     padding: clamp(16px, 2vw, 24px) 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
   }
 
   .desktop .news-timeline::-webkit-scrollbar {
@@ -1631,43 +1641,43 @@
     flex: 0 0 auto;
     width: clamp(280px, 35vw, 400px);
     padding: clamp(20px, 2.5vw, 24px);
-    background: var(--bg-white, #ffffff);
-    border-radius: 16px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: var(--imc-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--imc-border-light);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
     box-sizing: border-box;
   }
 
   .desktop .news-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-blue, #3498db);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--imc-primary);
   }
 
   .desktop .news-date {
-    color: var(--primary-blue, #3498db);
+    color: var(--imc-primary);
     font-size: clamp(12px, 1.2vw, 14px);
     font-family: "Roboto", Helvetica;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     margin-bottom: clamp(8px, 1vw, 12px);
     letter-spacing: 0.5px;
   }
 
   .desktop .news-title {
-    color: var(--text-primary, #2c3e50);
+    color: var(--imc-text);
     font-size: clamp(14px, 1.5vw, 16px);
     font-family: "Roboto", Helvetica;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     line-height: 1.4;
     margin-bottom: clamp(8px, 1vw, 12px);
   }
 
   .desktop .news-description {
-    color: var(--text-muted, #525252);
+    color: var(--imc-muted);
     font-size: clamp(12px, 1.3vw, 14px);
     font-family: "Roboto", Helvetica;
-    font-weight: 400;
+    font-weight: var(--fw-normal);
     line-height: 1.5;
   }
 
@@ -1678,21 +1688,21 @@
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
-    background: var(--bg-white, #ffffff);
-    border: 2px solid var(--primary-blue, #3498db);
-    border-radius: 50%;
+    background: var(--imc-surface);
+    border: 2px solid var(--imc-primary);
+    border-radius: var(--radius-full);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    box-shadow: var(--shadow-md);
   }
 
   .desktop .news-nav-btn:hover {
-    background: var(--primary-blue, #3498db);
-    color: var(--bg-white, #ffffff);
+    background: var(--imc-primary);
+    color: var(--imc-surface);
     transform: translateY(-50%) scale(1.1);
   }
 
@@ -2305,7 +2315,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    min-height: 70px;
+    min-height: var(--navbar-height);
   }
 
   /* Logo 保持比例 */
@@ -2500,7 +2510,7 @@
 
     .nav-container {
       padding: 0.6rem 1.2rem;
-      min-height: 60px;
+      min-height: calc(var(--navbar-height) - 10px);
     }
   }
 
@@ -3126,15 +3136,15 @@
 .hospital-card{
   min-width: 260px;       /* 列表可视宽 */
   max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   scroll-snap-align: start;
 }
 
 /* 固定图片比例区（用 .ratio） */
 .hospital-thumb { 
-  border-top-left-radius: 12px; 
-  border-top-right-radius: 12px; 
+  border-top-left-radius: var(--radius-md); 
+  border-top-right-radius: var(--radius-md); 
   overflow: hidden; 
 }
 
@@ -3143,9 +3153,9 @@
 
 /* 压缩标题占比：字号/行高/字重/两行截断 */
 .hospital-title{
-  font-size: .95rem;         /* 原 h6 改得更紧凑 */
+  font-size: var(--fz-sm);         /* 原 h6 改得更紧凑 */
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   display: -webkit-box;
   -webkit-line-clamp: 2;     /* 最多两行 */
   -webkit-box-orient: vertical;
@@ -3158,12 +3168,12 @@
 /* 大屏略微放大图片区域，视觉更均衡 */
 @media (min-width: 992px){
   .hospital-card{ min-width: 280px; max-width: 340px; }
-  .hospital-title{ font-size: 1rem; }
+  .hospital-title{ font-size: var(--fz); }
 }
 
 /* index.html 导航栏单独样式优化 */
 body.index-page .navbar {
-  min-height: 70px;  /* 与其他页面保持一致的高度 */
+  min-height: var(--navbar-height);  /* 与其他页面保持一致的高度 */
 }
 
 body.index-page .navbar .container {
