@@ -1,0 +1,652 @@
+/* ===== 1) Design Tokens ===== */
+:root{
+  --imc-primary:#0b83c5; --imc-primary-600:#0a6fa6;
+  --imc-surface:#fff; --imc-surface-gray:#f9fbfc;
+  --imc-text:#2c3e50; --imc-muted:#525252; --imc-border:#e0e0e0;
+  --radius-sm:8px; --radius-md:12px; --radius-lg:16px; --radius-pill:50px;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.10); --shadow-md:0 4px 14px rgba(0,0,0,.12);
+  --fz-sm:.95rem; --fz:1rem; --fz-lg:1.25rem;
+  --section-y:clamp(40px,6vw,80px); --container:1200px;
+}
+
+/* ===== 2) Button（基于 Bootstrap） ===== */
+.btn-imc{
+  --bs-btn-bg:var(--imc-primary);
+  --bs-btn-border-color:var(--imc-primary);
+  --bs-btn-hover-bg:var(--imc-primary-600);
+  --bs-btn-hover-border-color:var(--imc-primary-600);
+  --bs-btn-color:#fff; --bs-btn-hover-color:#fff;
+  border-radius:var(--radius-pill); font-weight:500; transition:.2s;
+}
+.btn-imc:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md); }
+
+/* 轮廓款（可选） */
+.btn-imc-outline{
+  --bs-btn-color:var(--imc-primary);
+  --bs-btn-border-color:var(--imc-primary);
+  --bs-btn-hover-color:#fff; --bs-btn-hover-bg:var(--imc-primary);
+  border-radius:var(--radius-pill); font-weight:500; transition:.2s;
+}
+
+/* ===== 3) Card 统一组件 ===== */
+.card-imc{
+  background:#fff; border:1px solid var(--imc-border);
+  border-radius:var(--radius-md); box-shadow:var(--shadow-sm);
+  padding:clamp(16px,2.5vw,24px); transition:.2s;
+}
+.card-imc:hover{ box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.card-imc h3{ color:var(--imc-text); font-weight:600; font-size:var(--fz-lg); margin:0 0 .5rem; }
+.card-imc p, .card-imc li{ color:var(--imc-muted); font-size:var(--fz-sm); line-height:1.6; }
+
+/* ===== 4) 医院卡片（走马灯项） ===== */
+#hospitalRow{ scroll-snap-type:x mandatory; }
+.hospital-card{ min-width:260px; max-width:320px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); scroll-snap-align:start; }
+.hospital-thumb{ border-top-left-radius:var(--radius-md); border-top-right-radius:var(--radius-md); overflow:hidden; }
+.object-fit-cover{ object-fit:cover; }
+.hospital-title{
+  font-size:var(--fz-sm); line-height:1.35; font-weight:600;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:0;
+}
+.hospital-card .card-body{ padding:.5rem .75rem; }
+
+/* ===== 5) Section & 容器 ===== */
+.section{ 
+  padding: var(--section-y) clamp(20px, 5vw, 80px); 
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.section .section-header{ text-align:center; margin-bottom:clamp(24px,4vw,40px); }
+.section .section-title{ font-size:clamp(24px,3vw,40px); font-weight:700; color:var(--imc-text); margin:0; }
+.section .section-description{ color:var(--imc-muted); max-width:800px; margin:.5rem auto 0; }
+.section .section-content{ max-width: 100%; margin: 0 auto; }
+
+/* ===== 6) 导航样式 ===== */
+.navbar .nav-link{ font-size:1.125rem; }
+
+/* Logo 样式 - 保持比例，防止压扁 */
+.navbar-brand img {
+  height: auto !important;
+  max-height: 40px;
+  width: auto !important;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 导航栏高度和间距 */
+.navbar {
+  min-height: 70px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar .container {
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* 导航链接间距 */
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--imc-primary) !important;
+}
+
+@media (min-width:992px){ 
+  .navbar .nav-link{ font-size:1.25rem; }
+  .navbar-brand img { max-height: 48px; }
+}
+
+/* ===== 7) 简单背景变体（可选） ===== */
+.section--gray{ background:var(--imc-surface-gray); }
+
+/* ===== 8) 新闻时间线样式 ===== */
+.news-timeline {
+  display: flex;
+  gap: clamp(16px, 2vw, 24px);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: clamp(16px, 2vw, 24px) 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.news-timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.news-date {
+  color: var(--imc-primary);
+  font-size: var(--fz-sm);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.news-title {
+  color: var(--imc-text);
+  font-size: var(--fz);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.news-description {
+  color: var(--imc-muted);
+  font-size: var(--fz-sm);
+  line-height: 1.5;
+}
+
+/* ===== 9) 表单样式 ===== */
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--imc-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--fz);
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--imc-primary);
+  box-shadow: 0 0 0 3px rgba(11, 131, 197, 0.1);
+}
+
+/* ===== 10) Hero Section 样式 ===== */
+.hero-section--index {
+  color: #2c3e50;
+  padding-top: 80px;
+}
+
+.hero-title--index {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle--index {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #2370FF;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle--secondary {
+  font-size: clamp(1.2rem, 2.5vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.image--index {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../homepage.png');
+}
+
+/* ===== 11) 医生卡片样式 ===== */
+.card-imc-doctor {
+  background: var(--imc-surface);
+  border: 1px solid var(--imc-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(16px, 2.5vw, 20px);
+  transition: all 0.2s ease;
+}
+
+.card-imc-doctor:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.doctor-image-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  position: relative;
+  background: var(--imc-surface-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--imc-muted);
+  font-size: 0.8rem;
+}
+
+.doctor-placeholder i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-name {
+  font-size: var(--fz-lg);
+  font-weight: 700;
+  color: var(--imc-text);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.doctor-title {
+  font-size: var(--fz);
+  font-weight: 600;
+  color: var(--imc-primary);
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.doctor-subtitle {
+  font-size: var(--fz-sm);
+  color: var(--imc-primary-600);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.doctor-position {
+  font-size: var(--fz-sm);
+  color: var(--imc-text);
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.doctor-specialty {
+  font-size: var(--fz-sm);
+  color: var(--imc-muted);
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ===== 12) 创始人样式 ===== */
+.founder-photo {
+  padding: 0;
+  margin: 0;
+}
+
+.founder-photo img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* ===== 13) 组织信息样式 ===== */
+.leadership-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.leadership-item strong {
+  min-width: 120px;
+  color: var(--imc-text);
+  font-weight: 600;
+}
+
+/* ===== 14) 通用工具类 ===== */
+.text-primary { color: var(--imc-primary) !important; }
+.text-muted { color: var(--imc-muted) !important; }
+.bg-gray { background-color: var(--imc-surface-gray) !important; }
+
+/* ===== 16) Hero Section 完整样式 ===== */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, 4vw, 40px);
+  position: relative;
+  padding: clamp(20px, 4vw, 64px);
+  z-index: 2;
+  max-width: 90vw;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== 17) About Section 样式 ===== */
+.about-section {
+  background: #f5f8fc;
+  padding: 60px 10%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #222;
+}
+
+.about-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.about-title {
+  font-size: clamp(28px, 3.5vw, 36px);
+  font-weight: 700;
+  color: var(--imc-text);
+  margin-bottom: 1rem;
+}
+
+.about-tag {
+  background: #eaf3ff;
+  color: #2370ff;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fz-sm);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: var(--imc-surface);
+  padding: clamp(20px, 3vw, 30px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.info-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.info-item strong {
+  display: block;
+  color: var(--imc-text);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== 18) Footer 完整样式 ===== */
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+  padding: clamp(50px, 6vw, 80px) clamp(20px, 4vw, 64px);
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #f8fbff;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--container);
+  align-items: flex-start;
+  gap: clamp(30px, 4vw, 40px);
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.content-6 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: clamp(30px, 4vw, 40px);
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(16px, 2vw, 20px);
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+.heading-3 {
+  position: relative;
+  align-self: stretch;
+  margin: 0;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--imc-text);
+}
+
+.text-wrapper-7 {
+  color: var(--imc-primary);
+}
+
+.links {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(40px, 5vw, 60px);
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.column-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 1.5vw, 16px);
+  position: relative;
+  flex: 1;
+  min-width: 140px;
+}
+
+.text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  margin: 0;
+  font-size: var(--fz-lg);
+  font-weight: 600;
+  color: var(--imc-text);
+}
+
+.div-9 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(6px, 0.8vw, 8px) 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.footer-link {
+  position: relative;
+  flex: 1;
+  font-size: var(--fz-sm);
+  color: var(--imc-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--imc-primary);
+  text-decoration: underline;
+}
+
+.div-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 2vw, 20px);
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.divider {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+  background-color: var(--imc-border);
+  border: none;
+}
+
+.row-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.copyright-text {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  font-size: var(--fz-sm);
+  color: var(--imc-muted);
+  text-align: center;
+}
+
+/* ===== 19) Section 背景变体 ===== */
+.section--light-gray {
+  background-color: var(--imc-surface-gray);
+}
+
+.section--primary {
+  background-color: var(--imc-primary);
+  color: var(--imc-surface);
+}
+
+.section--primary .section-title {
+  color: var(--imc-surface);
+}
+
+.section--primary .section-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section--dark-teal {
+  background-color: #0d3b45;
+  color: #ffffff;
+}
+
+.section--dark-teal .section-title {
+  color: #ffffff;
+}
+
+.section--dark-teal .section-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== 20) 响应式微调 ===== */
+@media (min-width:992px){
+  .card-imc h3{ font-size:1.375rem; }
+  .hospital-card{ min-width:280px; max-width:340px; }
+  .hospital-title{ font-size:var(--fz); }
+}
+@media (max-width:768px){
+  .card-imc{ padding:clamp(12px,2vw,16px); }
+  .navbar .nav-link{ font-size:1rem; }
+  .card-imc-doctor{ padding:var(--fz); }
+  .doctor-image-placeholder{ width:100px; height:100px; }
+  .doctor-name{ font-size:var(--fz-lg); }
+  .doctor-title{ font-size:var(--fz); }
+  .hero-section--index{ padding-top: 100px; }
+  .leadership-item{ flex-direction: column; align-items: flex-start; gap: 5px; }
+  .leadership-item strong{ min-width: auto; }
+  
+  /* Hero Section Mobile */
+  .hero-section{ padding: clamp(16px, 3vw, 40px); max-width: 95vw; }
+  .hero-content{ gap: clamp(12px, 2vw, 20px); }
+  
+  /* About Section Mobile */
+  .about-section{ padding: 40px 5%; }
+  .about-title{ font-size: 24px; }
+  .about-cards{ grid-template-columns: 1fr; gap: 15px; }
+  .info-row{ flex-direction: column; gap: 15px; }
+  .info-item{ min-width: auto; }
+  
+  /* Footer Mobile */
+  .content-6{ flex-direction: column; align-items: flex-start; }
+  .links{ flex-direction: column; gap: clamp(20px, 3vw, 30px); }
+  .column-6{ min-width: auto; }
+  
+  /* Form Mobile */
+  .form-input, .form-textarea{ font-size: 16px; } /* Prevent zoom on iOS */
+}
