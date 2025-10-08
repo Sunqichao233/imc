@@ -56,111 +56,137 @@
       </section>
 
       <!-- 組織概要 Section -->
-      <section class="about-section" id="overview">
-        <div class="about-header">
-          <h2 class="about-title" data-i18n="overview-title">組織概要</h2>
+      <section class="section section--light-gray" id="overview">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="overview-title">組織概要</h2>
+        </div>
+        
+        <div class="section-content">
+          <div class="row g-4">
+            <!-- 基本情報カード -->
+            <div class="col-lg-6">
+              <div class="card-imc h-100">
+                <h3 class="mb-3">基本情報</h3>
+                <div class="org-info-list">
+                  <div class="org-info-item">
+                    <strong data-i18n="org-name-label">名称：</strong>
+                    <span data-i18n="org-name">一般社団法人 国際医療交流推進機構</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="org-address-label">所在地：</strong>
+                    <span data-i18n="org-address">〒102-0083 東京千代田区麹町4-1-5</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="org-established-label">設立：</strong>
+                    <span data-i18n="org-established">2016/9/12</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="org-contact-label">連絡先：</strong>
+                    <div class="contact-details">
+                      <div>TEL　03-6261-6288</div>
+                      <div>EMAIL　info@imcs.co.jp</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 役員体制カード -->
+            <div class="col-lg-6">
+              <div class="card-imc h-100">
+                <h3 class="mb-3" data-i18n="leadership-title">役員体制</h3>
+                <div class="org-info-list">
+                  <div class="org-info-item">
+                    <strong data-i18n="representative-label">代表理事：</strong>
+                    <div class="leadership-names">
+                      <div>中村　達</div>
+                      <div>華岡　知</div>
+                    </div>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="directors-label">理事：</strong>
+                    <span data-i18n="directors-name">酒井　友佳</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="auditor-label">監事：</strong>
+                    <span data-i18n="auditor-name">山田　和夫</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="advisor-label">顧問：</strong>
+                    <span data-i18n="advisor-name">林　基弘</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="executive-directors-label">執行理事：</strong>
+                    <div class="leadership-names">
+                      <div>金子　朗久</div>
+                      <div>郭常青</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <!-- 基本情報 -->
-          <div class="org-basic-info">
-            <div class="info-row">
-              <div class="info-item">
-                <strong data-i18n="org-name-label">名称：</strong>
-                <span data-i18n="org-name">一般社団法人 国際医療交流推進機構</span>
-              </div>
-              <div class="info-item">
-                <strong data-i18n="org-address-label">所在地：</strong>
-                <span data-i18n="org-address">〒102-0083 東京千代田区麹町4-1-5</span>
-              </div>
-            </div>
-            <div class="info-row">
-              <div class="info-item">
-                <strong data-i18n="org-established-label">設立：</strong>
-                <span data-i18n="org-established">2016/9/12</span>
-              </div>
-              <div class="info-item">
-                <strong data-i18n="org-contact-label">連絡先：</strong>
-                <div style="line-height: 1.6;">
-                  <div>TEL　03-6261-6288</div>
-                  <div>EMAIL　info@imcs.co.jp</div>
-                </div>
-              </div>
+          <!-- 事業目的 -->
+          <div class="mt-5">
+            <div class="card-imc business-purpose-card">
+              <h3 class="text-primary mb-3">事業目的</h3>
+              <p class="mb-0">
+                この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
+              </p>
             </div>
           </div>
-        </div>
 
-        <!-- 事業目的 -->
-        <div class="business-purpose" style="margin-bottom: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
-          <h3 style="color: #007bff; margin-bottom: 1rem; font-size: 1.3rem;">事業目的</h3>
-          <p style="line-height: 1.8; color: #333; margin: 0;">
-            この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
-          </p>
-        </div>
-
-        <!-- 事業内容カード -->
-        <div class="about-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <div class="about-card">
-            <h3 data-i18n="business-research-title">調査・研究事業</h3>
-            <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-consulting-title">施設紹介事業</h3>
-            <p data-i18n="business-consulting-desc">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-tourism-title">施設運営・コンサルティング事業</h3>
-            <p data-i18n="business-tourism-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-trade-title">医療ツーリズム事業</h3>
-            <p data-i18n="business-trade-desc">医療ツーリズムに関する事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-food-title">食品・医薬部外品事業</h3>
-            <p data-i18n="business-food-desc">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-device-title">医療機器事業</h3>
-            <p data-i18n="business-device-desc">医療機器の販売及び輸出入事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-pharmacy-title">薬局・医薬品事業</h3>
-            <p data-i18n="business-pharmacy-desc">薬局業及び医薬品並びに医薬部外品の販売事業</p>
-          </div>
-          <div class="about-card">
-            <h3 data-i18n="business-hr-title">人材派遣事業</h3>
-            <p data-i18n="business-hr-desc">人材派遣事業</p>
-          </div>
-        </div>
-
-        <!-- 理事情報 -->
-        <div class="leadership-section">
-          <div class="about-card leadership-card">
-            <h3 data-i18n="leadership-title">役員体制</h3>
-            <div class="leadership-grid">
-              <div class="leadership-item">
-                <strong data-i18n="representative-label">代表理事：</strong>
-                <div style="line-height: 1.6;">
-                  <div>中村　達</div>
-                  <div>華岡　知</div>
+          <!-- 事業内容 -->
+          <div class="mt-5">
+            <h3 class="h4 mb-4 text-center">事業内容</h3>
+            <div class="row g-3">
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-research-title">調査・研究事業</h4>
+                  <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
                 </div>
               </div>
-              <div class="leadership-item">
-                <strong data-i18n="directors-label">理事：</strong>
-                <span data-i18n="directors-name">酒井　友佳</span>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-consulting-title">施設紹介事業</h4>
+                  <p data-i18n="business-consulting-desc">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
+                </div>
               </div>
-              <div class="leadership-item">
-                <strong data-i18n="auditor-label">監事：</strong>
-                <span data-i18n="auditor-name">山田　和夫</span>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-tourism-title">施設運営・コンサルティング事業</h4>
+                  <p data-i18n="business-tourism-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
+                </div>
               </div>
-              <div class="leadership-item">
-                <strong data-i18n="advisor-label">顧問：</strong>
-                <span data-i18n="advisor-name">林　基弘</span>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-trade-title">医療ツーリズム事業</h4>
+                  <p data-i18n="business-trade-desc">医療ツーリズムに関する事業</p>
+                </div>
               </div>
-              <div class="leadership-item">
-                <strong data-i18n="executive-directors-label">執行理事：</strong>
-                <div style="line-height: 1.6;">
-                  <div>金子　朗久</div>
-                  <div>郭常青</div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-food-title">食品・医薬部外品事業</h4>
+                  <p data-i18n="business-food-desc">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-device-title">医療機器事業</h4>
+                  <p data-i18n="business-device-desc">医療機器の販売及び輸出入事業</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-pharmacy-title">薬局・医薬品事業</h4>
+                  <p data-i18n="business-pharmacy-desc">薬局業及び医薬品並びに医薬部外品の販売事業</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card-imc business-item-card h-100">
+                  <h4 data-i18n="business-hr-title">人材派遣事業</h4>
+                  <p data-i18n="business-hr-desc">人材派遣事業</p>
                 </div>
               </div>
             </div>

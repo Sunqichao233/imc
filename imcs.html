@@ -63,31 +63,53 @@
           <h2 class="section-title" id="overview-heading" data-i18n="overview-title">会社概要</h2>
         </div>
         <div class="section-content">
-          <div class="section-cards">
-            <div class="card">
-              <h3 data-i18n="company-info-title">会社概要</h3>
-              <p><strong data-i18n="company-name-label">社　名　｜</strong>　IMCS株式会社</p>
-              <p><strong data-i18n="company-established-label">設　立　｜</strong>　2012年8月8日</p>
-              <p><strong data-i18n="company-capital-label">資本金　｜</strong>　1,000万円</p>
-              <p><strong data-i18n="company-phone-label">電話番号　｜</strong>　03-6261-6288</p>
-              <p><strong data-i18n="company-registration-label">経産省・外務省登録管理番号　｜</strong>　B-044</p>
+          <div class="row g-4">
+            <!-- 基本情報カード -->
+            <div class="col-lg-6">
+              <div class="card-imc h-100">
+                <h3 class="mb-3" data-i18n="company-info-title">会社概要</h3>
+                <div class="org-info-list">
+                  <div class="org-info-item">
+                    <strong>経産省・外務省登録管理番号：</strong>
+                    <span>B-044</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong>MTF会員</strong>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="company-name-label">名称：</strong>
+                    <span data-i18n="company-name">IMCS株式会社</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="company-address-label">所在地：</strong>
+                    <span data-i18n="company-address">〒102-0083 東京千代田区麹町4-1-5</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="company-established-label">設立：</strong>
+                    <span data-i18n="company-established">2012/8/9</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <div class="card">
-              <h3 data-i18n="company-purpose-title">事業目的</h3>
-              <p data-i18n="company-purpose-value">国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供</p>
-            </div>
-            
-            <div class="card">
-              <h3 data-i18n="qualifications-title">資格などを含む</h3>
-              <ul>
-                <li data-i18n="qualification-1">医療ツーリズム事業者認定</li>
-                <li data-i18n="qualification-2">国際医療コーディネーター資格</li>
-                <li data-i18n="qualification-3">医療通訳士認定</li>
-                <li data-i18n="qualification-4">海外医療機関提携認証</li>
-                <li data-i18n="qualification-5">国際医療保険対応資格</li>
-                <li data-i18n="qualification-6">多言語医療サポート認定</li>
-              </ul>
+            <!-- 役員・連絡先カード -->
+            <div class="col-lg-6">
+              <div class="card-imc h-100">
+                <h3 class="mb-3">役員・連絡先</h3>
+                <div class="org-info-list">
+                  <div class="org-info-item">
+                    <strong data-i18n="company-director-label">取締役：</strong>
+                    <span data-i18n="company-director">華岡　知</span>
+                  </div>
+                  <div class="org-info-item">
+                    <strong data-i18n="company-contact-label">連絡先：</strong>
+                    <div class="contact-details">
+                      <div>TEL　　03-6261-6288</div>
+                      <div>EMAIL　info@imcs.co.jp</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -262,20 +284,15 @@
           // Overview Panel
           'overview-title': '会社概要',
           'company-info-title': '会社概要',
-          'company-name-label': '社　名　｜',
-          'company-established-label': '設　立　｜',
-          'company-capital-label': '資本金　｜',
-          'company-phone-label': '電話番号　｜',
-          'company-registration-label': '経産省・外務省登録管理番号　｜',
-          'company-purpose-title': '事業目的',
-          'company-purpose-value': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供',
-          'qualifications-title': '資格などを含む',
-          'qualification-1': '医療ツーリズム事業者認定',
-          'qualification-2': '国際医療コーディネーター資格',
-          'qualification-3': '医療通訳士認定',
-          'qualification-4': '海外医療機関提携認証',
-          'qualification-5': '国際医療保険対応資格',
-          'qualification-6': '多言語医療サポート認定',
+          'company-name-label': '名称：',
+          'company-name': 'IMCS株式会社',
+          'company-address-label': '所在地：',
+          'company-address': '〒102-0083 東京千代田区麹町4-1-5',
+          'company-established-label': '設立：',
+          'company-established': '2012/8/9',
+          'company-director-label': '取締役：',
+          'company-director': '華岡　知',
+          'company-contact-label': '連絡先：',
           
           // Services Panel
           'services-title': '業務内容',
