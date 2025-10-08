@@ -127,6 +127,109 @@
 .bg-imc-surface-alt { background-color: var(--imc-surface-alt) !important; }
 .bg-imc-surface-gray { background-color: var(--imc-surface-gray) !important; }
 
+/* Unified Card Components - 统一卡片组件 */
+.card-imc {
+  background: var(--imc-surface);
+  border-radius: var(--radius-md);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--imc-border-light);
+  transition: all 0.3s ease;
+}
+
+.card-imc:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-imc h3 {
+  color: var(--imc-text);
+  font-family: "Roboto", Helvetica;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fz-lg);
+  line-height: 1.4;
+  margin: 0 0 var(--gap-sm) 0;
+}
+
+.card-imc p {
+  color: var(--imc-text-secondary);
+  font-family: "Roboto", Helvetica;
+  font-weight: var(--fw-normal);
+  font-size: var(--fz-sm);
+  line-height: 1.6;
+  margin: 0 0 var(--gap-xs) 0;
+}
+
+.card-imc ul {
+  margin: 0;
+  padding-left: var(--gap);
+  color: var(--imc-text-secondary);
+}
+
+.card-imc li {
+  font-family: "Roboto", Helvetica;
+  font-size: var(--fz-sm);
+  line-height: 1.6;
+  margin-bottom: var(--gap-xs);
+}
+
+.card-imc a {
+  color: var(--imc-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.card-imc a:hover {
+  border-bottom-color: var(--imc-primary);
+}
+
+.card-imc strong {
+  color: var(--imc-text);
+  font-weight: var(--fw-semibold);
+}
+
+/* Card Variants - 卡片变体 */
+.card-imc-news {
+  width: clamp(280px, 35vw, 400px);
+  flex: 0 0 auto;
+}
+
+.card-imc-hospital {
+  min-width: 260px;
+  max-width: 320px;
+  border-radius: var(--radius-md);
+  scroll-snap-align: start;
+}
+
+.card-imc-about {
+  text-align: left;
+  min-height: 200px;
+}
+
+.card-imc-about img {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius-md);
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.card-imc-purple {
+  background: linear-gradient(135deg, #e6ddff 0%, #d4c5ff 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-imc-purple h3 {
+  color: #5a2d91;
+}
+
+.card-imc-purple p {
+  color: #4a4a4a;
+}
+
 .desktop {
     display: flex;
     flex-direction: column;
@@ -320,66 +423,7 @@
     width: 100%;
   }
 
-  .desktop .section-cards .card {
-    background: var(--imc-surface);
-    border-radius: var(--radius-md);
-    padding: var(--card-padding);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    border: 1px solid var(--imc-border-light);
-  }
-
-  .desktop .section-cards .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .desktop .section-cards .card h3 {
-    color: var(--imc-text);
-    font-family: "Roboto", Helvetica;
-    font-weight: var(--fw-semibold);
-    font-size: clamp(18px, 2vw, 22px);
-    margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
-    line-height: 1.4;
-  }
-
-  .desktop .section-cards .card p {
-    color: var(--imc-text-secondary);
-    font-family: "Roboto", Helvetica;
-    font-weight: var(--fw-normal);
-    font-size: clamp(14px, 1.2vw, 16px);
-    line-height: 1.6;
-    margin: 0 0 clamp(8px, 1vw, 12px) 0;
-  }
-
-  .desktop .section-cards .card ul {
-    margin: 0;
-    padding-left: clamp(16px, 2vw, 20px);
-    color: var(--imc-text-secondary);
-  }
-
-  .desktop .section-cards .card li {
-    font-family: "Roboto", Helvetica;
-    font-size: clamp(14px, 1.2vw, 16px);
-    line-height: 1.6;
-    margin-bottom: clamp(6px, 0.8vw, 8px);
-  }
-
-  .desktop .section-cards .card a {
-    color: var(--imc-primary);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-
-  .desktop .section-cards .card a:hover {
-    border-bottom-color: var(--imc-primary);
-  }
-
-  .desktop .section-cards .card strong {
-    color: var(--imc-text);
-    font-weight: var(--fw-semibold);
-  }
+  /* 使用统一的 .card-imc 组件 */
   
   /* 可用 Bootstrap: .d-flex .align-items-center .justify-content-between .w-100 */
   
@@ -1637,23 +1681,7 @@
     display: none;
   }
 
-  .desktop .news-item {
-    flex: 0 0 auto;
-    width: clamp(280px, 35vw, 400px);
-    padding: clamp(20px, 2.5vw, 24px);
-    background: var(--imc-surface);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--imc-border-light);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-  }
-
-  .desktop .news-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--imc-primary);
-  }
+  /* 使用 .card-imc .card-imc-news 组件 */
 
   .desktop .news-date {
     color: var(--imc-primary);
@@ -2233,15 +2261,7 @@
       font-size: 16px; /* 防止iOS缩放 */
     }
     
-    /* Card layout responsive */
-    .desktop .section-cards {
-      grid-template-columns: 1fr;
-      gap: clamp(16px, 2.5vw, 20px);
-    }
-    
-    .desktop .section-cards .card {
-      padding: clamp(16px, 2.5vw, 20px);
-    }
+    /* Card layout responsive - 移至统一响应式区域 */
 
     /* Contact layout responsive - mobile stacking */
     .desktop .contact-content {
@@ -2718,59 +2738,7 @@
     gap: 20px;
   }
 
-  .about-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .about-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
-
-  .about-card img {
-    width: 100%;
-    height: 160px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    object-fit: cover;
-  }
-
-  .about-card h3 {
-    font-size: 18px;
-    margin: 10px 0 8px;
-    font-weight: 600;
-    color: #222;
-  }
-
-  .about-card p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .about-card.purple {
-    background: linear-gradient(135deg, #e6ddff 0%, #d4c5ff 100%);
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 200px;
-  }
-
-  .about-card.purple h3 {
-    color: #5a2d91;
-    margin-bottom: 15px;
-  }
-
-  .about-card.purple p {
-    color: #4a4a4a;
-  }
+  /* 使用 .card-imc .card-imc-about 和 .card-imc-purple 组件 */
 
   /* 组织基本信息样式 */
   .org-basic-info {
@@ -2854,10 +2822,7 @@
       font-size: 24px;
     }
 
-    .about-cards {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
+    /* About cards responsive - 移至统一响应式区域 */
 
     .info-row {
       flex-direction: column;
@@ -3119,14 +3084,8 @@
     }
   }
 
-/* 响应式导航栏字体大小 */
-/* 默认（手机） */
+/* 响应式导航栏字体大小 - 已移至统一响应式区域 */
 .navbar .nav-link{ font-size: 1.5rem; }
-/* ≥992px 桌面端放大 */
-@media (min-width: 992px){
-  .navbar .nav-link{ font-size: 1.5rem; }  /* 或 1.25rem */
-  .navbar .btn.btn-sm{ font-size: 1rem; }
-}
 
 /* 医院卡片样式优化 */
 /* 横向滚动容器（保留） */
@@ -3165,11 +3124,7 @@
 /* 紧凑内边距，减少文字空间 */
 .hospital-card .card-body{ padding: .5rem .75rem; }
 
-/* 大屏略微放大图片区域，视觉更均衡 */
-@media (min-width: 992px){
-  .hospital-card{ min-width: 280px; max-width: 340px; }
-  .hospital-title{ font-size: var(--fz); }
-}
+/* 移至统一响应式区域 */
 
 /* index.html 导航栏单独样式优化 */
 body.index-page .navbar {
@@ -3187,6 +3142,66 @@ body.index-page .navbar .container {
   body.index-page .navbar .container {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+
+/* ========================================
+   UNIFIED RESPONSIVE STYLES - 统一响应式样式
+   ======================================== */
+
+/* Large screens (≥992px) - 大屏幕 */
+@media (min-width: 992px) {
+  /* Card Components - 卡片组件 */
+  .card-imc h3 {
+    font-size: 1.375rem; /* 22px */
+  }
+  
+  .card-imc-hospital {
+    min-width: 280px;
+    max-width: 340px;
+  }
+  
+  .hospital-title {
+    font-size: var(--fz);
+  }
+  
+  /* Navigation - 导航 */
+  .navbar .nav-link {
+    font-size: 1.5rem;
+  }
+  
+  .navbar .btn.btn-sm {
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens (≤768px) - 中等屏幕 */
+@media (max-width: 768px) {
+  /* Card Layouts - 卡片布局 */
+  .desktop .section-cards {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 2.5vw, 20px);
+  }
+  
+  .card-imc {
+    padding: clamp(16px, 2.5vw, 20px);
+  }
+  
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Navigation - 导航 */
+  .nav-container {
+    padding: 0.6rem 1.2rem;
+    min-height: calc(var(--navbar-height) - 10px);
+  }
+  
+  /* Forms - 表单 */
+  .desktop .form-input,
+  .desktop .form-textarea {
+    font-size: 16px; /* 防止iOS缩放 */
   }
 }
   
