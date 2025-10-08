@@ -39,7 +39,7 @@
           <div class="ms-3 btn-group" role="group" aria-label="language switch">
             <button class="btn btn-imc btn-sm" id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
             <button class="btn btn-imc-outline btn-sm" id="lang-zh" onclick="switchLanguage('zh')">中文</button>
-          </div>
+              </div>
         </div>
       </div>
     </nav>
@@ -366,8 +366,23 @@
           <h2 class="section-title" id="resources-heading" data-i18n="resources-title">リソース展示</h2>
         </div>
         <div class="section-content">
-          <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
-            <!-- JS 渲染 -->
+          <!-- 医院展示 -->
+          <div class="mb-5">
+            <h3 class="h4 mb-4 text-center" data-i18n="hospitals-subtitle">提携医療機関</h3>
+            <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
+              <!-- JS 渲染 -->
+            </div>
+          </div>
+          
+          <!-- 医師紹介 -->
+          <div class="mt-5">
+            <div class="text-center mb-4">
+              <h3 class="h4 mb-3" data-i18n="doctors-title">医師紹介</h3>
+              <p class="text-muted" data-i18n="doctors-desc">日本トップクラスの専門医師陣をご紹介いたします</p>
+            </div>
+            <div class="row g-4" id="doctorsGrid">
+              <!-- JS 渲染医生信息 -->
+            </div>
           </div>
         </div>
       </section>
@@ -500,12 +515,17 @@
           
           // Resources Panel
           'resources-title': 'リソース展示',
+          'hospitals-subtitle': '提携医療機関',
           'hospital-network-title': '日本病院・医師 → 当社団',
           'hospital-network-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。',
           'network-1': '提携医療機関：50施設以上',
           'network-2': '専門医師：200名以上',
           'network-3': '対応診療科：20科目以上',
           'network-4': '社団法人との連携による包括的サポート体制',
+          
+          // Doctors Panel
+          'doctors-title': '医師紹介',
+          'doctors-desc': '日本トップクラスの専門医師陣をご紹介いたします',
           
           // Navigation
           'nav-organization': '一般社団法人 国際医療交流推進機構',
@@ -604,12 +624,17 @@
           
           // Resources Panel
           'resources-title': '资源展示',
+          'hospitals-subtitle': '合作医疗机构',
           'hospital-network-title': '日本病院・医師 → 当社团',
           'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量医疗服务。',
           'network-1': '合作医疗机构：50家以上',
           'network-2': '专门医师：200名以上',
           'network-3': '对应诊疗科：20科以上',
           'network-4': '与社团法人合作的综合支持体制',
+          
+          // Doctors Panel
+          'doctors-title': '医师介绍',
+          'doctors-desc': '为您介绍日本顶级专业医师团队',
           
           // Navigation
           'nav-organization': '一般社团法人 国际医疗交流推进机构',
@@ -674,14 +699,19 @@
       document.addEventListener('DOMContentLoaded', function() {
         initializeLanguage();
         renderHospitals();
+        renderDoctors();
       });
 
       // 医院数据驱动渲染
       function renderHospitals() {
         console.log('渲染医院列表...');
+        
+        // 验证数据完整性
+        console.log('医院数据验证:');
+        
         const hospitals = [
           {img:'hospitals/tokyo_university_hospital.png', title:'東京大学附属病院'},
-          {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学'},
+          {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学医院'},
           {img:'hospitals/juntendo_hospital.png', title:'順天堂医院'},
           {img:'hospitals/st_lukes_international_hospital.png', title:'聖路加国際病院'},
           {img:'hospitals/kameda_general_hospital.png', title:'亀田総合病院'},
@@ -706,24 +736,162 @@
           {img:'hospitals/toranomon_hospital.png', title:'虎ノ門医院'}
         ];
 
+        // 输出前5个医院的标题进行验证
+        hospitals.slice(0, 5).forEach((h, i) => {
+          console.log(`医院 ${i + 1}: "${h.title}"`);
+        });
+
         const row = document.getElementById('hospitalRow');
         if (!row) {
           console.error('找不到hospitalRow元素');
           return;
         }
         
-        row.innerHTML = hospitals.map(h=>`
-          <article class="card hospital-card h-100 flex-shrink-0">
-            <div class="ratio ratio-4x3 hospital-thumb">
-              <img src="${h.img}" alt="${h.title}" class="w-100 h-100 object-fit-cover" loading="lazy">
-            </div>
-            <div class="card-body py-2">
-              <h3 class="hospital-title text-center mb-0">${h.title}</h3>
-            </div>
-          </article>
-        `).join('');
+        // 清空现有内容
+        row.innerHTML = '';
+        
+        // 使用 map 和 join 方法渲染医院卡片
+        const cardsHTML = hospitals.map((hospital, index) => {
+          console.log(`渲染医院 ${index + 1}: ${hospital.title}`);
+          return `<article class="card hospital-card h-100 flex-shrink-0">
+              <div class="ratio ratio-4x3 hospital-thumb">
+                <img src="${hospital.img}" alt="${hospital.title}" class="w-100 h-100 object-fit-cover" loading="lazy">
+              </div>
+              <div class="card-body py-2">
+                <h3 class="hospital-title text-center mb-0">${hospital.title}</h3>
+              </div>
+            </article>`;
+        }).join('');
+        
+        row.innerHTML = cardsHTML;
         
         console.log(`已渲染 ${hospitals.length} 个医院`);
+      }
+
+      // 医师数据驱动渲染
+      function renderDoctors() {
+        console.log('渲染医师列表...');
+        const doctors = [
+          {
+            name: '林 基弘',
+            title: '「神の手」と呼ばれる名医',
+            subtitle: 'ガンマナイフ治療 世界第一',
+            position: '東京女子医科大学 脳神経外科 教授',
+            specialty: 'ガンマナイフ（GammaKnife）、ZAP-X、頭蓋底腫瘍、脳動静脈奇形（AVM）、三叉神経痛など',
+            image: 'doctors/hayashi_motohiro.png'
+          },
+          {
+            name: '丸山 隆志',
+            title: '脳腫瘍外科手術件数 日本一',
+            subtitle: '',
+            position: '東京女子医科大学 脳神経外科 講師',
+            specialty: '覚醒下悪性脳腫瘍（神経膠腫）手術、聴神経腫瘍手術、転移性脳腫瘍手術、脳腫瘍関連手術',
+            image: 'doctors/maruyama_takashi.png'
+          },
+          {
+            name: '新井 平伊',
+            title: '日本「アルツハイマー病」研究の第一人者',
+            subtitle: '',
+            position: '順天堂大学医学部 名誉教授',
+            specialty: '精神科全般、老年精神科、リエゾン精神医学、早発性アルツハイマー病専門外来',
+            image: 'doctors/arai_heii.png'
+          },
+          {
+            name: '藍原 康雄',
+            title: '小児脳神経外科 世界的名医',
+            subtitle: '',
+            position: '東京女子医科大学 脳神経外科 准教授',
+            specialty: '小児脳腫瘍（胚胎性腫瘍、良性腫瘍、膠腫／星状細胞腫などの悪性腫瘍、脳幹部腫瘍）、水頭症、脊髄腫瘍、小児もやもや病 など',
+            image: 'doctors/aihara_yasuo.png'
+          },
+          {
+            name: '川島 明次',
+            title: '日本脳神経外科・脳血管疾患の権威',
+            subtitle: '',
+            position: '聖路加国際病院 脳神経外科 部長',
+            specialty: '脳血管疾患（動脈瘤、脳出血）、頭蓋底腫瘍手術、もやもや病、頸動脈狭窄症',
+            image: 'doctors/kawashima_akitsugu.png'
+          },
+          {
+            name: '畑山 徹',
+            title: '顔面神経痛・痙攣・三叉神経痛 日本第一人者',
+            subtitle: '',
+            position: '水戸心脳疾患治療センター 院長',
+            specialty: '脳卒中、脳腫瘍治療、顔面神経痛、痙攣、三叉神経痛 など',
+            image: 'doctors/hatayama_toru.png'
+          },
+          {
+            name: '明星 智洋',
+            title: '日本腫瘍標的薬物療法の専門家',
+            subtitle: '医療革新の旗手',
+            position: '江戸川病院 副院長',
+            specialty: '腫瘍薬物療法（抗がん剤治療）、血液疾患（良性・悪性）、感染症管理、免疫療法',
+            image: 'doctors/myojo_tomohiro.png'
+          },
+          {
+            name: '小笠原 均',
+            title: '日本がん免疫療法専門家',
+            subtitle: '複合治療の先駆者',
+            position: 'JTK国際クリニック 院長',
+            specialty: '総合内科、膠原病、がん免疫療法、リウマチ、糖尿病、漢方内科',
+            image: 'doctors/ogasawara_hitoshi.png'
+          },
+          {
+            name: '田中 紘一',
+            title: '日本消化器外科の父',
+            subtitle: '上原賞受賞者',
+            position: '京都大学医学部附属病院 前院長',
+            specialty: '消化器外科、一般外科、小児外科、臓器移植、病理診断',
+            image: 'doctors/tanaka_koichi.png'
+          },
+          {
+            name: '高橋 克仁',
+            title: '希少がん・肉腫治療の第一人者',
+            subtitle: '',
+            position: '亀田総合病院 肉腫総合治療センター 主任／日本肉腫学会 理事長',
+            specialty: '希少がん、肉腫、がんゲノム医療',
+            image: 'doctors/takahashi_katsuhito.png'
+          },
+          {
+            name: '福間 英祐',
+            title: '非切開で乳がん治療 冷凍療法',
+            subtitle: '世界的リーダー',
+            position: '亀田総合病院 乳腺科 上席主任',
+            specialty: '乳がん治療、乳腺内視鏡下手術、乳腺画像診断、冷凍療法',
+            image: 'doctors/fukuma_eisuke.png'
+          }
+        ];
+
+        const grid = document.getElementById('doctorsGrid');
+        if (!grid) {
+          console.error('找不到doctorsGrid元素');
+          return;
+        }
+        
+        grid.innerHTML = doctors.map(doctor => `
+          <div class="col-lg-4 col-md-6">
+            <div class="card-imc card-imc-doctor h-100">
+              <div class="doctor-image-placeholder">
+                <img src="${doctor.image}" alt="${doctor.name}" class="doctor-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="doctor-placeholder" style="display:none;">
+                  <i class="fas fa-user-md"></i>
+                  <span>医師写真</span>
+                </div>
+              </div>
+              <div class="doctor-info">
+                <h3 class="doctor-name">${doctor.name}</h3>
+                <div class="doctor-title">${doctor.title}</div>
+                ${doctor.subtitle ? `<div class="doctor-subtitle">${doctor.subtitle}</div>` : ''}
+                <div class="doctor-position">${doctor.position}</div>
+                <div class="doctor-specialty">
+                  <strong>専門：</strong>${doctor.specialty}
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        
+        console.log(`已渲染 ${doctors.length} 位医师`);
       }
     </script>
     

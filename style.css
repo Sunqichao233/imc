@@ -230,6 +230,97 @@
   color: #4a4a4a;
 }
 
+/* Doctor Card Variant - 医生卡片变体 */
+.card-imc-doctor {
+  text-align: center;
+  padding: var(--gap-lg);
+}
+
+.doctor-image-placeholder {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--gap) auto;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--imc-surface-gray);
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+.doctor-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--imc-surface-gray);
+  color: var(--imc-muted);
+  font-size: var(--fz-xs);
+}
+
+.doctor-placeholder i {
+  font-size: 2rem;
+  margin-bottom: var(--gap-xs);
+  color: var(--imc-text-light);
+}
+
+.doctor-info {
+  text-align: left;
+}
+
+.doctor-name {
+  font-size: var(--fz-xl);
+  font-weight: var(--fw-bold);
+  color: var(--imc-text);
+  margin-bottom: var(--gap-xs);
+  text-align: center;
+}
+
+.doctor-title {
+  font-size: var(--fz-md);
+  font-weight: var(--fw-semibold);
+  color: var(--imc-primary);
+  margin-bottom: var(--gap-xs);
+  line-height: 1.4;
+}
+
+.doctor-subtitle {
+  font-size: var(--fz-sm);
+  font-weight: var(--fw-medium);
+  color: var(--imc-primary-600);
+  margin-bottom: var(--gap-xs);
+  font-style: italic;
+}
+
+.doctor-position {
+  font-size: var(--fz-sm);
+  font-weight: var(--fw-medium);
+  color: var(--imc-text-secondary);
+  margin-bottom: var(--gap-sm);
+  line-height: 1.4;
+}
+
+.doctor-specialty {
+  font-size: var(--fz-xs);
+  color: var(--imc-muted);
+  line-height: 1.5;
+}
+
+.doctor-specialty strong {
+  color: var(--imc-text-secondary);
+  font-weight: var(--fw-semibold);
+}
+
 .desktop {
     display: flex;
     flex-direction: column;
@@ -3202,6 +3293,24 @@ body.index-page .navbar .container {
   .desktop .form-input,
   .desktop .form-textarea {
     font-size: 16px; /* 防止iOS缩放 */
+  }
+  
+  /* Doctor Cards - 医生卡片 */
+  .card-imc-doctor {
+    padding: var(--gap);
+  }
+  
+  .doctor-image-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .doctor-name {
+    font-size: var(--fz-lg);
+  }
+  
+  .doctor-title {
+    font-size: var(--fz);
   }
 }
   
