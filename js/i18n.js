@@ -73,7 +73,7 @@ class I18n {
         'imcs-description': 'IMCS株式会社は、国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供しています。',
         
         // Brand Story Section
-        'brand-story-title': '会社の歴史・タイムライン',
+        'brand-story-title': 'ブランドストーリー',
         
         // Organizations Section
         'organizations-title': '私たちの組織',

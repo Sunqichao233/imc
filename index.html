@@ -53,58 +53,113 @@
             <h2 class="hero-subtitle" style="font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 500; margin-bottom: 2rem;" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</h2>
           </header>
         </div>
-
-
       </section>
+      
       <section class="section section--white" id="brand-story" aria-labelledby="brand-story-heading">
         <div class="section-header">
           <h2 class="section-title" id="brand-story-heading" data-i18n="brand-story-title">ブランドストーリー </h2>
         </div>
-        <div class="section-content">
-          <div class="branch-timeline">
-            <div class="main-timeline">
-              <!-- 右侧分支 -->
-              <div class="timeline-branch branch-right">
-                <div class="branch-node" data-year="2024">
-                  <div class="branch-card">
-                    <div class="branch-description">国際医療交流ネットワーク確立</div>
+        <div class="container-fluid px-lg-5">
+          <div class="row">
+            <!-- 左侧：世界地图 -->
+            <div class="col-lg-9">
+              <div class="world-map-container position-relative">
+                <img src="worldmap.png" alt="IMC国際医療グローバルネットワーク" class="world-map img-fluid">
+                <!-- 各国のマーカー -->
+                <div class="map-marker" data-country="日本" style="top: 38%; left: 82%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>日本</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="中国" style="top: 42%; left: 74%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>中国</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="香港" style="top: 48%; left: 76%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>香港</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="台湾" style="top: 46%; left: 78%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>台湾</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="ベトナム" style="top: 52%; left: 72%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>ベトナム</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="マレーシア" style="top: 58%; left: 72%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>マレーシア</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="オーストラリア" style="top: 70%; left: 80%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>オーストラリア</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="ニュージーランド" style="top: 75%; left: 86%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>ニュージーランド</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="米国" style="top: 42%; left: 25%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>米国</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="カナダ" style="top: 32%; left: 22%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>カナダ</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="英国" style="top: 34%; left: 45%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>英国</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="フランス" style="top: 38%; left: 47%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>フランス</strong>
+                  </div>
+                </div>
+                <div class="map-marker" data-country="ロシア" style="top: 30%; left: 60%;">
+                  <div class="marker-pin"></div>
+                  <div class="marker-tooltip">
+                    <strong>ロシア</strong>
                   </div>
                 </div>
               </div>
-              
-              <!-- 左侧分支 -->
-              <div class="timeline-branch branch-left">
-                <div class="branch-node" data-year="2023">
-                  <div class="branch-card">
-                    <div class="branch-description">教育研修プログラム本格始動</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 右侧分支 -->
-              <div class="timeline-branch branch-right">
-                <div class="branch-node" data-year="2022">
-                  <div class="branch-card">
-                    <div class="branch-description">海外医療機関との提携拡大</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 左侧分支 -->
-              <div class="timeline-branch branch-left">
-                <div class="branch-node" data-year="2021">
-                  <div class="branch-card">
-                    <div class="branch-description">IMCS株式会社設立、本格的な事業開始</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 右侧分支 -->
-              <div class="timeline-branch branch-right">
-                <div class="branch-node" data-year="2020">
-                  <div class="branch-card">
-                    <div class="branch-description">一般社団法人国際医療交流推進機構設立</div>
-                  </div>
+            </div>
+            
+            <!-- 右侧：文字介绍 -->
+            <div class="col-lg-3">
+              <div class="global-network-info ps-lg-4">
+                <div class="network-description">
+                  <p class="mb-4" style="line-height: 2; font-size: 1.1rem;">
+                    IMC国際医療は、2010年に事業を開始し、<strong style="color: #e63946; font-size: 1.2rem;">6,900名以上の顧客</strong>に対し、質の高い効率的な医療サービスを提供してきました。
+                  </p>
+                  <p class="mb-4" style="line-height: 2; font-size: 1.1rem;">
+                    外国人の日本における国際医療受診の管理およびサービス提供に特化し、同時に日本国内および海外の医療機関に対して経営・運営コンサルティングサービスも提供しています。
+                  </p>
+                  <p class="mb-0" style="line-height: 2; font-size: 1.1rem;">
+                    当グループの顧客および提携パートナーは、日本をはじめ、中国、香港、台湾、米国、カナダ、英国、フランス、ロシア、オーストラリア、ニュージーランド、マレーシア、ベトナムなど、<strong style="color: #e63946; font-size: 1.2rem;">世界各国・地域</strong>に広がっています。
+                  </p>
                 </div>
               </div>
             </div>
@@ -116,9 +171,6 @@
       <section class="section section--primary" id="organizations" aria-labelledby="organizations-heading">
         <div class="section-header">
           <h2 class="section-title" id="organizations-heading" data-i18n="organizations-title">私たちの組織</h2>
-          <p class="section-description" data-i18n="organizations-description">
-            IMC国際医療は、一般社団法人とIMCS株式会社の2つの組織で構成され、それぞれが専門性を活かして国際医療交流を推進しています。
-          </p>
         </div>
         <div class="section-content">
           <div class="organizations-grid">
@@ -164,7 +216,7 @@
       <section class="section section--light-gray" id="founder" aria-labelledby="founder-heading">
         <div class="section-header">
           <h2 class="section-title" id="founder-heading" data-i18n="founder-section-title">創業者紹介</h2>
-        </div
+        </div>
         <div class="section-content">
           <!-- 創業者プロフィール - 左右レイアウト -->
           <div class="founder-profile" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap;">
@@ -237,6 +289,7 @@
                    style="width: 100%; max-width: 350px; height: 500px; min-height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: block; margin: 0; padding: 0;">
             </div>
           </div>
+
         </div>
       </section>
       
@@ -280,6 +333,7 @@
           </div>
         </div>
       </section>
+
       <section class="section section--dark-teal" id="contact" aria-labelledby="contact-heading">
         <div class="section-header">
           <h2 class="section-title" id="contact-heading" data-i18n="contact-title">お問い合わせ</h2>
@@ -380,6 +434,7 @@
         </div>
         </div>
       </section>
+      
       <footer class="footer">
         <div class="container-2">
           <div class="content-6">
