@@ -1043,7 +1043,7 @@
 
 .case-image {
   width: 100%;
-  height: auto;
+  height: 200px;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   object-fit: cover;
