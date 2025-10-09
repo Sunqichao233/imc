@@ -595,7 +595,7 @@
 .doctor-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .doctor-placeholder {
@@ -1043,7 +1043,7 @@
 
 .case-image {
   width: 100%;
-  height: 200px;
+  height: auto;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   object-fit: cover;
@@ -1287,42 +1287,7 @@ figcaption {
   background: #c1121f; /* 深红色 */
 }
 
-/* ===== 23) 服务卡片样式 ===== */
-.service-card {
-  background: var(--imc-surface);
-  border: 1px solid var(--imc-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.service-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-5px);
-  border-color: var(--imc-primary-200);
-}
-
-.service-icon {
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-  transform: scale(1.1);
-}
-
-.service-title {
-  font-weight: 600;
-  color: var(--imc-text);
-  margin-bottom: 1rem;
-}
-
-.service-description {
-  font-size: var(--fz-sm);
-  line-height: 1.6;
-}
-
-/* ===== 24) 占位符样式 ===== */
+/* ===== 23) 占位符样式 ===== */
 .hospital-placeholder, .doctor-placeholder {
   display: flex;
   flex-direction: column;
@@ -1775,13 +1740,6 @@ figcaption {
 .business-icon {
   font-size: 2.5rem;
   filter: grayscale(1) brightness(0) invert(1);
-  line-height: 1;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.business-icon:hover {
-  transform: scale(1.1);
 }
 
 .icon-box-body {
@@ -1941,25 +1899,4 @@ figcaption {
   /* Placeholder Mobile */
   .hospital-placeholder, .doctor-placeholder{ padding: 1rem; }
   .placeholder-content{ font-size: 12px; }
-  
-  /* Corporate Members Grid Mobile */
-  .corporate-members-grid .col-md-2 {
-    flex: 0 0 25%; /* 4 cards per row on mobile */
-    max-width: 25%;
-  }
-}
-
-/* Text clamp utility classes */
-.clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
