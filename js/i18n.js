@@ -37,19 +37,19 @@ class I18n {
         
         // Resources Panel
         'resources-title': 'リソース展示',
-        'hospital-network-title': '日本医院・医师 → 当社团',
-        'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量的医疗服务。',
-        'network-1': '合作医疗机构：50家以上',
-        'network-2': '专业医师：200名以上',
-        'network-3': '对应诊疗科：20科以上',
-        'network-4': '与社团法人合作的综合支持体制',
-        'hospitals-subtitle': '合作医疗机构',
-        'doctors-title': '医师介绍',
-        'doctors-desc': '为您介绍日本顶级的专业医师团队',
+        'hospital-network-title': '日本医療機関・医師 → 当社団',
+        'hospital-network-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して、高品質な医療サービスの提供をサポートします。',
+        'network-1': '提携医療機関：50施設以上',
+        'network-2': '専門医師：200名以上',
+        'network-3': '対応診療科：20科以上',
+        'network-4': '社団法人との連携による総合サポート体制',
+        'hospitals-subtitle': '提携医療機関',
+        'doctors-title': '医師紹介',
+        'doctors-desc': '日本トップクラスの専門医師チームをご紹介します',
         
         // Resources Overview
-        'resources-overview-title': '法人会员',
-        'resources-overview-desc': '请查看IMC国际医疗的综合服务体系和国际网络',
+        'resources-overview-title': '法人会員',
+        'resources-overview-desc': 'IMC国際医療の総合サービス体系と国際ネットワークの全貌をご覧ください',
         
         // Contact Panel
         'contact-title': 'お問い合わせ',
@@ -132,10 +132,86 @@ class I18n {
         
         // Navigation
         'nav-overview': '公司概要',
-        'nav-services': '业务内容',
+        'nav-services': '业务内容', 
         'nav-resources': '资源展示',
         'nav-home': '首页',
         'nav-contact': '联系我们',
+        'nav-advisor': '顾问介绍',
+        'nav-business': '业务内容',
+        
+        // Organization Hero
+        'org-hero-title-1': '一般社团法人',
+        'org-hero-title-2': '国际医疗交流推进机构',
+        'org-hero-slogan': '致力于构建无信息差距的国际医疗平台',
+        
+        // Timeline
+        'timeline-title': '沿革·时间轴',
+        
+        // Organization Info
+        'org-name-label': '名称：',
+        'org-name': '一般社团法人 国际医疗交流推进机构',
+        'org-address-label': '所在地：',
+        'org-address': '〒102-0083 东京千代田区麹町4-1-5',
+        'org-established-label': '设立：',
+        'org-established': '2016/9/12',
+        'org-contact-label': '联系方式：',
+        
+        // Leadership
+        'leadership-title': '管理层体制',
+        'representative-label': '代表理事：',
+        'directors-label': '理事：',
+        'directors-name': '酒井　友佳',
+        'auditor-label': '监事：',
+        'auditor-name': '山田　和夫',
+        'advisor-label': '顾问：',
+        'advisor-name': '林　基弘',
+        'executive-directors-label': '执行理事：',
+        
+        // Business Titles
+        'business-title': '业务内容',
+        'business-research-title': '调查·研究事业',
+        'business-consulting-title': '设施介绍事业',
+        'business-tourism-title': '设施运营·咨询事业',
+        'business-trade-title': '医疗旅游事业',
+        'business-food-title': '食品·医药部外品事业',
+        'business-device-title': '医疗器械事业',
+        'business-pharmacy-title': '药局·医药品事业',
+        'business-hr-title': '人才派遣事业',
+        
+        // Advisor Section
+        'advisor-title': '顾问介绍',
+        'advisor-name': '林　基弘　Motohiro Hayashi',
+        'advisor-career-title': '经历',
+        'advisor-career-1985': '群马大学医学部入学',
+        'advisor-career-1991': '东京女子医科大学脑神经中心脑神经外科入局',
+        'advisor-career-1994': '从事伽马刀治疗工作',
+        'advisor-career-1999': '法国马赛蒂莫讷大学留学',
+        'advisor-career-2002': '东京女子医科大学伽马刀治疗部门负责人',
+        'advisor-career-2011': '东京女子医科大学中央放射线部门伽马刀治疗室长、先端生命医科学研究所MIL部门(伽马刀研究开发战略室)长',
+        'advisor-career-2013': '群马大学肿瘤放射线科・重粒子医学中心兼职讲师',
+        'advisor-career-2015': '第12届国际定位放射线治疗学会学术大会会长、第1届癌症根除峰会大会会长，现任至今',
+        'advisor-career-2018-1': '防卫医科大学脑神经外科　兼职讲师',
+        'advisor-career-2018-2': 'JTK诊所定位放射线治疗研究所　所长',
+        'advisor-positions-title': '职位',
+        'advisor-position-1': '日本脑神经外科学会 认定专门医・指导医・代议员',
+        'advisor-position-2': '日本定位放射线治疗学会负责人',
+        'advisor-position-3': '日本伽马刀研究会理事',
+        'advisor-position-4': '明日伽马刀担当会 前代表负责人',
+        'advisor-position-5': '亚洲伽马刀学院代表负责人',
+        'advisor-position-6': '世界脑神经外科学会联合(WFNS)・定位放射线治疗部门干事(前副代表)',
+        'advisor-position-7': '国际定位放射线治疗学会(ISRS)干事',
+        
+        // Business Cases
+        'business-case-1-1': '案例1：NHK World/Medical Frontiers播放纪念讲演会',
+        'business-case-1-2': '案例2：PET-CT早期癌症检查研讨会',
+        'business-case-2-1': '案例1：IMC国际医疗团队访问中国广州先进生命科学企业BGI，就未来业务合作进行协商',
+        'business-case-2-2': '案例2：2024年12月，中国药理学著名专家颜光美教授团队与IMC国际医疗创始人夏冰博士就肿瘤溶解病毒药物「VRT106」签署业务合同，表明将应用于现行治疗的意向',
+        'business-case-2-3': '案例3：2024年12月，上海药业生物技术有限公司创始人张鸿声教授访日，与夏冰博士就CAR-T细胞疗法业务合作进行协商',
+        'business-case-3-1': '案例：IMC国际医疗为日本国内大学医院・综合医院・专科诊所提供入境医疗事业咨询服务，定期共同举办研讨会，共同参展面向中国的展览会等，提供多角度咨询服务',
+        
+        // 公司名称
+        'company-runqiao': '潤橋医療教育科技・寿陽国際医院',
+        'company-ainuo': 'アイノ健康管理サービス(天津)有限公司',
         
         // IMCS Hero Section
         'imcs-welcome-title': 'Welcome to IMCS',
@@ -218,6 +294,17 @@ class I18n {
         // Founder Section
         'founder-section-title': '创始人介绍',
         'founder-description': '为您介绍IMC国际医疗的创始人・CEO夏冰先生。',
+        'founder-name': '夏冰　XiaBing',
+        'founder-position-title': '职位',
+        'founder-degree': '经营学博士',
+        'founder-title': 'IMC国际医疗创始人/CEO',
+        'founder-career-title': '主要经历',
+        'career-2010': 'IMCS株式会社创立（原：日本一舟健康管理株式会社）',
+        'career-2016': 'IMC国际医疗交流推进机构创立',
+        'career-2017': 'JTK诊所经营顾问',
+        'career-2023-degree': '取得经营学博士学位',
+        'career-2023-book': '《日本入境国际医疗协调系统的构建》出版',
+        'career-2024': '国际医疗旅游业界领袖表彰',
         
         // Releases Section
         'releases-section-title': '新闻发布',
@@ -228,7 +315,7 @@ class I18n {
         
         // Hero Section
         'hero-company': 'IMC国际医疗',
-        'hero-slogan': '连接世界的医疗网络',
+        'hero-slogan': '让世界更健康，让生命更长久',
         'hero-btn-about': '关于组织',
         'hero-btn-contact': '联系我们',
         
@@ -244,7 +331,11 @@ class I18n {
         'footer-hero-company': 'IMC国际医疗',
         'footer-org-info': '组织信息',
         'footer-services': '服务',
-        'footer-copyright': '© 2025 IMC国际医疗. 版权所有。'
+        'footer-copyright': '© 2025 IMC国际医疗. 版权所有。',
+        
+        // 公司名称
+        'company-runqiao': '润桥医疗教育科技・寿阳国际医院',
+        'company-ainuo': '艾诺健康管理服务(天津)有限公司'
       }
     };
     
