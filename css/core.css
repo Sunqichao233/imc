@@ -684,6 +684,7 @@
 }
 
 .image {
+  height: 100vh; /* 全屏显示 */
   position: relative;
   width: 100%;
   min-height: 60vh;
