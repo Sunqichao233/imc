@@ -48,7 +48,7 @@ class I18n {
         'doctors-desc': '日本トップクラスの専門医師陣をご紹介いたします',
         
         // Resources Overview
-        'resources-overview-title': '資源全体図',
+        'resources-overview-title': '法人会員',
         'resources-overview-desc': 'IMC国際医療の包括的なサービス体系と国際的なネットワークをご覧ください',
         
         // Contact Panel
@@ -170,7 +170,7 @@ class I18n {
         'doctors-desc': '为您介绍日本顶级专业医师团队',
         
         // Resources Overview
-        'resources-overview-title': '资源全体图',
+        'resources-overview-title': '法人会员',
         'resources-overview-desc': 'IMC国际医疗的综合服务体系和国际网络全貌',
         
         // Contact Panel

@@ -1142,6 +1142,48 @@ figcaption {
   margin: 0;
 }
 
+/* ===== Corporate Members Grid Styles ===== */
+.corporate-members-grid {
+  padding: 1rem 0;
+}
+
+.member-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-color: var(--imc-primary);
+}
+
+.company-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.company-location {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 /* ===== 22) 世界地图样式 ===== */
 .world-map-container {
   max-width: 100%;
@@ -1857,4 +1899,10 @@ figcaption {
   /* Placeholder Mobile */
   .hospital-placeholder, .doctor-placeholder{ padding: 1rem; }
   .placeholder-content{ font-size: 12px; }
+  
+  /* Corporate Members Grid Mobile */
+  .corporate-members-grid .col-md-2 {
+    flex: 0 0 25%; /* 4 cards per row on mobile */
+    max-width: 25%;
+  }
 }
