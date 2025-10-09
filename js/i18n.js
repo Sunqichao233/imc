@@ -37,19 +37,19 @@ class I18n {
         
         // Resources Panel
         'resources-title': 'リソース展示',
-        'hospital-network-title': '日本病院・医師 → 当社団',
-        'hospital-network-desc': '日本国内の優秀な医療機関・医師とのネットワークを構築し、一般社団法人国際医療交流推進機構と連携して高品質な医療サービスの提供を支援しています。',
-        'network-1': '提携医療機関：50施設以上',
-        'network-2': '専門医師：200名以上',
-        'network-3': '対応診療科：20科目以上',
-        'network-4': '社団法人との連携による包括的サポート体制',
-        'hospitals-subtitle': '提携医療機関',
-        'doctors-title': '医師紹介',
-        'doctors-desc': '日本トップクラスの専門医師陣をご紹介いたします',
+        'hospital-network-title': '日本医院・医师 → 当社团',
+        'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量的医疗服务。',
+        'network-1': '合作医疗机构：50家以上',
+        'network-2': '专业医师：200名以上',
+        'network-3': '对应诊疗科：20科以上',
+        'network-4': '与社团法人合作的综合支持体制',
+        'hospitals-subtitle': '合作医疗机构',
+        'doctors-title': '医师介绍',
+        'doctors-desc': '为您介绍日本顶级的专业医师团队',
         
         // Resources Overview
-        'resources-overview-title': '法人会員',
-        'resources-overview-desc': 'IMC国際医療の包括的なサービス体系と国際的なネットワークをご覧ください',
+        'resources-overview-title': '法人会员',
+        'resources-overview-desc': '请查看IMC国际医疗的综合服务体系和国际网络',
         
         // Contact Panel
         'contact-title': 'お問い合わせ',
@@ -159,7 +159,7 @@ class I18n {
         
         // Resources Panel
         'resources-title': '资源展示',
-        'hospital-network-title': '日本病院・医師 → 当社团',
+        'hospital-network-title': '日本医院・医师 → 当社团',
         'hospital-network-desc': '构建与日本国内优秀医疗机构・医师的网络，与一般社团法人国际医疗交流推进机构合作，支持提供高质量医疗服务。',
         'network-1': '合作医疗机构：50家以上',
         'network-2': '专业医师：200名以上',
