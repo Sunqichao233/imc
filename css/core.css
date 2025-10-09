@@ -1851,7 +1851,7 @@ figcaption {
   
   .map-section {
     height: auto;           /* 取消 600px 固定高 */
-    aspect-ratio: 4 / 3;    /* 桌面 4:3，可按需 3/2、16/9 */
+    aspect-ratio: 3 / 2;    /* 移动端 3:2，让地图更高一些 */
   }
   
   .form-row {
