@@ -78,7 +78,7 @@ class I18n {
         // Organizations Section
         'organizations-title': '私たちの組織',
         'organizations-description': 'IMC国際医療は、一般社団法人とIMCS株式会社の2つの組織で構成され、それぞれが専門性を活かして国際医療交流を推進しています。',
-        'org-card-title': '一般社団法人<br>国際医療交流推進機構',
+        'org-card-title': '一般社団法人国際医療交流推進機構',
         'org-card-description': '国際間の医療交流を推進し、医療・介護分野の発展とクロスボーダー医療の普及に寄与する非営利組織です。',
         'org-feature-1': '医療交流事業の企画・運営',
         'org-feature-2': '国際医療情報の提供',
@@ -86,7 +86,7 @@ class I18n {
         'org-feature-4': '医療ツーリズム事業',
         'org-learn-more': '詳しく見る',
         'imcs-card-title': 'IMCS株式会社',
-        'imcs-card-description': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供する営利企業です。',
+        'imcs-card-description': '国際医療交流推進機構の事業部門として、具体的な医療サービスとコンサルティング業務を提供する企業です。',
         'imcs-feature-1': '高品質な医療サービス提供',
         'imcs-feature-2': '国際医療コンサルティング',
         'imcs-feature-3': '先端医療技術の普及',
