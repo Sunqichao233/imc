@@ -986,7 +986,13 @@
 
 /* ===== 20) 业务内容样式 ===== */
 .business-item {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.business-item:last-child {
+  border-bottom: none;
 }
 
 .business-main-title {
@@ -1008,12 +1014,14 @@
   font-weight: 600;
   color: var(--imc-text);
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--imc-border);
 }
 
 .business-description {
   font-size: var(--fz);
   color: var(--imc-text);
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
@@ -1025,62 +1033,38 @@
 .business-list li {
   font-size: var(--fz-sm);
   color: var(--imc-text);
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 .business-cases {
   margin-top: 1.5rem;
 }
 
-.case-item {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--imc-surface-gray);
-  border-radius: var(--radius-md);
-  border-left: 4px solid var(--imc-primary);
-}
-
-.case-item h5 {
-  font-size: var(--fz);
-  font-weight: 600;
-  color: var(--imc-text);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.case-images {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.image-placeholder {
-  width: 200px;
-  height: 120px;
-  background: #f0f0f0;
-  border: 2px dashed #ccc;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--imc-muted);
-  font-size: var(--fz-sm);
-  font-weight: 500;
-}
-
 .case-image {
-  width: 200px;
-  height: 120px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--imc-border);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .case-image:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  padding: 0.25rem;
 }
 
 /* ===== 21) 组织概要样式 ===== */
@@ -1855,7 +1839,6 @@
   /* Business Content Mobile */
   .business-subsection{ margin-left: 0.5rem; }
   .business-list{ padding-left: 1rem; }
-  .case-item{ padding: 1rem; }
   .case-images{ flex-direction: column; gap: 0.5rem; }
   .image-placeholder{ width: 100%; max-width: 300px; height: 100px; }
   .case-image{ width: 100%; max-width: 300px; height: 100px; }
