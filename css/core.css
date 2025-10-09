@@ -1667,7 +1667,85 @@
   }
 }
 
-/* ===== 27) 響応式微調 ===== */
+/* ===== 27) jKit Icon Box 样式 ===== */
+.jkit-icon-box-wrapper {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.jkit-icon-box-wrapper.hover-from-left:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(35, 112, 255, 0.15);
+}
+
+.icon-box-header {
+  margin-bottom: 1.5rem;
+}
+
+.icon-box-header .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--imc-primary), #4A90E2);
+  transition: all 0.3s ease;
+}
+
+.elementor-animation-float .icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.business-icon {
+  font-size: 2.5rem;
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+.icon-box-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.icon-box-body .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--imc-text);
+  line-height: 1.3;
+}
+
+.icon-box-body .icon-box-description {
+  color: var(--imc-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--imc-primary);
+  margin-bottom: 1rem;
+}
+
+/* ===== 28) 響応式微調 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
   .hospital-card{ 
@@ -1697,6 +1775,28 @@
   /* Hero Section Mobile */
   .hero-section{ padding: clamp(16px, 3vw, 40px); max-width: 95vw; }
   .hero-content{ gap: clamp(12px, 2vw, 20px); }
+  
+  /* jKit Icon Box Mobile */
+  .jkit-icon-box-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .icon-box-header .icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .business-icon {
+    font-size: 2rem;
+  }
+  
+  .icon-box-body .title {
+    font-size: 1.1rem;
+  }
+  
+  .icon-box-body .icon-box-description {
+    font-size: 0.9rem;
+  }
   
   /* About Section Mobile */
   .about-section{ padding: 40px 5%; }

@@ -45,13 +45,14 @@
 
 
     <main class="desktop" id="top">
-      <!-- Hero：用工具类控制排版 -->
-      <section class="py-5 text-center text-dark" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imc.png'); background-size:cover; background-position:center;">
-        <div class="container py-5">
-          <h1 class="display-5 fw-bold mb-2 org-hero-title" data-i18n="org-hero-title-1">一般社団法人</h1>
-          <h1 class="display-5 fw-bold mb-3 org-hero-title" data-i18n="org-hero-title-2">国際医療交流推進機構</h1>
-          <p class="lead mb-2 org-hero-subtitle" data-i18n="org-hero-subtitle">International Medical Exchange Promotion Organization</p>
-          <p class="lead opacity-75 org-hero-slogan" data-i18n="org-hero-slogan">情報格差のない国際医療プラットフォームを目指す</p>
+      <!-- Hero Section -->
+      <section class="image" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imc.png');">
+        <div class="hero-section" style="color: white;">
+          <header class="hero-content">
+            <h1 class="hero-title org-hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: bold; margin-bottom: 1.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="org-hero-title-1">一般社団法人</h1>
+            <h1 class="hero-title org-hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: bold; margin-bottom: 1.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="org-hero-title-2">国際医療交流推進機構</h1>
+            <p class="hero-title org-hero-slogan" style="font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 400; margin-bottom: 1rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);" data-i18n="org-hero-slogan">情報格差のない国際医療プラットフォームを目指す</p>
+          </header>
         </div>
       </section>
 
@@ -128,67 +129,127 @@
           </div>
           
           <!-- 事業目的 -->
-          <div class="mt-5">
-            <div class="card-imc business-purpose-card">
-              <h3 class="text-primary mb-3">事業目的</h3>
-              <p class="mb-0">
-                この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
-              </p>
+          <div class="mt-5 text-center">
+            <p class="lead text-muted mb-5">
+              この法人は、国際間の医療交流を推進する事業を通じて、医療・介護分野の発展ならびにクロスボーダー医療の普及に寄与し、世界各国の健康と福祉の向上に貢献することを目的として次の事業を行なう。
+            </p>
           </div>
-        </div>
 
           <!-- 事業内容 -->
           <div class="mt-5">
-            <h3 class="h4 mb-4 text-center">事業内容</h3>
-            <div class="row g-3">
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-research-title">調査・研究事業</h4>
-            <p data-i18n="business-research-desc">医療、介護及び海外医療に関する調査及び研究、国内外の各種情報提供事業</p>
-          </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-consulting-title">施設紹介事業</h4>
-                  <p data-i18n="business-consulting-desc">医療、介護及び海外医療を推進する国内外の施設並びに旅行会社等の紹介事業</p>
-          </div>
-          </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-tourism-title">施設運営・コンサルティング事業</h4>
-                  <p data-i18n="business-tourism-desc">医療施設及び介護施設の設置運営事業及び、設置運営に関するコンサルティング事業</p>
-          </div>
-        </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-trade-title">医療ツーリズム事業</h4>
-                  <p data-i18n="business-trade-desc">医療ツーリズムに関する事業</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-food-title">食品・医薬部外品事業</h4>
-                  <p data-i18n="business-food-desc">食品、医薬部外品の研究開発、製造及び販売並びに輸出入事業</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-device-title">医療機器事業</h4>
-                  <p data-i18n="business-device-desc">医療機器の販売及び輸出入事業</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-pharmacy-title">薬局・医薬品事業</h4>
-                  <p data-i18n="business-pharmacy-desc">薬局業及び医薬品並びに医薬部外品の販売事業</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="card-imc business-item-card h-100">
-                  <h4 data-i18n="business-hr-title">人材派遣事業</h4>
-                  <p data-i18n="business-hr-desc">人材派遣事業</p>
-                </div>
-              </div>
+            <h3 class="text-center">事業内容</h3>
+            <div class="row g-4">
+              <!-- 調査・研究事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">🔬</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-research-title">調査・研究事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 施設紹介事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">🏥</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-consulting-title">施設紹介事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 施設運営・コンサルティング事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">💼</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-tourism-title">施設運営・コンサルティング事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 医療ツーリズム事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">✈️</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-trade-title">医療ツーリズム事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 食品・医薬部外品事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">🧪</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-food-title">食品・医薬部外品事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 医療機器事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">🔧</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-device-title">医療機器事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 薬局・医薬品事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">💊</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-pharmacy-title">薬局・医薬品事業</h3>
+                   </div>
+                 </div>
+               </div>
+               
+               <!-- 人材派遣事業 -->
+               <div class="col-lg-6 col-md-6">
+                 <div class="jkit-icon-box-wrapper hover-from-left">
+                   <div class="icon-box icon-box-header elementor-animation-float">
+                     <div class="icon style-color">
+                       <div class="business-icon">👥</div>
+                     </div>
+                   </div>
+                   <div class="icon-box icon-box-body">
+                     <h3 class="title" data-i18n="business-hr-title">人材派遣事業</h3>
+                   </div>
+                 </div>
+               </div>
             </div>
           </div>
         </div>
@@ -201,70 +262,70 @@
         </div>
         <div class="section-content">
           <!-- 顧問プロフィール - 左右レイアウト -->
-          <div class="advisor-profile" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap;">
+          <div class="founder-profile" style="display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap;">
             <style>
               @media (max-width: 768px) {
-                .advisor-profile {
+                .founder-profile {
                   flex-direction: column !important;
                   gap: 2rem !important;
                 }
-                .advisor-info {
+                .founder-info {
                   flex: none !important;
                 }
-                .advisor-photo {
+                .founder-photo {
                   flex: none !important;
                   align-self: center !important;
                 }
               }
             </style>
             <!-- 左側：経歴・履歴 -->
-            <div class="advisor-info" style="flex: 2; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-              <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #2c3e50; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem;">
+            <div class="founder-info" style="flex: 2; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #1a1a1a; border-bottom: 2px solid #2c5530; padding-bottom: 0.5rem;">
                 林　基弘　Motohiro Hayashi
               </h3>
               
               <!-- 経歴 -->
               <div class="career-section" style="margin-bottom: 2rem;">
-                <h4 style="color: #007bff; font-size: 1.2rem; margin-bottom: 1rem;">経歴</h4>
+                <h4 style="color: #2c5530; font-size: 1.2rem; margin-bottom: 1rem;">経歴</h4>
                 <div class="career-timeline" style="line-height: 1.8; font-size: 0.95rem;">
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">85年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">85年</span>
                     <span style="margin-left: 3rem;">群馬大学医学部入学</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">91年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">91年</span>
                     <span style="margin-left: 3rem;">東京女子医科大学脳神経センター脳神経外科入局</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">94年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">94年</span>
                     <span style="margin-left: 3rem;">ガンマナイフユニットへ従事</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">99年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">99年</span>
                     <span style="margin-left: 3rem;">フランス・マルセイユ・ティモンヌ大学留学</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">02年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">02年</span>
                     <span style="margin-left: 3rem;">東京女子医科大学ガンマナイフユニット治療責任者</span>
                 </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">11年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">11年</span>
                     <span style="margin-left: 3rem;">東京女子医科大学中央放射線部門ガンマナイフ治療室長、先端生命医科学研究所MIL部門(ガンマナイフ研究開発戦略室)長</span>
               </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">13年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">13年</span>
                     <span style="margin-left: 3rem;">群馬大学腫瘍放射線科・重粒子医学センター非常勤講師</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">15年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">15年</span>
                     <span style="margin-left: 3rem;">第12回国際定位放射線治療学会学術大会長、第１回がん撲滅サミット大会長を歴任し現在へ至る</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">18年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">18年</span>
                     <span style="margin-left: 3rem;">防衛医科大学脳神経外科　非常勤講師</span>
                   </div>
                   <div class="career-item" style="margin-bottom: 0.8rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff; font-weight: bold;">18年</span>
+                    <span style="position: absolute; left: 0; color: #2c5530; font-weight: bold;">18年</span>
                     <span style="margin-left: 3rem;">JTKクリニック定位放射線治療研究所　所長</span>
                   </div>
                 </div>
@@ -272,34 +333,34 @@
 
               <!-- 役職 -->
               <div class="positions-section">
-                <h4 style="color: #007bff; font-size: 1.2rem; margin-bottom: 1rem;">役職</h4>
+                <h4 style="color: #2c5530; font-size: 1.2rem; margin-bottom: 1rem;">役職</h4>
                 <div class="positions-list" style="line-height: 1.8; font-size: 0.95rem;">
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     日本脳神経外科学会 認定専門医・指導医・代議員
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     日本定位放射線治療学会世話人
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     日本ガンマナイフ研究会理事
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     明日のガンマナイフを担う会 前代表世話人
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     アジアガンマナイフアカデミー代表世話人
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     世界脳神経外科学会連合(WFNS)・定位放射線治療部門役員(前副代表)
                   </div>
                   <div class="position-item" style="margin-bottom: 0.5rem; padding-left: 1rem; position: relative; color: #333;">
-                    <span style="position: absolute; left: 0; color: #007bff;">•</span>
+                    <span style="position: absolute; left: 0; color: #2c5530;">•</span>
                     国際定位放射線治療学会(ISRS)役員
                   </div>
                 </div>
@@ -307,10 +368,10 @@
             </div>
             
             <!-- 右側：写真 -->
-            <div class="advisor-photo" style="flex: 1; display: flex; justify-content: center;">
+            <div class="founder-photo" style="flex: 1; display: flex; justify-content: center; align-self: flex-start; padding: 0; margin: 0;">
               <img src="hayashi.png" 
                    alt="林基弘顧問" 
-                   style="width: 100%; max-width: 350px; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                   style="width: 100%; max-width: 350px; height: 500px; min-height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: block; margin: 0; padding: 0;">
             </div>
           </div>
         </div>
@@ -401,6 +462,7 @@
                 <div class="case-images">
                   <img src="business/6.1.jpg" alt="海外プロモーション 画像1" class="case-image">
                   <img src="business/6.2.jpg" alt="海外プロモーション 画像2" class="case-image">
+                  <img src="business/6.3.png" alt="海外プロモーション 画像3" class="case-image">
                 </div>
               </div>
             </div>
@@ -414,8 +476,7 @@
               <div class="case-item">
                 <h5>事例：IMC国際医療として日本国内の大学病院・総合病院・専門クリニックのインバウンド医療事業コンサルティングを提供。定期的にセミナーを共催し中国向けの展示会に共同出展するなど、多角的なコンサルティングサービスを提案</h5>
                 <div class="case-images">
-                  <img src="business/6.3.png" alt="医療教育セミナー 画像1" class="case-image">
-                  <img src="business/6.4.png" alt="医療教育セミナー 画像2" class="case-image">
+                  <img src="business/7.1.png" alt="医療教育セミナー 画像1" class="case-image">
                 </div>
               </div>
             </div>
