@@ -1475,7 +1475,199 @@
   }
 }
 
-/* ===== 26) 響応式微調 ===== */
+/* ===== 26) jKit タイムライン ===== */
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* 移除原有的行级水平线样式，使用新的连接线方案 */
+
+.elementor-column {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.elementor-widget-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* jKit Icon Box スタイル */
+.jeg-elementor-kit.jkit-icon-box {
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-number {
+  background: var(--imc-primary);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(11, 131, 197, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.timeline-number .title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeline-number:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(11, 131, 197, 0.4);
+}
+
+/* 隐藏垂直分隔线 */
+.elementor-widget-divider.timeline-divider {
+  display: none;
+}
+
+/* 连接线样式 */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* 第一行连接线 */
+    linear-gradient(90deg, transparent 10%, var(--imc-primary) 10%, var(--imc-primary) 90%, transparent 90%),
+    /* 垂直连接线 */
+    linear-gradient(0deg, transparent 45%, var(--imc-primary) 45%, var(--imc-primary) 55%, transparent 55%),
+    /* 第二行连接线 */
+    linear-gradient(90deg, transparent 10%, var(--imc-primary) 10%, var(--imc-primary) 90%, transparent 90%);
+  background-size: 
+    100% 2px,
+    2px 100%,
+    100% 2px;
+  background-position: 
+    center 25%,
+    center center,
+    center 75%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* タイムライン内容 */
+.timeline-content {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  box-shadow: var(--shadow-sm);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInDown 0.6s ease-out 0.2s both;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-content .title {
+  color: var(--imc-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeline-content .icon-box-description {
+  color: var(--imc-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 991px) {
+  .timeline-container::before {
+    display: none;
+  }
+  
+  .elementor-column {
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-divider {
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-hidden-phone {
+    display: none !important;
+  }
+  
+  .timeline-number {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .timeline-number .title {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem 0.75rem;
+    min-height: 100px;
+  }
+  
+  .timeline-content .title {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content .icon-box-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== 27) 響応式微調 ===== */
 @media (min-width:992px){
   .card-imc h3{ font-size:1.375rem; }
   .hospital-card{ 
