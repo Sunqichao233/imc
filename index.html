@@ -50,7 +50,7 @@
         <div class="hero-section" style="color: white;">
           <header class="hero-content">
             <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: bold; margin-bottom: 1.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" data-i18n="hero-company">IMC国際医療</h1>
-            <h2 class="hero-title" style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 500; margin-bottom: 2rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);" data-i18n="hero-slogan">世界をつなぐ医療ネットワーク</h2>
+            <h2 class="hero-title" style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 500; margin-bottom: 2rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);" data-i18n="hero-slogan">世界をより健康に、命をより長く</h2>
           </header>
         </div>
       </section>
@@ -151,19 +151,47 @@
               </div>
             </div>
             
-            <!-- 右侧：文字介绍 -->
+            <!-- 右侧：文字介绍和统计数据 -->
             <div class="col-lg-3">
               <div class="global-network-info ps-lg-4">
-                <div class="network-description">
-                  <p class="mb-4" style="line-height: 2; font-size: 1.1rem;">
-                    IMC国際医療は、2010年に事業を開始し、<strong style="color: #e63946; font-size: 1.2rem;">6,900名以上の顧客</strong>に対し、質の高い効率的な医療サービスを提供してきました。
+                <!-- 简化的文字介绍 -->
+                <div class="network-description mb-4">
+                  <p class="mb-3" style="line-height: 1.8; font-size: 1rem;">
+                    IMC国際医療は2010年に事業を開始し、外国人の日本における国際医療受診サービスに特化しています。
                   </p>
-                  <p class="mb-4" style="line-height: 2; font-size: 1.1rem;">
-                    外国人の日本における国際医療受診の管理およびサービス提供に特化し、同時に日本国内および海外の医療機関に対して経営・運営コンサルティングサービスも提供しています。
+                  <p class="mb-0" style="line-height: 1.8; font-size: 1rem;">
+                    世界各国・地域の顧客および提携パートナーとのグローバルネットワークを構築しています。
                   </p>
-                  <p class="mb-0" style="line-height: 2; font-size: 1.1rem;">
-                    当グループの顧客および提携パートナーは、日本をはじめ、中国、香港、台湾、米国、カナダ、英国、フランス、ロシア、オーストラリア、ニュージーランド、マレーシア、ベトナムなど、<strong style="color: #e63946; font-size: 1.2rem;">世界各国・地域</strong>に広がっています。
-                  </p>
+                </div>
+                
+                <!-- 统计数据卡片 -->
+                <div class="stats-card bg-light rounded-3 p-4">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="stat-item text-center">
+                        <div class="stat-number" data-target="6900" style="font-size: 2.5rem; font-weight: bold; color: var(--imc-primary);">0</div>
+                        <div class="stat-label" style="font-size: 0.9rem; color: #666;">サポートしたクライアント</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-item text-center">
+                        <div class="stat-number" data-target="16" style="font-size: 2rem; font-weight: bold; color: var(--imc-primary);">0</div>
+                        <div class="stat-label" style="font-size: 0.8rem; color: #666;">対応実績国数</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-item text-center">
+                        <div class="stat-number" data-target="14" style="font-size: 2rem; font-weight: bold; color: var(--imc-primary);">0</div>
+                        <div class="stat-label" style="font-size: 0.8rem; color: #666;">営業年数</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="stat-item text-center">
+                        <div class="stat-number" data-target="72" style="font-size: 2rem; font-weight: bold; color: var(--imc-primary);">0</div>
+                        <div class="stat-label" style="font-size: 0.8rem; color: #666;">提携医療パートナー・スタッフ数</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -346,97 +374,93 @@
             尚、<span style="color: #e74c3c;">※</span>は必須項目となります。
           </p>
         </div>
-        <div class="section-content">
-          <div class="contact-container">
-            
-            <!-- 表单和地图并排布局 -->
-            <div class="contact-content">
-              <!-- 表单部分 -->
-              <div class="form-section">
-            <form class="contact-form" novalidate>
-              <!-- 問い合わせ項目 -->
-              <div class="form-group">
-                <label class="form-label">問い合わせ項目 <span class="required">*</span></label>
-                <div class="radio-group">
-                  <div class="radio-item">
-                    <input type="radio" id="inquiry-general" name="inquiry-type" value="general" required />
-                    <label for="inquiry-general">一般の方からのお問い合わせ</label>
-                  </div>
-                  <div class="radio-item">
-                    <input type="radio" id="inquiry-medical" name="inquiry-type" value="medical" required />
-                    <label for="inquiry-medical">医療関係者からのお問い合わせ</label>
-                  </div>
-                  <div class="radio-item">
-                    <input type="radio" id="inquiry-other" name="inquiry-type" value="other" required />
-                    <label for="inquiry-other">その他のお問い合わせ</label>
-                  </div>
+          <div class="container">
+            <div class="row g-4 align-items-stretch">
+              <!-- 左侧表单 -->
+              <div class="col-lg-6 col-md-12">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                  <form class="contact-form">
+                    <!-- 問い合わせ項目 -->
+                    <div class="mb-3">
+                      <label class="form-label">問い合わせ項目 <span class="required">*</span></label>
+                      <div class="d-flex flex-column gap-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="inquiry-general" name="inquiry-type" value="general" required />
+                          <label class="form-check-label" for="inquiry-general">一般の方からのお問い合わせ</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="inquiry-medical" name="inquiry-type" value="medical" required />
+                          <label class="form-check-label" for="inquiry-medical">医療関係者からのお問い合わせ</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="inquiry-other" name="inquiry-type" value="other" required />
+                          <label class="form-check-label" for="inquiry-other">その他のお問い合わせ</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 姓名并排 -->
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="last-name" class="form-label">姓 <span class="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" class="form-control" required />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="first-name" class="form-label">名 <span class="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" class="form-control" required />
+                      </div>
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+                      <input type="email" id="email" name="email" class="form-control" required />
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">電話番号</label>
+                      <input type="tel" id="phone" name="phone" class="form-control" />
+                    </div>
+
+                    <!-- 会社名と役職名并排 -->
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="company" class="form-label">会社名</label>
+                        <input type="text" id="company" name="company" class="form-control" />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="position" class="form-label">役職名</label>
+                        <input type="text" id="position" name="position" class="form-control" />
+                      </div>
+                    </div>
+
+                    <!-- お問い合わせ内容 -->
+                    <div class="mb-3">
+                      <label for="message" class="form-label">お問い合わせ内容</label>
+                      <textarea id="message" name="message" class="form-control" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-imc">送信</button>
+                  </form>
                 </div>
-              </div>
-
-              <!-- 姓名并排 -->
-              <div class="form-row">
-                <div class="form-group half-width">
-                  <label for="last-name" class="form-label">姓 <span class="required">*</span></label>
-                  <input type="text" id="last-name" name="last-name" class="form-input" required />
-                </div>
-                <div class="form-group half-width">
-                  <label for="first-name" class="form-label">名 <span class="required">*</span></label>
-                  <input type="text" id="first-name" name="first-name" class="form-input" required />
-              </div>
-            </div>
-
-              <!-- メールアドレス -->
-              <div class="form-group">
-                <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
-                <input type="email" id="email" name="email" class="form-input" required />
-              </div>
-
-              <!-- 電話番号 -->
-              <div class="form-group">
-                <label for="phone" class="form-label">電話番号</label>
-                <input type="tel" id="phone" name="phone" class="form-input" />
-              </div>
-
-              <!-- 会社名と役職名并排 -->
-              <div class="form-row">
-                <div class="form-group half-width">
-                  <label for="company" class="form-label">会社名</label>
-                  <input type="text" id="company" name="company" class="form-input" />
-                </div>
-                <div class="form-group half-width">
-                  <label for="position" class="form-label">役職名</label>
-                  <input type="text" id="position" name="position" class="form-input" />
-                </div>
-              </div>
-
-              <!-- お問い合わせ内容 -->
-              <div class="form-group">
-                <label for="message" class="form-label">お問い合わせ内容</label>
-                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
-              </div>
-
-                <button type="submit" class="btn btn-imc">送信</button>
-            </form>
               </div>
               
-              <!-- 地图部分 -->
-              <div class="map-section">
-                <iframe 
-                  class="contact-map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7323058559923!2d139.7358904902482!3d35.68359289353129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c64aab00001%3A0x875f36adbb4e7e1a!2zSU1D5Zu96Zqb5Yy755mC5Lqk5rWB5o6o6YCy5qmf5qeL!5e0!3m2!1szh-CN!2sjp!4v1758505286510!5m2!1szh-CN!2sjp" 
-                  width="100%" 
-                  height="100%" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="IMC国際医療 所在地マップ">
-                </iframe>
+              <!-- 右侧地图 -->
+              <div class="col-lg-6 col-md-12">
+                <div class="h-100 rounded overflow-hidden shadow-sm">
+                  <iframe 
+                    class="w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7323058559923!2d139.7358904902482!3d35.68359289353129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c64aab00001%3A0x875f36adbb4e7e1a!2zSU1D5Zu96Zqb5Yy755mC5Lqk5rWB5o6o6YCy5qmf5qeL!5e0!3m2!1szh-CN!2sjp!4v1758505286510!5m2!1szh-CN!2sjp" 
+                    style="border:0;" 
+                    allowfullscreen 
+                    loading="lazy"
+                    title="IMC国際医療 所在地マップ">
+                  </iframe>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        </div>
       </section>
       
       <footer class="footer">
@@ -484,6 +508,7 @@
     <script src="js/i18n.js"></script>
     <script src="js/news.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/counter.js"></script>
     
     <script>
       // 全局变量
