@@ -1739,7 +1739,6 @@ figcaption {
 
 .business-icon {
   font-size: 2.5rem;
-  filter: grayscale(1) brightness(0) invert(1);
 }
 
 .icon-box-body {
