@@ -479,10 +479,87 @@ class I18n {
     // 医疗服务详细
     'medical-services-detail': '医疗服务详细',
     'advanced-health-checkup': '先进的健康检查及健康管理',
-    'advanced-health-checkup-section': 'Ⅰ. 先进的健康检查',
+    'advanced-health-checkup-1': 'Ⅰ. 先进的健康检查',
     'overview': '概要',
     'main-content': '主要内容',
     'features': '特征',
+    
+    // 先进健康检查详细内容
+    'advanced-checkup-overview-1': 'IMC国际医疗以疾病早期发现・未病阶段干预为目的，与日本国内大学医院・综合医院・专科诊所合作，提供采用最先进医疗设备和专业医师的高精度综合健康检查项目。',
+    'advanced-checkup-overview-2': '超越普通人体检查的「高端体检」「VIP体检」「癌症早期发现项目」等面向国际患者的定制化服务。',
+    'advanced-checkup-main-content': '体检套餐（后续添加）',
+    'advanced-checkup-feature-1': '对应外国人接待的国际诊疗体制',
+    
+    // 日本渡航治疗
+    'japan-medical-travel': '日本渡航治疗',
+    'japan-travel-overview-1': 'IMC国际医疗面向寻求日本高水准医疗技术的外国患者，提供医疗+住宿+翻译+法务一站式支持的国际医疗协调服务。',
+    'japan-travel-overview-2': '为了让各国患者能够安心在日本接受治疗，从事前咨询到回国后的跟进提供一贯支持。',
+    
+    // 标准治疗
+    'standard-treatment': 'Ⅰ. 标准治疗（Conventional Cancer Therapy）',
+    'standard-treatment-desc-1': 'IMC国际医疗以癌症治疗的第一选择「标准治疗」（Evidence-based Medicine）为中心，根据患者的病期・全身状态・希望，介绍・协调最适合的医疗机构・专门医师。',
+    'standard-treatment-desc-2': '标准治疗是基于科学根据，在世界范围内确立了有效性・安全性的治疗方法。',
+    'main-treatments': '主要治疗内容',
+    'surgical-therapy': '手术疗法（Surgical Therapy）',
+    'drug-therapy': '药物疗法（Chemotherapy / Drug Therapy）',
+    'radiation-therapy': '放射线疗法（Radiation Therapy）',
+    'standard-treatment-features': '特征',
+    'standard-feature-1': '与日本大学医院・专门癌症中心的强力合作',
+    'standard-feature-2': '多职种团队（医师・药剂师・护士・营养师）的综合治疗',
+    'standard-feature-3': '面向外国患者的多语言翻译・事前说明',
+    'standard-feature-4': '以标准治疗为基础，根据需要提出再生医疗・免疫疗法的并用建议',
+    
+    // 癌症综合治疗
+    'comprehensive-cancer-treatment': 'Ⅱ. 癌症综合治疗（Comprehensive Cancer Therapy）',
+    'comprehensive-treatment-desc-1': 'IMC在标准治疗基础上，提出结合个别化医疗・再生医疗・补完代替疗法的「复合癌症治疗项目」。',
+    'comprehensive-treatment-desc-2': '根据患者的病期、体力、价值观，重视副作用的减轻・免疫力的恢复・生活质量（QOL）的提高。',
+    'comprehensive-treatments': '主要治疗内容',
+    'nk-therapy': 'NK疗法（Natural Killer Cell Therapy）',
+    'mt-therapy': 'MT疗法（Mixed T Cell Therapy / Multitype Cell Therapy）',
+    'vitamin-c-therapy': '高浓度维生素C疗法（High-dose Vitamin C Therapy）',
+    'molecular-therapy': '分子靶向疗法（Molecular Targeted Therapy）',
+    'immuno-herbal-therapy': '免疫汉方疗法（Immuno-Herbal Therapy）',
+    'ecct-therapy': 'ECCT疗法（Electro-Capacitive Cancer Therapy）',
+    'comprehensive-features': '特征',
+    'comprehensive-feature-1': '结合标准治疗+补完治疗的统合型癌症医疗',
+    'comprehensive-feature-2': '以免疫力恢复・副作用减轻・QOL提高为目标',
+    'comprehensive-feature-3': '严选基于科学根据的治疗，重视安全性・效果',
+    'comprehensive-feature-4': '持续监测治疗经过，实施个别最优化',
+    
+    // 复合治疗项目表格
+    'program-table-header-1': '项目',
+    'program-table-header-2': '内容',
+    'program-table-header-3': '目的',
+    'program-1': '标准治疗+NK疗法',
+    'program-1-content': '手术・药物治疗+免疫强化',
+    'program-1-purpose': '复发预防・免疫改善',
+    'program-2': '分子靶向药+高浓度VC点滴',
+    'program-2-content': '精密医疗+氧化应激减轻',
+    'program-2-purpose': '副作用抑制・治疗效果增强',
+    'program-3': '放射线疗法+ECCT疗法',
+    'program-3-content': '局部治疗+电场疗法',
+    'program-3-purpose': '局部控制・副作用减轻',
+    'program-4': 'MT疗法+免疫汉方',
+    'program-4-content': '多角度免疫攻击+体质改善',
+    'program-4-purpose': '体力恢复・生活质量提高',
+    
+    // 对象患者
+    'target-patients': '对象患者',
+    'target-patient-1': '标准治疗效果有限的患者',
+    'target-patient-2': '复发・转移癌症患者',
+    'target-patient-3': '因体力・免疫力下降难以继续治疗的患者',
+    'target-patient-4': '希望提高自然治愈力的患者',
+    'target-patient-5': '希望癌症治疗后复发预防・健康维持的患者',
+    
+    // IMC的强项
+    'imc-strengths': 'IMC的强项',
+    'imc-strength-1': '结合标准治疗与补完医疗的国际统合癌症医疗模式',
+    'imc-strength-2': '多语言协调与国际医疗滞在签证对应',
+    'imc-strength-3': '与国内顶级医疗机构・再生医疗诊所的合作',
+    'imc-strength-4': '基于科学根据与伦理的治疗建议',
+    'advanced-checkup-feature-2': '从一日完结型方案到带住宿的高级体检方案的灵活对应',
+    'advanced-checkup-feature-3': '基于检查数据的个别健康战略提案',
+    
     'japan-medical-travel': '日本医疗旅行',
     'standard-treatment': 'Ⅰ. 标准治疗（Conventional Cancer Therapy）',
     'main-treatments': '主要治疗内容',
