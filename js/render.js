@@ -2,30 +2,30 @@
 class DataRenderer {
   constructor() {
     this.hospitalsData = [
-      {img:'hospitals/tokyo_university_hospital.png', title:'東京大学附属病院'},
-      {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学医院'},
-      {img:'hospitals/juntendo_hospital.png', title:'順天堂医院'},
-      {img:'hospitals/st_lukes_international_hospital.png', title:'聖路加国際病院'},
-      {img:'hospitals/kameda_general_hospital.png', title:'亀田総合病院'},
-      {img:'hospitals/gan_ken_ariake_hospital.png', title:'がん研有明病院'},
-      {img:'hospitals/fujita_medical_university_tokyo.png', title:'藤田医科大学東京<br>先端医療研究センター'},
-      {img:'hospitals/tokyo_medical_university_hospital.png', title:'東京医科大学病院'},
-      {img:'hospitals/nihon_university_hospital.png', title:'日本大学医院'},
-      {img:'hospitals/keio_university_hospital.png', title:'慶応義塾大学病院'},
-      {img:'hospitals/tokyo_teishin_hospital.png', title:'東京逓信病院'},
-      {img:'hospitals/yotsuya_medical_cube.png', title:'四谷メディカルキューブ'},
-      {img:'hospitals/jikei_university_hospital.png', title:'東京慈恵会医科大学付属病院'},
-      {img:'hospitals/ncgm_hospital.png', title:'国立国際医療研究センター病院'},
-      {img:'hospitals/ncc_hospital.png', title:'国立がん研究センター'},
-      {img:'hospitals/inouye_eye_hospital.png', title:'井上眼科医院'},
-      {img:'hospitals/ntt_east_kanto_hospital.png', title:'NTT東日本 関東病院'},
-      {img:'hospitals/cardiovascular_institute_hospital.png', title:'心臓血管研究所付属病院'},
-      {img:'hospitals/tokyo_saiseikai_central_hospital.png', title:'東京都済生会中央病院'},
-      {img:'hospitals/tokyo_medical_dental_university_hospital.png', title:'東京医科歯科大学病院'},
-      {img:'hospitals/nippon_medical_school_hospital.png', title:'日本医科大学付属病院'},
-      {img:'hospitals/shonan_kamakura_general_hospital.png', title:'湘南鎌倉病院'},
-      {img:'hospitals/iuhw_mita_hospital.png', title:'国際医療福祉大学三田病院'},
-      {img:'hospitals/toranomon_hospital.png', title:'虎ノ門医院'}
+      {img:'hospitals/tokyo_university_hospital.png', title:'東京大学附属病院', i18nKey:'hospital-tokyo-university'},
+      {img:'hospitals/tokyo_womens_medical_university.png', title:'東京女子医科大学医院', i18nKey:'hospital-tokyo-womens-medical'},
+      {img:'hospitals/juntendo_hospital.png', title:'順天堂医院', i18nKey:'hospital-juntendo'},
+      {img:'hospitals/st_lukes_international_hospital.png', title:'聖路加国際病院', i18nKey:'hospital-st-lukes'},
+      {img:'hospitals/kameda_general_hospital.png', title:'亀田総合病院', i18nKey:'hospital-kameda-general'},
+      {img:'hospitals/gan_ken_ariake_hospital.png', title:'がん研有明病院', i18nKey:'hospital-gan-ken-ariake'},
+      {img:'hospitals/fujita_medical_university_tokyo.png', title:'藤田医科大学東京<br>先端医療研究センター', i18nKey:'hospital-fujita-medical-tokyo'},
+      {img:'hospitals/tokyo_medical_university_hospital.png', title:'東京医科大学病院', i18nKey:'hospital-tokyo-medical-university'},
+      {img:'hospitals/nihon_university_hospital.png', title:'日本大学医院', i18nKey:'hospital-nihon-university'},
+      {img:'hospitals/keio_university_hospital.png', title:'慶応義塾大学病院', i18nKey:'hospital-keio-university'},
+      {img:'hospitals/tokyo_teishin_hospital.png', title:'東京逓信病院', i18nKey:'hospital-tokyo-teishin'},
+      {img:'hospitals/yotsuya_medical_cube.png', title:'四谷メディカルキューブ', i18nKey:'hospital-yotsuya-medical-cube'},
+      {img:'hospitals/jikei_university_hospital.png', title:'東京慈恵会医科大学付属病院', i18nKey:'hospital-jikei-university'},
+      {img:'hospitals/ncgm_hospital.png', title:'国立国際医療研究センター病院', i18nKey:'hospital-ncgm'},
+      {img:'hospitals/ncc_hospital.png', title:'国立がん研究センター', i18nKey:'hospital-ncc'},
+      {img:'hospitals/inouye_eye_hospital.png', title:'井上眼科医院', i18nKey:'hospital-inouye-eye'},
+      {img:'hospitals/ntt_east_kanto_hospital.png', title:'NTT東日本 関東病院', i18nKey:'hospital-ntt-east-kanto'},
+      {img:'hospitals/cardiovascular_institute_hospital.png', title:'心臓血管研究所付属病院', i18nKey:'hospital-cardiovascular-institute'},
+      {img:'hospitals/tokyo_saiseikai_central_hospital.png', title:'東京都済生会中央病院', i18nKey:'hospital-tokyo-saiseikai-central'},
+      {img:'hospitals/tokyo_medical_dental_university_hospital.png', title:'東京医科歯科大学病院', i18nKey:'hospital-tokyo-medical-dental'},
+      {img:'hospitals/nippon_medical_school_hospital.png', title:'日本医科大学付属病院', i18nKey:'hospital-nippon-medical-school'},
+      {img:'hospitals/shonan_kamakura_general_hospital.png', title:'湘南鎌倉病院', i18nKey:'hospital-shonan-kamakura-general'},
+      {img:'hospitals/iuhw_mita_hospital.png', title:'国際医療福祉大学三田病院', i18nKey:'hospital-iuhw-mita'},
+      {img:'hospitals/toranomon_hospital.png', title:'虎ノ門医院', i18nKey:'hospital-toranomon'}
     ];
     
     this.doctorsData = [
@@ -134,7 +134,7 @@ class DataRenderer {
               </div>
             </div>
             <div class="card-body py-2">
-              <h3 class="hospital-title text-center mb-0">${hospital.title}</h3>
+              <h3 class="hospital-title text-center mb-0" data-i18n="${hospital.i18nKey}">${hospital.title}</h3>
             </div>
           </article>
         </div>
