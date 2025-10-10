@@ -98,43 +98,72 @@
 
 /* ===== 4) 医院卡片（走马灯项） ===== */
 #hospitalRow{ scroll-snap-type:x mandatory; }
-.hospital-card{ 
-  width: 280px; /* 固定宽度确保一致性 */
-  height: 240px; /* 固定高度确保一致性 */
-  border-radius:var(--radius-md); 
-  box-shadow:var(--shadow-sm); 
-  scroll-snap-align:start; 
-  display: flex;
-  flex-direction: column;
-}
-.hospital-thumb{ 
-  border-top-left-radius:var(--radius-md); 
-  border-top-right-radius:var(--radius-md); 
-  overflow:hidden; 
-  flex: 3; /* 图片区域占据剩余空间 */
-  position: relative;
-  background: #f8f9fa; /* 背景色，防止图片加载时空白 */
-}
-.hospital-thumb img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center;
-  display: block;
+/* Swiper 外层：保持每张卡片一致 */ 
+.mySwiper .swiper-slide { 
+  width: 260px !important;       /* 卡片宽度 */ 
+  height: 240px !important;      /* 卡片高度 */ 
+  flex-shrink: 0; 
+  display: flex; 
+  justify-content: center; 
+} 
+
+/* 卡片整体：撑满 slide */ 
+.hospital-card { 
+  width: 100%; 
+  height: 100%; 
+  border-radius: var(--radius-md); 
+  box-shadow: var(--shadow-sm); 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  background: #fff; 
+  transition: transform 0.3s; 
+} 
+.hospital-card:hover { 
+  transform: scale(1.03); 
+} 
+
+/* 上半部分图片区域固定比例 */ 
+.hospital-thumb { 
+  position: relative; 
+  width: 100%; 
+  height: 75%;                   /* 固定比例（例如 3/4） */ 
+  overflow: hidden; 
+  background: #f8f9fa; 
+} 
+.hospital-thumb img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
 }
 .object-fit-cover{ object-fit:cover; }
-.hospital-title{
-  font-size:var(--fz-sm); line-height:1.35; font-weight:600;
-  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:0;
-  text-align: center;
+/* 下半部分标题区域固定高度 */ 
+.hospital-card .card-body { 
+  height: 25%;                   /* 剩余部分放标题 */ 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0.5rem; 
+} 
+
+.hospital-title { 
+  font-size: 0.9rem; 
+  text-align: center; 
+  font-weight: 600; 
+  line-height: 1.3; 
+  margin: 0; 
 }
-.hospital-card .card-body{ 
-  padding:.5rem .75rem; 
-  flex-shrink: 0; /* 防止文字区域被压缩 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 30px; /* 确保文字区域有足够高度 */
+
+/* 响应式设计：移动端缩小卡片 */
+@media (max-width: 768px) { 
+  .mySwiper .swiper-slide { 
+    width: 200px !important; 
+    height: 200px !important; 
+  } 
+  .hospital-title { 
+    font-size: 0.8rem; 
+  } 
 }
 
 /* ===== 5) Section & 容器 ===== */

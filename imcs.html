@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/core.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper 样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- 头部：Bootstrap Navbar -->
@@ -688,8 +690,11 @@
           <!-- 医院展示 -->
           <div class="mb-5">
             <h3 class="h4 mb-4 text-center" data-i18n="hospitals-subtitle">提携医療機関</h3>
-            <div class="d-flex gap-3 overflow-auto px-1" id="hospitalRow" style="scroll-snap-type:x mandatory;">
-              <!-- JS 渲染 -->
+            <!-- Swiper 容器 -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper" id="hospitalRow">
+                <!-- JS 渲染 -->
+              </div>
             </div>
           </div>
           
@@ -1045,6 +1050,8 @@
       }
     </script>
     
+    <!-- Swiper 脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

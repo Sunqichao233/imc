@@ -113,38 +113,55 @@ class DataRenderer {
   // 渲染医院列表
   renderHospitals() {
     console.log('渲染医院列表...');
-    
     const row = document.getElementById('hospitalRow');
-    if (!row) {
-      console.error('找不到hospitalRow元素');
-      return;
-    }
-    
+    if (!row) return console.error('找不到 hospitalRow 元素');
+
     try {
       row.innerHTML = this.hospitalsData.map(hospital => `
-        <article class="card hospital-card flex-shrink-0">
-          <div class="hospital-thumb">
-            <img src="${hospital.img}" 
-                 alt="${hospital.title}" 
-                 class="w-100 h-100 object-fit-cover" 
-                 loading="lazy"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="hospital-placeholder" style="display:none;">
-              <div class="placeholder-content">
-                <i class="fas fa-hospital"></i>
-                <span>医療機関</span>
+        <div class="swiper-slide">
+          <article class="card hospital-card">
+            <div class="hospital-thumb">
+              <img src="${hospital.img}"
+                   alt="${hospital.title}"
+                   class="w-100 h-100 object-fit-cover"
+                   loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="hospital-placeholder" style="display:none;">
+                <div class="placeholder-content text-center">
+                  <i class="fas fa-hospital"></i>
+                  <span>医療機関</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card-body py-2">
-            <h3 class="hospital-title text-center mb-0">${hospital.title}</h3>
-          </div>
-        </article>
+            <div class="card-body py-2">
+              <h3 class="hospital-title text-center mb-0">${hospital.title}</h3>
+            </div>
+          </article>
+        </div>
       `).join('');
-      
+
       console.log(`已渲染 ${this.hospitalsData.length} 个医院`);
-    } catch (error) {
-      console.error('渲染医院列表时出错:', error);
+
+      // 初始化 Swiper
+      if (window.hospitalSwiper) window.hospitalSwiper.destroy(true, true);
+      window.hospitalSwiper = new Swiper('.mySwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        loop: true,
+        grabCursor: true,
+        freeMode: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 }
+        }
+      });
+    } catch (err) {
+      console.error('渲染医院列表出错:', err);
     }
   }
   
@@ -229,12 +246,10 @@ class DataRenderer {
   validateDoctorData(data) {
     return data && 
            typeof data.name === 'string' && 
-           typeof data.title === 'string' && 
            typeof data.position === 'string' && 
            typeof data.specialty === 'string' && 
            typeof data.image === 'string' && 
            data.name.length > 0 && 
-           data.title.length > 0 && 
            data.position.length > 0 && 
            data.specialty.length > 0 && 
            data.image.length > 0;
@@ -307,7 +322,6 @@ class DataRenderer {
     const lowerKeyword = keyword.toLowerCase();
     return this.doctorsData.filter(doctor => 
       doctor.name.toLowerCase().includes(lowerKeyword) ||
-      doctor.title.toLowerCase().includes(lowerKeyword) ||
       doctor.position.toLowerCase().includes(lowerKeyword) ||
       doctor.specialty.toLowerCase().includes(lowerKeyword)
     );
