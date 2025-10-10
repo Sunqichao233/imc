@@ -122,8 +122,73 @@ class I18n {
         'footer-hero-company': 'IMC国際医療',
         'footer-org-info': '組織情報',
         'footer-services': 'サービス',
-        'footer-copyright': '© 2025 IMC国際医療. All rights reserved.'
-      },
+        'footer-copyright': '© 2025 IMC国際医療. All rights reserved.',
+        
+        // 時間軸
+        'timeline-2012-year': '2012年',
+        'timeline-2012-desc': 'IMC創業',
+        'timeline-2014-year': '2014年',
+        'timeline-2014-desc': '経済産業省・外務省より「身元保証機関」として認定（B-121）',
+        'timeline-2017-year': '2017年',
+        'timeline-2017-desc': 'IMC株式会社設立、訪日国際医療支援事業を本格始動',
+        'timeline-2018-year': '2018年',
+        'timeline-2018-desc': '日本の先端医療ネットワークを構築',
+        'timeline-2021-year': '2021年',
+        'timeline-2021-desc': 'オンライン診療サービス開始、医療ツーリズム促進プロジェクト始動',
+        'timeline-2023-year': '2023年',
+        'timeline-2023-desc': '日本脳神経外科学会参加、再生医療研究連携・多言語対応体制強化',
+        'timeline-2024-year': '2024年',
+        'timeline-2024-desc': '健康食品ブランド「百賀堂」立ち上げ、国内外ECサイト展開開始',
+        'timeline-2025-year': '2025年',
+        'timeline-2025-desc': '医療教育・国際学術交流を強化。PET-CTセミナーや免疫医療カンファレンスを国内外で開催',
+        
+        // 世界地図
+        'world-map-alt': '世界地図',
+        'country-japan': '日本',
+        'country-china': '中国',
+        'country-hongkong': '香港',
+        'country-taiwan': '台湾',
+        'country-vietnam': 'ベトナム',
+        'country-malaysia': 'マレーシア',
+        'country-australia': 'オーストラリア',
+        'country-newzealand': 'ニュージーランド',
+        'country-usa': 'アメリカ',
+        'country-canada': 'カナダ',
+        'country-uk': 'イギリス',
+        'country-france': 'フランス',
+        'country-russia': 'ロシア',
+        
+        // 统计数据
+        'global-network-desc1': '私たちは世界各国の医療機関・専門医と連携し、国境を越えた医療サービスを提供しています。',
+        'global-network-desc2': '患者様一人ひとりに最適な医療を届けるため、グローバルネットワークを活用しています。',
+        'stat-clients': 'サポートしたクライアント数',
+        'stat-countries': '対応実績国数',
+        'stat-years': '営業年数',
+        'stat-partners': '提携医療パートナー・スタッフ数',
+    
+    // 医疗服务详细
+    'medical-services-detail': '医療サービス詳細',
+    'advanced-health-checkup': '先端的な健康診断及び健康管理',
+    'advanced-health-checkup-section': 'Ⅰ. 先端的な健康診断',
+    'overview': '概要',
+    'main-content': '主な内容',
+    'features': '特徴',
+    'japan-medical-travel': '日本渡航治療',
+    'standard-treatment': 'Ⅰ. 標準治療（Conventional Cancer Therapy）',
+    'main-treatments': '主な治療内容',
+    'comprehensive-cancer-treatment': 'Ⅱ. がんの複合治療（Comprehensive Cancer Therapy）',
+    
+    // 再生医疗
+    'regenerative-medicine': '再生医療',
+    'main-service-areas': '主な提供領域',
+    
+    // 不妊治疗
+    'fertility-treatment': '不妊治療（生殖医療）分野',
+    'japan-fertility-support': 'Ⅰ. 外国人の日本渡航不妊治療支援',
+    'main-support-content': '主な支援内容：',
+    'characteristics': '特徴：',
+    'taiwan-fertility-support': 'Ⅱ. 外国人・日本人の台湾渡航不妊治療支援'
+  },
       
       zh: {
         // Meta and Title
@@ -208,10 +273,6 @@ class I18n {
         'business-case-2-2': '案例2：2024年12月，中国药理学著名专家颜光美教授团队与IMC国际医疗创始人夏冰博士就肿瘤溶解病毒药物「VRT106」签署业务合同，表明将应用于现行治疗的意向',
         'business-case-2-3': '案例3：2024年12月，上海药业生物技术有限公司创始人张鸿声教授访日，与夏冰博士就CAR-T细胞疗法业务合作进行协商',
         'business-case-3-1': '案例：IMC国际医疗为日本国内大学医院・综合医院・专科诊所提供入境医疗事业咨询服务，定期共同举办研讨会，共同参展面向中国的展览会等，提供多角度咨询服务',
-        
-        // 公司名称
-        'company-runqiao': '潤橋医療教育科技・寿陽国際医院',
-        'company-ainuo': 'アイノ健康管理サービス(天津)有限公司',
         
         // IMCS Hero Section
         'imcs-welcome-title': 'Welcome to IMCS',
@@ -335,8 +396,91 @@ class I18n {
         
         // 公司名称
         'company-runqiao': '润桥医疗教育科技・寿阳国际医院',
-        'company-ainuo': '艾诺健康管理服务(天津)有限公司'
-      }
+        'company-ainuo': '艾诺健康管理服务(天津)有限公司',
+        
+        // IMCS事业内容
+        'business-item-1': '(1) 医疗、护理及海外医疗相关的调查及研究事业',
+        'business-item-2': '(2) 医疗、护理及海外医疗相关的国内外各种信息提供事业',
+        'business-item-3': '(3) 推进医疗、护理及海外医疗的国内外设施以及旅行社等的介绍事业',
+        'business-item-4': '(4) 医疗设施及护理设施的设置运营事业',
+        'business-item-5': '(5) 医疗设施及护理设施的设置运营相关咨询事业',
+        'business-item-6': '(6) 医疗旅游相关的企划旅行实施、旅行者向导及旅行相关合同的代理、中介、代办等旅行业以及旅行业者代理业',
+        'business-item-7': '(7) 医疗、护理及海外医疗相关研讨会的企划及运营事业',
+        'business-item-8': '(8) 医疗、护理及海外医疗相关出版物的提供、图书及记录的供览、书籍制作、视频配信制作、图书借阅、摄影、口译及翻译相关事业',
+        'business-item-9': '(9) 海外企业及团体的日本进出以及日本企业及团体的海外进出相关咨询事业',
+        'business-item-10': '(10) 食品、医药部外品的研究开发、制造及销售以及进出口事业',
+        'business-item-11': '(11) 医疗器械的销售及进出口事业',
+        'business-item-12': '(12) 药局业及医药品以及医药部外品的销售事业',
+        'business-item-13': '(13) 不动产买卖、租赁及管理以及中介事业',
+        'business-item-14': '(14) 人才派遣事业',
+        'business-item-15': '(15) 各种贸易事业',
+        'business-item-16': '(16) 其他为达成本法人目的所必要的事业',
+        
+        // 时间轴
+        'timeline-2012-year': '2012年',
+        'timeline-2012-desc': 'IMC创业',
+        'timeline-2014-year': '2014年',
+        'timeline-2014-desc': '经济产业省・外务省认定为「身元保证机关」（B-121）',
+        'timeline-2017-year': '2017年',
+        'timeline-2017-desc': 'IMC株式会社设立，访日国际医疗支援事业正式启动',
+        'timeline-2018-year': '2018年',
+        'timeline-2018-desc': '构建日本先进医疗网络',
+        'timeline-2021-year': '2021年',
+        'timeline-2021-desc': '在线诊疗服务开始，医疗旅游促进项目启动',
+        'timeline-2023-year': '2023年',
+        'timeline-2023-desc': '参加日本脑神经外科学会，再生医疗研究合作・多语言对应体制强化',
+        'timeline-2024-year': '2024年',
+        'timeline-2024-desc': '健康食品品牌「百贺堂」成立，国内外EC网站展开开始',
+        'timeline-2025-year': '2025年',
+        'timeline-2025-desc': '强化医疗教育・国际学术交流。在国内外举办PET-CT研讨会和免疫医疗会议',
+        
+        // 世界地图
+        'world-map-alt': '世界地图',
+        'country-japan': '日本',
+        'country-china': '中国',
+        'country-hongkong': '香港',
+        'country-taiwan': '台湾',
+        'country-vietnam': '越南',
+        'country-malaysia': '马来西亚',
+        'country-australia': '澳大利亚',
+        'country-newzealand': '新西兰',
+        'country-usa': '美国',
+        'country-canada': '加拿大',
+        'country-uk': '英国',
+        'country-france': '法国',
+        'country-russia': '俄罗斯',
+        
+        // 统计数据
+        'global-network-desc1': '我们与世界各国的医疗机构・专业医师合作，提供跨越国界的医疗服务。',
+        'global-network-desc2': '为了向每一位患者提供最适合的医疗，我们充分利用全球网络。',
+        'stat-clients': '支持的客户数',
+        'stat-countries': '对应实绩国家数',
+        'stat-years': '营业年数',
+        'stat-partners': '合作医疗伙伴・员工数',
+    
+    // 医疗服务详细
+    'medical-services-detail': '医疗服务详细',
+    'advanced-health-checkup': '先进的健康检查及健康管理',
+    'advanced-health-checkup-section': 'Ⅰ. 先进的健康检查',
+    'overview': '概要',
+    'main-content': '主要内容',
+    'features': '特征',
+    'japan-medical-travel': '日本医疗旅行',
+    'standard-treatment': 'Ⅰ. 标准治疗（Conventional Cancer Therapy）',
+    'main-treatments': '主要治疗内容',
+    'comprehensive-cancer-treatment': 'Ⅱ. 癌症综合治疗（Comprehensive Cancer Therapy）',
+    
+    // 再生医疗
+    'regenerative-medicine': '再生医疗',
+    'main-service-areas': '主要服务领域',
+    
+    // 不孕治疗
+    'fertility-treatment': '不孕治疗（生殖医疗）领域',
+    'japan-fertility-support': 'Ⅰ. 外国人日本不孕治疗支援',
+    'main-support-content': '主要支援内容：',
+    'characteristics': '特征：',
+    'taiwan-fertility-support': 'Ⅱ. 外国人・日本人台湾不孕治疗支援'
+  }
     };
     
     this.init();
