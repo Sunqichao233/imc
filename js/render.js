@@ -264,68 +264,6 @@ class DataRenderer {
   getDoctorsData() {
     return [...this.doctorsData];
   }
-  
-  // 根据索引更新医院数据
-  updateHospital(index, hospitalData) {
-    if (index >= 0 && index < this.hospitalsData.length && this.validateHospitalData(hospitalData)) {
-      this.hospitalsData[index] = hospitalData;
-      this.renderHospitals();
-      return true;
-    }
-    return false;
-  }
-  
-  // 根据索引更新医师数据
-  updateDoctor(index, doctorData) {
-    if (index >= 0 && index < this.doctorsData.length && this.validateDoctorData(doctorData)) {
-      this.doctorsData[index] = doctorData;
-      this.renderDoctors();
-      return true;
-    }
-    return false;
-  }
-  
-  // 根据索引删除医院
-  removeHospital(index) {
-    if (index >= 0 && index < this.hospitalsData.length) {
-      this.hospitalsData.splice(index, 1);
-      this.renderHospitals();
-      return true;
-    }
-    return false;
-  }
-  
-  // 根据索引删除医师
-  removeDoctor(index) {
-    if (index >= 0 && index < this.doctorsData.length) {
-      this.doctorsData.splice(index, 1);
-      this.renderDoctors();
-      return true;
-    }
-    return false;
-  }
-  
-  // 搜索医院
-  searchHospitals(keyword) {
-    if (!keyword) return this.hospitalsData;
-    
-    const lowerKeyword = keyword.toLowerCase();
-    return this.hospitalsData.filter(hospital => 
-      hospital.title.toLowerCase().includes(lowerKeyword)
-    );
-  }
-  
-  // 搜索医师
-  searchDoctors(keyword) {
-    if (!keyword) return this.doctorsData;
-    
-    const lowerKeyword = keyword.toLowerCase();
-    return this.doctorsData.filter(doctor => 
-      doctor.name.toLowerCase().includes(lowerKeyword) ||
-      doctor.position.toLowerCase().includes(lowerKeyword) ||
-      doctor.specialty.toLowerCase().includes(lowerKeyword)
-    );
-  }
 }
 
 // 导出DataRenderer类
